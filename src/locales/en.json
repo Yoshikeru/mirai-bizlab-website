@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "CEO Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Designing the Future of Business from Bangkok",
+    "title_line1": "Powering Growth",
+    "title_line2": "Through Finance.",
+    "subtitle": "Accounting outsourcing, internal DX, and AI training. We support Japanese businesses in Thailand with technology and hands-on expertise.",
+    "cta_primary": "Our Services",
+    "cta_secondary": "Contact Us",
+    "scroll_hint": "Scroll to explore"
+  },
+  "services": {
+    "section_label": "SERVICES",
+    "title": "Our Services",
+    "subtitle": "From accounting to AI—three solutions to strengthen the management foundation of Japanese businesses in Bangkok.",
+    "service1": {
+      "title": "Accounting Outsourcing",
+      "subtitle": "経理代行",
+      "description": "From monthly and annual accounting to payroll and tax filing, we handle your books in full compliance with Thai regulations. Our experienced team functions as your accounting department, freeing you to focus on growth.",
+      "features": ["Monthly Accounting", "Payroll & Social Security", "Tax Filing & VAT", "Financial Reporting"]
+    },
+    "service2": {
+      "title": "App & AI Integration",
+      "subtitle": "社内情報のアプリ化 & AI化",
+      "description": "We consolidate scattered internal data into apps and dramatically improve efficiency with AI. Move beyond paper and Excel to enable real-time business decisions.",
+      "features": ["Business App Development", "AI Automation", "Data Analytics Platform", "System Integration"]
+    },
+    "service3": {
+      "title": "Personal AI Training",
+      "subtitle": "管理者向けパーソナルAIトレーニング",
+      "description": "Hands-on, one-on-one training for managers on using AI tools like ChatGPT and Claude in daily operations. Customized to your specific workflow for immediate impact.",
+      "features": ["AI Tool Workshops", "Prompt Engineering", "Workflow Optimization", "Ongoing Support"]
+    },
+    "cta": "Learn More"
+  },
+  "about": {
+    "section_label": "ABOUT",
+    "title": "About Us",
+    "subtitle": "Bridging technology and accounting to support Japanese businesses in Thailand.",
+    "company_name": "MIRAI BizLab Co., Ltd.",
+    "established": "June 13, 2018",
+    "representative": "Takuro Yoshida",
+    "capital": "2,000,000 THB",
+    "address_jp": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270",
+    "address_en": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270",
+    "tel": "02-088-8539",
+    "tax_id": "0105561100482",
+    "table": {
+      "company_name": "Company Name",
+      "established": "Established",
+      "representative": "Representative",
+      "capital": "Capital",
+      "address": "Address",
+      "tel": "Phone",
+      "tax_id": "Tax ID"
+    },
+    "message_title": "Message from the CEO",
+    "message": "Through my experience running businesses in Bangkok, I've witnessed firsthand the accounting challenges that Japanese companies face in Thailand—language barriers, regulatory differences, and the rapid pace of digitalization. Addressing these challenges through both practical expertise and technology is MIRAI BizLab's mission. With accounting as our foundation, we leverage AI and applications to move your business forward."
+  },
+  "blog": {
+    "section_label": "BLOG",
+    "title": "CEO Blog",
+    "subtitle": "Insights on management and AI adoption in Thailand.",
+    "read_more": "Read More",
+    "coming_soon": "Articles coming soon.",
+    "sample_posts": [
+      {
+        "title": "3 Key Points in Thai Accounting for Japanese Businesses",
+        "date": "2026.02.01",
+        "excerpt": "Japanese companies operating in Thailand face unique accounting challenges due to language and regulatory differences. Here are three critical points to keep in mind.",
+        "category": "Accounting"
+      },
+      {
+        "title": "How to Use ChatGPT in Accounting Operations",
+        "date": "2026.01.15",
+        "excerpt": "AI technology is accelerating efficiency in accounting. In this article, we share practical use cases and implementation strategies.",
+        "category": "AI"
+      },
+      {
+        "title": "DX Challenges Facing Japanese Companies in Bangkok",
+        "date": "2026.01.05",
+        "excerpt": "The wave of digital transformation is reaching Thailand. Let's explore the on-the-ground challenges and solutions.",
+        "category": "DX"
+      }
+    ]
+  },
+  "contact": {
+    "section_label": "CONTACT",
+    "title": "Contact Us",
+    "subtitle": "Questions about our services or need a quote? Feel free to reach out.",
+    "form": {
+      "company": "Company Name",
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you for your inquiry. We will get back to you shortly.",
+      "error": "Failed to send. Please contact us directly via email."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address_title": "Address",
+      "tel_title": "Phone",
+      "email_title": "Email"
+    }
+  },
+  "chat": {
+    "title": "MIRAI AI Assistant",
+    "placeholder": "Ask about our services...",
+    "greeting": "Hello! I'm the MIRAI BizLab AI assistant. Feel free to ask about our services.",
+    "send": "Send",
+    "thinking": "Thinking..."
+  },
+  "footer": {
+    "description": "Based in Bangkok, we co-create the future of business—from accounting to AI adoption for Japanese enterprises.",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Info",
+    "copyright": "© 2026 MIRAI BizLab Co., Ltd. All rights reserved."
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "back_to_top": "Back to Top"
+  }
+}
