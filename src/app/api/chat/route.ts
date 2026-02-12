@@ -20,7 +20,7 @@ const SYSTEM_PROMPT = `あなたはMIRAI BizLab Co., Ltd.のAIアシスタント
 - 税務申告・VAT処理
 - 収支レポート作成
 - タイの法令に完全準拠
-- 飲食店、ヘアサロンなど多様な業種に対応
+- 飲食店、ヘアサロン、オフィスなど多様な業種に対応
 
 ### 2. 社内情報のアプリ化 & AI化 (App & AI Integration)
 - 散在する社内情報のアプリケーション集約
@@ -31,7 +31,7 @@ const SYSTEM_PROMPT = `あなたはMIRAI BizLab Co., Ltd.のAIアシスタント
 - データ分析基盤構築
 
 ### 3. 管理者向けパーソナルAIトレーニング (Personal AI Training)
-- ChatGPT、Claude等のAIツール活用研修
+- ChatGPT、Claude、Gemini等のAIツール活用研修
 - マンツーマン指導
 - プロンプト設計指導
 - 業務フロー最適化
