@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import Anthropic from '@anthropic-ai/sdk';
 
 const SYSTEM_PROMPT = `あなたはMIRAI BizLab Co., Ltd.のAIアシスタントです。
 バンコクを拠点に日系企業向けのサービスを提供している会社のアシスタントとして、
@@ -62,7 +63,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Build messages array from history
-    const messages = [];
+    const messages: { role: 'user' | 'assistant'; content: string }[] = [];
     if (history && Array.isArray(history)) {
       for (const msg of history) {
         messages.push({
@@ -76,35 +77,27 @@ export async function POST(req: NextRequest) {
       content: message,
     });
 
-    // Call Anthropic API
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-5-20250514',
-        max_tokens: 1024,
-        system: SYSTEM_PROMPT,
-        messages,
-      }),
+    // Call Anthropic API via SDK
+    const client = new Anthropic({ apiKey });
+    const response = await client.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: 1024,
+      system: SYSTEM_PROMPT,
+      messages,
     });
 
-    if (!response.ok) {
-      throw new Error(`API request failed: ${response.status}`);
-    }
-
-    const data = await response.json();
-    const reply = data.content[0]?.text || 'Sorry, I could not generate a response.';
+    const textBlock = response.content.find((block) => block.type === 'text');
+    const reply =
+      textBlock && 'text' in textBlock
+        ? textBlock.text
+        : 'Sorry, I could not generate a response.';
 
     return NextResponse.json({ reply });
   } catch (error) {
     console.error('Chat API error:', error);
-    return NextResponse.json(
-      { reply: 'An error occurred. Please try again later.' },
-      { status: 500 }
-    );
+    return NextResponse.json({
+      reply:
+        '申し訳ございません。一時的にエラーが発生しました。しばらくしてからお試しいただくか、info@miraibizlab.co.th までお問い合わせください。',
+    });
   }
 }
