@@ -1,0 +1,84 @@
+"use client";
+
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
+
+import { Button } from "@/components/ui/Button";
+
+export function CtaSection() {
+  const t = useTranslations("home.cta");
+
+  return (
+    <section
+      className="relative isolate overflow-hidden bg-[#101012] py-28 md:py-36"
+      aria-labelledby="cta-heading"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 -left-40 -z-10 h-[620px] w-[620px] -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/15 blur-[140px]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 -bottom-40 -z-10 h-[420px] w-[420px] rounded-full bg-[color:var(--color-accent)]/10 blur-[140px]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:60px_60px]"
+      />
+
+      <div className="relative mx-auto w-full max-w-(--container-content) px-6 text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="typo-eyebrow"
+        >
+          {t("eyebrow")}
+        </motion.p>
+        <motion.h2
+          id="cta-heading"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 0.1,
+          }}
+          className="typo-display mt-7 whitespace-pre-line text-white"
+        >
+          {t("title")}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.85,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 0.2,
+          }}
+          className="typo-body-lg mx-auto mt-8 max-w-2xl text-white/70"
+        >
+          {t("description")}
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            duration: 0.85,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 0.3,
+          }}
+          className="mt-12 flex justify-center"
+        >
+          <Button href="/contact" variant="primary">
+            {t("button")}
+          </Button>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

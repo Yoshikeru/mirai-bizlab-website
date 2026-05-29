@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #fafafa;
+  --color-foreground: #1a1a1a;
+  --color-accent: #d7000f;
+  --color-accent-soft: #f4e5e6;
+  --color-muted: #6b6b6b;
+  --color-border: #e5e5e5;
+
+  --font-sans-jp: var(--font-noto-sans-jp), "Noto Sans JP", system-ui, sans-serif;
+  --font-sans-latin: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-sans-thai: var(--font-noto-sans-thai), "Noto Sans Thai", system-ui, sans-serif;
+  --font-sans-display: var(--font-inter-tight), var(--font-inter), "Inter Tight",
+    "Inter", system-ui, sans-serif;
+
+  --content-max: 1280px;
+  --content-readable: 1140px;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+
+  --font-sans: var(--font-sans-jp);
+  --font-display: var(--font-sans-display);
+  --font-thai: var(--font-sans-thai);
+
+  --container-content: 1140px;
+  --container-wide: 1280px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-sans-latin);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+html[lang="th"] body {
+  font-family: var(--font-sans-thai);
+  line-height: 1.7;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans-jp);
+  font-size: 16px;
+  line-height: 1.8;
+  font-feature-settings: "palt";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4 {
+  font-family: var(--font-sans-display);
+  letter-spacing: -0.022em;
+  font-weight: 800;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------------- */
+/* Typography scale (7 tiers)                                        */
+/*   eyebrow  · display  · h1  · h2  · h3  · body-lg  · body  · caption */
+/* ---------------------------------------------------------------- */
+
+@utility typo-eyebrow {
+  font-family: var(--font-sans-display);
+  font-size: 0.6875rem; /* 11px */
+  line-height: 1.4;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+@utility typo-display {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-size: clamp(2.75rem, 6.4vw, 6.5rem); /* 44 → 104 */
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  font-weight: 800;
+  font-feature-settings: "ss01", "ss02", "palt";
+}
+
+@utility typo-h1 {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-size: clamp(2.25rem, 4.4vw, 4rem); /* 36 → 64 */
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  font-weight: 800;
+  font-feature-settings: "ss01", "palt";
+}
+
+@utility typo-h2 {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-size: clamp(1.875rem, 3.4vw, 3rem); /* 30 → 48 */
+  line-height: 1.14;
+  letter-spacing: -0.018em;
+  font-weight: 800;
+  font-feature-settings: "palt";
+}
+
+@utility typo-h3 {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-size: clamp(1.375rem, 1.7vw, 1.75rem); /* 22 → 28 */
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  font-weight: 700;
+  font-feature-settings: "palt";
+}
+
+@utility typo-body-lg {
+  font-size: 1.125rem; /* 18 */
+  line-height: 1.72;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@utility typo-body {
+  font-size: 1rem; /* 16 */
+  line-height: 1.78;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@utility typo-caption {
+  font-size: 0.8125rem; /* 13 */
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--color-muted);
+}

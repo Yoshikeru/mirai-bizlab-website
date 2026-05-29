@@ -1,17 +1,27 @@
-# MIRAI BizLab Co., Ltd. - Official Website
+# MIRAI BizLab — Corporate Website
 
-バンコクを拠点に日系企業の経理代行・AI導入支援を提供する MIRAI BizLab Co., Ltd. の公式ウェブサイト。
+バンコクを拠点とする会計・コンサルティング会社 **MIRAI BizLab Co., Ltd.** のコーポレートサイト。日系SMEのタイ進出と運用を支援する3言語(日本語 / English / ไทย)対応のNext.jsプロジェクトです。
+
+---
 
 ## 技術スタック
 
-- **Next.js 14** (App Router)
-- **React 18**
-- **TypeScript**
-- **Tailwind CSS 3.4** (カスタムデザインシステム)
-- **Framer Motion 11** (アニメーション)
-- **Anthropic Claude API** (AIチャット機能)
+| 項目 | 採用 |
+| --- | --- |
+| フレームワーク | Next.js 15 (App Router) |
+| 言語 | TypeScript (strict) |
+| スタイリング | Tailwind CSS v4 + CSSデザイントークン |
+| アニメーション | Framer Motion (`motion/react`) + Lenis (スムーススクロール) |
+| 多言語化 | next-intl v4 (ja / en / th, default: ja) |
+| アイコン | lucide-react |
+| カルーセル | Embla Carousel |
+| フォーム | react-hook-form + zod |
+| ブログ | MDX (`next-mdx-remote/rsc` + gray-matter) |
+| フォント | next/font 経由で Noto Sans JP / Inter / Noto Sans Thai |
 
-## セットアップ手順
+---
+
+## セットアップ
 
 ### 1. 依存関係のインストール
 
@@ -21,17 +31,11 @@ npm install
 
 ### 2. 環境変数の設定
 
-`.env.local.example` を `.env.local` にコピーし、APIキーを設定:
-
 ```bash
 cp .env.local.example .env.local
 ```
 
-```
-ANTHROPIC_API_KEY=your_api_key_here
-```
-
-> **Note:** AIチャット機能はAPIキーなしでもフォールバック応答で動作します。
+`.env.local` を編集し、本番URL等を設定してください。`NEXT_PUBLIC_SITE_URL` は `sitemap.xml` / `robots.txt` / OG画像URL の正規化に使われます。
 
 ### 3. 開発サーバーの起動
 
@@ -39,122 +43,216 @@ ANTHROPIC_API_KEY=your_api_key_here
 npm run dev
 ```
 
-ブラウザで http://localhost:3000 を開きます。
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてください。デフォルトでは `/ja` にリダイレクトされます。
 
 ### 4. 本番ビルド
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
-## プロジェクト構造
+### 5. その他のコマンド
+
+```bash
+npm run lint        # ESLint
+npm run typecheck   # tsc --noEmit
+```
+
+---
+
+## ディレクトリ構成
 
 ```
 mirai-bizlab-website/
+├── content/
+│   └── blog/                 # MDX記事 (ja / en / th サブディレクトリ)
+├── messages/
+│   ├── ja.json               # 日本語翻訳
+│   ├── en.json               # 英語翻訳
+│   └── th.json               # タイ語翻訳
 ├── public/
-│   └── images/              # ロゴ・画像ファイル
+│   └── assets/logo/          # ロゴ画像 (1: 横並び, 2: 縦並び)
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx       # ルートレイアウト（多言語対応）
-│   │   ├── page.tsx         # トップページ
-│   │   ├── globals.css      # グローバルスタイル
-│   │   ├── services/        # 事業内容ページ
-│   │   ├── about/           # 会社概要ページ
-│   │   ├── blog/            # 社長ブログページ
-│   │   ├── contact/         # お問い合わせページ
-│   │   └── api/chat/        # AIチャットAPI
+│   │   ├── [locale]/         # 各ロケールごとのルート
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx      # ホーム
+│   │   │   ├── about/
+│   │   │   ├── services/
+│   │   │   ├── pricing/
+│   │   │   ├── cases/
+│   │   │   ├── blog/         # 一覧 + [slug] 個別
+│   │   │   ├── careers/
+│   │   │   └── contact/
+│   │   ├── api/contact/      # 問い合わせフォーム送信先 (現状 console.log)
+│   │   ├── icon.tsx          # favicon (動的生成)
+│   │   ├── apple-icon.tsx    # apple-touch-icon
+│   │   ├── opengraph-image.tsx # OG画像
+│   │   ├── sitemap.ts        # sitemap.xml
+│   │   ├── robots.ts         # robots.txt
+│   │   └── not-found.tsx
 │   ├── components/
-│   │   ├── layout/          # Header, Footer, LanguageSwitcher
-│   │   ├── chat/            # AIチャットボットWidget
-│   │   └── ui/              # 共通UIコンポーネント
+│   │   ├── layout/           # Header, Footer, LocaleSwitcher, PageHero, Breadcrumb
+│   │   ├── sections/         # ページ固有のセクション
+│   │   ├── motion/           # アニメーション基盤 (LenisProvider, Reveal, constants)
+│   │   └── ui/               # 再利用UI (Button, SectionHeader, AnimatedNumber)
+│   ├── data/                 # 構造化データのインデックス (例: cases.ts)
 │   ├── lib/
-│   │   ├── i18n.ts          # 多言語対応ユーティリティ
-│   │   └── animations.ts    # Framer Motionアニメーション定義
-│   └── locales/
-│       ├── ja.json          # 日本語
-│       ├── en.json          # 英語
-│       └── th.json          # タイ語
-├── package.json
-├── tailwind.config.js       # Tailwindカスタム設定
+│   │   ├── i18n/             # next-intl の routing / navigation / request 設定
+│   │   └── blog.ts           # MDX読み込み
+│   ├── styles/globals.css    # デザイントークン + Tailwind v4 エントリ
+│   └── middleware.ts         # next-intl ロケールルーティング
+├── next.config.ts
 ├── tsconfig.json
-└── next.config.js
+└── package.json
 ```
 
-## ページ構成
-
-| ページ | パス | 説明 |
-|--------|------|------|
-| トップ | `/` | ヒーローセクション、サービスプレビュー、会社紹介 |
-| 事業内容 | `/services` | 3つのサービス詳細（経理代行、アプリ化&AI化、AIトレーニング） |
-| 会社概要 | `/about` | 代表メッセージ、会社情報テーブル、地図 |
-| 社長ブログ | `/blog` | ブログ記事一覧（CMS連携予定） |
-| お問い合わせ | `/contact` | 問い合わせフォーム、連絡先情報 |
+---
 
 ## デザインシステム
 
-### カラーパレット
+### カラートークン (`src/styles/globals.css`)
 
-| 用途 | カラー | コード |
-|------|--------|--------|
-| プライマリレッド | 赤 | `#DC2626` |
-| レッドダーク（ホバー） | 暗い赤 | `#B91C1C` |
-| ブランドブラック | 黒 | `#0A0A0A` |
-| グレーダーク | 濃灰 | `#1F2937` |
-| グレーミッド | 灰 | `#6B7280` |
-| グレーライト | 薄灰 | `#F3F4F6` |
-| ホワイト | 白 | `#FFFFFF` |
+| 用途 | 値 |
+| --- | --- |
+| 背景 | `#FAFAFA` |
+| 文字 | `#1A1A1A` |
+| アクセント (朱赤) | `#D7000F` |
+| アクセント (薄背景) | `#F4E5E6` |
+| 補助テキスト | `#6B6B6B` |
+| 罫線 | `#E5E5E5` |
 
 ### フォント
 
-- **Inter** — 英語テキスト
-- **Noto Sans JP** — 日本語テキスト
-- **Noto Sans Thai** — タイ語テキスト
+- 日本語: Noto Sans JP (`--font-noto-sans-jp`)
+- 欧文: Inter (`--font-inter`)
+- タイ語: Noto Sans Thai (`--font-noto-sans-thai`)
 
-### 主なアニメーション
+`html[lang]` で言語ごとに自動切替されます。
 
-- スクロール連動フェードイン
-- パララックスヒーロー
-- カードホバーエフェクト
-- ページ遷移アニメーション
-- ナビゲーションのスムーズ表示/非表示
+### アニメーション規格
 
-## 機能
+- イージング: `cubic-bezier(0.22, 1, 0.36, 1)` (定数: [src/components/motion/constants.ts](src/components/motion/constants.ts))
+- 標準 duration: 0.6 – 0.8s / ホバー: 0.3s
+- スクロール連動には `useScroll` + `useTransform` を使用
+- すべての装飾アニメーションは `prefers-reduced-motion` を尊重
 
-### 多言語対応（3言語）
-- 日本語 🇯🇵
-- English 🇬🇧
-- ไทย 🇹🇭
-- ヘッダーの言語切替ボタンで瞬時に切替可能
+---
 
-### AIチャットボット
-- 画面右下のチャットアイコンから起動
-- MIRAI BizLabのサービスに関する質問に自動回答
-- Anthropic Claude APIを使用
-- APIキー未設定時はフォールバック応答
+## コンテンツの更新方法
 
-### レスポンシブデザイン
-- モバイル、タブレット、デスクトップに完全対応
-- モバイル用ハンバーガーメニュー
+### 1. ページ本文 / セクションのコピー
 
-## カスタマイズ
+`messages/{ja,en,th}.json` を編集してください。3言語すべてで同じキーが揃っている必要があります。
 
-### ロゴの変更
-`public/images/` にロゴファイルを配置し、`Header.tsx` と `Footer.tsx` のロゴ部分を更新してください。
+| 編集対象 | パス |
+| --- | --- |
+| ホーム | `home.*` |
+| 会社情報 | `about.*` |
+| サービス | `services.*` |
+| 料金 | `pricing.*` (含む FAQ) |
+| 事例 | `home.cases.items` (現状はホームと共有) |
+| 採用 | `careers.*` |
+| お問い合わせ | `contact.*` |
+| 共通 (ナビ / フッター) | `nav.*` / `footer.*` |
 
-### 問い合わせフォームの接続
-`src/app/contact/page.tsx` の `handleSubmit` 関数を実際のメール送信APIまたはフォームサービスに接続してください。
+### 2. ブログ記事の追加
 
-### ブログ記事の管理
-CMSを導入する場合は、`src/app/blog/page.tsx` のサンプルデータ部分をAPI呼び出しに置き換えてください。
+```
+content/blog/<locale>/<slug>.mdx
+```
 
-## Cursor IDEでの開発
+3言語すべてに同じ `<slug>` で配置してください。フロントマターは以下:
 
-1. Cursorでこのフォルダを開く
-2. ターミナルで `npm install` を実行
-3. `npm run dev` で開発サーバーを起動
-4. Cursorの AI機能で各コンポーネントを自由にカスタマイズ
+```mdx
+---
+title: "記事タイトル"
+category: "expansion"  # accounting | legal | expansion | trends
+publishedAt: "2026-04-15"
+excerpt: "概要(一覧カード用)"
+readTime: 6
+---
+
+## 見出し
+本文 (MDX)
+```
+
+ファイルを追加すると、`sitemap.xml` と `/blog` 一覧、`/blog/[slug]` 個別ページに自動反映されます。
+
+### 3. 事例 (Cases)
+
+現状はメッセージファイルに直接埋め込んでいます。CMS化する際は `src/data/cases.ts` の `CASE_SLUGS` を起点に、`messages/*.json` の `home.cases.items` を外部データソースへ差し替えてください。
+
+### 4. ロゴアセット
+
+```
+public/assets/logo/
+├── Logo_MIRAI_BizLab1.png   # 横並びロゴ (Header / Footer)
+├── Logo_MIRAI_BizLab2.jpg   # 縦並びロゴ (PageHero / MVV背景)
+└── tree-mark.png            # 樹木モチーフ単体 (favicon と src/app/icon.png 用)
+```
+
+差し替えはファイルを置き換えるだけで反映されます。
+
+### 5. 連絡先 (電話 / メール / LINE / 住所 / 営業時間)
+
+`messages/{ja,en,th}.json` の `contact.info.*` を編集してください。フッターやContactページに反映されます。
+
+### 6. 価格
+
+`messages/{ja,en,th}.json` の `pricing.plans` を編集してください。価格を確定して表示する場合は、`price` フィールドを `"50,000 THB / month"` のような表示に書き換えます。
+
+---
+
+## Vercel へのデプロイ
+
+### 初回セットアップ
+
+1. [Vercel](https://vercel.com) にログインし、**Import Project** から GitHub リポジトリを接続します。
+2. **Framework Preset** は **Next.js** を選択 (自動検出されます)。
+3. **Environment Variables** で以下を設定:
+   - `NEXT_PUBLIC_SITE_URL` = `https://miraibizlab.co.th` (本番ドメイン)
+4. **Deploy** をクリック。
+
+### カスタムドメインの設定
+
+1. Vercel プロジェクトの **Settings → Domains** で `miraibizlab.co.th` を追加。
+2. DNS プロバイダで A レコード / CNAME を Vercel が指示する値に設定。
+3. SSL は自動で発行されます。
+4. 設定後、`NEXT_PUBLIC_SITE_URL` を本番ドメインに更新し再デプロイ。
+
+### 継続的デプロイ
+
+- `main` ブランチへのpushで本番デプロイ
+- フィーチャーブランチで自動的にプレビュー URL が発行されます
+- プレビュー環境にも環境変数を継承するには **Environment Variables** で `Preview` を選択
+
+### 問い合わせフォームの本実装
+
+現状 `src/app/api/contact/route.ts` は受信内容を `console.log` するのみです。本番運用前に以下のいずれかに置き換えてください:
+
+- **メール送信**: [Resend](https://resend.com), [SendGrid](https://sendgrid.com) 等のAPIで `CONTACT_NOTIFY_EMAIL` 宛に転送
+- **Slack 通知**: Incoming Webhook (`CONTACT_SLACK_WEBHOOK`) で営業チャンネルに投稿
+- **CRM 連携**: HubSpot / Salesforce / Zoho などの API に同期
+
+実装後は `.env.local.example` を更新し、Vercel の Environment Variables にも反映してください。
+
+---
+
+## 動作確認チェックリスト
+
+- [ ] 3言語 (`/ja`, `/en`, `/th`) すべてのページが正常に表示される
+- [ ] LocaleSwitcher で言語切替後も同じパスを保持する
+- [ ] `/blog` 一覧 → 個別記事に遷移できる (3言語)
+- [ ] `/contact` フォームのバリデーションが機能する (空欄 / 不正メール / カテゴリ未選択)
+- [ ] `/sitemap.xml` と `/robots.txt` が応答する
+- [ ] `/icon` / `/apple-icon` / `/opengraph-image` が画像を返す
+- [ ] `npm run build` がエラーなく完了する
+- [ ] Lighthouse でパフォーマンス80以上、アクセシビリティ95以上
+
+---
 
 ## ライセンス
 
-MIRAI BizLab Co., Ltd. 専用
+MIRAI BizLab Co., Ltd. 専用 / All rights reserved.

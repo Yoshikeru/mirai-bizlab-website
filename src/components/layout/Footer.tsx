@@ -1,117 +1,113 @@
-'use client';
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { useI18n } from '@/lib/i18n';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { Link } from "@/lib/i18n/navigation";
 
-const Footer = () => {
-  const { t } = useI18n();
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
-  const navItems = [
-    { href: '/', label: t('nav.home') },
-    { href: '/services', label: t('nav.services') },
-    { href: '/about', label: t('nav.about') },
-    { href: '/blog', label: t('nav.blog') },
-    { href: '/contact', label: t('nav.contact') },
-  ];
+const SERVICE_LINKS = [
+  { key: "services", href: "/services" },
+  { key: "pricing", href: "/pricing" },
+  { key: "cases", href: "/cases" },
+] as const;
+
+const COMPANY_LINKS = [
+  { key: "about", href: "/about" },
+  { key: "blog", href: "/blog" },
+  { key: "careers", href: "/careers" },
+  { key: "contact", href: "/contact" },
+] as const;
+
+export function Footer() {
+  const t = useTranslations("footer");
+  const nav = useTranslations("nav");
+  const site = useTranslations("site");
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-black text-white">
-      {/* Main Footer */}
-      <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
-        >
-          {/* Brand Column */}
-          <motion.div variants={fadeInUp} className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <img
-                src="/images/logo.svg"
-                alt="MIRAI BizLab"
-                className="h-10 w-auto"
-              />
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight leading-none">
-                  MIRAI BizLab
-                </span>
-                <span className="text-[10px] tracking-[0.2em] text-white/50 uppercase leading-none mt-0.5">
-                  Co., Ltd.
-                </span>
-              </div>
-            </div>
-            <p className="text-white/60 leading-relaxed max-w-md text-sm">
-              {t('footer.description')}
+    <footer className="border-t border-[color:var(--color-border)] bg-background">
+      <div className="mx-auto w-full max-w-(--container-wide) px-6 py-20">
+        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 md:gap-10">
+          <div className="col-span-2 md:col-span-1">
+            <p className="text-base font-bold tracking-tight">{site("name")}</p>
+            <p className="mt-4 text-sm leading-relaxed text-[color:var(--color-muted)]">
+              {t("tagline")}
             </p>
-          </motion.div>
+            <p className="mt-5 text-xs text-[color:var(--color-muted)]">
+              {t("address")}
+            </p>
+          </div>
 
-          {/* Quick Links */}
-          <motion.div variants={fadeInUp}>
-            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-white/40 mb-6">
-              {t('footer.quick_links')}
-            </h4>
-            <ul className="space-y-3">
-              {navItems.map((item) => (
-                <li key={item.href}>
+          <div>
+            <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
+              {t("services")}
+            </p>
+            <ul className="mt-5 flex flex-col gap-3 text-sm">
+              {SERVICE_LINKS.map((item) => (
+                <li key={item.key}>
                   <Link
                     href={item.href}
-                    className="text-white/60 hover:text-brand-red transition-colors duration-300 text-sm"
+                    className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
                   >
-                    {item.label}
+                    {nav(item.key)}
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Contact Info */}
-          <motion.div variants={fadeInUp}>
-            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-white/40 mb-6">
-              {t('footer.contact_info')}
-            </h4>
-            <div className="space-y-4 text-sm text-white/60">
-              <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Tel</p>
-                <p>02-088-8539</p>
-              </div>
-              <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Email</p>
-                <p>info@miraibizlab.co.th</p>
-              </div>
-              <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Address</p>
-                <p className="leading-relaxed">
-                  The Metropolis Building, 3rd Floor
-                  <br />
-                  Samutprakarn 10270, Thailand
-                </p>
-              </div>
+          <div>
+            <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
+              {t("company")}
+            </p>
+            <ul className="mt-5 flex flex-col gap-3 text-sm">
+              {COMPANY_LINKS.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    href={item.href}
+                    className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
+                  >
+                    {nav(item.key)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
+              {t("language")}
+            </p>
+            <div className="mt-5">
+              <LocaleSwitcher tone="muted" />
             </div>
-          </motion.div>
-        </motion.div>
-      </div>
+          </div>
+        </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40">{t('footer.copyright')}</p>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-xs text-white/40 hover:text-brand-red transition-colors duration-300 flex items-center gap-2"
-          >
-            <span>{t('common.back_to_top')}</span>
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-            </svg>
-          </button>
+        <div className="mt-16 flex flex-col-reverse items-start gap-6 border-t border-[color:var(--color-border)] pt-8 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs text-[color:var(--color-muted)]">
+            {t("copyright", { year })}
+          </p>
+          <p className="text-xs text-[color:var(--color-muted)]">
+            Photos by{" "}
+            <a
+              href="https://unsplash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-200 hover:text-[color:var(--color-accent)]"
+            >
+              Unsplash
+            </a>
+          </p>
+          <Image
+            src="/assets/logo/Logo_MIRAI_BizLab1.png"
+            alt={site("name")}
+            width={240}
+            height={120}
+            className="h-9 w-auto md:h-10"
+          />
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

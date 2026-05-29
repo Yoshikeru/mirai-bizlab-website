@@ -1,0 +1,410 @@
+{
+  "site": {
+    "name": "MIRAI BizLab",
+    "tagline": "バンコクの日系中小企業向け会計・コンサルティングパートナー"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "会社情報",
+    "services": "サービス",
+    "pricing": "料金",
+    "cases": "事例",
+    "blog": "ブログ",
+    "careers": "採用情報",
+    "contact": "お問い合わせ"
+  },
+  "locale": {
+    "label": "言語",
+    "ja": "JP",
+    "en": "EN",
+    "th": "TH",
+    "jaFull": "日本語",
+    "enFull": "English",
+    "thFull": "ไทย"
+  },
+  "common": {
+    "scroll": "Scroll",
+    "home": "ホーム",
+    "viewMore": "詳しく見る",
+    "back": "戻る"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "For Japanese SMEs in Thailand",
+      "title": "タイで挑む、\nすべての日系中小企業へ。",
+      "subtitle": "日系中小企業のための、会計・会社設立・経営コンサルティングをワンストップで。",
+      "primaryCta": "無料相談を予約する",
+      "secondaryCta": "サービスを見る"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "在タイ日系SMEの\n伴走者として。",
+      "description": "創業から15年。バンコクを拠点に、3言語・幅広い業種・あらゆるフェーズの企業をご支援しています。",
+      "metrics": [
+        { "value": 320, "suffix": "+", "label": "在タイ顧客数" },
+        { "value": 3, "suffix": "", "label": "対応言語数" },
+        { "value": 24, "suffix": "+", "label": "対応業種" },
+        { "value": 180, "suffix": "+", "label": "設立支援実績" }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "あなたの「タイで挑む」を、\n3つの軸で支える。",
+      "items": [
+        { "index": "01", "title": "会計・税務", "description": "月次記帳・税務申告・監査対応まで、現地基準と日本本社の両方に寄り添う実務サポート。" },
+        { "index": "02", "title": "会社設立支援", "description": "BOI・現地法人・駐在員事務所など、ビジネスモデルに最適な進出スキームをご提案。" },
+        { "index": "03", "title": "経営コンサルティング", "description": "管理会計の整備からKPI設計、業績改善まで、経営に踏み込む実行支援を行います。" }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why MIRAI",
+      "title": "選ばれる、\n4つの理由。",
+      "reasons": [
+        { "title": "3言語フル対応", "description": "日本語・英語・タイ語のトリリンガル体制で、本社・現地スタッフ・当局の三者を一気通貫でつなぎます。" },
+        { "title": "日系SME特化", "description": "在タイ日系SMEに特化した運用設計。よくある落とし穴と勝ち筋を、初回相談からお伝えします。" },
+        { "title": "ワンストップ", "description": "会計・設立・コンサルを社内チームで完結。窓口がひとつで、引き継ぎロスが発生しません。" },
+        { "title": "現地15年の知見", "description": "通算15年の現地支援で培った当局・銀行・士業ネットワークが、最短ルートをひらきます。" }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Cases",
+      "title": "支援事例。",
+      "description": "業種・規模を問わず、タイ進出からスケールまで幅広くご支援しています。",
+      "items": [
+        { "industry": "製造業", "scale": "従業員 120名", "title": "現地工場の経理・原価管理を立て直し", "summary": "本社向け管理会計を整え、月次クローズを10日短縮しました。" },
+        { "industry": "卸売・小売", "scale": "従業員 35名", "title": "BOI申請から設立・口座開設まで", "summary": "進出意思決定から3ヶ月で営業開始までを伴走しました。" },
+        { "industry": "IT・SaaS", "scale": "従業員 18名", "title": "クロスボーダー請求の最適化", "summary": "VAT・源泉・移転価格を踏まえた請求オペレーションを構築。" },
+        { "industry": "飲食・サービス", "scale": "店舗数 6", "title": "店舗別P/Lの可視化とKPI設計", "summary": "店舗単位の収益構造を見える化し、意思決定スピードを向上。" },
+        { "industry": "医療・ヘルスケア", "scale": "従業員 60名", "title": "現地法人化と管理体制の整備", "summary": "代理店契約から自社法人化へ移行し、組織を強化。" },
+        { "industry": "建設・不動産", "scale": "従業員 80名", "title": "工事進行基準の運用支援", "summary": "原価集計と進行基準を導入し、決算精度を改善。" }
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "ご相談から、導入まで。",
+      "steps": [
+        { "title": "無料相談", "description": "オンラインで30〜45分。現状とゴールをお聞かせください。" },
+        { "title": "現状ヒアリング", "description": "数字・組織・業務フローを精緻にヒアリングします。" },
+        { "title": "ご提案・お見積", "description": "課題仮説とスコープ、料金プランをご提示します。" },
+        { "title": "契約・着手", "description": "オンボーディングを経て、最短2週間で運用開始。" },
+        { "title": "継続サポート", "description": "月次レビューを軸に、四半期での戦略アップデートも実施。" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Get in touch",
+      "title": "まずは、\n無料相談から。",
+      "description": "課題の整理から、進出スキームの選定まで。30分でも、十分にお話しできます。",
+      "button": "無料相談を予約する"
+    }
+  },
+  "footer": {
+    "tagline": "バンコクから、日系中小企業の挑戦を加速する。",
+    "company": "会社情報",
+    "services": "サービス",
+    "language": "言語",
+    "address": "Bangkok, Thailand",
+    "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
+  },
+  "pages": {
+    "about": { "title": "会社情報", "description": "会社概要・代表挨拶" },
+    "services": { "title": "サービス", "description": "提供サービスの詳細" },
+    "pricing": { "title": "料金", "description": "サービスプラン" },
+    "cases": { "title": "事例", "description": "支援実績" },
+    "blog": { "title": "ブログ", "description": "コラム・ノウハウ" },
+    "careers": { "title": "採用情報", "description": "MIRAI BizLabで働く" },
+    "contact": { "title": "お問い合わせ", "description": "ご相談はこちらから" }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "バンコクから、\nひとつの選択肢になる。",
+      "description": "私たちは、日系SMEがタイで挑戦するための「現地パートナー」です。"
+    },
+    "message": {
+      "eyebrow": "Message",
+      "title": "代表挨拶",
+      "name": "Taro Yamada",
+      "role": "代表取締役 / Managing Director",
+      "body": [
+        "MIRAI BizLab は、日本企業がタイで事業を立ち上げ、伸ばしていくための「足場」になることを目指しています。",
+        "海外進出には、言語・制度・文化のギャップという目に見えない壁があります。私たちはその壁を、日本語・英語・タイ語のトリリンガル体制と現地15年の知見でほどき、お客様の意思決定が一歩早くなる環境を整えます。",
+        "数字を整えるのは目的ではなく、経営判断のためのスタートラインです。経理・税務・会社設立・コンサルティングをワンストップでお預かりし、本業に集中できる時間を取り戻します。",
+        "「タイで何を成し遂げたいか」を共有してください。私たちは、その先までご一緒します。"
+      ]
+    },
+    "info": {
+      "eyebrow": "Company",
+      "title": "会社情報",
+      "rows": [
+        { "label": "社名", "value": "MIRAI BizLab Co., Ltd." },
+        { "label": "設立", "value": "2010年4月 (バンコク)" },
+        { "label": "代表者", "value": "Taro Yamada" },
+        { "label": "所在地", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+        { "label": "事業内容", "value": "会計・税務、会社設立支援、経営コンサルティング" },
+        { "label": "対応言語", "value": "日本語 / English / ภาษาไทย" },
+        { "label": "在籍人数", "value": "35名 (2026年5月時点)" }
+      ]
+    },
+    "mvv": {
+      "eyebrow": "MVV",
+      "title": "Mission · Vision · Values",
+      "items": [
+        { "key": "mission", "label": "Mission", "title": "挑戦の足場をつくる。", "description": "日系SMEが、タイで地に足のついた挑戦ができるよう、経理・税務・経営の足場を整える。" },
+        { "key": "vision", "label": "Vision", "title": "東南アジア進出の、最初の電話番号に。", "description": "「タイで動くなら、まずMIRAI BizLabに相談する」 そう言われるパートナーになる。" },
+        { "key": "values", "label": "Values", "title": "正確 · 速さ · 誠実。", "description": "数字に正確に、対応に速く、人に誠実に。当たり前のことを当たり前以上の精度で。" }
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "経営の「裏側」を、\n私たちが引き受ける。",
+      "description": "会計・税務、会社設立、経営コンサルティング。タイで挑戦するための実務をワンストップで。"
+    },
+    "nav": "サービス一覧",
+    "items": [
+      {
+        "id": "accounting",
+        "index": "01",
+        "title": "会計・税務",
+        "summary": "月次から税務、監査対応まで。日本本社・現地当局の両方に寄り添う運用設計。",
+        "problem": "現地スタッフ任せの会計で、本社向け報告にズレが生じる。税務リスクが見えづらい。",
+        "solution": "現地基準(TFRS)と日本本社向け管理会計を両立する月次運用を設計。クラウド会計を活用し、月次クローズと可視化を加速します。",
+        "deliverables": [
+          "月次記帳・試算表作成",
+          "VAT / 源泉所得税 / 法人税の申告対応",
+          "監査法人窓口・調整",
+          "本社向け管理会計レポート (日本語 / 英語)"
+        ],
+        "pricing": "月額 50,000 THB 〜 (規模・対応範囲により変動)"
+      },
+      {
+        "id": "incorporation",
+        "index": "02",
+        "title": "会社設立支援",
+        "summary": "BOI、現地法人、駐在員事務所。進出スキームの設計から銀行口座開設まで。",
+        "problem": "進出形態の選択肢が多く、税制・労務・出資比率の前提が複雑で意思決定が止まる。",
+        "solution": "事業内容と将来像から逆算して進出スキームを設計。BOI申請から登記、口座開設、就労ビザ申請まで一気通貫で支援します。",
+        "deliverables": [
+          "進出スキーム比較・選定",
+          "BOI / 商務省登記サポート",
+          "銀行口座開設アレンジ",
+          "就労ビザ・ワークパーミット申請"
+        ],
+        "pricing": "プロジェクト 250,000 THB 〜 (スキームにより変動)"
+      },
+      {
+        "id": "consulting",
+        "index": "03",
+        "title": "経営コンサルティング",
+        "summary": "管理会計、KPI設計、業績改善。数字を経営判断につなぐ実行支援。",
+        "problem": "数字はあるが意思決定に使えていない。本社と現地の認識ギャップが埋まらない。",
+        "solution": "管理会計フレームを再設計し、KPIダッシュボードを整備。月次レビューで仮説検証のサイクルを回します。",
+        "deliverables": [
+          "管理会計設計 (部門別 / 製品別 / 店舗別)",
+          "KPIダッシュボード構築",
+          "月次経営レビュー同席",
+          "業績改善プロジェクトの伴走"
+        ],
+        "pricing": "月額 80,000 THB 〜 / プロジェクト型もご相談可"
+      }
+    ],
+    "cta": {
+      "title": "どのサービスが合うか、まず話してみる。",
+      "description": "サービスの組み合わせや、優先順位の検討も含めて、初回相談で整理します。",
+      "button": "無料相談を予約する"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Pricing",
+      "title": "事業規模に合わせて、\n3つのプランから。",
+      "description": "立ち上げ期から成長期まで。お客様の規模とフェーズに合わせて、必要な機能をお選びいただけます。"
+    },
+    "note": "価格はすべて目安です。事業内容により変動します。詳細はお見積でご提示します。",
+    "recommended": "おすすめ",
+    "plans": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "tagline": "立ち上げ期・小規模オフィス向け",
+        "price": "お問い合わせ",
+        "features": [
+          "月次記帳・試算表作成",
+          "VAT / 源泉申告",
+          "年次法人税申告",
+          "メール / オンラインサポート",
+          "本社向けレポート (英語)"
+        ],
+        "cta": "このプランで相談する"
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "tagline": "従業員30名前後の成長フェーズ向け",
+        "price": "お問い合わせ",
+        "features": [
+          "Standardの全機能",
+          "管理会計 (部門別 / 製品別)",
+          "監査法人対応・調整",
+          "月次経営レビュー (オンライン)",
+          "本社向けレポート (日本語 / 英語)",
+          "クラウド会計の運用設計"
+        ],
+        "cta": "このプランで相談する"
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "tagline": "複数拠点 / 連結対応 / 中堅企業向け",
+        "price": "お問い合わせ",
+        "features": [
+          "Businessの全機能",
+          "連結報告 (日本本社向け)",
+          "複数拠点・複数法人対応",
+          "専任CFOサポート",
+          "KPIダッシュボード構築",
+          "業績改善プロジェクト伴走"
+        ],
+        "cta": "このプランで相談する"
+      }
+    ],
+    "faq": {
+      "title": "よくあるご質問",
+      "items": [
+        { "q": "最短どれくらいで運用開始できますか？", "a": "オンボーディングを経て、最短2週間で月次運用を開始できます。" },
+        { "q": "BOI申請のみの依頼は可能ですか？", "a": "可能です。プロジェクト単位でお受けし、その後の継続運用は任意でご選択いただけます。" },
+        { "q": "日本本社の経理担当と直接連携してもらえますか？", "a": "はい。本社との定例ミーティング・レポート提出を含む運用設計をご相談ください。" },
+        { "q": "途中でプラン変更は可能ですか？", "a": "ご事業のフェーズに合わせて、柔軟にプラン変更が可能です。" },
+        { "q": "契約期間に縛りはありますか？", "a": "月次契約をベースに、年間契約での割引もご用意しています。" }
+      ]
+    }
+  },
+  "cases": {
+    "hero": {
+      "eyebrow": "Cases",
+      "title": "数字の裏にある、\n挑戦のストーリー。",
+      "description": "業種・規模・フェーズの異なる支援事例から、私たちのスタンスを紹介します。"
+    },
+    "filter": {
+      "label": "業種で絞り込む",
+      "all": "すべて"
+    },
+    "empty": "該当する事例が見つかりませんでした。"
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "現場で得た、\n実務の知見を。",
+      "description": "会計・法務・タイ進出ノウハウ・トレンド。現場の解像度のままお届けします。"
+    },
+    "filter": { "label": "カテゴリー", "all": "すべて" },
+    "categories": {
+      "accounting": "会計",
+      "legal": "法務",
+      "expansion": "タイ進出",
+      "trends": "トレンド"
+    },
+    "readMore": "続きを読む",
+    "minRead": "分で読めます",
+    "publishedOn": "公開日",
+    "empty": "該当する記事はまだありません。"
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "Careers",
+      "title": "現在、新規採用は\n行っておりません。",
+      "description": "募集再開時のご連絡や、将来のキャリアに関するご相談は、引き続きお問い合わせフォームより承っております。"
+    },
+    "notice": {
+      "badge": "Hiring Paused",
+      "title": "新規募集は一時停止中です。",
+      "description": "現在、新規ポジションの募集は受け付けておりません。再開のお知らせをご希望の方は、お問い合わせフォームよりご連絡ください。",
+      "cta": "お問い合わせフォームへ"
+    },
+    "office": {
+      "title": "バンコクオフィス",
+      "description": "スクンビット駅徒歩5分、自然光のあふれるオフィスで、日本人・タイ人・各国メンバーが日々ディスカッションしています。",
+      "imagePlaceholder": "オフィス写真 (準備中)"
+    },
+    "positions": {
+      "title": "ご参考: 通常募集している職種",
+      "subtitle": "採用再開時には、以下のポジションを中心に募集を予定しています。",
+      "items": [
+        {
+          "id": "accounting-staff",
+          "title": "経理スタッフ",
+          "type": "正社員",
+          "location": "バンコク",
+          "summary": "日系クライアントの月次記帳・税務申告補助・クライアント対応を担当。日本語必須、英語またはタイ語での実務経験者歓迎。経理実務1〜3年。"
+        },
+        {
+          "id": "consultant-jp",
+          "title": "経理コンサルタント (日本人)",
+          "type": "正社員",
+          "location": "バンコク",
+          "summary": "日系SMEの管理会計設計、月次経営レビュー、KPI構築、業績改善プロジェクトの中核を担います。日本国内での経理実務3年以上、英語ビジネスレベル。"
+        },
+        {
+          "id": "consultant-th",
+          "title": "経理コンサルタント (タイ人)",
+          "type": "正社員",
+          "location": "バンコク",
+          "summary": "タイ現地法人の経理運用設計、TFRSベースの月次クローズ、タイ税務(VAT / 源泉 / 法人税)対応をリード。タイ語ネイティブ・英語ビジネス、日本語歓迎。"
+        }
+      ]
+    },
+    "apply": {
+      "title": "採用再開時のご相談",
+      "description": "募集再開のお知らせや、将来のキャリアに関するご相談を希望される方は、お問い合わせフォームよりご連絡ください。",
+      "button": "お問い合わせフォームへ"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "まずは、\nひとこえください。",
+      "description": "30分のオンライン相談から、現状の整理を一緒に進めます。"
+    },
+    "form": {
+      "title": "お問い合わせフォーム",
+      "name": { "label": "お名前", "placeholder": "山田 太郎", "required": "お名前を入力してください" },
+      "company": { "label": "会社名", "placeholder": "株式会社サンプル", "required": "会社名を入力してください" },
+      "email": { "label": "メールアドレス", "placeholder": "you@example.com", "required": "メールアドレスを入力してください", "invalid": "有効なメールアドレスを入力してください" },
+      "phone": { "label": "電話番号 (任意)", "placeholder": "+66 X XXXX XXXX" },
+      "categories": {
+        "label": "ご相談カテゴリ (複数選択可)",
+        "required": "1つ以上選択してください",
+        "options": [
+          { "value": "accounting", "label": "会計・税務" },
+          { "value": "incorporation", "label": "会社設立支援" },
+          { "value": "consulting", "label": "経営コンサルティング" },
+          { "value": "careers", "label": "採用について" },
+          { "value": "other", "label": "その他" }
+        ]
+      },
+      "message": { "label": "ご相談内容", "placeholder": "現状や、お困りごとを自由にお書きください。", "required": "ご相談内容を入力してください" },
+      "submit": "送信する",
+      "submitting": "送信中...",
+      "success": "送信ありがとうございました。1営業日以内にご返信します。",
+      "error": "送信に失敗しました。時間を置いて再度お試しください。"
+    },
+    "info": {
+      "title": "直接のご連絡もどうぞ",
+      "phone": { "label": "電話", "value": "+66 2 XXX XXXX" },
+      "email": { "label": "メール", "value": "info@miraibizlab.co.th" },
+      "line": { "label": "LINE 公式", "value": "@miraibizlab" },
+      "address": { "label": "所在地", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+      "hours": { "label": "営業時間", "value": "平日 9:00 – 18:00 (バンコク時間)" }
+    },
+    "map": {
+      "title": "オフィス",
+      "placeholder": "地図 (Google Maps embed プレースホルダー)"
+    }
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは移動または削除された可能性があります。",
+    "button": "ホームに戻る"
+  }
+}

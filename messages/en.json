@@ -1,0 +1,407 @@
+{
+  "site": {
+    "name": "MIRAI BizLab",
+    "tagline": "Accounting & Consulting Partner for Japanese SMEs in Bangkok"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "cases": "Cases",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "locale": {
+    "label": "Language",
+    "ja": "JP",
+    "en": "EN",
+    "th": "TH",
+    "jaFull": "日本語",
+    "enFull": "English",
+    "thFull": "ไทย"
+  },
+  "common": {
+    "scroll": "Scroll",
+    "home": "Home",
+    "viewMore": "View details",
+    "back": "Back"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "For Japanese SMEs in Thailand",
+      "title": "For every Japanese SME\nventuring into Thailand.",
+      "subtitle": "Accounting, company setup, and management consulting for Japanese SMEs — delivered as one.",
+      "primaryCta": "Book a free consultation",
+      "secondaryCta": "Explore services"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "A long-term partner\nfor Japanese SMEs in Thailand.",
+      "description": "Fifteen years on the ground in Bangkok. We support Japanese businesses across languages, industries, and growth stages.",
+      "metrics": [
+        { "value": 320, "suffix": "+", "label": "Clients in Thailand" },
+        { "value": 3, "suffix": "", "label": "Languages supported" },
+        { "value": 24, "suffix": "+", "label": "Industries served" },
+        { "value": 180, "suffix": "+", "label": "Companies set up" }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Three pillars\nfor every stage in Thailand.",
+      "items": [
+        { "index": "01", "title": "Accounting & Tax", "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ." },
+        { "index": "02", "title": "Company Setup", "description": "BOI, local entities, and representative offices — we design the entry scheme that fits your business model." },
+        { "index": "03", "title": "Management Consulting", "description": "Management accounting, KPIs, and performance turnaround — we get into the operating reality with you." }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why MIRAI",
+      "title": "Four reasons\nclients choose us.",
+      "reasons": [
+        { "title": "Fully trilingual", "description": "Japanese, English, and Thai delivered by one team — HQ, local staff, and authorities stay in sync." },
+        { "title": "Focused on Japanese SMEs", "description": "We design operations specifically for Japan-affiliated SMEs in Thailand, sharing pitfalls and shortcuts from day one." },
+        { "title": "One-stop", "description": "Accounting, setup, and consulting under one roof — one contact, zero handover loss." },
+        { "title": "Fifteen years on the ground", "description": "Our local network across authorities, banks, and specialists opens the fastest viable route." }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Cases",
+      "title": "Selected work.",
+      "description": "Across industries and growth stages, from Thailand market entry to scaling operations.",
+      "items": [
+        { "industry": "Manufacturing", "scale": "120 employees", "title": "Rebuilt cost accounting at a local plant", "summary": "Closed monthly books 10 days faster and aligned with Japan HQ reporting." },
+        { "industry": "Wholesale & Retail", "scale": "35 employees", "title": "BOI to setup to bank account", "summary": "From the entry decision to opening for business in three months." },
+        { "industry": "IT / SaaS", "scale": "18 employees", "title": "Cross-border billing optimization", "summary": "Designed billing ops that respect VAT, withholding, and transfer pricing." },
+        { "industry": "Hospitality", "scale": "6 outlets", "title": "Store-level P&L and KPI design", "summary": "Visualized unit economics and sped up decision-making." },
+        { "industry": "Healthcare", "scale": "60 employees", "title": "Transition to a local subsidiary", "summary": "Moved from agency contract to a wholly-owned entity with a tighter org structure." },
+        { "industry": "Construction", "scale": "80 employees", "title": "Percentage-of-completion accounting", "summary": "Implemented PoC accounting and improved year-end accuracy." }
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "From first call\nto continuous support.",
+      "steps": [
+        { "title": "Free consultation", "description": "A 30–45 min online call. Share your current state and goals." },
+        { "title": "Deep-dive interview", "description": "We map your numbers, organization, and workflows in detail." },
+        { "title": "Proposal & quote", "description": "Hypothesis, scope, and pricing — clearly on the table." },
+        { "title": "Contract & kickoff", "description": "Onboarding completes and operations start within ~2 weeks." },
+        { "title": "Ongoing support", "description": "Monthly reviews, with quarterly strategy updates layered on top." }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Get in touch",
+      "title": "Start with a\nfree consultation.",
+      "description": "From sharpening the problem to choosing the right entry scheme — 30 minutes is enough to move forward.",
+      "button": "Book a free consultation"
+    }
+  },
+  "footer": {
+    "tagline": "Accelerating Japanese SMEs' ambitions, from Bangkok.",
+    "company": "Company",
+    "services": "Services",
+    "language": "Language",
+    "address": "Bangkok, Thailand",
+    "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
+  },
+  "pages": {
+    "about": { "title": "About", "description": "Our story & leadership" },
+    "services": { "title": "Services", "description": "Detailed service offerings" },
+    "pricing": { "title": "Pricing", "description": "Service plans" },
+    "cases": { "title": "Cases", "description": "Selected work" },
+    "blog": { "title": "Blog", "description": "Insights & know-how" },
+    "careers": { "title": "Careers", "description": "Working at MIRAI BizLab" },
+    "contact": { "title": "Contact", "description": "Get in touch" }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "From Bangkok,\na local choice you can rely on.",
+      "description": "We are the on-the-ground partner for Japanese SMEs taking on Thailand."
+    },
+    "message": {
+      "eyebrow": "Message",
+      "title": "Message from leadership",
+      "name": "Taro Yamada",
+      "role": "Managing Director",
+      "body": [
+        "MIRAI BizLab exists to be the operational footing that helps Japanese companies launch and grow in Thailand.",
+        "Crossing borders means crossing language, regulation, and culture. We unwind those gaps with a fully trilingual team and fifteen years of local experience, so your decisions can move a step faster.",
+        "Tidy numbers are not the goal — they are the starting line for smart decisions. We take on accounting, tax, company setup, and consulting as one package so you can keep your focus on the core business.",
+        "Share with us what you want to achieve in Thailand. We will walk with you well past the entry point."
+      ]
+    },
+    "info": {
+      "eyebrow": "Company",
+      "title": "Company information",
+      "rows": [
+        { "label": "Name", "value": "MIRAI BizLab Co., Ltd." },
+        { "label": "Founded", "value": "April 2010 (Bangkok)" },
+        { "label": "Managing Director", "value": "Taro Yamada" },
+        { "label": "Location", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+        { "label": "Business", "value": "Accounting & tax, company setup, management consulting" },
+        { "label": "Languages", "value": "Japanese / English / ภาษาไทย" },
+        { "label": "Team size", "value": "35 members (as of May 2026)" }
+      ]
+    },
+    "mvv": {
+      "eyebrow": "MVV",
+      "title": "Mission · Vision · Values",
+      "items": [
+        { "key": "mission", "label": "Mission", "title": "Build the footing for ambition.", "description": "Make it possible for Japanese SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management." },
+        { "key": "vision", "label": "Vision", "title": "The first call for Southeast Asia.", "description": "When a Japanese company is about to move in Thailand, MIRAI BizLab is the first number they pick up." },
+        { "key": "values", "label": "Values", "title": "Accurate · Fast · Honest.", "description": "Accurate with numbers, fast in response, honest with people — the obvious things, delivered above the obvious bar." }
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "We take on\nthe business behind your business.",
+      "description": "Accounting & tax, company setup, and management consulting — the operational reality of running in Thailand, handled as one."
+    },
+    "nav": "Service list",
+    "items": [
+      {
+        "id": "accounting",
+        "index": "01",
+        "title": "Accounting & Tax",
+        "summary": "Monthly close, tax filings, audits — aligned with both your Japan HQ and Thai authorities.",
+        "problem": "Accounting handled solely by local staff drifts away from HQ-ready reporting, and tax risk becomes hard to see.",
+        "solution": "We design operations that satisfy both TFRS and your HQ's management accounting needs, accelerating monthly close and visibility through cloud accounting.",
+        "deliverables": [
+          "Monthly bookkeeping and trial balance",
+          "VAT / withholding / corporate tax filings",
+          "Audit firm coordination",
+          "HQ-ready reports (Japanese / English)"
+        ],
+        "pricing": "From THB 50,000 / month (depending on scope)"
+      },
+      {
+        "id": "incorporation",
+        "index": "02",
+        "title": "Company Setup",
+        "summary": "BOI, local entities, representative offices — from entry scheme design to bank account opening.",
+        "problem": "Too many entry options, with complex assumptions around tax, labor, and shareholding, stall the decision.",
+        "solution": "We design the right entry scheme from your business outcome backwards — and own BOI, registration, bank accounts, and visas end to end.",
+        "deliverables": [
+          "Entry scheme comparison and selection",
+          "BOI / Ministry of Commerce registration",
+          "Bank account opening",
+          "Work permit and visa application"
+        ],
+        "pricing": "From THB 250,000 per project (depending on scheme)"
+      },
+      {
+        "id": "consulting",
+        "index": "03",
+        "title": "Management Consulting",
+        "summary": "Management accounting, KPI design, and performance turnaround — turning numbers into decisions.",
+        "problem": "Numbers exist, but don't drive decisions. The understanding gap between HQ and the local team won't close.",
+        "solution": "We redesign management accounting, build the KPI dashboard, and run monthly reviews that complete a real hypothesis-validation loop.",
+        "deliverables": [
+          "Management accounting design (segment / product / store)",
+          "KPI dashboard build",
+          "Monthly business review attendance",
+          "Performance improvement project support"
+        ],
+        "pricing": "From THB 80,000 / month (project-based available)"
+      }
+    ],
+    "cta": {
+      "title": "Not sure which service fits? Talk it through first.",
+      "description": "We will sort through the combinations and priorities together on a first call.",
+      "button": "Book a free consultation"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Pricing",
+      "title": "Three plans,\nshaped to your stage.",
+      "description": "From launch to growth, choose the bundle that matches your size and ambition."
+    },
+    "note": "All prices are indicative. Final pricing depends on scope and will be presented in a quotation.",
+    "recommended": "Recommended",
+    "plans": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "tagline": "For new offices and small teams",
+        "price": "Contact us",
+        "features": [
+          "Monthly bookkeeping and trial balance",
+          "VAT / withholding filings",
+          "Annual corporate tax filing",
+          "Email / online support",
+          "HQ-ready report (English)"
+        ],
+        "cta": "Talk about this plan"
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "tagline": "For ~30-person growth-stage teams",
+        "price": "Contact us",
+        "features": [
+          "Everything in Standard",
+          "Management accounting (segment / product)",
+          "Audit firm coordination",
+          "Monthly online business review",
+          "HQ-ready report (Japanese / English)",
+          "Cloud accounting operations"
+        ],
+        "cta": "Talk about this plan"
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "tagline": "For mid-size, multi-entity organizations",
+        "price": "Contact us",
+        "features": [
+          "Everything in Business",
+          "Consolidated reporting for Japan HQ",
+          "Multi-entity / multi-site support",
+          "Dedicated CFO-level support",
+          "KPI dashboard build",
+          "Performance improvement projects"
+        ],
+        "cta": "Talk about this plan"
+      }
+    ],
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "How fast can we go live?", "a": "We can kick off monthly operations as soon as two weeks after onboarding." },
+        { "q": "Can we engage you only for a BOI application?", "a": "Yes. We accept project-based work, and continuing operations afterward is optional." },
+        { "q": "Will you coordinate directly with our Japan HQ?", "a": "Yes — regular meetings and HQ-ready reporting are part of the operating design." },
+        { "q": "Can we change plans midway?", "a": "Yes. We adjust the plan as your business stage evolves." },
+        { "q": "Is there a minimum commitment?", "a": "We work on a monthly basis, with discounts for annual commitments." }
+      ]
+    }
+  },
+  "cases": {
+    "hero": {
+      "eyebrow": "Cases",
+      "title": "Stories of ambition,\nbehind the numbers.",
+      "description": "Selected work across industries, sizes, and growth stages."
+    },
+    "filter": { "label": "Filter by industry", "all": "All" },
+    "empty": "No cases match this filter."
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Field-tested\noperating know-how.",
+      "description": "Accounting, legal, Thailand entry know-how, and trends — delivered at the resolution we actually work at."
+    },
+    "filter": { "label": "Category", "all": "All" },
+    "categories": {
+      "accounting": "Accounting",
+      "legal": "Legal",
+      "expansion": "Thailand Entry",
+      "trends": "Trends"
+    },
+    "readMore": "Read more",
+    "minRead": "min read",
+    "publishedOn": "Published",
+    "empty": "No articles yet."
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "Careers",
+      "title": "We are not\ncurrently hiring.",
+      "description": "We continue to welcome inquiries about future opportunities through our contact form."
+    },
+    "notice": {
+      "badge": "Hiring Paused",
+      "title": "Open positions are temporarily on hold.",
+      "description": "We are not accepting applications at the moment. If you'd like to be notified when hiring resumes, please reach out via the contact form.",
+      "cta": "Go to contact form"
+    },
+    "office": {
+      "title": "Our Bangkok office",
+      "description": "Five minutes from Sukhumvit station, our daylit office is where Japanese, Thai, and international colleagues think out loud every day.",
+      "imagePlaceholder": "Office photo (coming soon)"
+    },
+    "positions": {
+      "title": "For reference: roles we typically hire for",
+      "subtitle": "When hiring resumes, we plan to focus on the following positions.",
+      "items": [
+        {
+          "id": "accounting-staff",
+          "title": "Accounting Staff",
+          "type": "Full-time",
+          "location": "Bangkok",
+          "summary": "Handle monthly bookkeeping, tax-filing support, and client communication for our Japanese clientele. Japanese required; working English or Thai a plus. 1–3 years of accounting experience."
+        },
+        {
+          "id": "consultant-jp",
+          "title": "Accounting Consultant (Japanese national)",
+          "type": "Full-time",
+          "location": "Bangkok",
+          "summary": "Own management accounting design, monthly business reviews, KPI builds, and performance-improvement projects for Japanese SMEs. 3+ years of accounting experience in Japan; business-level English."
+        },
+        {
+          "id": "consultant-th",
+          "title": "Accounting Consultant (Thai national)",
+          "type": "Full-time",
+          "location": "Bangkok",
+          "summary": "Lead accounting operations design for local entities, TFRS-based monthly close, and Thai tax compliance (VAT / withholding / corporate). Native Thai, business English; Japanese a strong plus."
+        }
+      ]
+    },
+    "apply": {
+      "title": "Stay in touch",
+      "description": "If you'd like updates on future openings or want to discuss your career, please reach us through the contact form.",
+      "button": "Go to contact form"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Start with a\nshort conversation.",
+      "description": "A 30-minute online call is enough to organize the current picture together."
+    },
+    "form": {
+      "title": "Contact form",
+      "name": { "label": "Name", "placeholder": "Taro Yamada", "required": "Please enter your name" },
+      "company": { "label": "Company", "placeholder": "Sample Inc.", "required": "Please enter your company name" },
+      "email": { "label": "Email", "placeholder": "you@example.com", "required": "Please enter your email", "invalid": "Please enter a valid email" },
+      "phone": { "label": "Phone (optional)", "placeholder": "+66 X XXXX XXXX" },
+      "categories": {
+        "label": "What is this about? (select all that apply)",
+        "required": "Please select at least one option",
+        "options": [
+          { "value": "accounting", "label": "Accounting & Tax" },
+          { "value": "incorporation", "label": "Company Setup" },
+          { "value": "consulting", "label": "Management Consulting" },
+          { "value": "careers", "label": "Careers" },
+          { "value": "other", "label": "Other" }
+        ]
+      },
+      "message": { "label": "Message", "placeholder": "Tell us where you are and what's getting in the way.", "required": "Please enter your message" },
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": "Thank you. We will reply within one business day.",
+      "error": "Sending failed. Please try again later."
+    },
+    "info": {
+      "title": "Or reach us directly",
+      "phone": { "label": "Phone", "value": "+66 2 XXX XXXX" },
+      "email": { "label": "Email", "value": "info@miraibizlab.co.th" },
+      "line": { "label": "LINE Official", "value": "@miraibizlab" },
+      "address": { "label": "Address", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+      "hours": { "label": "Hours", "value": "Weekdays 9:00 – 18:00 (Bangkok)" }
+    },
+    "map": {
+      "title": "Office",
+      "placeholder": "Map (Google Maps embed placeholder)"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for may have moved or been removed.",
+    "button": "Back to home"
+  }
+}
