@@ -41,19 +41,20 @@
       "title": "A long-term partner\nfor Japanese SMEs in Thailand.",
       "description": "Fifteen years on the ground in Bangkok. We support Japanese businesses across languages, industries, and growth stages.",
       "metrics": [
-        { "value": 320, "suffix": "+", "label": "Clients in Thailand" },
+        { "value": 30, "suffix": "", "label": "Clients in Thailand" },
         { "value": 3, "suffix": "", "label": "Languages supported" },
         { "value": 24, "suffix": "+", "label": "Industries served" },
-        { "value": 180, "suffix": "+", "label": "Companies set up" }
+        { "value": 120, "suffix": "+", "label": "Companies set up" }
       ]
     },
     "services": {
       "eyebrow": "Services",
-      "title": "Three pillars\nfor every stage in Thailand.",
+      "title": "Four pillars\nfor every stage in Thailand.",
       "items": [
-        { "index": "01", "title": "Accounting & Tax", "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ." },
-        { "index": "02", "title": "Company Setup", "description": "BOI, local entities, and representative offices — we design the entry scheme that fits your business model." },
-        { "index": "03", "title": "Management Consulting", "description": "Management accounting, KPIs, and performance turnaround — we get into the operating reality with you." }
+        { "index": "01", "title": "Company Setup", "description": "BOI, local entities, and representative offices — we design the entry scheme that fits your business model." },
+        { "index": "02", "title": "Accounting & Tax", "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ." },
+        { "index": "03", "title": "Accounting System Implementation", "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ." },
+        { "index": "04", "title": "Management Consulting", "description": "Management accounting, KPIs, and performance turnaround — we get into the operating reality with you." }
       ]
     },
     "why": {
@@ -164,23 +165,8 @@
     "nav": "Service list",
     "items": [
       {
-        "id": "accounting",
-        "index": "01",
-        "title": "Accounting & Tax",
-        "summary": "Monthly close, tax filings, audits — aligned with both your Japan HQ and Thai authorities.",
-        "problem": "Accounting handled solely by local staff drifts away from HQ-ready reporting, and tax risk becomes hard to see.",
-        "solution": "We design operations that satisfy both TFRS and your HQ's management accounting needs, accelerating monthly close and visibility through cloud accounting.",
-        "deliverables": [
-          "Monthly bookkeeping and trial balance",
-          "VAT / withholding / corporate tax filings",
-          "Audit firm coordination",
-          "HQ-ready reports (Japanese / English)"
-        ],
-        "pricing": "From THB 50,000 / month (depending on scope)"
-      },
-      {
         "id": "incorporation",
-        "index": "02",
+        "index": "01",
         "title": "Company Setup",
         "summary": "BOI, local entities, representative offices — from entry scheme design to bank account opening.",
         "problem": "Too many entry options, with complex assumptions around tax, labor, and shareholding, stall the decision.",
@@ -194,8 +180,38 @@
         "pricing": "From THB 250,000 per project (depending on scheme)"
       },
       {
-        "id": "consulting",
+        "id": "accounting",
+        "index": "02",
+        "title": "Accounting & Tax",
+        "summary": "Monthly close, tax filings, audits — aligned with both your Japan HQ and Thai authorities.",
+        "problem": "Accounting handled solely by local staff drifts away from HQ-ready reporting, and tax risk becomes hard to see.",
+        "solution": "We design operations that satisfy both TFRS and your HQ's management accounting needs, accelerating monthly close and visibility through cloud accounting.",
+        "deliverables": [
+          "Monthly bookkeeping and trial balance",
+          "VAT / withholding / corporate tax filings",
+          "Audit firm coordination",
+          "HQ-ready reports (Japanese / English)"
+        ],
+        "pricing": "From THB 50,000 / month (depending on scope)"
+      },
+      {
+        "id": "accounting-system",
         "index": "03",
+        "title": "Accounting System Implementation",
+        "summary": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ.",
+        "problem": "You want to roll out a cloud or ERP, but no one can design a setup that satisfies local operations and HQ-grade management accounting at once. Manual work and Excel survive after go-live.",
+        "solution": "We evaluate QuickBooks / Xero / freee / Money Forward / SAP B1 against your operating needs and budget, redesign chart-of-accounts and department codes, and build a flow that automates up to 80% of monthly close.",
+        "deliverables": [
+          "System selection (cloud / ERP)",
+          "Chart-of-accounts and department code redesign",
+          "Monthly close automation flow",
+          "Training for local staff and HQ accounting"
+        ],
+        "pricing": "From THB 200,000 per project (varies by scope and target system)"
+      },
+      {
+        "id": "consulting",
+        "index": "04",
         "title": "Management Consulting",
         "summary": "Management accounting, KPI design, and performance turnaround — turning numbers into decisions.",
         "problem": "Numbers exist, but don't drive decisions. The understanding gap between HQ and the local team won't close.",

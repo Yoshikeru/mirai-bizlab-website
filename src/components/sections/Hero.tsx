@@ -48,7 +48,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-background/95 via-background/70 to-background/0 md:from-background/92 md:via-background/55 md:to-transparent"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-(--container-wide) grid-cols-1 items-center gap-14 px-6 pt-32 pb-28 md:grid-cols-12 md:gap-10 md:pt-40">
+      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-(--container-wide) grid-cols-1 items-center gap-14 px-6 pt-16 pb-24 md:grid-cols-12 md:gap-10 md:pt-20">
         <motion.div
           className="md:col-span-7"
           style={reduce ? undefined : { opacity: textOpacity, y: textY }}

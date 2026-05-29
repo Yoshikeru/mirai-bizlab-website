@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Calculator, LineChart } from "lucide-react";
+import { Building2, Calculator, Database, LineChart } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
@@ -8,7 +8,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 type ServiceItem = { index: string; title: string; description: string };
 
-const ICONS = [Calculator, Building2, LineChart];
+// 01 会社設立 / 02 会計・税務 / 03 会計システム / 04 経営コンサル
+const ICONS = [Building2, Calculator, Database, LineChart];
 
 export function Services() {
   const t = useTranslations("home.services");
@@ -19,7 +20,7 @@ export function Services() {
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-3 md:gap-8">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2 md:gap-7 lg:grid-cols-4 lg:gap-6">
           {items.map((item, index) => {
             const Icon = ICONS[index] ?? Calculator;
             return (

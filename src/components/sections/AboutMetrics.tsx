@@ -12,6 +12,7 @@ type Metric = { value: number; suffix: string; label: string };
 export function AboutMetrics() {
   const t = useTranslations("home.about");
   const metrics = t.raw("metrics") as Metric[];
+  const total = metrics.length;
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const reduce = useReducedMotion();
@@ -64,7 +65,12 @@ export function AboutMetrics() {
             className="flex w-max gap-8 px-6 will-change-transform lg:gap-10"
           >
             {metrics.map((metric, index) => (
-              <MetricCard key={metric.label} metric={metric} index={index} />
+              <MetricCard
+                key={metric.label}
+                metric={metric}
+                index={index}
+                total={total}
+              />
             ))}
           </motion.ul>
         </div>
@@ -72,7 +78,13 @@ export function AboutMetrics() {
         {/* mobile: stacked grid */}
         <ul className="mx-auto mt-12 grid w-full max-w-(--container-content) grid-cols-2 gap-4 px-6 pb-20 md:hidden">
           {metrics.map((metric, index) => (
-            <MetricCard key={metric.label} metric={metric} index={index} compact />
+            <MetricCard
+              key={metric.label}
+              metric={metric}
+              index={index}
+              total={total}
+              compact
+            />
           ))}
         </ul>
       </div>
@@ -83,12 +95,17 @@ export function AboutMetrics() {
 function MetricCard({
   metric,
   index,
+  total,
   compact = false,
 }: {
   metric: Metric;
   index: number;
+  total: number;
   compact?: boolean;
 }) {
+  const idx = String(index + 1).padStart(2, "0");
+  const totalStr = String(total).padStart(2, "0");
+
   return (
     <motion.li
       initial={{ opacity: 0, y: 30 }}
@@ -99,17 +116,44 @@ function MetricCard({
         ease: [0.22, 1, 0.36, 1],
         delay: index * 0.08,
       }}
-      className={`group relative flex flex-col justify-between rounded-3xl border border-[color:var(--color-border)] bg-white p-6 transition-shadow duration-300 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] ${
-        compact ? "aspect-square" : "h-[320px] w-[300px] sm:w-[360px] lg:h-[380px] lg:w-[400px]"
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white p-6 transition-shadow duration-300 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] ${
+        compact
+          ? "aspect-square"
+          : "h-[320px] w-[300px] sm:w-[360px] lg:h-[380px] lg:w-[400px]"
       }`}
     >
-      <span className="text-xs font-mono tracking-widest text-[color:var(--color-muted)]">
-        {String(index + 1).padStart(2, "0")}
+      {/* Giant faint background numeral (fills the empty space) */}
+      <span
+        aria-hidden
+        className={`pointer-events-none absolute select-none font-black tabular-nums leading-none text-[color:var(--color-accent)]/[0.05] ${
+          compact
+            ? "-right-1 -bottom-4 text-[8rem]"
+            : "-right-2 -bottom-12 text-[15rem] lg:-bottom-16 lg:text-[19rem]"
+        }`}
+      >
+        {idx}
       </span>
-      <div>
+
+      {/* Top row: index pagination + diagonal mark */}
+      <div className="relative flex items-start justify-between">
+        <span className="typo-eyebrow font-mono">
+          {idx}
+          <span className="mx-1 text-[color:var(--color-muted)]">/</span>
+          <span className="text-[color:var(--color-muted)]">{totalStr}</span>
+        </span>
+        <span
+          aria-hidden
+          className={`block bg-[color:var(--color-accent)] ${
+            compact ? "h-px w-6" : "h-px w-10 lg:w-14"
+          }`}
+        />
+      </div>
+
+      {/* Middle: animated value */}
+      <div className="relative">
         <div
-          className={`flex items-baseline font-bold tabular-nums text-foreground ${
-            compact ? "text-4xl" : "text-6xl lg:text-7xl"
+          className={`flex items-baseline gap-1 font-bold tracking-tight tabular-nums text-foreground ${
+            compact ? "text-4xl" : "text-7xl lg:text-[5.5rem]"
           }`}
         >
           <AnimatedNumber value={metric.value} suffix={metric.suffix} />
@@ -122,10 +166,23 @@ function MetricCard({
           {metric.label}
         </p>
       </div>
-      <span
-        aria-hidden
-        className="absolute right-6 bottom-6 block h-[2px] w-10 origin-left bg-[color:var(--color-accent)] transition-transform duration-300 group-hover:scale-x-[1.6]"
-      />
+
+      {/* Bottom decoration: stepped tick marks */}
+      <div className="relative flex items-end justify-between">
+        <div className="flex items-end gap-[3px]">
+          {Array.from({ length: compact ? 5 : 8 }).map((_, i) => (
+            <span
+              key={i}
+              aria-hidden
+              className="block w-px bg-foreground/15"
+              style={{ height: `${6 + (i % 4) * 4}px` }}
+            />
+          ))}
+        </div>
+        <span className="typo-caption font-mono text-[10px] tracking-[0.32em] text-[color:var(--color-muted)] uppercase">
+          IN&nbsp;TH
+        </span>
+      </div>
     </motion.li>
   );
 }
