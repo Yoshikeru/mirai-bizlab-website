@@ -38,7 +38,7 @@ const schema = {
       "@type": "ContactPoint",
       telephone: "+66-2-088-8539",
       contactType: "customer service",
-      email: "info@miraibizlab.co.th",
+      email: "contact@miraibizlab.co.th",
       availableLanguage: ["Japanese", "English", "Thai"],
       areaServed: "TH",
     },

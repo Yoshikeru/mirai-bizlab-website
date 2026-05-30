@@ -228,15 +228,31 @@ public/assets/logo/
 - フィーチャーブランチで自動的にプレビュー URL が発行されます
 - プレビュー環境にも環境変数を継承するには **Environment Variables** で `Preview` を選択
 
-### 問い合わせフォームの本実装
+### 問い合わせフォームの稼働 (Resend設定)
 
-現状 `src/app/api/contact/route.ts` は受信内容を `console.log` するのみです。本番運用前に以下のいずれかに置き換えてください:
+`src/app/api/contact/route.ts` は [Resend](https://resend.com) によるメール送信に対応済みです。Vercel の環境変数に下記を設定すれば、即座にメール通知が始まります。
 
-- **メール送信**: [Resend](https://resend.com), [SendGrid](https://sendgrid.com) 等のAPIで `CONTACT_NOTIFY_EMAIL` 宛に転送
-- **Slack 通知**: Incoming Webhook (`CONTACT_SLACK_WEBHOOK`) で営業チャンネルに投稿
-- **CRM 連携**: HubSpot / Salesforce / Zoho などの API に同期
+| 変数名 | 用途 | 例 |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Resend の API キー (必須) | `re_xxxxxxxxxxxxxxxxxxxx` |
+| `CONTACT_NOTIFY_EMAIL` | お問い合わせの通知先メール | `yoshida@miraibizlab.co.th` |
+| `CONTACT_FROM_EMAIL` | (任意) ドメイン認証後の差出人 | `MIRAI BizLab <contact@miraibizlab.co.th>` |
 
-実装後は `.env.local.example` を更新し、Vercel の Environment Variables にも反映してください。
+#### セットアップ手順
+
+1. [https://resend.com](https://resend.com) でサインアップ
+2. **API Keys → Create API Key** で `re_...` を発行 → コピー
+3. Vercel ダッシュボード → プロジェクト → **Settings → Environment Variables** で上記3変数を Production / Preview / Development に追加
+4. (任意) 自社ドメイン `miraibizlab.co.th` を Resend の **Domains** で認証 (DNS にTXT/MX/DKIMを追加) → 認証完了後に `CONTACT_FROM_EMAIL` を `contact@miraibizlab.co.th` 経由に変更
+5. 設定後、再デプロイ (`npx vercel --prod`) で反映
+
+> **`RESEND_API_KEY` 未設定時**は console.log フォールバックで動作し、本番ビルドは通ります (メール送信されません)。
+
+#### 動作確認
+
+- フォーム送信 → 200 OK + `{ ok: true, delivery: "email" }` レスポンス
+- `CONTACT_NOTIFY_EMAIL` に件名 `[MIRAI BizLab] お問い合わせ from ...` のHTMLメールが届く
+- `reply-to` がお客様のメールに設定されているので、メールアプリの「返信」でそのまま顧客に返信できます
 
 ---
 

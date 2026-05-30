@@ -408,7 +408,7 @@
     "info": {
       "title": "直接のご連絡もどうぞ",
       "phone": { "label": "電話", "value": "02-088-8539" },
-      "email": { "label": "メール", "value": "info@miraibizlab.co.th" },
+      "email": { "label": "メール", "value": "contact@miraibizlab.co.th" },
       "line": { "label": "LINE 公式", "value": "@miraibizlab", "url": "https://lin.ee/yPi5Yoq" },
       "address": { "label": "所在地", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
       "hours": { "label": "営業時間", "value": "平日 9:00 – 18:00 (バンコク時間)" }
