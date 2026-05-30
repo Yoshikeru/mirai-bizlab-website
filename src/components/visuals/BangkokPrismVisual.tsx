@@ -2,8 +2,18 @@
 
 import { motion, useReducedMotion } from "motion/react";
 
+import { THAILAND_PATH } from "./thailand-outline";
+
 const BANGKOK = { x: 905, y: 595 };
 const NUM_BEAMS = 36;
+
+// mapsicon native coordinate (post-transform) of Bangkok area, eyeballed and
+// confirmed visually. Used to map the 1024-unit map into our 1600x1000 viewBox
+// so that BANGKOK on the map aligns with our BANGKOK constant.
+const MAP_BANGKOK = { x: 480, y: 580 };
+const MAP_SCALE = 0.72;
+const MAP_OFFSET_X = BANGKOK.x - MAP_BANGKOK.x * MAP_SCALE;
+const MAP_OFFSET_Y = BANGKOK.y - MAP_BANGKOK.y * MAP_SCALE;
 
 // Prism palette: warm red base, fanned across orange / amber / pink / cool light
 const PRISM_HUES = [355, 0, 6, 14, 22, 32, 44, 58, 188, 210, 248, 286, 320, 340];
@@ -202,46 +212,8 @@ export function BangkokPrismVisual() {
           <circle cx={BANGKOK.x - 8} cy={BANGKOK.y - 24} r={4} fill="#1A1A1A" />
         </motion.g>
 
-        {/* Thailand silhouette — refined smooth path */}
-        <motion.path
-          d="
-            M 870 195
-            C 905 192 938 200 962 220
-            C 988 240 1006 264 1024 290
-            C 1044 312 1066 322 1090 332
-            C 1118 342 1148 350 1172 368
-            C 1196 386 1214 414 1224 440
-            C 1232 466 1232 492 1224 514
-            C 1216 538 1196 556 1170 564
-            C 1140 572 1106 572 1074 568
-            C 1042 564 1010 562 982 572
-            C 962 580 952 596 956 614
-            C 962 628 956 642 938 644
-            C 920 644 906 638 902 624
-            C 900 612 906 600 905 595
-            L 905 595
-            C 895 632 890 670 886 710
-            C 882 748 878 786 874 822
-            C 870 854 868 882 870 906
-            C 874 928 886 942 904 944
-            C 922 944 934 932 938 910
-            C 940 884 938 854 934 822
-            C 930 786 924 748 918 710
-            C 912 670 906 632 905 595
-            L 905 595
-            C 902 580 894 564 880 552
-            C 858 538 832 524 808 510
-            C 778 494 752 472 734 444
-            C 716 416 706 384 706 350
-            C 706 318 714 286 730 260
-            C 750 232 786 210 822 200
-            C 838 196 854 195 870 195 Z
-          "
-          fill="url(#thailand-fill)"
-          stroke="#3A3A3A"
-          strokeWidth="2.2"
-          strokeLinejoin="round"
-          strokeLinecap="round"
+        {/* Thailand silhouette — real geographic outline (mapsicon, MIT) */}
+        <motion.g
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -249,7 +221,22 @@ export function BangkokPrismVisual() {
             ease: [0.22, 1, 0.36, 1],
           }}
           style={{ transformOrigin: `${BANGKOK.x}px ${BANGKOK.y}px` }}
-        />
+        >
+          <g
+            transform={`translate(${MAP_OFFSET_X} ${MAP_OFFSET_Y}) scale(${MAP_SCALE})`}
+          >
+            <g transform="translate(0 1024) scale(0.1 -0.1)">
+              <path
+                d={THAILAND_PATH}
+                fill="url(#thailand-fill)"
+                stroke="#2A2A2A"
+                strokeWidth={14}
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </g>
+          </g>
+        </motion.g>
 
         {/* Major cities — visible dots */}
         <g>

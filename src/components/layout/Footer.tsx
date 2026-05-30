@@ -88,17 +88,6 @@ export function Footer() {
           <p className="text-xs text-[color:var(--color-muted)]">
             {t("copyright", { year })}
           </p>
-          <p className="text-xs text-[color:var(--color-muted)]">
-            Photos by{" "}
-            <a
-              href="https://unsplash.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-[color:var(--color-accent)]"
-            >
-              Unsplash
-            </a>
-          </p>
           <Image
             src="/assets/logo/Logo_MIRAI_BizLab1.png"
             alt={site("name")}

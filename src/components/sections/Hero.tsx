@@ -69,7 +69,13 @@ export function Hero() {
               ease: [0.22, 1, 0.36, 1],
               delay: 0.1,
             }}
-            className="typo-display mt-7 whitespace-pre-line"
+            className="mt-7 whitespace-pre-line font-extrabold tracking-[-0.025em]"
+            style={{
+              fontFamily:
+                "var(--font-sans-display), var(--font-sans-jp), sans-serif",
+              fontSize: "clamp(2rem, 4.4vw, 4rem)",
+              lineHeight: 1.1,
+            }}
           >
             {t("title")}
           </motion.h1>
