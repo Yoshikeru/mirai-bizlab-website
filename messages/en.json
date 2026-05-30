@@ -103,7 +103,7 @@
     "company": "Company",
     "services": "Services",
     "language": "Language",
-    "address": "Bangkok, Thailand",
+    "address": "Samutprakarn, Thailand",
     "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
   },
   "pages": {
@@ -124,7 +124,7 @@
     "message": {
       "eyebrow": "Message",
       "title": "Message from leadership",
-      "name": "Taro Yamada",
+      "name": "Takuro Yoshida",
       "role": "Managing Director",
       "body": [
         "MIRAI BizLab exists to be the operational footing that helps Japanese companies launch and grow in Thailand.",
@@ -139,11 +139,11 @@
       "rows": [
         { "label": "Name", "value": "MIRAI BizLab Co., Ltd." },
         { "label": "Founded", "value": "April 2010 (Bangkok)" },
-        { "label": "Managing Director", "value": "Taro Yamada" },
-        { "label": "Location", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+        { "label": "Managing Director", "value": "Takuro Yoshida" },
+        { "label": "Location", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
         { "label": "Business", "value": "Accounting & tax, company setup, management consulting" },
         { "label": "Languages", "value": "Japanese / English / ภาษาไทย" },
-        { "label": "Team size", "value": "35 members (as of May 2026)" }
+        { "label": "Team size", "value": "7 members (as of May 2026)" }
       ]
     },
     "mvv": {
@@ -151,8 +151,8 @@
       "title": "Mission · Vision · Values",
       "items": [
         { "key": "mission", "label": "Mission", "title": "Build the footing for ambition.", "description": "Make it possible for Japanese SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management." },
-        { "key": "vision", "label": "Vision", "title": "The first call for Southeast Asia.", "description": "When a Japanese company is about to move in Thailand, MIRAI BizLab is the first number they pick up." },
-        { "key": "values", "label": "Values", "title": "Accurate · Fast · Honest.", "description": "Accurate with numbers, fast in response, honest with people — the obvious things, delivered above the obvious bar." }
+        { "key": "vision", "label": "Vision", "title": "The right adviser for Bangkok, Thailand.", "description": "When a Japanese company is about to make a move in Bangkok, MIRAI BizLab is the first name they reach out to." },
+        { "key": "values", "label": "Values", "title": "Fast · Approachable · Honest.", "description": "Fast in response, easy to reach out to, honest with people — the obvious things, delivered at a refreshing pace." }
       ]
     }
   },
@@ -407,7 +407,7 @@
       "phone": { "label": "Phone", "value": "+66 2 XXX XXXX" },
       "email": { "label": "Email", "value": "info@miraibizlab.co.th" },
       "line": { "label": "LINE Official", "value": "@miraibizlab" },
-      "address": { "label": "Address", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+      "address": { "label": "Address", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
       "hours": { "label": "Hours", "value": "Weekdays 9:00 – 18:00 (Bangkok)" }
     },
     "map": {

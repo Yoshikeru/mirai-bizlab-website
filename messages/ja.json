@@ -103,7 +103,7 @@
     "company": "会社情報",
     "services": "サービス",
     "language": "言語",
-    "address": "Bangkok, Thailand",
+    "address": "Samutprakarn, Thailand",
     "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
   },
   "pages": {
@@ -124,7 +124,7 @@
     "message": {
       "eyebrow": "Message",
       "title": "代表挨拶",
-      "name": "Taro Yamada",
+      "name": "Takuro Yoshida 吉田 拓郎",
       "role": "代表取締役 / Managing Director",
       "body": [
         "MIRAI BizLab は、日本企業がタイで事業を立ち上げ、伸ばしていくための「足場」になることを目指しています。",
@@ -139,11 +139,11 @@
       "rows": [
         { "label": "社名", "value": "MIRAI BizLab Co., Ltd." },
         { "label": "設立", "value": "2010年4月 (バンコク)" },
-        { "label": "代表者", "value": "Taro Yamada" },
-        { "label": "所在地", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+        { "label": "代表者", "value": "Takuro Yoshida 吉田 拓郎" },
+        { "label": "所在地", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
         { "label": "事業内容", "value": "会計・税務、会社設立支援、経営コンサルティング" },
         { "label": "対応言語", "value": "日本語 / English / ภาษาไทย" },
-        { "label": "在籍人数", "value": "35名 (2026年5月時点)" }
+        { "label": "在籍人数", "value": "7名 (2026年5月時点)" }
       ]
     },
     "mvv": {
@@ -151,8 +151,8 @@
       "title": "Mission · Vision · Values",
       "items": [
         { "key": "mission", "label": "Mission", "title": "挑戦の足場をつくる。", "description": "日系SMEが、タイで地に足のついた挑戦ができるよう、経理・税務・経営の足場を整える。" },
-        { "key": "vision", "label": "Vision", "title": "東南アジア進出の、最初の電話番号に。", "description": "「タイで動くなら、まずMIRAI BizLabに相談する」 そう言われるパートナーになる。" },
-        { "key": "values", "label": "Values", "title": "正確 · 速さ · 誠実。", "description": "数字に正確に、対応に速く、人に誠実に。当たり前のことを当たり前以上の精度で。" }
+        { "key": "vision", "label": "Vision", "title": "タイ・バンコク進出の相談役に最適。", "description": "「バンコクで動くなら、まずMIRAI BizLabに相談する」 そう言われるパートナーになる。" },
+        { "key": "values", "label": "Values", "title": "速さ・気軽さ・誠実さ", "description": "対応に速く、いつでも気軽に、人に誠実に。当たり前のことを、気持ちのいいスピード感で。" }
       ]
     }
   },
@@ -410,7 +410,7 @@
       "phone": { "label": "電話", "value": "+66 2 XXX XXXX" },
       "email": { "label": "メール", "value": "info@miraibizlab.co.th" },
       "line": { "label": "LINE 公式", "value": "@miraibizlab" },
-      "address": { "label": "所在地", "value": "Sukhumvit Rd., Bangkok, Thailand" },
+      "address": { "label": "所在地", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
       "hours": { "label": "営業時間", "value": "平日 9:00 – 18:00 (バンコク時間)" }
     },
     "map": {
