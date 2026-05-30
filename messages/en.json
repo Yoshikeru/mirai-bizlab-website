@@ -404,9 +404,9 @@
     },
     "info": {
       "title": "Or reach us directly",
-      "phone": { "label": "Phone", "value": "+66 2 XXX XXXX" },
+      "phone": { "label": "Phone", "value": "02-088-8539" },
       "email": { "label": "Email", "value": "info@miraibizlab.co.th" },
-      "line": { "label": "LINE Official", "value": "@miraibizlab" },
+      "line": { "label": "LINE Official", "value": "@miraibizlab", "url": "https://lin.ee/yPi5Yoq" },
       "address": { "label": "Address", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
       "hours": { "label": "Hours", "value": "Weekdays 9:00 – 18:00 (Bangkok)" }
     },

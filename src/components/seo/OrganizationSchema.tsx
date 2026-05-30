@@ -36,7 +36,7 @@ const schema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+66-2-XXX-XXXX",
+      telephone: "+66-2-088-8539",
       contactType: "customer service",
       email: "info@miraibizlab.co.th",
       availableLanguage: ["Japanese", "English", "Thai"],

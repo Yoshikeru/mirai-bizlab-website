@@ -28,6 +28,13 @@ export function Footer() {
   const email = contactInfo("email.value");
   const phone = contactInfo("phone.value");
   const line = contactInfo("line.value");
+  const lineUrl = (() => {
+    try {
+      return contactInfo("line.url");
+    } catch {
+      return "";
+    }
+  })();
 
   return (
     <footer className="border-t border-[color:var(--color-border)] bg-background">
@@ -52,14 +59,26 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${phone.replace(/\s+/g, "")}`}
+                  href={`tel:${phone.replace(/[^\d+]/g, "")}`}
                   className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
                 >
                   {phone}
                 </a>
               </li>
               <li className="text-[color:var(--color-muted)]">
-                LINE: <span className="text-foreground">{line}</span>
+                LINE:{" "}
+                {lineUrl ? (
+                  <a
+                    href={lineUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
+                  >
+                    {line}
+                  </a>
+                ) : (
+                  <span className="text-foreground">{line}</span>
+                )}
               </li>
             </ul>
           </div>
