@@ -140,7 +140,8 @@
         { "label": "社名", "value": "MIRAI BizLab Co., Ltd." },
         { "label": "設立", "value": "2010年4月 (バンコク)" },
         { "label": "代表者", "value": "Takuro Yoshida 吉田 拓郎" },
-        { "label": "所在地", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
+        { "label": "本社", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
+        { "label": "バンコクオフィス", "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110" },
         { "label": "事業内容", "value": "会計・税務、会社設立支援、経営コンサルティング" },
         { "label": "対応言語", "value": "日本語 / English / ภาษาไทย" },
         { "label": "在籍人数", "value": "7名 (2026年5月時点)" }
@@ -410,7 +411,8 @@
       "phone": { "label": "電話", "value": "02-088-8539" },
       "email": { "label": "メール", "value": "contact@miraibizlab.co.th" },
       "line": { "label": "LINE 公式", "value": "@miraibizlab", "url": "https://lin.ee/yPi5Yoq" },
-      "address": { "label": "所在地", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
+      "address": { "label": "本社", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
+      "bangkokOffice": { "label": "バンコクオフィス", "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110" },
       "hours": { "label": "営業時間", "value": "平日 9:00 – 18:00 (バンコク時間)" }
     },
     "map": {

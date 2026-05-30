@@ -10,13 +10,20 @@ import {
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
-type RowKey = "phone" | "email" | "line" | "address" | "hours";
+type RowKey =
+  | "phone"
+  | "email"
+  | "line"
+  | "address"
+  | "bangkokOffice"
+  | "hours";
 
 const ROWS: { key: RowKey; icon: typeof Phone }[] = [
   { key: "phone", icon: Phone },
   { key: "email", icon: Mail },
   { key: "line", icon: MessageSquare },
   { key: "address", icon: MapPin },
+  { key: "bangkokOffice", icon: MapPin },
   { key: "hours", icon: Clock },
 ];
 
