@@ -22,7 +22,12 @@ export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
   const site = useTranslations("site");
+  const contactInfo = useTranslations("contact.info");
   const year = new Date().getFullYear();
+
+  const email = contactInfo("email.value");
+  const phone = contactInfo("phone.value");
+  const line = contactInfo("line.value");
 
   return (
     <footer className="border-t border-[color:var(--color-border)] bg-background">
@@ -36,6 +41,27 @@ export function Footer() {
             <p className="mt-5 text-xs text-[color:var(--color-muted)]">
               {t("address")}
             </p>
+            <ul className="mt-4 flex flex-col gap-1.5 text-xs">
+              <li>
+                <a
+                  href={`mailto:${email}`}
+                  className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
+                >
+                  {email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${phone.replace(/\s+/g, "")}`}
+                  className="text-foreground transition-colors duration-300 hover:text-[color:var(--color-accent)]"
+                >
+                  {phone}
+                </a>
+              </li>
+              <li className="text-[color:var(--color-muted)]">
+                LINE: <span className="text-foreground">{line}</span>
+              </li>
+            </ul>
           </div>
 
           <div>

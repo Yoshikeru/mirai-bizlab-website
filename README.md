@@ -253,6 +253,39 @@ public/assets/logo/
 
 ---
 
+## クレジット (オープンソース素材)
+
+### タイ地図 (Heroセクション)
+- **データ**: [mapsicon](https://github.com/djaiss/mapsicon) — 国別 SVG outline コレクション
+- **ライセンス**: MIT License
+- **使用箇所**: `src/components/visuals/thailand-outline.ts` (国境path data)、`src/components/visuals/BangkokPrismVisual.tsx` (描画)
+
+### フォント (Google Fonts経由)
+- [Inter](https://rsms.me/inter/) — 欧文本文
+- [Inter Tight](https://fonts.google.com/specimen/Inter+Tight) — 欧文Display見出し
+- [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) — 日本語
+- [Noto Sans Thai](https://fonts.google.com/noto/specimen/Noto+Sans+Thai) — タイ語
+
+### アイコン
+- [Lucide](https://lucide.dev/) — 各セクションのアイコン (Building2, Calculator, Database, LineChart 他)
+- **ライセンス**: ISC License
+
+### 写真素材 (差し替え予定)
+- 仮素材として一部 [Unsplash](https://unsplash.com) のフリー写真を利用。本番運用時には自社素材へ差し替えてください。
+
+---
+
+## デプロイ運用フロー (Vercel自動デプロイ設定後)
+
+1. ローカルで編集 → `git commit`
+2. `git push` で GitHub の対象ブランチへ
+3. Vercel が自動でビルド → 本番反映 (約1〜3分)
+4. デプロイ完了通知は Vercel ダッシュボード / GitHub PR コメント / Slack 連携(任意)で確認
+
+> Production ブランチ以外への push は自動でプレビュー URL (`*.vercel.app`) が発行されます。マージ前のレビューに便利です。
+
+---
+
 ## ライセンス
 
 MIRAI BizLab Co., Ltd. 専用 / All rights reserved.

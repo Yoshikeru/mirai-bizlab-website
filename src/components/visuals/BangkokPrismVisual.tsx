@@ -7,11 +7,13 @@ import { THAILAND_PATH } from "./thailand-outline";
 const BANGKOK = { x: 905, y: 595 };
 const NUM_BEAMS = 36;
 
-// mapsicon native coordinate (post-transform) of Bangkok area, eyeballed and
-// confirmed visually. Used to map the 1024-unit map into our 1600x1000 viewBox
-// so that BANGKOK on the map aligns with our BANGKOK constant.
-const MAP_BANGKOK = { x: 480, y: 580 };
-const MAP_SCALE = 0.72;
+// mapsicon native coordinate (post-transform) of Bangkok area. Derived from
+// real lat/lng 13.75°N 100.5°E mapped into the mapsicon 1024-unit coordinate
+// (north ≈ y 0, south ≈ y 1024, west ≈ x 0, east ≈ x 1024).
+//   y ≈ (20.5 - 13.75) / (20.5 - 5.5) * 1024 ≈ 461
+//   x ≈ (100.5 - 97.3) / (105.6 - 97.3) * 1024 ≈ 394
+const MAP_BANGKOK = { x: 394, y: 461 };
+const MAP_SCALE = 0.68;
 const MAP_OFFSET_X = BANGKOK.x - MAP_BANGKOK.x * MAP_SCALE;
 const MAP_OFFSET_Y = BANGKOK.y - MAP_BANGKOK.y * MAP_SCALE;
 
