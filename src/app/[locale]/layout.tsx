@@ -12,6 +12,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { LenisProvider } from "@/components/motion/LenisProvider";
+import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
 import { routing, type Locale } from "@/lib/i18n/routing";
 import "@/styles/globals.css";
 
@@ -115,11 +116,20 @@ export default async function LocaleLayout({
       className={`${notoSansJp.variable} ${inter.variable} ${interTight.variable} ${notoSansThai.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <a
+          href="#main"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:z-[100] focus-visible:rounded-full focus-visible:bg-foreground focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-semibold focus-visible:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2"
+        >
+          Skip to main content
+        </a>
+        <OrganizationSchema />
         <NextIntlClientProvider>
           <LenisProvider>
             <div className="flex min-h-screen flex-col">
               <Header />
-              <main className="flex-1">{children}</main>
+              <main id="main" className="flex-1">
+                {children}
+              </main>
               <Footer />
             </div>
           </LenisProvider>
