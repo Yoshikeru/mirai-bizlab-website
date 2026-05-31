@@ -10,9 +10,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.81",
     "@hookform/resolvers": "^5.2.2",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "ai": "^6.0.193",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
     "lenis": "^1.3.23",

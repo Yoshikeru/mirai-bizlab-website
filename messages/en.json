@@ -41,30 +41,74 @@
       "title": "A long-term partner\nfor Japanese SMEs in Thailand.",
       "description": "Fifteen years on the ground in Bangkok. We support Japanese businesses across languages, industries, and growth stages.",
       "metrics": [
-        { "value": 30, "suffix": "", "label": "Clients in Thailand" },
-        { "value": 3, "suffix": "", "label": "Languages supported" },
-        { "value": 24, "suffix": "+", "label": "Industries served" },
-        { "value": 120, "suffix": "+", "label": "Companies set up" }
+        {
+          "value": 30,
+          "suffix": "",
+          "label": "Clients in Thailand"
+        },
+        {
+          "value": 3,
+          "suffix": "",
+          "label": "Languages supported"
+        },
+        {
+          "value": 24,
+          "suffix": "+",
+          "label": "Industries served"
+        },
+        {
+          "value": 120,
+          "suffix": "+",
+          "label": "Companies set up"
+        }
       ]
     },
     "services": {
       "eyebrow": "Services",
       "title": "Four pillars\nfor every stage in Thailand.",
       "items": [
-        { "index": "01", "title": "Company Setup", "description": "BOI, local entities, and representative offices — we design the entry scheme that fits your business model." },
-        { "index": "02", "title": "Accounting & Tax", "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ." },
-        { "index": "03", "title": "Accounting System Implementation", "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ." },
-        { "index": "04", "title": "Management Consulting", "description": "Management accounting, KPIs, and performance turnaround — we get into the operating reality with you." }
+        {
+          "index": "01",
+          "title": "Company Setup",
+          "description": "BOI, local entities, and representative offices — we design the entry scheme that fits your business model."
+        },
+        {
+          "index": "02",
+          "title": "Accounting & Tax",
+          "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ."
+        },
+        {
+          "index": "03",
+          "title": "Accounting System Implementation",
+          "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ."
+        },
+        {
+          "index": "04",
+          "title": "Management Consulting",
+          "description": "Management accounting, KPIs, and performance turnaround — we get into the operating reality with you."
+        }
       ]
     },
     "why": {
       "eyebrow": "Why MIRAI",
       "title": "Four reasons\nclients choose us.",
       "reasons": [
-        { "title": "Fully trilingual", "description": "Japanese, English, and Thai delivered by one team — HQ, local staff, and authorities stay in sync." },
-        { "title": "Focused on Japanese SMEs", "description": "We design operations specifically for Japan-affiliated SMEs in Thailand, sharing pitfalls and shortcuts from day one." },
-        { "title": "One-stop", "description": "Accounting, setup, and consulting under one roof — one contact, zero handover loss." },
-        { "title": "Fifteen years on the ground", "description": "Our local network across authorities, banks, and specialists opens the fastest viable route." }
+        {
+          "title": "Fully trilingual",
+          "description": "Japanese, English, and Thai delivered by one team — HQ, local staff, and authorities stay in sync."
+        },
+        {
+          "title": "Focused on Japanese SMEs",
+          "description": "We design operations specifically for Japan-affiliated SMEs in Thailand, sharing pitfalls and shortcuts from day one."
+        },
+        {
+          "title": "One-stop",
+          "description": "Accounting, setup, and consulting under one roof — one contact, zero handover loss."
+        },
+        {
+          "title": "Fifteen years on the ground",
+          "description": "Our local network across authorities, banks, and specialists opens the fastest viable route."
+        }
       ]
     },
     "cases": {
@@ -72,23 +116,68 @@
       "title": "Selected work.",
       "description": "Across industries and growth stages, from Thailand market entry to scaling operations.",
       "items": [
-        { "industry": "Manufacturing", "scale": "120 employees", "title": "Rebuilt cost accounting at a local plant", "summary": "Closed monthly books 10 days faster and aligned with Japan HQ reporting." },
-        { "industry": "Wholesale & Retail", "scale": "35 employees", "title": "BOI to setup to bank account", "summary": "From the entry decision to opening for business in three months." },
-        { "industry": "IT / SaaS", "scale": "18 employees", "title": "Cross-border billing optimization", "summary": "Designed billing ops that respect VAT, withholding, and transfer pricing." },
-        { "industry": "Hospitality", "scale": "6 outlets", "title": "Store-level P&L and KPI design", "summary": "Visualized unit economics and sped up decision-making." },
-        { "industry": "Healthcare", "scale": "60 employees", "title": "Transition to a local subsidiary", "summary": "Moved from agency contract to a wholly-owned entity with a tighter org structure." },
-        { "industry": "Construction", "scale": "80 employees", "title": "Percentage-of-completion accounting", "summary": "Implemented PoC accounting and improved year-end accuracy." }
+        {
+          "industry": "Manufacturing",
+          "scale": "120 employees",
+          "title": "Rebuilt cost accounting at a local plant",
+          "summary": "Closed monthly books 10 days faster and aligned with Japan HQ reporting."
+        },
+        {
+          "industry": "Wholesale & Retail",
+          "scale": "35 employees",
+          "title": "BOI to setup to bank account",
+          "summary": "From the entry decision to opening for business in three months."
+        },
+        {
+          "industry": "IT / SaaS",
+          "scale": "18 employees",
+          "title": "Cross-border billing optimization",
+          "summary": "Designed billing ops that respect VAT, withholding, and transfer pricing."
+        },
+        {
+          "industry": "Hospitality",
+          "scale": "6 outlets",
+          "title": "Store-level P&L and KPI design",
+          "summary": "Visualized unit economics and sped up decision-making."
+        },
+        {
+          "industry": "Healthcare",
+          "scale": "60 employees",
+          "title": "Transition to a local subsidiary",
+          "summary": "Moved from agency contract to a wholly-owned entity with a tighter org structure."
+        },
+        {
+          "industry": "Construction",
+          "scale": "80 employees",
+          "title": "Percentage-of-completion accounting",
+          "summary": "Implemented PoC accounting and improved year-end accuracy."
+        }
       ]
     },
     "process": {
       "eyebrow": "Process",
       "title": "From first call\nto continuous support.",
       "steps": [
-        { "title": "Free consultation", "description": "A 30–45 min online call. Share your current state and goals." },
-        { "title": "Deep-dive interview", "description": "We map your numbers, organization, and workflows in detail." },
-        { "title": "Proposal & quote", "description": "Hypothesis, scope, and pricing — clearly on the table." },
-        { "title": "Contract & kickoff", "description": "Onboarding completes and operations start within ~2 weeks." },
-        { "title": "Ongoing support", "description": "Monthly reviews, with quarterly strategy updates layered on top." }
+        {
+          "title": "Free consultation",
+          "description": "A 30–45 min online call. Share your current state and goals."
+        },
+        {
+          "title": "Deep-dive interview",
+          "description": "We map your numbers, organization, and workflows in detail."
+        },
+        {
+          "title": "Proposal & quote",
+          "description": "Hypothesis, scope, and pricing — clearly on the table."
+        },
+        {
+          "title": "Contract & kickoff",
+          "description": "Onboarding completes and operations start within ~2 weeks."
+        },
+        {
+          "title": "Ongoing support",
+          "description": "Monthly reviews, with quarterly strategy updates layered on top."
+        }
       ]
     },
     "cta": {
@@ -107,13 +196,34 @@
     "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
   },
   "pages": {
-    "about": { "title": "About", "description": "Our story & leadership" },
-    "services": { "title": "Services", "description": "Detailed service offerings" },
-    "pricing": { "title": "Pricing", "description": "Service plans" },
-    "cases": { "title": "Cases", "description": "Selected work" },
-    "blog": { "title": "Blog", "description": "Insights & know-how" },
-    "careers": { "title": "Careers", "description": "Working at MIRAI BizLab" },
-    "contact": { "title": "Contact", "description": "Get in touch" }
+    "about": {
+      "title": "About",
+      "description": "Our story & leadership"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Detailed service offerings"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Service plans"
+    },
+    "cases": {
+      "title": "Cases",
+      "description": "Selected work"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Insights & know-how"
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Working at MIRAI BizLab"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch"
+    }
   },
   "about": {
     "hero": {
@@ -137,23 +247,62 @@
       "eyebrow": "Company",
       "title": "Company information",
       "rows": [
-        { "label": "Name", "value": "MIRAI BizLab Co., Ltd." },
-        { "label": "Founded", "value": "April 2010 (Bangkok)" },
-        { "label": "Managing Director", "value": "Takuro Yoshida" },
-        { "label": "Head Office", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
-        { "label": "Bangkok Office", "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110" },
-        { "label": "Business", "value": "Accounting & tax, company setup, management consulting" },
-        { "label": "Languages", "value": "Japanese / English / ภาษาไทย" },
-        { "label": "Team size", "value": "7 members (as of May 2026)" }
+        {
+          "label": "Name",
+          "value": "MIRAI BizLab Co., Ltd."
+        },
+        {
+          "label": "Founded",
+          "value": "April 2010 (Bangkok)"
+        },
+        {
+          "label": "Managing Director",
+          "value": "Takuro Yoshida"
+        },
+        {
+          "label": "Head Office",
+          "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270"
+        },
+        {
+          "label": "Bangkok Office",
+          "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110"
+        },
+        {
+          "label": "Business",
+          "value": "Accounting & tax, company setup, management consulting"
+        },
+        {
+          "label": "Languages",
+          "value": "Japanese / English / ภาษาไทย"
+        },
+        {
+          "label": "Team size",
+          "value": "7 members (as of May 2026)"
+        }
       ]
     },
     "mvv": {
       "eyebrow": "MVV",
       "title": "Mission · Vision · Values",
       "items": [
-        { "key": "mission", "label": "Mission", "title": "Build the footing for ambition.", "description": "Make it possible for Japanese SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management." },
-        { "key": "vision", "label": "Vision", "title": "The right adviser for Bangkok, Thailand.", "description": "When a Japanese company is about to make a move in Bangkok, MIRAI BizLab is the first name they reach out to." },
-        { "key": "values", "label": "Values", "title": "Fast · Approachable · Honest.", "description": "Fast in response, easy to reach out to, honest with people — the obvious things, delivered at a refreshing pace." }
+        {
+          "key": "mission",
+          "label": "Mission",
+          "title": "Build the footing for ambition.",
+          "description": "Make it possible for Japanese SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management."
+        },
+        {
+          "key": "vision",
+          "label": "Vision",
+          "title": "The right adviser for Bangkok, Thailand.",
+          "description": "When a Japanese company is about to make a move in Bangkok, MIRAI BizLab is the first name they reach out to."
+        },
+        {
+          "key": "values",
+          "label": "Values",
+          "title": "Fast · Approachable · Honest.",
+          "description": "Fast in response, easy to reach out to, honest with people — the obvious things, delivered at a refreshing pace."
+        }
       ]
     }
   },
@@ -289,11 +438,26 @@
     "faq": {
       "title": "Frequently asked questions",
       "items": [
-        { "q": "How fast can we go live?", "a": "We can kick off monthly operations as soon as two weeks after onboarding." },
-        { "q": "Can we engage you only for a BOI application?", "a": "Yes. We accept project-based work, and continuing operations afterward is optional." },
-        { "q": "Will you coordinate directly with our Japan HQ?", "a": "Yes — regular meetings and HQ-ready reporting are part of the operating design." },
-        { "q": "Can we change plans midway?", "a": "Yes. We adjust the plan as your business stage evolves." },
-        { "q": "Is there a minimum commitment?", "a": "We work on a monthly basis, with discounts for annual commitments." }
+        {
+          "q": "How fast can we go live?",
+          "a": "We can kick off monthly operations as soon as two weeks after onboarding."
+        },
+        {
+          "q": "Can we engage you only for a BOI application?",
+          "a": "Yes. We accept project-based work, and continuing operations afterward is optional."
+        },
+        {
+          "q": "Will you coordinate directly with our Japan HQ?",
+          "a": "Yes — regular meetings and HQ-ready reporting are part of the operating design."
+        },
+        {
+          "q": "Can we change plans midway?",
+          "a": "Yes. We adjust the plan as your business stage evolves."
+        },
+        {
+          "q": "Is there a minimum commitment?",
+          "a": "We work on a monthly basis, with discounts for annual commitments."
+        }
       ]
     }
   },
@@ -303,7 +467,10 @@
       "title": "Stories of ambition,\nbehind the numbers.",
       "description": "Selected work across industries, sizes, and growth stages."
     },
-    "filter": { "label": "Filter by industry", "all": "All" },
+    "filter": {
+      "label": "Filter by industry",
+      "all": "All"
+    },
     "empty": "No cases match this filter."
   },
   "blog": {
@@ -312,7 +479,10 @@
       "title": "Field-tested\noperating know-how.",
       "description": "Accounting, legal, Thailand entry know-how, and trends — delivered at the resolution we actually work at."
     },
-    "filter": { "label": "Category", "all": "All" },
+    "filter": {
+      "label": "Category",
+      "all": "All"
+    },
     "categories": {
       "accounting": "Accounting",
       "legal": "Legal",
@@ -382,22 +552,57 @@
     },
     "form": {
       "title": "Contact form",
-      "name": { "label": "Name", "placeholder": "Taro Yamada", "required": "Please enter your name" },
-      "company": { "label": "Company", "placeholder": "Sample Inc.", "required": "Please enter your company name" },
-      "email": { "label": "Email", "placeholder": "you@example.com", "required": "Please enter your email", "invalid": "Please enter a valid email" },
-      "phone": { "label": "Phone (optional)", "placeholder": "+66 X XXXX XXXX" },
+      "name": {
+        "label": "Name",
+        "placeholder": "Taro Yamada",
+        "required": "Please enter your name"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Sample Inc.",
+        "required": "Please enter your company name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "required": "Please enter your email",
+        "invalid": "Please enter a valid email"
+      },
+      "phone": {
+        "label": "Phone (optional)",
+        "placeholder": "+66 X XXXX XXXX"
+      },
       "categories": {
         "label": "What is this about? (select all that apply)",
         "required": "Please select at least one option",
         "options": [
-          { "value": "accounting", "label": "Accounting & Tax" },
-          { "value": "incorporation", "label": "Company Setup" },
-          { "value": "consulting", "label": "Management Consulting" },
-          { "value": "careers", "label": "Careers" },
-          { "value": "other", "label": "Other" }
+          {
+            "value": "accounting",
+            "label": "Accounting & Tax"
+          },
+          {
+            "value": "incorporation",
+            "label": "Company Setup"
+          },
+          {
+            "value": "consulting",
+            "label": "Management Consulting"
+          },
+          {
+            "value": "careers",
+            "label": "Careers"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
         ]
       },
-      "message": { "label": "Message", "placeholder": "Tell us where you are and what's getting in the way.", "required": "Please enter your message" },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us where you are and what's getting in the way.",
+        "required": "Please enter your message"
+      },
       "submit": "Send",
       "submitting": "Sending...",
       "success": "Thank you. We will reply within one business day.",
@@ -405,17 +610,60 @@
     },
     "info": {
       "title": "Or reach us directly",
-      "phone": { "label": "Phone", "value": "02-088-8539" },
-      "email": { "label": "Email", "value": "contact@miraibizlab.co.th" },
-      "line": { "label": "LINE Official", "value": "@miraibizlab", "url": "https://lin.ee/yPi5Yoq" },
-      "address": { "label": "Head Office", "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270" },
-      "bangkokOffice": { "label": "Bangkok Office", "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110" },
-      "hours": { "label": "Hours", "value": "Weekdays 9:00 – 18:00 (Bangkok)" }
+      "phone": {
+        "label": "Phone",
+        "value": "02-088-8539"
+      },
+      "email": {
+        "label": "Email",
+        "value": "contact@miraibizlab.co.th"
+      },
+      "line": {
+        "label": "LINE Official",
+        "value": "@miraibizlab",
+        "url": "https://lin.ee/yPi5Yoq"
+      },
+      "address": {
+        "label": "Head Office",
+        "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270"
+      },
+      "bangkokOffice": {
+        "label": "Bangkok Office",
+        "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110"
+      },
+      "hours": {
+        "label": "Hours",
+        "value": "Weekdays 9:00 – 18:00 (Bangkok)"
+      }
     },
     "map": {
       "title": "Office",
       "placeholder": "Map (Google Maps embed placeholder)"
     }
+  },
+  "chat": {
+    "launcher": "Ask our AI assistant",
+    "title": "MIRAI AI Assistant",
+    "subtitle": "Ask about expanding to Thailand & accounting",
+    "online": "Online",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "close": "Close",
+    "reset": "Reset conversation",
+    "typing": "Typing…",
+    "welcome": "Hello! I'm MIRAI BizLab's AI assistant. Ask me anything about company setup in Thailand, accounting & tax, pricing, or how we work.",
+    "suggestionsLabel": "Popular questions",
+    "suggestions": [
+      "How long does company setup take?",
+      "What are your accounting fees?",
+      "Tell me about BOI",
+      "I'd like to book a free consultation"
+    ],
+    "disclaimer": "General AI guidance. Please consult a professional for final decisions.",
+    "error": "Sorry, something went wrong. Please wait a moment and try again.",
+    "ctaLabel": "Talk to us now",
+    "ctaConsult": "Book a free consultation",
+    "ctaLine": "Chat on LINE"
   },
   "notFound": {
     "title": "Page not found",

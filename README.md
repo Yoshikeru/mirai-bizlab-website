@@ -254,6 +254,34 @@ public/assets/logo/
 - `CONTACT_NOTIFY_EMAIL` に件名 `[MIRAI BizLab] お問い合わせ from ...` のHTMLメールが届く
 - `reply-to` がお客様のメールに設定されているので、メールアプリの「返信」でそのまま顧客に返信できます
 
+### AIチャットボットの稼働 (Anthropic Claude設定)
+
+サイト右下のフローティングボタンから開くAIアシスタントです。自社のサービス・料金・会社情報・連絡先を学習済みで、**3言語 (日/英/タイ)** で自動応答し、相談意向を検知したらお問い合わせフォーム・LINEへ誘導します。
+
+- バックエンド: `src/app/api/chat/route.ts` ([Vercel AI SDK](https://sdk.vercel.ai) + Claude のストリーミング)
+- 知識ベース: `src/lib/chat/knowledge.ts` (サイト内容と同期。サービス/料金を更新したらここも更新)
+- UI: `src/components/chat/ChatWidget.tsx`
+
+| 変数名 | 用途 | 例 |
+| --- | --- | --- |
+| `ANTHROPIC_API_KEY` | Anthropic の API キー (必須) | `sk-ant-xxxxxxxxxxxxxxxxxxxx` |
+| `CHAT_MODEL` | (任意) 使用モデル | `claude-haiku-4-5` (既定) |
+
+#### セットアップ手順
+
+1. [https://console.anthropic.com](https://console.anthropic.com) でログイン
+2. **API Keys → Create Key** で `sk-ant-...` を発行 → コピー
+3. Vercel ダッシュボード → プロジェクト → **Settings → Environment Variables** で `ANTHROPIC_API_KEY` を Production / Preview / Development に追加
+4. 設定後、再デプロイ (`npx vercel --prod` または GitHub への push) で反映
+
+> **`ANTHROPIC_API_KEY` 未設定時**は、チャットが「お問い合わせフォーム・LINE・電話へご連絡ください」と案内するフォールバックで動作し、本番ビルドは通ります。
+>
+> コスト管理: 既定モデルは低コストな `claude-haiku-4-5`。1会話あたり数円程度。レート制限 (1分15回/IP) と入出力トークン上限 (`route.ts`) でコスト暴走を防止しています。
+
+#### コンテンツ更新時の注意
+
+サービス内容・料金・連絡先などを変更したら、`src/lib/chat/knowledge.ts` の該当箇所も更新してください (チャットの回答精度を保つため)。
+
 ---
 
 ## 動作確認チェックリスト
