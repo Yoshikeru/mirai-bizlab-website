@@ -642,8 +642,8 @@
     }
   },
   "chat": {
-    "launcher": "AIアシスタントに質問",
-    "title": "MIRAI AI アシスタント",
+    "launcher": "AIサポートに質問",
+    "title": "MIRAI AIサポート",
     "subtitle": "タイ進出・会計のご相談にお答えします",
     "online": "オンライン",
     "placeholder": "ご質問を入力してください…",
@@ -651,7 +651,7 @@
     "close": "閉じる",
     "reset": "会話をリセット",
     "typing": "入力中…",
-    "welcome": "こんにちは！MIRAI BizLab のAIアシスタントです。タイでの会社設立・会計税務・料金・進め方など、お気軽にご質問ください。",
+    "welcome": "こんにちは！MIRAI BizLab のAIサポートです。タイでの会社設立・会計税務・料金・進め方など、お気軽にご質問ください。",
     "suggestionsLabel": "よくある質問",
     "suggestions": [
       "会社設立にはどれくらいかかりますか？",

@@ -53,6 +53,46 @@ function clientKey(request: Request): string {
   return request.headers.get("x-real-ip") ?? "anonymous";
 }
 
+/**
+ * Only accept requests that originate from our own site. This blocks casual
+ * scripted abuse of the endpoint from other origins. It is a deterrent, not a
+ * hard guarantee (the Origin header can be spoofed) — the real spend ceiling is
+ * the budget limit set on the Anthropic account.
+ *
+ * When no Origin/Referer header is present we allow the request (some legitimate
+ * clients omit it) to avoid false negatives.
+ */
+function isAllowedOrigin(request: Request): boolean {
+  const source =
+    request.headers.get("origin") ?? request.headers.get("referer");
+  if (!source) return true;
+
+  let host: string;
+  try {
+    host = new URL(source).host.toLowerCase();
+  } catch {
+    return false;
+  }
+
+  const hostname = host.split(":")[0]!;
+  if (hostname === "localhost" || hostname === "127.0.0.1") return true;
+  if (hostname.endsWith(".vercel.app")) return true;
+
+  const allowed = new Set<string>([
+    "miraibizlab.co.th",
+    "www.miraibizlab.co.th",
+  ]);
+  try {
+    if (process.env.NEXT_PUBLIC_SITE_URL) {
+      allowed.add(new URL(process.env.NEXT_PUBLIC_SITE_URL).host.toLowerCase());
+    }
+  } catch {
+    /* ignore malformed env */
+  }
+
+  return allowed.has(host) || allowed.has(hostname);
+}
+
 /** Localised graceful fallback used when the AI key is missing or errors. */
 function fallbackText(locale: Locale): string {
   switch (locale) {
@@ -73,6 +113,11 @@ function plainTextResponse(text: string, status = 200): Response {
 }
 
 export async function POST(request: Request) {
+  // Reject requests that don't originate from our own site.
+  if (!isAllowedOrigin(request)) {
+    return plainTextResponse("Forbidden", 403);
+  }
+
   let body: ChatRequestBody;
   try {
     body = (await request.json()) as ChatRequestBody;
