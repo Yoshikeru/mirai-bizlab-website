@@ -305,3 +305,4 @@ public/assets/logo/
 ## ライセンス
 
 MIRAI BizLab Co., Ltd. 専用 / All rights reserved.
+  test trigger: GitHub→Vercel auto deploy
