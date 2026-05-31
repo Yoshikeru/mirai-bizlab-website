@@ -11,6 +11,19 @@ import { Link } from "@/lib/i18n/navigation";
 type Role = "user" | "assistant";
 type ChatMessage = { id: string; role: Role; content: string };
 
+/**
+ * The chat renders plain text (no markdown parser), so strip the common
+ * markdown the model may still emit — bold/italic markers, headings and link
+ * syntax — so visitors never see raw `**` or `[text](url)`.
+ */
+function toPlainText(s: string): string {
+  return s
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/__([^_]+)__/g, "$1")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)");
+}
+
 let idCounter = 0;
 function newId(): string {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
@@ -265,7 +278,9 @@ export function ChatWidget() {
                       : "max-w-[88%] rounded-2xl rounded-tl-sm border border-[color:var(--color-border)] bg-white px-4 py-3 text-[13.5px] leading-relaxed whitespace-pre-wrap text-foreground"
                   }
                 >
-                  {m.content || (
+                  {(m.role === "assistant"
+                    ? toPlainText(m.content)
+                    : m.content) || (
                     <span className="inline-flex gap-1" aria-label={t("typing")}>
                       <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[color:var(--color-muted)] [animation-delay:-0.2s]" />
                       <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[color:var(--color-muted)] [animation-delay:-0.1s]" />
