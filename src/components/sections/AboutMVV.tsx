@@ -3,8 +3,6 @@
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
-import { RubikCube3D } from "@/components/visuals/RubikCube3D";
-
 type MVVItem = {
   key: string;
   label: string;
@@ -18,12 +16,6 @@ export function AboutMVV() {
 
   return (
     <section className="relative isolate overflow-hidden bg-background py-24 md:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-1/2 left-1/2 -z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center opacity-50 md:opacity-100"
-      >
-        <RubikCube3D className="scale-90 md:scale-125" />
-      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"

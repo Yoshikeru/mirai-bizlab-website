@@ -7,6 +7,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { AboutMessage } from "@/components/sections/AboutMessage";
 import { AboutInfo } from "@/components/sections/AboutInfo";
 import { AboutMVV } from "@/components/sections/AboutMVV";
+import { RubikCube3D } from "@/components/visuals/RubikCube3D";
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,8 @@ function AboutPageContent() {
           { label: common("home"), href: "/" },
           { label: pages("about.title") },
         ]}
+        watermark={false}
+        rightSlot={<RubikCube3D />}
       />
       <AboutMessage />
       <AboutInfo />
