@@ -6,7 +6,7 @@
  */
 
 const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://miraibizlab.co.th"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.miraibizlab.co.th"
 ).replace(/\/$/, "");
 
 const schema = {

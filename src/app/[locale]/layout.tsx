@@ -21,7 +21,7 @@ import { buildAlternates } from "@/lib/seo/alternates";
 import "@/styles/globals.css";
 
 const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://miraibizlab.co.th"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.miraibizlab.co.th"
 ).replace(/\/$/, "");
 
 const OG_LOCALES: Record<Locale, string> = {
