@@ -8,8 +8,6 @@ import { useEffect, useState } from "react";
 
 import { Link } from "@/lib/i18n/navigation";
 
-import { LocaleSwitcher } from "./LocaleSwitcher";
-
 const NAV_ITEMS = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
@@ -142,14 +140,8 @@ export function MobileMenu() {
               </div>
             </nav>
 
-            <div className="border-t border-[color:var(--color-border)]/80 px-6 py-5">
-              <div className="flex items-center justify-between">
-                <p className="typo-eyebrow text-[color:var(--color-muted)]">
-                  Language
-                </p>
-                <LocaleSwitcher />
-              </div>
-            </div>
+            {/* Locale switcher is already in the header on mobile, no
+                need to duplicate it here. */}
           </motion.div>
         ) : null}
       </AnimatePresence>

@@ -60,9 +60,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden lg:block">
-            <LocaleSwitcher />
-          </div>
+          {/* Locale switcher is shown on every viewport, sitting just to
+              the left of the hamburger button on mobile / tablet. */}
+          <LocaleSwitcher />
           <MobileMenu />
         </div>
       </div>
