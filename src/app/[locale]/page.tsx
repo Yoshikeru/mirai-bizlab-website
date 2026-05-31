@@ -8,6 +8,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Process } from "@/components/sections/Process";
 import { Services } from "@/components/sections/Services";
 import { WhyMirai } from "@/components/sections/WhyMirai";
+import type { Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 export async function generateMetadata({
   params,
@@ -18,6 +20,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "home.hero" });
   return {
     description: t("subtitle"),
+    alternates: buildAlternates(locale as Locale, "/"),
   };
 }
 

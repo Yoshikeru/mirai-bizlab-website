@@ -17,6 +17,7 @@ import { Header } from "@/components/layout/Header";
 import { LenisProvider } from "@/components/motion/LenisProvider";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
 import { routing, type Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 import "@/styles/globals.css";
 
 const SITE_URL = (
@@ -89,12 +90,7 @@ export async function generateMetadata({
       title: site("name"),
       description: site("tagline"),
     },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `/${l}`]),
-      ),
-    },
+    alternates: buildAlternates(locale as Locale, "/"),
   };
 }
 

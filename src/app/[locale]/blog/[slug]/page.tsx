@@ -14,6 +14,7 @@ import {
   type BlogPost,
 } from "@/lib/blog";
 import { type Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 type Params = { locale: string; slug: string };
 
@@ -32,6 +33,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: buildAlternates(locale as Locale, `/blog/${slug}`),
   };
 }
 

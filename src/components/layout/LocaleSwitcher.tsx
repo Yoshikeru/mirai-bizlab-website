@@ -1,11 +1,16 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { Fragment, useTransition } from "react";
+import { Fragment } from "react";
 
-import { usePathname, useRouter } from "@/lib/i18n/navigation";
+import { Link, usePathname } from "@/lib/i18n/navigation";
 import { routing, type Locale } from "@/lib/i18n/routing";
 
+/**
+ * Locale switcher rendered as anchor links so search engines can follow
+ * each language. Each link carries the proper `hreflang` and
+ * `rel="alternate"` attributes for SEO.
+ */
 export function LocaleSwitcher({
   tone = "default",
 }: {
@@ -13,16 +18,7 @@ export function LocaleSwitcher({
 }) {
   const t = useTranslations("locale");
   const current = useLocale() as Locale;
-  const router = useRouter();
   const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
-
-  function setLocale(next: Locale) {
-    if (next === current) return;
-    startTransition(() => {
-      router.replace(pathname, { locale: next });
-    });
-  }
 
   const baseColor =
     tone === "muted"
@@ -42,19 +38,20 @@ export function LocaleSwitcher({
               /
             </span>
           ) : null}
-          <button
-            type="button"
-            onClick={() => setLocale(loc)}
-            disabled={isPending}
-            aria-current={current === loc}
-            className={`px-2 py-1 transition-colors duration-300 disabled:opacity-60 ${
+          <Link
+            href={pathname}
+            locale={loc}
+            hrefLang={loc}
+            rel="alternate"
+            aria-current={current === loc ? "true" : undefined}
+            className={`px-2 py-1 transition-colors duration-300 ${
               current === loc
                 ? "text-foreground"
                 : `${baseColor} hover:text-foreground`
             }`}
           >
             {t(loc)}
-          </button>
+          </Link>
         </Fragment>
       ))}
     </div>

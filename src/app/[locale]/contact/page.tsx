@@ -6,6 +6,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ContactInfo } from "@/components/sections/ContactInfo";
 import { ContactMap } from "@/components/sections/ContactMap";
+import type { Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 export async function generateMetadata({
   params,
@@ -14,7 +16,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages.contact" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates(locale as Locale, "/contact"),
+  };
 }
 
 export default async function ContactPage({

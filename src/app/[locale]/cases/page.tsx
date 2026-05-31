@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/layout/PageHero";
 import { CasesGrid } from "@/components/sections/CasesGrid";
 import { CtaSection } from "@/components/sections/CtaSection";
+import type { Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 export async function generateMetadata({
   params,
@@ -13,7 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages.cases" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates(locale as Locale, "/cases"),
+  };
 }
 
 export default async function CasesPage({

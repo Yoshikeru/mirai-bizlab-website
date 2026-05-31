@@ -8,6 +8,8 @@ import { AboutMessage } from "@/components/sections/AboutMessage";
 import { AboutInfo } from "@/components/sections/AboutInfo";
 import { AboutMVV } from "@/components/sections/AboutMVV";
 import { RubikCube3D } from "@/components/visuals/RubikCube3D";
+import type { Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 export async function generateMetadata({
   params,
@@ -19,6 +21,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: buildAlternates(locale as Locale, "/about"),
   };
 }
 

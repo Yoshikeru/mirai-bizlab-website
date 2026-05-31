@@ -6,6 +6,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { PricingFAQ } from "@/components/sections/PricingFAQ";
 import { PricingPlans } from "@/components/sections/PricingPlans";
+import type { Locale } from "@/lib/i18n/routing";
+import { buildAlternates } from "@/lib/seo/alternates";
 
 export async function generateMetadata({
   params,
@@ -14,7 +16,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pages.pricing" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates(locale as Locale, "/pricing"),
+  };
 }
 
 export default async function PricingPage({
