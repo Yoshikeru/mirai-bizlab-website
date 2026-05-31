@@ -1,40 +1,62 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 
-const VIEW = 320; // canvas size
-const CUBIE = 56; // per-cubie size
-const GAP = 4; // gap between cubies
+/**
+ * Rubik-style cube that *stays as a cube* (no flying cubies). Each face holds
+ * a 3x3 grid of cells whose colors shuffle through several scrambled patterns
+ * — like watching someone twist the cube — and then snap back to the solved
+ * pattern every 30 seconds.
+ *
+ * Palette mirrors the Thailand-map visual on the homepage: soft greys for
+ * "white" stickers, the brand red as the accent, and dark grey for the body.
+ */
 
+const SIZE = 240;
+const HALF = SIZE / 2;
+const GAP = 4;
+const CELLS_PER_ROW = 3;
+
+// Palette (matched to the Thailand-map look on /)
 const RED = "#D7000F";
-const WHITE = "#FFFFFF";
-const BORDER = "#1A1A1A";
+const LIGHT = "#EDEDED";
+const BORDER = "#2A2A2A";
 
-type Face = "front" | "back" | "right" | "left" | "top" | "bottom";
+// Six faces of the cube
+type FaceKey = "front" | "back" | "right" | "left" | "top" | "bottom";
 
-type Scramble = {
-  x: number;
-  y: number;
-  z: number;
-  rx: number;
-  ry: number;
-  rz: number;
+const FACES: { key: FaceKey; transform: string; shade: number }[] = [
+  { key: "front", transform: `translateZ(${HALF}px)`, shade: 1 },
+  { key: "back", transform: `rotateY(180deg) translateZ(${HALF}px)`, shade: 0.78 },
+  { key: "right", transform: `rotateY(90deg) translateZ(${HALF}px)`, shade: 0.92 },
+  { key: "left", transform: `rotateY(-90deg) translateZ(${HALF}px)`, shade: 0.86 },
+  { key: "top", transform: `rotateX(90deg) translateZ(${HALF}px)`, shade: 1.06 },
+  { key: "bottom", transform: `rotateX(-90deg) translateZ(${HALF}px)`, shade: 0.72 },
+];
+
+// Solved pattern — alternating red / light per face
+const SOLVED_RED_FIRST: boolean[] = [
+  true, false, true,
+  false, true, false,
+  true, false, true,
+];
+const SOLVED_LIGHT_FIRST: boolean[] = [
+  false, true, false,
+  true, false, true,
+  false, true, false,
+];
+
+const SOLVED: Record<FaceKey, boolean[]> = {
+  front: SOLVED_RED_FIRST,
+  back: SOLVED_LIGHT_FIRST,
+  right: SOLVED_LIGHT_FIRST,
+  left: SOLVED_LIGHT_FIRST,
+  top: SOLVED_RED_FIRST,
+  bottom: SOLVED_RED_FIRST,
 };
 
-type Cubie = {
-  id: string;
-  px: number;
-  py: number;
-  pz: number;
-  faces: Record<Face, string>;
-  s1: Scramble;
-  s2: Scramble;
-  s3: Scramble;
-};
-
-// Linear-congruential PRNG with fixed seed → deterministic output across
-// SSR / CSR (avoids hydration mismatch).
+// Linear-congruential PRNG (seeded → identical SSR/CSR output, no hydration mismatch)
 function seededRand(seed: number): () => number {
   let s = seed;
   return () => {
@@ -43,173 +65,137 @@ function seededRand(seed: number): () => number {
   };
 }
 
-function faceColor(x: number, y: number, z: number, face: Face): string {
-  // Outer face colors — alternating red/white per checker position
-  switch (face) {
-    case "front":
-      return z === 1 ? ((x + y + 9) % 2 === 0 ? RED : WHITE) : BORDER;
-    case "back":
-      return z === -1 ? ((x + y + 9) % 2 === 0 ? WHITE : RED) : BORDER;
-    case "right":
-      return x === 1 ? ((y + z + 9) % 2 === 0 ? RED : WHITE) : BORDER;
-    case "left":
-      return x === -1 ? ((y + z + 9) % 2 === 0 ? WHITE : RED) : BORDER;
-    case "top":
-      return y === -1 ? ((x + z + 9) % 2 === 0 ? RED : WHITE) : BORDER;
-    case "bottom":
-      return y === 1 ? ((x + z + 9) % 2 === 0 ? WHITE : RED) : BORDER;
-  }
-}
-
-function makeScramble(rand: () => number): Scramble {
-  // Round to 2 decimals so SSR/CSR strings match in framer-motion output
-  const r = (max: number) => Math.round((rand() - 0.5) * max * 100) / 100;
-  return {
-    x: r(180),
-    y: r(180),
-    z: r(180),
-    rx: r(720),
-    ry: r(720),
-    rz: r(720),
-  };
-}
-
-function buildCubies(): Cubie[] {
-  const rand = seededRand(1337);
-  const cubies: Cubie[] = [];
-  for (let x = -1; x <= 1; x++) {
-    for (let y = -1; y <= 1; y++) {
-      for (let z = -1; z <= 1; z++) {
-        // Skip core (invisible inside) for perf and visual cleanness
-        if (x === 0 && y === 0 && z === 0) continue;
-        cubies.push({
-          id: `${x}-${y}-${z}`,
-          px: x * (CUBIE + GAP),
-          py: y * (CUBIE + GAP),
-          pz: z * (CUBIE + GAP),
-          faces: {
-            front: faceColor(x, y, z, "front"),
-            back: faceColor(x, y, z, "back"),
-            right: faceColor(x, y, z, "right"),
-            left: faceColor(x, y, z, "left"),
-            top: faceColor(x, y, z, "top"),
-            bottom: faceColor(x, y, z, "bottom"),
-          },
-          s1: makeScramble(rand),
-          s2: makeScramble(rand),
-          s3: makeScramble(rand),
-        });
+/**
+ * Produce a "twisted" pattern: swap rows / columns / blocks within each face
+ * to mimic the visual effect of layer rotations without actually simulating
+ * the cube. Output is deterministic for a given seed.
+ */
+function makeScrambledPattern(seed: number): Record<FaceKey, boolean[]> {
+  const rand = seededRand(seed);
+  const out = {} as Record<FaceKey, boolean[]>;
+  for (const { key } of FACES) {
+    const base = [...SOLVED[key]];
+    // Apply 3–5 random swaps of pairs of cells
+    const swaps = 3 + Math.floor(rand() * 3);
+    for (let i = 0; i < swaps; i++) {
+      const a = Math.floor(rand() * 9);
+      const b = Math.floor(rand() * 9);
+      [base[a], base[b]] = [base[b], base[a]];
+    }
+    // Occasionally rotate the face 90° (rotate the array)
+    if (rand() > 0.5) {
+      const rotated = new Array(9).fill(false);
+      for (let r = 0; r < CELLS_PER_ROW; r++) {
+        for (let c = 0; c < CELLS_PER_ROW; c++) {
+          rotated[c * CELLS_PER_ROW + (CELLS_PER_ROW - 1 - r)] =
+            base[r * CELLS_PER_ROW + c];
+        }
       }
+      out[key] = rotated;
+    } else {
+      out[key] = base;
     }
   }
-  return cubies;
+  return out;
 }
 
-function CubieFace({ color, transform }: { color: string; transform: string }) {
-  const isInner = color === BORDER;
+// Pre-generated scrambled patterns (deterministic across SSR/CSR)
+const SCRAMBLES: Record<FaceKey, boolean[]>[] = [
+  makeScrambledPattern(11),
+  makeScrambledPattern(23),
+  makeScrambledPattern(47),
+  makeScrambledPattern(89),
+  makeScrambledPattern(157),
+];
+
+// Sequence over 30s: scramble several times, then snap to solved.
+// Each entry: ms within the cycle where this pattern becomes active.
+const TIMELINE: { at: number; pattern: Record<FaceKey, boolean[]> }[] = [
+  { at: 0, pattern: SOLVED },
+  { at: 1800, pattern: SCRAMBLES[0] },
+  { at: 5400, pattern: SCRAMBLES[1] },
+  { at: 9000, pattern: SCRAMBLES[2] },
+  { at: 13500, pattern: SCRAMBLES[3] },
+  { at: 18000, pattern: SCRAMBLES[4] },
+  { at: 22500, pattern: SCRAMBLES[2] },
+  { at: 25500, pattern: SCRAMBLES[0] },
+  { at: 28000, pattern: SOLVED }, // snap back to solved
+];
+const CYCLE_MS = 30000;
+
+function Face({
+  transform,
+  pattern,
+  shade,
+}: {
+  transform: string;
+  pattern: boolean[];
+  shade: number;
+}) {
   return (
     <div
       style={{
         position: "absolute",
-        width: CUBIE,
-        height: CUBIE,
-        background: color,
-        border: `1px solid ${BORDER}`,
-        borderRadius: 6,
-        transform,
-        backfaceVisibility: "hidden",
-        boxShadow: isInner
-          ? "none"
-          : "inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -2px 0 rgba(0,0,0,0.18)",
-      }}
-    />
-  );
-}
-
-function CubieElement({ cubie, reduce }: { cubie: Cubie; reduce: boolean }) {
-  const { px, py, pz, s1, s2, s3, faces } = cubie;
-
-  // Animation keyframes:
-  //   0%   solved
-  //   18%  scramble #1 (cubies fly apart)
-  //   38%  scramble #2 (different chaos)
-  //   62%  scramble #3 (one more pass)
-  //   88%  back to solved (snap into place — the "aha" moment)
-  //  100%  hold solved for a beat
-  const times = [0, 0.18, 0.38, 0.62, 0.88, 1];
-
-  return (
-    <motion.div
-      style={{
-        position: "absolute",
-        width: CUBIE,
-        height: CUBIE,
         top: "50%",
         left: "50%",
-        marginLeft: -CUBIE / 2,
-        marginTop: -CUBIE / 2,
-        transformStyle: "preserve-3d",
+        width: SIZE,
+        height: SIZE,
+        marginLeft: -HALF,
+        marginTop: -HALF,
+        transform,
+        backfaceVisibility: "hidden",
+        background: BORDER,
+        borderRadius: 14,
+        padding: GAP,
+        display: "grid",
+        gridTemplateColumns: `repeat(${CELLS_PER_ROW}, 1fr)`,
+        gridTemplateRows: `repeat(${CELLS_PER_ROW}, 1fr)`,
+        gap: GAP,
+        boxSizing: "border-box",
+        filter: `brightness(${shade})`,
       }}
-      initial={{ x: px, y: py, z: pz, rotateX: 0, rotateY: 0, rotateZ: 0 }}
-      animate={
-        reduce
-          ? { x: px, y: py, z: pz }
-          : {
-              x: [px, px + s1.x, px + s2.x, px + s3.x, px, px],
-              y: [py, py + s1.y, py + s2.y, py + s3.y, py, py],
-              z: [pz, pz + s1.z, pz + s2.z, pz + s3.z, pz, pz],
-              rotateX: [0, s1.rx, s2.rx, s3.rx, 0, 0],
-              rotateY: [0, s1.ry, s2.ry, s3.ry, 0, 0],
-              rotateZ: [0, s1.rz, s2.rz, s3.rz, 0, 0],
-            }
-      }
-      transition={
-        reduce
-          ? undefined
-          : {
-              duration: 30,
-              repeat: Infinity,
-              ease: [0.65, 0.05, 0.36, 1], // smooth scramble, snappy solve
-              times,
-            }
-      }
     >
-      <CubieFace color={faces.front} transform={`translateZ(${CUBIE / 2}px)`} />
-      <CubieFace
-        color={faces.back}
-        transform={`rotateY(180deg) translateZ(${CUBIE / 2}px)`}
-      />
-      <CubieFace
-        color={faces.right}
-        transform={`rotateY(90deg) translateZ(${CUBIE / 2}px)`}
-      />
-      <CubieFace
-        color={faces.left}
-        transform={`rotateY(-90deg) translateZ(${CUBIE / 2}px)`}
-      />
-      <CubieFace
-        color={faces.top}
-        transform={`rotateX(90deg) translateZ(${CUBIE / 2}px)`}
-      />
-      <CubieFace
-        color={faces.bottom}
-        transform={`rotateX(-90deg) translateZ(${CUBIE / 2}px)`}
-      />
-    </motion.div>
+      {pattern.map((isRed, i) => (
+        <motion.div
+          key={i}
+          animate={{ background: isRed ? RED : LIGHT }}
+          transition={{ duration: 0.55, ease: [0.65, 0.05, 0.36, 1] }}
+          style={{
+            borderRadius: 7,
+            boxShadow:
+              "inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -2px 0 rgba(0,0,0,0.12)",
+          }}
+        />
+      ))}
+    </div>
   );
 }
 
 export function RubikCube3D({ className = "" }: { className?: string }) {
   const reduce = useReducedMotion();
-  const cubies = useMemo(() => buildCubies(), []);
+  const [tick, setTick] = useState(0);
+
+  useEffect(() => {
+    if (reduce) return;
+    const interval = setInterval(() => setTick((t) => t + 1), 100);
+    return () => clearInterval(interval);
+  }, [reduce]);
+
+  // Pick the current pattern based on elapsed ms within the 30s cycle.
+  const elapsedMs = (tick * 100) % CYCLE_MS;
+  let currentPattern = TIMELINE[0].pattern;
+  for (const entry of TIMELINE) {
+    if (elapsedMs >= entry.at) currentPattern = entry.pattern;
+  }
+  if (reduce) currentPattern = SOLVED;
 
   return (
     <div
       className={className}
       style={{
-        width: VIEW,
-        height: VIEW,
-        perspective: 1200,
+        width: SIZE,
+        height: SIZE,
+        perspective: 1400,
         perspectiveOrigin: "50% 50%",
       }}
       aria-hidden
@@ -217,29 +203,30 @@ export function RubikCube3D({ className = "" }: { className?: string }) {
       <motion.div
         style={{
           position: "relative",
-          width: VIEW,
-          height: VIEW,
+          width: SIZE,
+          height: SIZE,
           transformStyle: "preserve-3d",
         }}
-        initial={{ rotateX: -25, rotateY: -28 }}
+        initial={{ rotateX: -25, rotateY: -32 }}
         animate={
           reduce
-            ? undefined
-            : { rotateX: -25, rotateY: [-28, 332] }
+            ? { rotateX: -25, rotateY: -32 }
+            : { rotateX: -25, rotateY: [-32, 328] }
         }
         transition={
           reduce
             ? undefined
             : {
-                rotateY: { duration: 60, repeat: Infinity, ease: "linear" },
+                rotateY: { duration: 45, repeat: Infinity, ease: "linear" },
               }
         }
       >
-        {cubies.map((cubie) => (
-          <CubieElement
-            key={cubie.id}
-            cubie={cubie}
-            reduce={reduce ?? false}
+        {FACES.map(({ key, transform, shade }) => (
+          <Face
+            key={key}
+            transform={transform}
+            shade={shade}
+            pattern={currentPattern[key]}
           />
         ))}
       </motion.div>

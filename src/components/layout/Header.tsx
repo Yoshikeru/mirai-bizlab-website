@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { MobileMenu } from "./MobileMenu";
 
 const NAV_ITEMS = [
   { key: "about", href: "/about" },
@@ -58,8 +59,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <LocaleSwitcher />
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:block">
+            <LocaleSwitcher />
+          </div>
+          <MobileMenu />
         </div>
       </div>
     </header>
