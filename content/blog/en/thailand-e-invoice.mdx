@@ -1,0 +1,104 @@
+---
+title: "Thailand's e-Invoice regime — e-Tax Invoice & e-Receipt explained"
+category: "accounting"
+publishedAt: "2026-05-31"
+excerpt: "The Revenue Department's e-invoice program — why VAT-registered businesses should adopt it, what the real requirements look like, the operational traps, and how we support the rollout."
+readTime: 9
+coverImage: "/assets/photos/blog-boi.jpg"
+---
+
+## The big picture
+
+Thailand's **Revenue Department** has been actively rolling out **e-Tax Invoice & e-Receipt** to replace paper invoicing. As Japanese parents push electronic recordkeeping (think the Japanese "denshichouhozonhou"), Japanese SMEs in Thailand increasingly want their local entity to be electronic as well.
+
+Below is what we've learned from operating it for clients — the **decision logic and the operational traps**.
+
+## First, distinguish the two regimes
+
+Thailand actually has **two different programs** under the e-invoice umbrella, with very different cost and complexity.
+
+### 1. e-Tax Invoice & e-Receipt (full version)
+
+- Issue invoices / receipts as **XML with a digital certificate**
+- Format: **ETDA-approved XML** (UBL 2.1 based)
+- File **submitted to the Revenue Department by the 15th of each month**
+- Retention: **5 years**, legally equivalent to paper
+
+**Who it's for**: Any VAT-registered entity in principle. In practice it pays off when revenue ≥ 30M THB or transaction volume exceeds a few hundred per month.
+
+### 2. e-Tax Invoice by Email (lite version)
+
+- PDF + ETDA-timestamped email, with `etax@etda.or.th` in CC
+- Designed for **SMEs with revenue ≤ 30M THB**
+
+**Who it's for**: Lower transaction volume, low IT-change appetite. Adoption cost is small.
+
+## Why bother — four benefits
+
+1. **Saved hours**: No printing, mailing, scanning, filing. We've seen 200+ hours/year reclaimed at mid-size clients.
+2. **Audit-ready**: Pull any invoice from the last 5 years in seconds during a tax audit.
+3. **HQ integration**: Sales data feeds directly into ERP / cloud accounting → HQ-grade management accounting becomes far easier.
+4. **Counterparty trust**: Large Thai counterparts (PTT, Central, SCG, etc.) are increasingly **making e-invoice support a procurement condition**.
+
+## The traps we see in the field
+
+### Trap 1: jumping straight to "full version"
+
+Vendors push the expensive XML+certificate setup. If you're issuing 30 invoices a month, **by Email is enough**.
+
+### Trap 2: forgetting to renew the digital certificate
+
+Certificates expire in 1–3 years. Forgetting the renewal means the system stops issuing — and you scramble back to paper invoices for a month.
+
+### Trap 3: counterparty not ready
+
+You email a PDF; they ask for a **stamped paper invoice**. Always agree in advance.
+
+### Trap 4: font / encoding issues
+
+Thai-language invoices in XML routinely garble on the recipient's side because of font embedding. We always validate Sarabun / TH SarabunNew handling first.
+
+### Trap 5: monthly close timing
+
+The 15th-of-the-month submission interferes with month-end accounting close. The e-invoice send schedule has to be designed **backwards from your close calendar**.
+
+## How to start — four steps
+
+### Step 1: Eligibility decision
+
+Pick between full / by-email / not-yet, based on your size, volume, internal systems, and counterparty pressure.
+
+### Step 2: Digital certificate
+
+- **Full**: get the cert from an ETDA-approved provider (TICA, TDID, etc.)
+- **By email**: register with the ETDA email service
+
+### Step 3: System integration
+
+- **Cloud accounting** (PEAK, FlowAccount): native e-invoice plug-ins exist
+- **ERP** (SAP B1, Oracle NetSuite): middleware connectors (Symphony, e-Tax Invoice Connector)
+- **Legacy systems**: CSV/Excel-to-XML converters as a bridge
+
+### Step 4: Counterparty notice + pilot
+
+Tell your top ~5 counterparts, run a 3-month pilot, then go live.
+
+## What MIRAI BizLab delivers
+
+We provide this end to end:
+
+- **Eligibility assessment** based on size, volume, counterparties, and roadmap
+- **Certificate procurement** including provider selection and filing
+- **Accounting system integration** — see also [Accounting System Implementation](/en/services)
+- **Operations design**: monthly close schedule, fallback flow, counterparty comms
+- **Ongoing support**: cert renewals, counterparty issues, RD queries
+
+## Start with the assessment
+
+Even just "should we adopt it?" can be answered in a 30-minute free consultation. Tell us your scale, monthly invoice volume, and counterparty mix — and we'll give you **full / by email / not yet** the same day.
+
+[Book a free consultation](/en/contact)
+
+---
+
+*Related*: [BOI applications, from the field](/en/blog/boi-key-points) / [Your first step into Thailand — the Thai shareholder question](/en/blog/incorporation-thai-shareholder)

@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+
+import { RubikCube3D } from "@/components/visuals/RubikCube3D";
 
 type MVVItem = {
   key: string;
@@ -19,16 +20,14 @@ export function AboutMVV() {
     <section className="relative isolate overflow-hidden bg-background py-24 md:py-32">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 opacity-[0.05]"
+        className="pointer-events-none absolute top-1/2 left-1/2 -z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center opacity-50 md:opacity-100"
       >
-        <Image
-          src="/assets/logo/Logo_MIRAI_BizLab2.jpg"
-          alt=""
-          width={700}
-          height={760}
-          className="h-[600px] w-auto md:h-[820px]"
-        />
+        <RubikCube3D className="scale-90 md:scale-125" />
       </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"
+      />
 
       <div className="relative mx-auto w-full max-w-(--container-wide) px-6">
         <div className="text-center">
