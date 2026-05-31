@@ -306,3 +306,4 @@ public/assets/logo/
 
 MIRAI BizLab Co., Ltd. 専用 / All rights reserved.
   test trigger: GitHub→Vercel auto deploy
+auto-deploy verification: Sun May 31 15:12:59 +07 2026
