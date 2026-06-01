@@ -1,7 +1,26 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+import { clientKey, isAllowedOrigin, rateLimited } from "@/lib/api/security";
+
 export const runtime = "nodejs";
+
+// Best-effort per-IP rate limit: a genuine visitor submits once, so a low cap
+// is plenty and blunts spam / Resend cost abuse.
+const RATE = { windowMs: 60_000, max: 5 };
+
+// Field length caps to reject oversized / abusive payloads.
+const LIMITS = {
+  name: 100,
+  company: 200,
+  email: 200,
+  phone: 50,
+  message: 5000,
+  categories: 12,
+  categoryItem: 60,
+};
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type ContactPayload = {
   name: string;
@@ -87,9 +106,22 @@ function renderText(p: ContactPayload): string {
 }
 
 export async function POST(request: Request) {
-  let body: ContactPayload;
+  // Reject requests that don't originate from our own site.
+  if (!isAllowedOrigin(request)) {
+    return NextResponse.json({ ok: false, error: "Forbidden" }, { status: 403 });
+  }
+
+  // Throttle abusive bursts (spam / Resend cost).
+  if (rateLimited("contact", clientKey(request), RATE)) {
+    return NextResponse.json(
+      { ok: false, error: "Too many requests" },
+      { status: 429 },
+    );
+  }
+
+  let raw: unknown;
   try {
-    body = (await request.json()) as ContactPayload;
+    raw = await request.json();
   } catch {
     return NextResponse.json(
       { ok: false, error: "Invalid JSON" },
@@ -97,9 +129,48 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!body?.name || !body?.email || !body?.message) {
+  const input = (raw ?? {}) as Record<string, unknown>;
+  const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+
+  const body: ContactPayload = {
+    name: str(input.name),
+    company: str(input.company),
+    email: str(input.email),
+    phone: str(input.phone),
+    categories: Array.isArray(input.categories)
+      ? input.categories
+          .filter((c): c is string => typeof c === "string")
+          .slice(0, LIMITS.categories)
+          .map((c) => c.trim().slice(0, LIMITS.categoryItem))
+      : [],
+    message: str(input.message),
+  };
+
+  // Required fields.
+  if (!body.name || !body.email || !body.message) {
     return NextResponse.json(
       { ok: false, error: "Missing required fields" },
+      { status: 400 },
+    );
+  }
+
+  // Email format.
+  if (!EMAIL_RE.test(body.email) || body.email.length > LIMITS.email) {
+    return NextResponse.json(
+      { ok: false, error: "Invalid email" },
+      { status: 400 },
+    );
+  }
+
+  // Length caps (reject oversized payloads rather than silently truncating).
+  if (
+    body.name.length > LIMITS.name ||
+    body.company.length > LIMITS.company ||
+    (body.phone?.length ?? 0) > LIMITS.phone ||
+    body.message.length > LIMITS.message
+  ) {
+    return NextResponse.json(
+      { ok: false, error: "Input too long" },
       { status: 400 },
     );
   }

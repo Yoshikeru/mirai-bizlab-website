@@ -2,6 +2,7 @@ import { anthropic } from "@ai-sdk/anthropic";
 import { streamText } from "ai";
 
 import { getSystemPrompt } from "@/lib/chat/knowledge";
+import { clientKey, isAllowedOrigin, rateLimited } from "@/lib/api/security";
 import { routing, type Locale } from "@/lib/i18n/routing";
 
 export const runtime = "nodejs";
@@ -16,29 +17,8 @@ const MAX_CHARS_PER_MESSAGE = 2000;
 const MAX_TOTAL_CHARS = 12000;
 const MAX_OUTPUT_TOKENS = 700;
 
-// Best-effort in-memory rate limit. Serverless instances are ephemeral and not
-// shared, so this only throttles bursts hitting the same warm instance — enough
-// to blunt naive abuse without an external store.
-const WINDOW_MS = 60_000;
-const MAX_REQUESTS_PER_WINDOW = 15;
-const hits = new Map<string, { count: number; reset: number }>();
-
-function rateLimited(key: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(key);
-  if (!entry || now > entry.reset) {
-    hits.set(key, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  // Opportunistic cleanup so the map can't grow unbounded.
-  if (hits.size > 5000) {
-    for (const [k, v] of hits) {
-      if (now > v.reset) hits.delete(k);
-    }
-  }
-  return entry.count > MAX_REQUESTS_PER_WINDOW;
-}
+// Best-effort per-IP rate limit (see lib/api/security).
+const RATE = { windowMs: 60_000, max: 15 };
 
 type IncomingMessage = { role: "user" | "assistant"; content: unknown };
 
@@ -46,52 +26,6 @@ type ChatRequestBody = {
   messages?: IncomingMessage[];
   locale?: string;
 };
-
-function clientKey(request: Request): string {
-  const fwd = request.headers.get("x-forwarded-for");
-  if (fwd) return fwd.split(",")[0]!.trim();
-  return request.headers.get("x-real-ip") ?? "anonymous";
-}
-
-/**
- * Only accept requests that originate from our own site. This blocks casual
- * scripted abuse of the endpoint from other origins. It is a deterrent, not a
- * hard guarantee (the Origin header can be spoofed) — the real spend ceiling is
- * the budget limit set on the Anthropic account.
- *
- * When no Origin/Referer header is present we allow the request (some legitimate
- * clients omit it) to avoid false negatives.
- */
-function isAllowedOrigin(request: Request): boolean {
-  const source =
-    request.headers.get("origin") ?? request.headers.get("referer");
-  if (!source) return true;
-
-  let host: string;
-  try {
-    host = new URL(source).host.toLowerCase();
-  } catch {
-    return false;
-  }
-
-  const hostname = host.split(":")[0]!;
-  if (hostname === "localhost" || hostname === "127.0.0.1") return true;
-  if (hostname.endsWith(".vercel.app")) return true;
-
-  const allowed = new Set<string>([
-    "miraibizlab.co.th",
-    "www.miraibizlab.co.th",
-  ]);
-  try {
-    if (process.env.NEXT_PUBLIC_SITE_URL) {
-      allowed.add(new URL(process.env.NEXT_PUBLIC_SITE_URL).host.toLowerCase());
-    }
-  } catch {
-    /* ignore malformed env */
-  }
-
-  return allowed.has(host) || allowed.has(hostname);
-}
 
 /** Localised graceful fallback used when the AI key is missing or errors. */
 function fallbackText(locale: Locale): string {
@@ -154,7 +88,7 @@ export async function POST(request: Request) {
     return plainTextResponse(fallbackText(locale), 200);
   }
 
-  if (rateLimited(clientKey(request))) {
+  if (rateLimited("chat", clientKey(request), RATE)) {
     const msg =
       locale === "en"
         ? "You're sending messages a little too fast. Please wait a moment and try again."
