@@ -67,7 +67,7 @@ export function CasesCarousel() {
               {items.map((item, index) => (
                 <li
                   key={item.title}
-                  className="relative flex shrink-0 basis-[86%] flex-col overflow-hidden rounded-3xl bg-white transition-shadow duration-300 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] sm:basis-[72%] md:basis-[58%] lg:basis-[44%]"
+                  className="relative flex shrink-0 basis-[86%] flex-col overflow-hidden rounded-3xl bg-surface transition-shadow duration-300 hover:shadow-card-hover sm:basis-[72%] md:basis-[58%] lg:basis-[44%]"
                 >
                   <div className="relative aspect-[16/9] w-full overflow-hidden">
                     <Image

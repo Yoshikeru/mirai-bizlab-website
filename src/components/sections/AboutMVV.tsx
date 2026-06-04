@@ -59,7 +59,7 @@ export function AboutMVV() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.12,
               }}
-              className="group relative rounded-3xl border border-[color:var(--color-border)] bg-white/80 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-white md:p-10"
+              className="group relative rounded-3xl border border-[color:var(--color-border)] bg-surface/80 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-surface md:p-10"
             >
               <p className="typo-eyebrow font-mono">{item.label}</p>
               <h3 className="typo-h3 mt-6">{item.title}</h3>

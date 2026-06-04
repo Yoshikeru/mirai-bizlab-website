@@ -30,7 +30,7 @@ export function CareersNotice() {
 
           <div className="relative grid grid-cols-1 items-start gap-8 md:grid-cols-12">
             <div className="md:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-accent)]/30 bg-white/70 px-3.5 py-1.5 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-accent)]/30 bg-surface/70 px-3.5 py-1.5 backdrop-blur-sm">
                 <PauseCircle
                   className="h-3.5 w-3.5 text-[color:var(--color-accent)]"
                   aria-hidden
@@ -48,7 +48,7 @@ export function CareersNotice() {
             <div className="md:col-span-5 md:flex md:justify-end">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full border border-foreground/15 bg-white px-6 py-3.5 text-sm font-semibold tracking-wide text-foreground transition-all duration-300 hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)] focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:outline-none"
+                className="group inline-flex items-center gap-3 rounded-full border border-foreground/15 bg-surface px-6 py-3.5 text-sm font-semibold tracking-wide text-foreground transition-all duration-300 hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)] focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 <span>{t("cta")}</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -107,7 +107,7 @@ export function CasesGrid() {
                 <button
                   type="button"
                   onClick={() => setOpen(index)}
-                  className="group flex h-full w-full flex-col overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white text-left transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/25 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.25)]"
+                  className="group flex h-full w-full flex-col overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface text-left transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/25 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.25)]"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden">
                     <Image
@@ -168,14 +168,14 @@ export function CasesGrid() {
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               role="dialog"
               aria-modal="true"
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+              className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-surface shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
               <button
                 type="button"
                 onClick={() => setOpen(null)}
                 aria-label="Close"
-                className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/90 backdrop-blur-sm transition-all duration-200 hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+                className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-surface/90 backdrop-blur-sm transition-all duration-200 hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
               >
                 <X className="h-4 w-4" />
               </button>

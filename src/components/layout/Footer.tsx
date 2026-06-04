@@ -138,7 +138,7 @@ export function Footer() {
             alt={site("name")}
             width={240}
             height={120}
-            className="h-9 w-auto md:h-10"
+            className="h-9 w-auto md:h-10 dark:brightness-0 dark:invert"
           />
         </div>
       </div>

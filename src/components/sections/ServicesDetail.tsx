@@ -147,7 +147,7 @@ function ServiceBlock({
         </div>
       </dl>
 
-      <div className="mt-12 rounded-3xl border border-[color:var(--color-border)] bg-white p-8 md:p-10">
+      <div className="mt-12 rounded-3xl border border-[color:var(--color-border)] bg-surface p-8 md:p-10">
         <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
           Deliverables
         </p>

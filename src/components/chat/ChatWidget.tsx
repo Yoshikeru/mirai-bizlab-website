@@ -192,10 +192,10 @@ export function ChatWidget() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 24, scale: 0.98 }}
           transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-3 bottom-3 z-[140] flex max-h-[82vh] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-white shadow-[0_24px_70px_-20px_rgba(0,0,0,0.45)] sm:inset-x-auto sm:right-5 sm:bottom-5 sm:h-[600px] sm:max-h-[78vh] sm:w-[400px]"
+          className="fixed inset-x-3 bottom-3 z-[140] flex max-h-[82vh] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-surface shadow-[0_24px_70px_-20px_rgba(0,0,0,0.45)] sm:inset-x-auto sm:right-5 sm:bottom-5 sm:h-[600px] sm:max-h-[78vh] sm:w-[400px]"
         >
           {/* Header */}
-          <div className="flex items-center justify-between gap-3 bg-foreground px-5 py-4 text-background">
+          <div className="flex items-center justify-between gap-3 bg-contrast px-5 py-4 text-white">
             <div className="flex items-center gap-3">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--color-accent)]">
                 <Sparkles className="h-4 w-4 text-white" aria-hidden />
@@ -239,7 +239,7 @@ export function ChatWidget() {
           >
             {/* Welcome + suggestions */}
             <div className="flex justify-start">
-              <div className="max-w-[88%] rounded-2xl rounded-tl-sm border border-[color:var(--color-border)] bg-white px-4 py-3 text-[13.5px] leading-relaxed text-foreground">
+              <div className="max-w-[88%] rounded-2xl rounded-tl-sm border border-[color:var(--color-border)] bg-surface px-4 py-3 text-[13.5px] leading-relaxed text-foreground">
                 {t("welcome")}
               </div>
             </div>
@@ -255,7 +255,7 @@ export function ChatWidget() {
                       key={s}
                       type="button"
                       onClick={() => void send(s)}
-                      className="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1.5 text-left text-[12.5px] text-foreground transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+                      className="rounded-full border border-[color:var(--color-border)] bg-surface px-3 py-1.5 text-left text-[12.5px] text-foreground transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
                     >
                       {s}
                     </button>
@@ -275,7 +275,7 @@ export function ChatWidget() {
                   className={
                     m.role === "user"
                       ? "max-w-[88%] rounded-2xl rounded-tr-sm bg-[color:var(--color-accent)] px-4 py-3 text-[13.5px] leading-relaxed whitespace-pre-wrap text-white"
-                      : "max-w-[88%] rounded-2xl rounded-tl-sm border border-[color:var(--color-border)] bg-white px-4 py-3 text-[13.5px] leading-relaxed whitespace-pre-wrap text-foreground"
+                      : "max-w-[88%] rounded-2xl rounded-tl-sm border border-[color:var(--color-border)] bg-surface px-4 py-3 text-[13.5px] leading-relaxed whitespace-pre-wrap text-foreground"
                   }
                 >
                   {(m.role === "assistant"
@@ -299,11 +299,11 @@ export function ChatWidget() {
           </div>
 
           {/* Lead-capture CTAs */}
-          <div className="flex items-center gap-2 border-t border-[color:var(--color-border)] bg-white px-4 pt-3">
+          <div className="flex items-center gap-2 border-t border-[color:var(--color-border)] bg-surface px-4 pt-3">
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="flex-1 rounded-full bg-[color:var(--color-accent)] px-3 py-2 text-center text-[12.5px] font-semibold text-white transition-colors hover:bg-[#bb000d]"
+              className="flex-1 rounded-full bg-[color:var(--color-accent)] px-3 py-2 text-center text-[12.5px] font-semibold text-white transition-colors hover:bg-accent-strong"
             >
               {t("ctaConsult")}
             </Link>
@@ -320,7 +320,7 @@ export function ChatWidget() {
           {/* Input */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white px-4 pt-2 pb-3"
+            className="bg-surface px-4 pt-2 pb-3"
           >
             <div className="flex items-end gap-2 rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-background)] px-3 py-2 focus-within:border-[color:var(--color-accent)]">
               <textarea
@@ -338,7 +338,7 @@ export function ChatWidget() {
                 type="submit"
                 disabled={streaming || !input.trim()}
                 aria-label={t("send")}
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background transition-colors hover:bg-[#0f0f0f] disabled:cursor-not-allowed disabled:opacity-35"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-35"
               >
                 <Send className="h-4 w-4" aria-hidden />
               </button>

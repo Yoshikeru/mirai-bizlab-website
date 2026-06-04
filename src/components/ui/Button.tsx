@@ -7,9 +7,9 @@ type Variant = "primary" | "secondary" | "ghost-light";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary:
-    "bg-[color:var(--color-accent)] text-white hover:bg-[#bb000d] focus-visible:ring-[color:var(--color-accent)]",
+    "bg-[color:var(--color-accent)] bg-gradient-to-b from-[color:var(--color-accent)] to-[color:var(--color-accent-strong)] text-white shadow-[0_8px_22px_-10px_rgba(215,0,15,0.55)] hover:brightness-105 focus-visible:ring-[color:var(--color-accent)]",
   secondary:
-    "bg-foreground text-background hover:bg-[#0f0f0f] focus-visible:ring-foreground",
+    "bg-foreground text-background hover:opacity-90 focus-visible:ring-foreground",
   "ghost-light":
     "border border-white/40 text-white hover:bg-white/10 focus-visible:ring-white",
 };

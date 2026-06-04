@@ -34,7 +34,7 @@ export function Services() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: index * 0.15,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-[color:var(--color-accent-soft)]/55 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.32)] md:p-10 md:py-12"
+                className="group relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-[color:var(--color-accent-soft)]/55 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.32)] md:p-10 md:py-12"
               >
                 <span
                   aria-hidden

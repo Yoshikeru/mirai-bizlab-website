@@ -116,7 +116,7 @@ function MetricCard({
         ease: [0.22, 1, 0.36, 1],
         delay: index * 0.08,
       }}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white p-6 transition-shadow duration-300 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] ${
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface p-6 transition-shadow duration-300 hover:shadow-card-hover ${
         compact
           ? "aspect-square"
           : "h-[320px] w-[300px] sm:w-[360px] lg:h-[380px] lg:w-[400px]"

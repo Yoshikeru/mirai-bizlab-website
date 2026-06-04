@@ -13,7 +13,7 @@ export function PricingFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#F8F8F8] py-24 md:py-32">
+    <section className="bg-surface-alt py-24 md:py-32">
       <div className="mx-auto w-full max-w-(--container-content) px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

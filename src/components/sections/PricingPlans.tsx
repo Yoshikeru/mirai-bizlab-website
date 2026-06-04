@@ -48,8 +48,8 @@ export function PricingPlans() {
                 }}
                 className={`relative flex flex-col rounded-3xl p-8 md:p-10 ${
                   recommended
-                    ? "border border-[color:var(--color-accent)] bg-[#101012] text-white shadow-[0_40px_80px_-40px_rgba(215,0,15,0.45)] md:py-12 lg:py-14"
-                    : "border border-[color:var(--color-border)] bg-white text-foreground"
+                    ? "border border-[color:var(--color-accent)] bg-contrast text-white shadow-[0_40px_80px_-40px_rgba(215,0,15,0.45)] md:py-12 lg:py-14"
+                    : "border border-[color:var(--color-border)] bg-surface text-foreground"
                 }`}
               >
                 {recommended ? (

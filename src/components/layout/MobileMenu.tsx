@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Link } from "@/lib/i18n/navigation";
 
 const NAV_ITEMS = [
@@ -22,6 +23,7 @@ const NAV_ITEMS = [
 export function MobileMenu() {
   const t = useTranslations("nav");
   const contact = useTranslations("contact.info");
+  const theme = useTranslations("theme");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
@@ -120,7 +122,12 @@ export function MobileMenu() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-col gap-4 text-sm">
+            <div className="mt-10 flex items-center justify-between border-t border-[color:var(--color-border)]/60 pt-6">
+              <span className="typo-eyebrow">{theme("label")}</span>
+              <ThemeToggle />
+            </div>
+
+            <div className="mt-8 flex flex-col gap-4 text-sm">
               <p className="typo-eyebrow">Contact</p>
               <a
                 href={`tel:${contact("phone.value").replace(/[^\d+]/g, "")}`}

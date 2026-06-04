@@ -1,12 +1,31 @@
 @import "tailwindcss";
 
+/* Class-based dark mode — next-themes toggles `.dark` on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
+  color-scheme: light;
+
+  /* Surfaces & text */
   --color-background: #fafafa;
   --color-foreground: #1a1a1a;
-  --color-accent: #d7000f;
-  --color-accent-soft: #f4e5e6;
+  --color-surface: #ffffff; /* cards / elevated panels */
+  --color-surface-alt: #f4f4f5; /* alternating section bands */
+  --color-contrast: #101012; /* intentional dark panels (CTA等) — both themes */
+  --color-contrast-foreground: #ffffff;
   --color-muted: #6b6b6b;
   --color-border: #e5e5e5;
+
+  /* Accent */
+  --color-accent: #d7000f;
+  --color-accent-strong: #bb000d; /* hover / gradient end */
+  --color-accent-soft: #f4e5e6;
+
+  /* Elevation (theme-aware) */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04),
+    0 14px 30px -18px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.06),
+    0 32px 60px -28px rgba(0, 0, 0, 0.3);
 
   --font-sans-jp: var(--font-noto-sans-jp), "Noto Sans JP", system-ui, sans-serif;
   --font-sans-latin: var(--font-inter), "Inter", system-ui, sans-serif;
@@ -18,13 +37,43 @@
   --content-readable: 1140px;
 }
 
+.dark {
+  color-scheme: dark;
+
+  --color-background: #0c0c0e;
+  --color-foreground: #f2f2f3;
+  --color-surface: #161619;
+  --color-surface-alt: #1b1b1f;
+  --color-contrast: #050506;
+  --color-contrast-foreground: #f2f2f3;
+  --color-muted: #9a9aa3;
+  --color-border: #2a2a30;
+
+  --color-accent: #ff5a64; /* lighter red reads better on dark */
+  --color-accent-strong: #ff7a82;
+  --color-accent-soft: #2a1417;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4),
+    0 14px 30px -18px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.5),
+    0 32px 60px -28px rgba(0, 0, 0, 0.75);
+}
+
 @theme inline {
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-contrast: var(--color-contrast);
+  --color-contrast-foreground: var(--color-contrast-foreground);
   --color-accent: var(--color-accent);
+  --color-accent-strong: var(--color-accent-strong);
   --color-accent-soft: var(--color-accent-soft);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
 
   --font-sans: var(--font-sans-jp);
   --font-display: var(--font-sans-display);

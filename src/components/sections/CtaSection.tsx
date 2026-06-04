@@ -10,7 +10,7 @@ export function CtaSection() {
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-[#101012] py-28 md:py-36"
+      className="relative isolate overflow-hidden bg-contrast py-28 md:py-36"
       aria-labelledby="cta-heading"
     >
       <div

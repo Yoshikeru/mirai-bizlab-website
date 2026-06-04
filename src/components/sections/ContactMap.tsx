@@ -9,14 +9,14 @@ export function ContactMap() {
   const info = useTranslations("contact.info");
 
   return (
-    <section className="bg-[#F8F8F8] py-20 md:py-24">
+    <section className="bg-surface-alt py-20 md:py-24">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white"
+          className="relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface"
         >
           <div className="relative aspect-[16/7] w-full">
             <div

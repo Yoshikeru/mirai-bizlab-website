@@ -665,6 +665,12 @@
     "ctaConsult": "無料相談を予約",
     "ctaLine": "LINEで相談"
   },
+  "theme": {
+    "toggle": "テーマ切替",
+    "toDark": "ダークモードに切り替え",
+    "toLight": "ライトモードに切り替え",
+    "label": "テーマ"
+  },
   "notFound": {
     "title": "ページが見つかりません",
     "description": "お探しのページは移動または削除された可能性があります。",

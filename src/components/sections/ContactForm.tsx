@@ -75,7 +75,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="rounded-3xl border border-[color:var(--color-border)] bg-white p-8 md:p-10"
+      className="rounded-3xl border border-[color:var(--color-border)] bg-surface p-8 md:p-10"
       aria-label={t("title")}
     >
       <h2 className="typo-h2">{t("title")}</h2>
@@ -207,7 +207,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="group inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-[#bb000d] focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60"
+          className="group inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-accent-strong focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "submitting" ? (
             <>

@@ -665,6 +665,12 @@
     "ctaConsult": "Book a free consultation",
     "ctaLine": "Chat on LINE"
   },
+  "theme": {
+    "toggle": "Toggle theme",
+    "toDark": "Switch to dark mode",
+    "toLight": "Switch to light mode",
+    "label": "Theme"
+  },
   "notFound": {
     "title": "Page not found",
     "description": "The page you're looking for may have moved or been removed.",

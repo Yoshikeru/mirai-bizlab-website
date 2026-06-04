@@ -3,6 +3,8 @@ import { useTranslations } from "next-intl";
 
 import { Link } from "@/lib/i18n/navigation";
 
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
+
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileMenu } from "./MobileMenu";
 
@@ -34,7 +36,7 @@ export function Header() {
             width={220}
             height={110}
             priority
-            className="h-9 w-auto md:h-10"
+            className="h-9 w-auto md:h-10 dark:brightness-0 dark:invert"
           />
         </Link>
 
@@ -61,7 +63,9 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           {/* Locale switcher is shown on every viewport, sitting just to
-              the left of the hamburger button on mobile / tablet. */}
+              the left of the hamburger button on mobile / tablet. The theme
+              toggle joins from tablet up; on phones it lives in the menu. */}
+          <ThemeToggle className="hidden sm:flex" />
           <LocaleSwitcher />
           <MobileMenu />
         </div>

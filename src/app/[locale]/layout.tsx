@@ -17,6 +17,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { LenisProvider } from "@/components/motion/LenisProvider";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { routing, type Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 import "@/styles/globals.css";
@@ -113,6 +114,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      suppressHydrationWarning
       className={`${notoSansJp.variable} ${inter.variable} ${interTight.variable} ${notoSansThai.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
@@ -123,18 +125,20 @@ export default async function LocaleLayout({
           Skip to main content
         </a>
         <OrganizationSchema />
-        <NextIntlClientProvider>
-          <LenisProvider>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main id="main" className="flex-1">
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </LenisProvider>
-          <ChatWidget />
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider>
+            <LenisProvider>
+              <div className="flex min-h-screen flex-col">
+                <Header />
+                <main id="main" className="flex-1">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+            </LenisProvider>
+            <ChatWidget />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
