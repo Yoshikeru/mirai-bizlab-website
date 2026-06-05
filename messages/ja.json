@@ -31,14 +31,14 @@
   "home": {
     "hero": {
       "eyebrow": "For Japanese SMEs in Thailand",
-      "title": "タイで挑む\n全ての日系中小企業様の\n頼れるパートナー",
-      "subtitle": "日系中小企業のための、会計・会社設立・経営コンサルティングをワンストップで。",
+      "title": "タイで挑む\n全ての日系SME様の\n頼れるパートナー",
+      "subtitle": "日系SMEのための、タイ進出・会計・BizDevをワンストップで。",
       "primaryCta": "無料相談を予約する",
       "secondaryCta": "サービスを見る"
     },
     "about": {
       "eyebrow": "About",
-      "title": "在タイ日系SMEの\nパートナー＆\n伴走するチャレンジャー",
+      "title": "在タイ日系SMEの\nパートナー＆\n伴走者",
       "description": "創業から15年。バンコクを拠点に、3言語・幅広い業種・あらゆるフェーズの企業をご支援しています。",
       "metrics": [
         {
@@ -228,7 +228,7 @@
   "about": {
     "hero": {
       "eyebrow": "About",
-      "title": "バンコクから、\nひとつの選択肢になる。",
+      "title": "バンコクで\nあなたによりそう。",
       "description": "私たちは、日系SMEがタイで挑戦するための「現地パートナー」です。"
     },
     "message": {

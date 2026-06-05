@@ -31,14 +31,14 @@
   "home": {
     "hero": {
       "eyebrow": "For Japanese SMEs in Thailand",
-      "title": "For every Japanese SME\nventuring into Thailand.",
-      "subtitle": "Accounting, company setup, and management consulting for Japanese SMEs — delivered as one.",
+      "title": "A reliable partner\nfor every SME\nventuring into Thailand.",
+      "subtitle": "Thailand market entry, accounting and BizDev for SMEs — all in one place.",
       "primaryCta": "Book a free consultation",
       "secondaryCta": "Explore services"
     },
     "about": {
       "eyebrow": "About",
-      "title": "A long-term partner\nfor Japanese SMEs in Thailand.",
+      "title": "Your partner &\ncompanion\nfor SMEs in Thailand.",
       "description": "Fifteen years on the ground in Bangkok. We support Japanese businesses across languages, industries, and growth stages.",
       "metrics": [
         {
@@ -228,7 +228,7 @@
   "about": {
     "hero": {
       "eyebrow": "About",
-      "title": "From Bangkok,\na local choice you can rely on.",
+      "title": "In Bangkok,\nright by your side.",
       "description": "We are the on-the-ground partner for Japanese SMEs taking on Thailand."
     },
     "message": {
