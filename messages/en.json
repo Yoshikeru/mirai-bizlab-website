@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "eyebrow": "For Japanese SMEs in Thailand",
-      "title": "A reliable partner\nfor every SME\nventuring into Thailand.",
+      "title": "A partner by the side\nof every SME\nventuring into Thailand.",
       "subtitle": "Thailand market entry, accounting and BizDev for SMEs — all in one place.",
       "primaryCta": "Book a free consultation",
       "secondaryCta": "Explore services"
@@ -362,17 +362,17 @@
       {
         "id": "consulting",
         "index": "04",
-        "title": "Management Consulting",
-        "summary": "Management accounting, KPI design, and performance turnaround — turning numbers into decisions.",
-        "problem": "Numbers exist, but don't drive decisions. The understanding gap between HQ and the local team won't close.",
-        "solution": "We redesign management accounting, build the KPI dashboard, and run monthly reviews that complete a real hypothesis-validation loop.",
+        "title": "A Sounding Board for Owners",
+        "summary": "Bring us the numbers, the organization, the on-the-ground worries — we frame them with an objective eye and help you put solutions into practice.",
+        "problem": "Tough calls to make, but no one local to talk them through — and no clear person to turn to with worries about the numbers or the organization.",
+        "solution": "We listen to an owner's concerns with an outside perspective, frame the real issues, and work out the next moves together — from management accounting and KPIs to organizational and on-the-ground challenges, all the way to execution.",
         "deliverables": [
-          "Management accounting design (segment / product / store)",
-          "KPI dashboard build",
+          "A sounding board to frame your management issues",
+          "Management accounting & KPI design (segment / product / store)",
           "Monthly business review attendance",
-          "Performance improvement project support"
+          "Hands-on support putting solutions into practice"
         ],
-        "pricing": "From THB 80,000 / month (project-based available)"
+        "pricing": "From THB 80,000 / month (one-off consultations available)"
       }
     ],
     "cta": {
@@ -586,7 +586,7 @@
           },
           {
             "value": "consulting",
-            "label": "Management Consulting"
+            "label": "Management advisory"
           },
           {
             "value": "careers",
