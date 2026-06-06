@@ -13,7 +13,6 @@ import { Link } from "@/lib/i18n/navigation";
 const NAV_ITEMS = [
   { key: "about", href: "/about" },
   { key: "services", href: "/services" },
-  { key: "pricing", href: "/pricing" },
   { key: "cases", href: "/cases" },
   { key: "blog", href: "/blog" },
   { key: "careers", href: "/careers" },

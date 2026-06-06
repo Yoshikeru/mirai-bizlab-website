@@ -7,7 +7,6 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "pricing": "Pricing",
     "cases": "Cases",
     "blog": "Blog",
     "careers": "Careers",
@@ -204,10 +203,6 @@
       "title": "Services",
       "description": "Detailed service offerings"
     },
-    "pricing": {
-      "title": "Pricing",
-      "description": "Service plans"
-    },
     "cases": {
       "title": "Cases",
       "description": "Selected work"
@@ -379,86 +374,6 @@
       "title": "Not sure which service fits? Talk it through first.",
       "description": "We will sort through the combinations and priorities together on a first call.",
       "button": "Book a free consultation"
-    }
-  },
-  "pricing": {
-    "hero": {
-      "eyebrow": "Pricing",
-      "title": "Three plans,\nshaped to your stage.",
-      "description": "From launch to growth, choose the bundle that matches your size and ambition."
-    },
-    "note": "All prices are indicative. Final pricing depends on scope and will be presented in a quotation.",
-    "recommended": "Recommended",
-    "plans": [
-      {
-        "id": "standard",
-        "name": "Standard",
-        "tagline": "For new offices and small teams",
-        "price": "Contact us",
-        "features": [
-          "Monthly bookkeeping and trial balance",
-          "VAT / withholding filings",
-          "Annual corporate tax filing",
-          "Email / online support",
-          "HQ-ready report (English)"
-        ],
-        "cta": "Talk about this plan"
-      },
-      {
-        "id": "business",
-        "name": "Business",
-        "tagline": "For ~30-person growth-stage teams",
-        "price": "Contact us",
-        "features": [
-          "Everything in Standard",
-          "Management accounting (segment / product)",
-          "Audit firm coordination",
-          "Monthly online business review",
-          "HQ-ready report (Japanese / English)",
-          "Cloud accounting operations"
-        ],
-        "cta": "Talk about this plan"
-      },
-      {
-        "id": "enterprise",
-        "name": "Enterprise",
-        "tagline": "For mid-size, multi-entity organizations",
-        "price": "Contact us",
-        "features": [
-          "Everything in Business",
-          "Consolidated reporting for Japan HQ",
-          "Multi-entity / multi-site support",
-          "Dedicated CFO-level support",
-          "KPI dashboard build",
-          "Performance improvement projects"
-        ],
-        "cta": "Talk about this plan"
-      }
-    ],
-    "faq": {
-      "title": "Frequently asked questions",
-      "items": [
-        {
-          "q": "How fast can we go live?",
-          "a": "We can kick off monthly operations as soon as two weeks after onboarding."
-        },
-        {
-          "q": "Can we engage you only for a BOI application?",
-          "a": "Yes. We accept project-based work, and continuing operations afterward is optional."
-        },
-        {
-          "q": "Will you coordinate directly with our Japan HQ?",
-          "a": "Yes — regular meetings and HQ-ready reporting are part of the operating design."
-        },
-        {
-          "q": "Can we change plans midway?",
-          "a": "Yes. We adjust the plan as your business stage evolves."
-        },
-        {
-          "q": "Is there a minimum commitment?",
-          "a": "We work on a monthly basis, with discounts for annual commitments."
-        }
-      ]
     }
   },
   "cases": {

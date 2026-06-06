@@ -7,7 +7,6 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 
 const SERVICE_LINKS = [
   { key: "services", href: "/services" },
-  { key: "pricing", href: "/pricing" },
   { key: "cases", href: "/cases" },
 ] as const;
 

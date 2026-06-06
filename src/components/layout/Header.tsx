@@ -13,7 +13,6 @@ import { MobileMenu } from "./MobileMenu";
 const NAV_ITEMS = [
   { key: "about", href: "/about" },
   { key: "services", href: "/services" },
-  { key: "pricing", href: "/pricing" },
   { key: "cases", href: "/cases" },
   { key: "blog", href: "/blog" },
   { key: "careers", href: "/careers" },
@@ -59,7 +58,7 @@ export function Header() {
         aria-label="Primary"
         className="hidden border-t border-[color:var(--color-border)]/80 lg:block"
       >
-        <ul className="mx-auto grid max-w-(--container-wide) grid-cols-7 divide-x divide-[color:var(--color-border)]/80">
+        <ul className="mx-auto grid max-w-(--container-wide) grid-cols-6 divide-x divide-[color:var(--color-border)]/80">
           {NAV_ITEMS.map((item) => {
             const active = isActive(item.href);
             return (
