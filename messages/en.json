@@ -116,40 +116,40 @@
       "description": "Across industries and growth stages, from Thailand market entry to scaling operations.",
       "items": [
         {
-          "industry": "Manufacturing",
-          "scale": "120 employees",
-          "title": "Rebuilt cost accounting at a local plant",
-          "summary": "Closed monthly books 10 days faster and aligned with Japan HQ reporting."
+          "industry": "Trading",
+          "scale": "25 employees",
+          "title": "From company setup to import/export operations",
+          "summary": "We guided BOI, incorporation and bank account opening, then built the accounting backbone — including import/export VAT refunds and customs coordination."
         },
         {
-          "industry": "Wholesale & Retail",
-          "scale": "35 employees",
-          "title": "BOI to setup to bank account",
-          "summary": "From the entry decision to opening for business in three months."
+          "industry": "Trading",
+          "scale": "40 employees",
+          "title": "Sharper inventory, credit and cost control with a faster close",
+          "summary": "We made purchasing, inventory and receivables visible, tightened credit control and cost accuracy, and shortened the monthly close to 8 business days."
         },
         {
-          "industry": "IT / SaaS",
-          "scale": "18 employees",
-          "title": "Cross-border billing optimization",
-          "summary": "Designed billing ops that respect VAT, withholding, and transfer pricing."
+          "industry": "Office",
+          "scale": "30 employees",
+          "title": "Standing up the admin function of a regional HQ",
+          "summary": "We built accounting, HR and general affairs end-to-end for a Southeast Asia hub and established a clean reporting line back to head office."
         },
         {
-          "industry": "Hospitality",
-          "scale": "6 outlets",
-          "title": "Store-level P&L and KPI design",
-          "summary": "Visualized unit economics and sped up decision-making."
+          "industry": "Office",
+          "scale": "12 employees",
+          "title": "From representative office to local subsidiary",
+          "summary": "As the business grew, we converted a rep office into a local entity — handling licensing, tax registration and labor matters without a gap."
         },
         {
-          "industry": "Healthcare",
-          "scale": "60 employees",
-          "title": "Transition to a local subsidiary",
-          "summary": "Moved from agency contract to a wholly-owned entity with a tighter org structure."
+          "industry": "Professional Firm",
+          "scale": "15 employees",
+          "title": "Fully outsourced back office for a professional firm",
+          "summary": "Bookkeeping, payroll and filings were handed to us — freeing the team to focus on its core work while trimming fixed costs."
         },
         {
-          "industry": "Construction",
-          "scale": "80 employees",
-          "title": "Percentage-of-completion accounting",
-          "summary": "Implemented PoC accounting and improved year-end accuracy."
+          "industry": "Beauty Clinic",
+          "scale": "5 locations",
+          "title": "Per-store P/L and cloud accounting for a multi-clinic group",
+          "summary": "We rolled out cloud accounting to surface per-store P/L, giving headquarters real-time visibility across every location."
         }
       ]
     },
@@ -380,7 +380,7 @@
     "hero": {
       "eyebrow": "Cases",
       "title": "Stories of ambition,\nbehind the numbers.",
-      "description": "Selected work across industries, sizes, and growth stages."
+      "description": "From trading companies and offices to professional firms and beauty clinics — a look at our journey with a wide range of clients in Bangkok."
     },
     "filter": {
       "label": "Filter by industry",
