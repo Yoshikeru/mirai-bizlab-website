@@ -1,18 +1,39 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/Button";
 
 export function CtaSection() {
   const t = useTranslations("home.cta");
+  const reduce = useReducedMotion();
 
   return (
     <section
       className="relative isolate overflow-hidden bg-contrast py-28 md:py-36"
       aria-labelledby="cta-heading"
     >
+      {/* Drifting circle outlines */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -left-36 -z-10 h-[520px] w-[520px] rounded-full border border-[color:var(--color-accent)]/30"
+        animate={reduce ? undefined : { x: [0, 24, 0], y: [0, -18, 0], scale: [1, 1.04, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -top-44 -right-28 -z-10 h-[600px] w-[600px] rounded-full border border-white/10"
+        animate={reduce ? undefined : { x: [0, -20, 0], y: [0, 16, 0], scale: [1.04, 1, 1.04] }}
+        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-28 left-4 -z-10 h-[360px] w-[360px] rounded-full border border-white/[0.07]"
+        animate={reduce ? undefined : { x: [0, 16, 0], y: [0, -10, 0] }}
+        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 -left-40 -z-10 h-[620px] w-[620px] -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/15 blur-[140px]"

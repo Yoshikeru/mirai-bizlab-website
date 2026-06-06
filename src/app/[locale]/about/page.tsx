@@ -7,7 +7,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { AboutMessage } from "@/components/sections/AboutMessage";
 import { AboutInfo } from "@/components/sections/AboutInfo";
 import { AboutMVV } from "@/components/sections/AboutMVV";
-import { RubikCube3D } from "@/components/visuals/RubikCube3D";
+import { OrbitVisual } from "@/components/visuals/OrbitVisual";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 
@@ -52,7 +52,7 @@ function AboutPageContent() {
           { label: pages("about.title") },
         ]}
         watermark={false}
-        rightSlot={<RubikCube3D />}
+        rightSlot={<OrbitVisual />}
       />
       <AboutMessage />
       <AboutInfo />
