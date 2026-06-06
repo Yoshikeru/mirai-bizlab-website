@@ -587,7 +587,8 @@
     "label": "Theme"
   },
   "notFound": {
-    "title": "Page not found",
+    "title": "This page has gone missing",
+    "fun": "It hopped on a tuk-tuk and got lost\nsomewhere in Bangkok 🛺",
     "description": "The page you're looking for may have moved or been removed.",
     "button": "Back to home"
   }
