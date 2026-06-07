@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/layout/PageHero";
 import { BlogList } from "@/components/sections/BlogList";
 import { CtaSection } from "@/components/sections/CtaSection";
+import { BlogVisual } from "@/components/visuals/BlogVisual";
 import { getBlogPosts } from "@/lib/blog";
 import { type Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
@@ -54,6 +55,7 @@ function BlogPageContent({
           { label: common("home"), href: "/" },
           { label: pages("blog.title") },
         ]}
+        rightSlot={<BlogVisual />}
       />
       <BlogList posts={posts} />
       <CtaSection />

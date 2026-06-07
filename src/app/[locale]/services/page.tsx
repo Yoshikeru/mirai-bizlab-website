@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { ServicesDetail } from "@/components/sections/ServicesDetail";
+import { ServicesVisual } from "@/components/visuals/ServicesVisual";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 
@@ -47,6 +48,7 @@ function ServicesContent() {
           { label: common("home"), href: "/" },
           { label: pages("services.title") },
         ]}
+        rightSlot={<ServicesVisual />}
       />
       <ServicesDetail />
       <CtaSection />

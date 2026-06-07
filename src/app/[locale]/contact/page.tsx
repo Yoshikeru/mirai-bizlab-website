@@ -6,6 +6,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ContactInfo } from "@/components/sections/ContactInfo";
 import { ContactMap } from "@/components/sections/ContactMap";
+import { ContactVisual } from "@/components/visuals/ContactVisual";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 
@@ -48,6 +49,7 @@ function ContactContent() {
           { label: common("home"), href: "/" },
           { label: pages("contact.title") },
         ]}
+        rightSlot={<ContactVisual />}
       />
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto w-full max-w-(--container-wide) px-6">

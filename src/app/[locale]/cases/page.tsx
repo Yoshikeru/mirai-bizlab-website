@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/layout/PageHero";
 import { CasesGrid } from "@/components/sections/CasesGrid";
 import { CtaSection } from "@/components/sections/CtaSection";
+import { CasesVisual } from "@/components/visuals/CasesVisual";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 
@@ -47,6 +48,7 @@ function CasesContent() {
           { label: common("home"), href: "/" },
           { label: pages("cases.title") },
         ]}
+        rightSlot={<CasesVisual />}
       />
       <CasesGrid />
       <CtaSection />

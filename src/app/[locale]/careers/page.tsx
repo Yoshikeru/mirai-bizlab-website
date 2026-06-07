@@ -6,6 +6,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CareersNotice } from "@/components/sections/CareersNotice";
 import { CareersOffice } from "@/components/sections/CareersOffice";
 import { CareersPositions } from "@/components/sections/CareersPositions";
+import { CareersVisual } from "@/components/visuals/CareersVisual";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
 
@@ -48,6 +49,7 @@ function CareersContent() {
           { label: common("home"), href: "/" },
           { label: pages("careers.title") },
         ]}
+        rightSlot={<CareersVisual />}
       />
       <CareersNotice />
       <CareersOffice />
