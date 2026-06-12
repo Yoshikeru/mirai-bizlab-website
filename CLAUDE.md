@@ -30,8 +30,8 @@ npm run build      # 本番ビルド
 **コミット前に必ず `typecheck` → `lint` → `build` を通すこと。**
 
 ## デプロイ運用（重要）
-- 本番デプロイは **Vercel の GitHub 自動連携**。Production Branch = **`claude/fervent-antonelli-146211`**。
-- このブランチに **push すると本番に自動デプロイ**される（別ブランチはプレビュー扱い）。
+- 本番デプロイは **Vercel の GitHub 自動連携**。Production Branch = **`main`**（2026-06-13に旧 `claude/fervent-antonelli-146211` から切替済み・push→本番反映を実地確認済み）。
+- `main` に **push すると本番に自動デプロイ**される（別ブランチはプレビュー扱い）。
 - 流れ: 編集 → typecheck/lint/build → `git commit` → `git push origin HEAD` → Vercel が自動ビルド・公開。
 - 反映確認は本番URLを `curl` などで確認（デプロイは概ね1〜2分）。
 
