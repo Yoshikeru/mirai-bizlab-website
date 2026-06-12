@@ -21,11 +21,13 @@
   --color-accent-strong: #bb000d; /* hover / gradient end */
   --color-accent-soft: #f4e5e6;
 
-  /* Elevation (theme-aware) */
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04),
-    0 14px 30px -18px rgba(0, 0, 0, 0.2);
-  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.06),
-    0 32px 60px -28px rgba(0, 0, 0, 0.3);
+  /* Elevation (theme-aware) — layered for depth */
+  --shadow-card: 0 1px 2px rgba(16, 16, 18, 0.05),
+    0 6px 14px -6px rgba(16, 16, 18, 0.06),
+    0 18px 38px -18px rgba(16, 16, 18, 0.18);
+  --shadow-card-hover: 0 2px 6px rgba(16, 16, 18, 0.07),
+    0 16px 32px -12px rgba(215, 0, 15, 0.1),
+    0 40px 72px -28px rgba(16, 16, 18, 0.32);
 
   --font-sans-jp: var(--font-noto-sans-jp), "Noto Sans JP", system-ui, sans-serif;
   --font-sans-latin: var(--font-inter), "Inter", system-ui, sans-serif;
@@ -87,6 +89,36 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Branded scrollbar — subtle, premium detail */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-muted) 45%, transparent)
+    transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-muted) 40%, transparent);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+/* Accent focus ring — keyboard nav looks intentional, on-brand */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 html[lang="en"] body {
@@ -107,6 +139,21 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-feature-settings: "palt";
+  position: relative;
+}
+
+/* Paper-grain texture — barely-there noise lifts flat surfaces sitewide */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.dark body::before {
+  opacity: 0.035;
 }
 
 h1,
@@ -115,6 +162,11 @@ h3,
 h4 {
   font-weight: 700;
   letter-spacing: -0.01em;
+  text-wrap: balance; /* even line lengths — editorial-grade headings */
+}
+
+p {
+  text-wrap: pretty; /* no orphan words at paragraph ends */
 }
 
 html[lang="en"] h1,
@@ -144,6 +196,21 @@ html[lang="en"] h4 {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-accent);
+
+  /* Signature accent rule before every eyebrow — ties sections to the brand */
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.75rem;
+    height: 1px;
+    margin-right: 0.875rem;
+    vertical-align: middle;
+    background: linear-gradient(
+      to right,
+      var(--color-accent),
+      color-mix(in srgb, var(--color-accent) 25%, transparent)
+    );
+  }
 }
 
 @utility typo-display {
