@@ -18,6 +18,17 @@ module.exports = {
           'gray-light': '#F3F4F6',
           white: '#FFFFFF',
         },
+        // 週刊タイ経済 デモ用パレット（紺＋金）
+        tk: {
+          navy: '#16284B',
+          'navy-2': '#1F3A6B',
+          gold: '#C9A24B',
+          'gold-light': '#E3C97E',
+          ice: '#EAF0F8',
+          cream: '#F7F4EC',
+          ink: '#23303F',
+          mute: '#6B7787',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'Noto Sans JP', 'Noto Sans Thai', 'sans-serif'],

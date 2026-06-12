@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -13,6 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [locale, setLocale] = useState<Locale>('ja');
+  const pathname = usePathname();
+  // 週刊タイ経済デモは独自のヘッダー／フッターを使うため、企業サイトの共通UIを隠す
+  const isThaikeizai = pathname?.startsWith('/thaikeizai');
 
   const t = useMemo(() => getTranslation(locale), [locale]);
 
@@ -38,10 +42,16 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <I18nContext.Provider value={contextValue}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <AIChatBot />
+          {isThaikeizai ? (
+            <main>{children}</main>
+          ) : (
+            <>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+              <AIChatBot />
+            </>
+          )}
         </I18nContext.Provider>
       </body>
     </html>
