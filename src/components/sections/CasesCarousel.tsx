@@ -53,7 +53,7 @@ export function CasesCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-[#F5F5F5] py-24 md:py-32">
+    <section className="bg-[#F5F5F5] py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <SectionHeader
           eyebrow={t("eyebrow")}
@@ -61,7 +61,7 @@ export function CasesCarousel() {
           description={t("description")}
         />
 
-        <div className="mt-14 md:mt-20">
+        <div className="mt-10 md:mt-20">
           <div ref={emblaRef} className="overflow-hidden">
             <ul className="flex gap-6 md:gap-8">
               {items.map((item, index) => (

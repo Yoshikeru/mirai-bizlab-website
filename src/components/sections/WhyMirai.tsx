@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,7 +13,7 @@ export function WhyMirai() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-background py-24 md:py-32">
+    <section className="relative bg-background py-14 md:py-32">
       <div className="mx-auto grid w-full max-w-(--container-wide) grid-cols-1 gap-12 px-6 md:grid-cols-12 md:gap-16">
         <aside className="md:col-span-5">
           <div className="md:sticky md:top-28">
@@ -71,6 +72,35 @@ export function WhyMirai() {
                 );
               })}
             </ul>
+
+            {/* editorial photo — reveals with a slow de-zoom */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px 0px" }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="relative mt-12 hidden aspect-[4/3] overflow-hidden rounded-3xl md:block"
+            >
+              <motion.div
+                initial={{ scale: 1.18 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true, margin: "-80px 0px" }}
+                transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src="/assets/photos/office-hero.jpg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </motion.div>
+              <span
+                aria-hidden
+                className="absolute bottom-0 left-0 block h-1 w-16 bg-[color:var(--color-accent)]"
+              />
+            </motion.div>
           </div>
         </aside>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/Button";
@@ -11,9 +12,26 @@ export function CtaSection() {
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-contrast py-28 md:py-36"
+      className="relative isolate overflow-hidden bg-contrast py-16 md:py-36"
       aria-labelledby="cta-heading"
     >
+      {/* Bangkok night photo — slow breathing zoom under a dark wash */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-20"
+        animate={reduce ? undefined : { scale: [1, 1.07, 1] }}
+        transition={{ duration: 34, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Image
+          src="/assets/photos/office-bangkok.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-contrast/70 via-contrast/40 to-contrast/85" />
+      </motion.div>
+
       {/* Drifting circle outlines */}
       <motion.div
         aria-hidden

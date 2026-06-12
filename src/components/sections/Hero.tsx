@@ -31,7 +31,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate min-h-screen overflow-hidden bg-background"
+      className="relative isolate min-h-svh overflow-hidden bg-background"
     >
       {/* Bangkok prism visual (background) */}
       <motion.div
@@ -48,7 +48,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-background/95 via-background/70 to-background/0 md:from-background/92 md:via-background/55 md:to-transparent"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-(--container-wide) grid-cols-1 items-start gap-14 px-6 pt-10 pb-24 md:grid-cols-12 md:gap-10 md:pt-16">
+      <div className="relative z-10 mx-auto grid min-h-svh w-full max-w-(--container-wide) grid-cols-1 items-start px-6 pt-6 pb-20 md:grid-cols-12 md:gap-10 md:pt-16 md:pb-24">
         <motion.div
           className="md:col-span-7"
           style={reduce ? undefined : { opacity: textOpacity, y: textY }}
@@ -111,7 +111,7 @@ export function Hero() {
         </motion.div>
 
         {/* right column intentionally empty on desktop — visual carries the right side */}
-        <div className="md:col-span-5" aria-hidden />
+        <div className="hidden md:col-span-5 md:block" aria-hidden />
       </div>
 
       {/* scroll indicator */}

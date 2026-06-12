@@ -20,7 +20,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
   }, [posts, category]);
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">

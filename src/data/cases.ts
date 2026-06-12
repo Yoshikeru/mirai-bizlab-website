@@ -8,21 +8,23 @@
  * both the home carousel and the /cases grid map `items[index]` to `CASE_SLUGS[index]`.
  */
 export const CASE_SLUGS = [
-  "trading-setup-import-export",
-  "trading-inventory-credit",
-  "office-regional-hq",
-  "office-rep-to-subsidiary",
-  "firm-back-office-bpo",
-  "beauty-clinic-multistore",
+  "restaurant-multi-outlet",
+  "beauty-salon-payroll",
+  "medical-clinic-accounting",
+  "ad-agency-project-pl",
+  "peak-cloud-accounting",
+  "company-incorporation-fnb",
+  "company-liquidation",
 ] as const;
 
 export type CaseSlug = (typeof CASE_SLUGS)[number];
 
 export const CASE_IMAGES: Record<CaseSlug, string> = {
-  "trading-setup-import-export": "/assets/photos/case-retail.jpg",
-  "trading-inventory-credit": "/assets/photos/case-manufacturing.jpg",
-  "office-regional-hq": "/assets/photos/office-hero.jpg",
-  "office-rep-to-subsidiary": "/assets/photos/office-bangkok.jpg",
-  "firm-back-office-bpo": "/assets/photos/office-collab.jpg",
-  "beauty-clinic-multistore": "/assets/photos/case-healthcare.jpg",
+  "restaurant-multi-outlet": "/assets/photos/case-hospitality.jpg",
+  "beauty-salon-payroll": "/assets/photos/case-salon.jpg",
+  "medical-clinic-accounting": "/assets/photos/case-healthcare.jpg",
+  "ad-agency-project-pl": "/assets/photos/office-collab.jpg",
+  "peak-cloud-accounting": "/assets/photos/case-it.jpg",
+  "company-incorporation-fnb": "/assets/photos/office-bangkok.jpg",
+  "company-liquidation": "/assets/photos/office-hero.jpg",
 };

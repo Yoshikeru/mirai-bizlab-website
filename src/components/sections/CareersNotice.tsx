@@ -10,7 +10,7 @@ export function CareersNotice() {
   const t = useTranslations("careers.notice");
 
   return (
-    <section className="bg-background pt-4 pb-20 md:pt-8 md:pb-24">
+    <section className="bg-background pt-4 pb-12 md:pt-8 md:pb-24">
       <div className="mx-auto w-full max-w-(--container-content) px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

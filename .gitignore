@@ -35,3 +35,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 旧プロトタイプ（別gitリポジトリ・ビルド対象外）
+mirai-bizlab-website/

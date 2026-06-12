@@ -37,7 +37,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[color:var(--color-border)] bg-background">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6 py-20">
+      <div className="mx-auto w-full max-w-(--container-wide) px-6 py-12 md:py-20">
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4 md:gap-10">
           <div className="col-span-2 md:col-span-1">
             <p className="text-base font-bold tracking-tight">{site("name")}</p>

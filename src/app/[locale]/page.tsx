@@ -5,6 +5,7 @@ import { AboutMetrics } from "@/components/sections/AboutMetrics";
 import { CasesCarousel } from "@/components/sections/CasesCarousel";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/sections/Marquee";
 import { Process } from "@/components/sections/Process";
 import { Services } from "@/components/sections/Services";
 import { WhyMirai } from "@/components/sections/WhyMirai";
@@ -35,6 +36,7 @@ export default async function HomePage({
   return (
     <>
       <Hero />
+      <Marquee />
       <AboutMetrics />
       <Services />
       <WhyMirai />

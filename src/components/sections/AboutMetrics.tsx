@@ -34,7 +34,7 @@ export function AboutMetrics() {
       <div className="absolute inset-x-0 bottom-0 h-px bg-[color:var(--color-accent)]/80" />
 
       <div className="md:sticky md:top-0 md:flex md:h-screen md:flex-col md:justify-center md:overflow-hidden">
-        <div className="mx-auto w-full max-w-(--container-wide) px-6 pt-20 md:pt-0">
+        <div className="mx-auto w-full max-w-(--container-wide) px-6 pt-14 md:pt-0">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             <div className="md:col-span-5">
               <Reveal y={16} duration={0.6}>
@@ -76,7 +76,7 @@ export function AboutMetrics() {
         </div>
 
         {/* mobile: stacked grid */}
-        <ul className="mx-auto mt-12 grid w-full max-w-(--container-content) grid-cols-2 gap-4 px-6 pb-20 md:hidden">
+        <ul className="mx-auto mt-10 grid w-full max-w-(--container-content) grid-cols-2 gap-3 px-6 pb-14 md:hidden">
           {metrics.map((metric, index) => (
             <MetricCard
               key={metric.label}

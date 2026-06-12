@@ -21,11 +21,11 @@ export function Process() {
   const trackHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="relative bg-background py-24 md:py-32">
+    <section className="relative bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-content) px-6">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-        <div ref={containerRef} className="relative mt-16 pl-10 md:mt-20 md:pl-16">
+        <div ref={containerRef} className="relative mt-10 pl-10 md:mt-20 md:pl-16">
           <div
             aria-hidden
             className="absolute top-0 bottom-0 left-2 w-px bg-foreground/10 md:left-4"

@@ -113,43 +113,189 @@
     "cases": {
       "eyebrow": "Cases",
       "title": "Selected work.",
-      "description": "Across industries and growth stages, from Thailand market entry to scaling operations.",
+      "description": "Our strength is supporting multi-location, storefront businesses — restaurants, salons, clinics, agencies — where daily operations and the numbers are tightly linked, with hands-on accounting, tax and HR support on the ground in Thailand.",
       "items": [
         {
-          "industry": "Trading",
-          "scale": "25 employees",
-          "title": "From company setup to import/export operations",
-          "summary": "We guided BOI, incorporation and bank account opening, then built the accounting backbone — including import/export VAT refunds and customs coordination."
+          "industry": "Restaurant",
+          "scale": "3 outlets / 32 staff",
+          "title": "Reconciling cash and delivery sales across 3 outlets for per-store P/L",
+          "summary": "Cash and delivery-platform deposits could no longer be reconciled, leaving per-store profitability invisible. POS integration and a faster monthly close gave head office the numbers to manage by.",
+          "challenge": "As the group grew to three Japanese restaurants, cash sales, deposits from delivery platforms such as Grab and LINE MAN, and in-store card payments were each tracked separately, and the month-end reconciliation had broken down. With commission-net deposits impossible to match against sales, neither per-store margins nor even total company revenue could be stated with confidence.",
+          "approach": [
+            "Set reconciliation rules across POS, daily sales and deposits",
+            "Allocated delivery commissions and promo costs by outlet",
+            "Cloud accounting to speed the close and output per-store P/L"
+          ],
+          "results": [
+            {
+              "value": "8 business days",
+              "label": "Time to monthly close (about 15 days faster)"
+            },
+            {
+              "value": "3 outlets",
+              "label": "Coverage of per-store P/L"
+            },
+            {
+              "value": "100%",
+              "label": "Reconciliation rate of delivery deposits"
+            }
+          ]
         },
         {
-          "industry": "Trading",
-          "scale": "40 employees",
-          "title": "Sharper inventory, credit and cost control with a faster close",
-          "summary": "We made purchasing, inventory and receivables visible, tightened credit control and cost accuracy, and shortened the monthly close to 8 business days."
+          "industry": "Hair Salon",
+          "scale": "2 outlets / 14 stylists",
+          "title": "Unifying commission pay with social security and withholding tax",
+          "summary": "Stylist commission calculations depended on one person, and social security and personal income tax withholding contained errors. Outsourced payroll and HR cleanup made the monthly cycle accurate and on time.",
+          "challenge": "At two salons serving Japanese expatriates, the store manager calculated commission pay tied to nomination and service revenue by hand, so each month brought variance and delays. Social Security Office (SSO) deductions and personal income tax withholding (PND1) also contained errors that demanded constant correction.",
+          "approach": [
+            "Defined commission logic and standardized the calculation template",
+            "Outsourced monthly SSO and PND1 withholding and filing",
+            "Multilingual payslips and a clear disbursement flow"
+          ],
+          "results": [
+            {
+              "value": "5th of each month",
+              "label": "Payroll finalized on schedule (zero delays)"
+            },
+            {
+              "value": "Zero",
+              "label": "Errors in withholding and social security (post-fix)"
+            },
+            {
+              "value": "Approx. 8 hrs",
+              "label": "Monthly payroll workload removed from stores"
+            }
+          ]
         },
         {
-          "industry": "Office",
-          "scale": "30 employees",
-          "title": "Standing up the admin function of a regional HQ",
-          "summary": "We built accounting, HR and general affairs end-to-end for a Southeast Asia hub and established a clean reporting line back to head office."
+          "industry": "Medical Clinic",
+          "scale": "21 staff / 2 departments",
+          "title": "Untangling revenue recognition and drug inventory for a clinic",
+          "summary": "Insurance and self-pay treatment had different cash cycles, blurring revenue recognition, and drug inventory was untracked. A new accounting framework made department-level P/L and stock visible.",
+          "challenge": "At this Japanese-affiliated clinic, cashless billing to insurers was mixed with cash and card payments from self-pay treatment, and revenue was recognized at inconsistent times. Pharmaceuticals and medical supplies were not tracked in the books either, leaving cost of goods and wastage unknown.",
+          "approach": [
+            "Separated revenue recognition for insurance and self-pay",
+            "Introduced department- and segment-level P/L management",
+            "Built stock-count and cost-recognition flow for drugs"
+          ],
+          "results": [
+            {
+              "value": "2 departments",
+              "label": "Units of segment P/L visibility"
+            },
+            {
+              "value": "Approx. 30 days",
+              "label": "Insurance receivable settlement cycle, now tracked"
+            },
+            {
+              "value": "Monthly",
+              "label": "Frequency of drug stock-count and costing"
+            }
+          ]
         },
         {
-          "industry": "Office",
-          "scale": "12 employees",
-          "title": "From representative office to local subsidiary",
-          "summary": "As the business grew, we converted a rep office into a local entity — handling licensing, tax registration and labor matters without a gap."
+          "industry": "Advertising Agency",
+          "scale": "18 staff",
+          "title": "Project-level cost control to surface loss-making jobs",
+          "summary": "Costs were not tracked per project, so unprofitable jobs only surfaced at year-end. Project P/L, WHT management and tighter receivables let the team judge profitability before taking work on.",
+          "challenge": "At this Japanese-affiliated agency, production, media and subcontracting costs were booked across projects, so gross margin per job was invisible. Withholding tax (WHT 3%) on subcontractors was often missed, and combined with slow collections, cash flow was chronically tight.",
+          "approach": [
+            "Tagged and aggregated costs by project code",
+            "Set up 3% subcontractor WHT and PND3/53 remittance",
+            "Managed the billing-to-collection cycle to improve cash flow"
+          ],
+          "results": [
+            {
+              "value": "Per project",
+              "label": "Unit of gross-margin visibility"
+            },
+            {
+              "value": "Before signing",
+              "label": "When profitability can now be judged"
+            },
+            {
+              "value": "Approx. 20 days",
+              "label": "Reduction in average collection cycle"
+            }
+          ]
         },
         {
-          "industry": "Professional Firm",
-          "scale": "15 employees",
-          "title": "Fully outsourced back office for a professional firm",
-          "summary": "Bookkeeping, payroll and filings were handed to us — freeing the team to focus on its core work while trimming fixed costs."
+          "industry": "PEAK Rollout",
+          "scale": "12 staff",
+          "title": "Moving from Excel and paper invoices to PEAK cloud accounting",
+          "summary": "Invoicing and bookkeeping ran on Excel and paper, so the numbers lagged until month-end. Rolling out Thailand's PEAK cloud accounting delivered real-time visibility and far less bookkeeping work.",
+          "challenge": "Sales and purchase invoices were created in Excel and filed on paper, and bookkeeping relied on manual entry, so the monthly figures were not firm until late the following month. VAT and withholding tax were tallied by hand each time, carrying the risk of entry errors and double-counting.",
+          "approach": [
+            "Rolled out PEAK to digitize invoicing and bookkeeping",
+            "Configured automatic VAT/WHT tallying and reporting",
+            "Tailored the chart of accounts and workflow to the company"
+          ],
+          "results": [
+            {
+              "value": "About -60%",
+              "label": "Reduction in monthly bookkeeping workload"
+            },
+            {
+              "value": "Real-time",
+              "label": "Visibility of sales and balances"
+            },
+            {
+              "value": "3rd business day",
+              "label": "Days to finalize the monthly trial balance"
+            }
+          ]
         },
         {
-          "industry": "Beauty Clinic",
-          "scale": "5 locations",
-          "title": "Per-store P/L and cloud accounting for a multi-clinic group",
-          "summary": "We rolled out cloud accounting to surface per-store P/L, giving headquarters real-time visibility across every location."
+          "industry": "Company Setup",
+          "scale": "THB 3M capital / F&B",
+          "title": "Guiding an F&B market entry through to license approval",
+          "summary": "We supported everything from DBD registration and VAT registration to the food business license and the expatriate's visa and work permit. Running the administrative steps in parallel enabled a fast launch.",
+          "challenge": "Entering Thailand's F&B sector for the first time, the Japanese parent had no clear picture of company structure, foreign-ownership rules or the licenses required, and could not judge which steps to take in what order. Progress had to be managed backward from the planned opening date.",
+          "approach": [
+            "Handled DBD company registration and tax/VAT registration",
+            "Supported food license and signboard tax applications",
+            "Obtained the expatriate's visa and work permit"
+          ],
+          "results": [
+            {
+              "value": "Approx. 8 weeks",
+              "label": "From registration to opening"
+            },
+            {
+              "value": "1 permit",
+              "label": "Expatriate work permit obtained"
+            },
+            {
+              "value": "One-stop",
+              "label": "Single point for setup, tax, license and visa"
+            }
+          ]
+        },
+        {
+          "industry": "Liquidation",
+          "scale": "9 staff / market exit",
+          "title": "Closing the company in an orderly liquidation on exit",
+          "summary": "We carried out employee terminations, tax clearance and liquidation registration step by step in line with the law. The company was wound up without dispute, completing the parent's exit on plan.",
+          "challenge": "A parent-company restructuring meant withdrawing from Thailand, but the required steps and timeline were unclear — statutory severance under labor law, settlement of unpaid taxes and VAT, appointment of a liquidator and creditor notices among them.",
+          "approach": [
+            "Carried out lawful severance and separation procedures",
+            "Cancelled VAT registration and obtained tax clearance",
+            "Completed liquidator appointment, creditor notice and registration"
+          ],
+          "results": [
+            {
+              "value": "9 staff",
+              "label": "Separations completed lawfully"
+            },
+            {
+              "value": "Zero",
+              "label": "Labor or tax disputes"
+            },
+            {
+              "value": "Approx. 12 months",
+              "label": "Time to completion of liquidation"
+            }
+          ]
         }
       ]
     },
@@ -184,7 +330,17 @@
       "title": "Start with a\nfree consultation.",
       "description": "From sharpening the problem to choosing the right entry scheme — 30 minutes is enough to move forward.",
       "button": "Book a free consultation"
-    }
+    },
+    "marquee": [
+      "Company Setup",
+      "Accounting & Tax",
+      "Monthly Closing",
+      "Payroll",
+      "Visa & Work Permit",
+      "PEAK Cloud Accounting",
+      "Business Advisory",
+      "Liquidation"
+    ]
   },
   "footer": {
     "tagline": "Accelerating Japanese SMEs' ambitions, from Bangkok.",
@@ -380,13 +536,18 @@
     "hero": {
       "eyebrow": "Cases",
       "title": "Stories of ambition,\nbehind the numbers.",
-      "description": "From trading companies and offices to professional firms and beauty clinics — a look at our journey with a wide range of clients in Bangkok."
+      "description": "We specialize in supporting Japanese SMEs in Thailand, particularly multi-outlet, operations-heavy businesses. From building accounting frameworks to day-to-day bookkeeping and payroll, market entry and exit, here are cases where we worked alongside our clients in line with Thai practice."
     },
     "filter": {
       "label": "Filter by industry",
       "all": "All"
     },
-    "empty": "No cases match this filter."
+    "empty": "No cases match this filter.",
+    "detail": {
+      "challenge": "The challenge",
+      "approach": "What we did",
+      "results": "Results"
+    }
   },
   "blog": {
     "hero": {

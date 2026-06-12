@@ -22,7 +22,7 @@ export function ServicesDetail() {
   const [active, setActive] = useState<string>(items[0]?.id ?? "");
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
           <aside className="md:col-span-3">

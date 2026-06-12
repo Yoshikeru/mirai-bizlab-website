@@ -20,7 +20,7 @@ export function PricingPlans() {
   const plans = t.raw("plans") as Plan[];
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <motion.p
           initial={{ opacity: 0, y: 12 }}

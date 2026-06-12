@@ -263,6 +263,25 @@ html[lang="en"] h4 {
   font-weight: 400;
 }
 
+/* Marquee — seamless infinite scroll (paired with two identical halves) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 36s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 @utility typo-caption {
   font-size: 0.8125rem; /* 13 */
   line-height: 1.5;

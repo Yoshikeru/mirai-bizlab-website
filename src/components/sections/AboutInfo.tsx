@@ -10,7 +10,7 @@ export function AboutInfo() {
   const rows = t.raw("rows") as InfoRow[];
 
   return (
-    <section className="bg-surface-alt py-24 md:py-32">
+    <section className="bg-surface-alt py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-content) px-6">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           <header className="md:col-span-4">

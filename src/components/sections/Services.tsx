@@ -16,11 +16,11 @@ export function Services() {
   const items = t.raw("items") as ServiceItem[];
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2 md:gap-7 lg:grid-cols-4 lg:gap-6">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:mt-20 md:grid-cols-2 md:gap-7 lg:grid-cols-4 lg:gap-6">
           {items.map((item, index) => {
             const Icon = ICONS[index] ?? Calculator;
             return (

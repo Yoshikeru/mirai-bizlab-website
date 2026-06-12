@@ -9,7 +9,7 @@ export function ContactMap() {
   const info = useTranslations("contact.info");
 
   return (
-    <section className="bg-surface-alt py-20 md:py-24">
+    <section className="bg-surface-alt py-12 md:py-24">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

@@ -13,6 +13,9 @@ type CaseItem = {
   scale: string;
   title: string;
   summary: string;
+  challenge: string;
+  approach: string[];
+  results: { value: string; label: string }[];
 };
 
 export function CasesGrid() {
@@ -57,7 +60,7 @@ export function CasesGrid() {
   const activeItem = open !== null ? items[open] : null;
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
@@ -91,7 +94,7 @@ export function CasesGrid() {
             {t("empty")}
           </p>
         ) : (
-          <ul className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-5 md:mt-14 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map(({ item, index }, gridIndex) => (
               <motion.li
                 key={item.title}
@@ -168,7 +171,7 @@ export function CasesGrid() {
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               role="dialog"
               aria-modal="true"
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-surface shadow-2xl"
+              className="relative max-h-[88svh] w-full max-w-3xl overflow-y-auto overscroll-contain rounded-3xl bg-surface shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
               <button
@@ -191,7 +194,7 @@ export function CasesGrid() {
                   />
                 </div>
               ) : null}
-              <div className="p-8 md:p-12">
+              <div className="p-6 md:p-12">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
                     {activeItem.industry}
@@ -210,6 +213,44 @@ export function CasesGrid() {
                 <p className="mt-6 text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg">
                   {activeItem.summary}
                 </p>
+
+                <div className="mt-10">
+                  <h3 className="typo-eyebrow">{t("detail.challenge")}</h3>
+                  <p className="typo-body mt-4 text-[color:var(--color-muted)]">
+                    {activeItem.challenge}
+                  </p>
+                </div>
+
+                <div className="mt-10">
+                  <h3 className="typo-eyebrow">{t("detail.approach")}</h3>
+                  <ul className="mt-4 flex flex-col gap-3">
+                    {activeItem.approach.map((step, stepIndex) => (
+                      <li key={step} className="flex items-start gap-4">
+                        <span className="mt-1 font-mono text-xs font-semibold tracking-widest text-[color:var(--color-accent)]">
+                          {String(stepIndex + 1).padStart(2, "0")}
+                        </span>
+                        <span className="typo-body text-foreground">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-10">
+                  <h3 className="typo-eyebrow">{t("detail.results")}</h3>
+                  <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    {activeItem.results.map((result) => (
+                      <div
+                        key={result.label}
+                        className="rounded-2xl border border-[color:var(--color-border)] bg-background p-5"
+                      >
+                        <p className="text-xl font-bold tracking-tight text-[color:var(--color-accent)]">
+                          {result.value}
+                        </p>
+                        <p className="typo-caption mt-2">{result.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>

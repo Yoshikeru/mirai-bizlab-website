@@ -15,7 +15,7 @@ export function AboutMVV() {
   const items = t.raw("items") as MVVItem[];
 
   return (
-    <section className="relative isolate overflow-hidden bg-background py-24 md:py-32">
+    <section className="relative isolate overflow-hidden bg-background py-14 md:py-32">
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"

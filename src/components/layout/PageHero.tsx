@@ -26,7 +26,7 @@ export function PageHero({
   const hasRight = Boolean(rightSlot);
 
   return (
-    <section className="relative isolate overflow-hidden bg-background pt-12 pb-20 md:pt-20 md:pb-28">
+    <section className="relative isolate overflow-hidden bg-background pt-4 pb-12 md:pt-16 md:pb-24">
       {watermark && !hasRight ? (
         <div
           aria-hidden
@@ -60,7 +60,7 @@ export function PageHero({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="typo-eyebrow mt-10"
+              className="typo-eyebrow mt-6 md:mt-10"
             >
               {eyebrow}
             </motion.p>

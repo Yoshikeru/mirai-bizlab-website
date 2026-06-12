@@ -19,7 +19,7 @@ export function CareersPositions() {
   const items = t.raw("items") as Position[];
 
   return (
-    <section className="bg-surface-alt py-24 md:py-32">
+    <section className="bg-surface-alt py-14 md:py-32">
       <div className="mx-auto w-full max-w-(--container-wide) px-6">
         <div className="flex flex-col gap-5">
           <motion.h2
