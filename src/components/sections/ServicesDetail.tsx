@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 
 type ServiceItem = {
   id: string;
@@ -14,7 +14,15 @@ type ServiceItem = {
   solution: string;
   deliverables: string[];
   pricing: string;
+  ctaLabel?: string;
 };
+
+/**
+ * Stripe Payment Link for the Thailand Entry Strategy Session (one-off, 30,000 THB).
+ * Set NEXT_PUBLIC_STRATEGY_SESSION_URL in Vercel to the Stripe Payment Link URL.
+ * When unset, the CTA falls back to the contact page.
+ */
+const PAYMENT_URL = process.env.NEXT_PUBLIC_STRATEGY_SESSION_URL;
 
 export function ServicesDetail() {
   const t = useTranslations("services");
@@ -95,12 +103,16 @@ function ServiceBlock({
   item: ServiceItem;
   onEnter: () => void;
 }) {
+  const locale = useLocale();
   const ref = useRef<HTMLElement | null>(null);
   const inView = useInView(ref, { margin: "-35% 0% -55% 0%" });
 
   useEffect(() => {
     if (inView) onEnter();
   }, [inView, onEnter]);
+
+  const ctaHref = PAYMENT_URL ?? `/${locale}/contact`;
+  const ctaExternal = Boolean(PAYMENT_URL);
 
   return (
     <motion.article
@@ -168,13 +180,26 @@ function ServiceBlock({
         </ul>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2 rounded-2xl border-l-4 border-[color:var(--color-accent)] bg-[color:var(--color-accent-soft)]/40 p-6 md:flex-row md:items-baseline md:gap-6 md:p-7">
-        <span className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
-          Pricing
-        </span>
-        <span className="text-base font-semibold tracking-tight text-foreground md:text-lg">
-          {item.pricing}
-        </span>
+      <div className="mt-6 flex flex-col gap-4 rounded-2xl border-l-4 border-[color:var(--color-accent)] bg-[color:var(--color-accent-soft)]/40 p-6 md:flex-row md:items-center md:justify-between md:gap-6 md:p-7">
+        <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:gap-6">
+          <span className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
+            Pricing
+          </span>
+          <span className="text-base font-semibold tracking-tight text-foreground md:text-lg">
+            {item.pricing}
+          </span>
+        </div>
+        {item.ctaLabel && (
+          <a
+            href={ctaHref}
+            target={ctaExternal ? "_blank" : undefined}
+            rel={ctaExternal ? "noopener noreferrer" : undefined}
+            className="inline-flex flex-none items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_-12px_rgba(215,0,15,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            {item.ctaLabel}
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        )}
       </div>
     </motion.article>
   );
