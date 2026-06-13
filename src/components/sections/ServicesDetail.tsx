@@ -3,7 +3,7 @@
 import { motion, useInView } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight, Check, Info } from "lucide-react";
 
 type ServiceItem = {
   id: string;
@@ -16,6 +16,7 @@ type ServiceItem = {
   pricing: string;
   ctaLabel?: string;
   ctaNote?: string;
+  audienceNote?: string;
   rationale?: {
     title: string;
     body: string[];
@@ -177,6 +178,15 @@ function ServiceBlock({
       <p className="mt-5 max-w-2xl text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg">
         {item.summary}
       </p>
+
+      {item.audienceNote && (
+        <div className="mt-6 flex max-w-2xl items-start gap-3 rounded-xl border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent-soft)]/30 p-4">
+          <Info className="mt-0.5 h-4 w-4 flex-none text-[color:var(--color-accent)]" />
+          <p className="text-sm leading-relaxed text-foreground">
+            {item.audienceNote}
+          </p>
+        </div>
+      )}
 
       <dl className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
         <div>
