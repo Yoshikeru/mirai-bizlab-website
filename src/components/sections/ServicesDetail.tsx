@@ -19,10 +19,12 @@ type ServiceItem = {
 
 /**
  * Stripe Payment Link for the Thailand Entry Strategy Session (one-off, 30,000 THB).
- * Set NEXT_PUBLIC_STRATEGY_SESSION_URL in Vercel to the Stripe Payment Link URL.
- * When unset, the CTA falls back to the contact page.
+ * A Payment Link is a public URL (meant to be shared), so it is safe to ship in code.
+ * NEXT_PUBLIC_STRATEGY_SESSION_URL can override it (e.g. to swap links without a code change).
  */
-const PAYMENT_URL = process.env.NEXT_PUBLIC_STRATEGY_SESSION_URL;
+const PAYMENT_URL =
+  process.env.NEXT_PUBLIC_STRATEGY_SESSION_URL ??
+  "https://book.stripe.com/aFabIUelNbKV2572tI24000";
 
 export function ServicesDetail() {
   const t = useTranslations("services");
