@@ -348,7 +348,115 @@
     "services": "Services",
     "language": "Language",
     "address": "Samutprakarn, Thailand",
+    "privacy": "Privacy Policy",
     "copyright": "© {year} MIRAI BizLab Co., Ltd. All rights reserved."
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Privacy Policy",
+      "title": "Privacy\nPolicy",
+      "description": "MIRAI BizLab Co., Ltd. is committed to handling and protecting your personal data responsibly."
+    },
+    "updated": "Last updated: June 13, 2026",
+    "intro": [
+      "MIRAI BizLab Co., Ltd. (\"we\", \"us\", \"our\") handles the personal data we collect through this website (www.miraibizlab.co.th) and in the course of providing our services in accordance with Thailand's Personal Data Protection Act B.E. 2562 (\"PDPA\") and other applicable laws.",
+      "This policy explains what personal data we collect, how we use it, when we share it, and the rights available to you."
+    ],
+    "controller": {
+      "heading": "Data Controller",
+      "lines": [
+        "MIRAI BizLab Co., Ltd.",
+        "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270, Thailand",
+        "Email: contact@miraibizlab.co.th",
+        "Tel: +66-2-088-8539"
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Personal data we collect",
+        "paragraphs": ["We may collect the following personal data:"],
+        "bullets": [
+          "Information you provide through our contact form (name, company name, email address, phone number, and the content of your enquiry)",
+          "The content of conversations you enter into our AI chat support",
+          "Information collected automatically when you use the website (IP address, browser and device type, pages viewed, access time, and identifiers such as cookies)"
+        ]
+      },
+      {
+        "heading": "Purposes of use",
+        "paragraphs": ["We use the personal data we collect for the following purposes:"],
+        "bullets": [
+          "Responding to enquiries and consultations, preparing quotations, and providing our services",
+          "Maintaining and improving service quality, and improving and analysing the website",
+          "Sending you notices and relevant information where you have consented",
+          "Complying with the law, preventing misuse, and protecting our legitimate rights and interests"
+        ]
+      },
+      {
+        "heading": "Legal basis for processing",
+        "paragraphs": [
+          "Under the PDPA, we process personal data on one of the following legal bases: performance of a contract, the legitimate interests of us or a third party, compliance with a legal obligation, or your consent. Where we rely on consent, you may withdraw it at any time."
+        ]
+      },
+      {
+        "heading": "Disclosure and processors",
+        "paragraphs": [
+          "We do not sell or rent your personal data to third parties without your consent. However, we may entrust the handling of personal data to the following trusted service providers (processors) to the extent necessary to provide our services:"
+        ],
+        "bullets": [
+          "Website hosting and analytics (Vercel Inc.)",
+          "Contact email delivery (Resend)",
+          "AI chat support response generation (Anthropic)",
+          "Where disclosure is required by law, or necessary to protect rights and safety"
+        ]
+      },
+      {
+        "heading": "Cross-border data transfers",
+        "paragraphs": [
+          "Some of the processors listed above are located outside Thailand (e.g. in the United States). Where personal data is transferred internationally, we handle it under the appropriate safeguards required by the PDPA."
+        ]
+      },
+      {
+        "heading": "Cookies and analytics",
+        "paragraphs": [
+          "Our website may use cookies and similar technologies (including analytics) to understand usage and improve our services. You can refuse cookies through your browser settings, but some features may not function correctly as a result."
+        ]
+      },
+      {
+        "heading": "Data retention",
+        "paragraphs": [
+          "We retain personal data only for as long as necessary to achieve the purposes of use or as required by law, and we securely delete or anonymise it when retention is no longer necessary."
+        ]
+      },
+      {
+        "heading": "Security measures",
+        "paragraphs": [
+          "We implement reasonable and appropriate technical and organisational security measures to prevent unauthorised access, loss, destruction, alteration, and leakage of personal data."
+        ]
+      },
+      {
+        "heading": "Your rights as a data subject",
+        "paragraphs": ["Under the PDPA, you have the following rights in relation to your personal data held by us:"],
+        "bullets": [
+          "The right to access and obtain a copy of your personal data",
+          "The right to request correction or updating of your personal data",
+          "The right to request erasure or suspension of use of your personal data",
+          "The right to object to processing and to withdraw your consent",
+          "The right to lodge a complaint with the supervisory authority"
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          "We may revise this policy in response to changes in law or in our services. We will announce any material changes on this website."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "If you have any questions about this policy or wish to exercise the rights above, please contact us at contact@miraibizlab.co.th."
+        ]
+      }
+    ]
   },
   "pages": {
     "about": {
@@ -374,6 +482,10 @@
     "contact": {
       "title": "Contact",
       "description": "Get in touch"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How we handle your personal data"
     }
   },
   "about": {

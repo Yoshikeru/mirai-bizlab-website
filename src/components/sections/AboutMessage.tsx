@@ -1,9 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-
-import { FounderAvatar } from "@/components/illustrations/FounderAvatar";
 
 export function AboutMessage() {
   const t = useTranslations("about.message");
@@ -47,7 +46,15 @@ export function AboutMessage() {
               }}
               className="mt-10 flex flex-col gap-6"
             >
-              <FounderAvatar className="h-44 w-44 flex-none drop-shadow-[0_18px_36px_rgba(215,0,15,0.18)] md:h-52 md:w-52" />
+              <div className="relative h-44 w-44 flex-none overflow-hidden rounded-2xl shadow-[0_18px_36px_rgba(215,0,15,0.18)] ring-1 ring-[color:var(--color-border)] md:h-52 md:w-52">
+                <Image
+                  src="/assets/photos/founder.jpg"
+                  alt={t("name")}
+                  fill
+                  sizes="(min-width: 768px) 208px, 176px"
+                  className="object-cover"
+                />
+              </div>
               <div>
                 <p className="typo-h3">{t("name")}</p>
                 <p className="typo-caption mt-2">{t("role")}</p>

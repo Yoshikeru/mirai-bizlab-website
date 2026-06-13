@@ -129,9 +129,17 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col-reverse items-start gap-6 border-t border-[color:var(--color-border)] pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-[color:var(--color-muted)]">
-            {t("copyright", { year })}
-          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-5">
+            <p className="text-xs text-[color:var(--color-muted)]">
+              {t("copyright", { year })}
+            </p>
+            <Link
+              href="/privacy"
+              className="text-xs text-[color:var(--color-muted)] transition-colors duration-300 hover:text-[color:var(--color-accent)]"
+            >
+              {t("privacy")}
+            </Link>
+          </div>
           <Image
             src="/assets/logo/Logo_MIRAI_BizLab1.png"
             alt={site("name")}
