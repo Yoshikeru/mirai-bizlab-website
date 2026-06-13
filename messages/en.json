@@ -642,7 +642,17 @@
           "Pitfall-avoidance advice tailored to your case"
         ],
         "pricing": "THB 30,000 per session (online, paid in advance)",
-        "ctaLabel": "Book online"
+        "ctaLabel": "Book online",
+        "rationale": {
+          "title": "Success takes many forms. Failure follows a pattern.",
+          "body": [
+            "The level of understanding of Thailand among Japanese companies entering the market varies remarkably. Some know the country intimately; some have Thai friends and understand it more deeply still; others arrive with almost no prior knowledge at all. The starting line is genuinely different for everyone.",
+            "Yet while success takes countless forms, failure almost always looks the same. The wrong partner, a shaky grasp of local accounting and tax, stumbling over hiring and managing Thai staff, leaving negotiations and contracts half-finished — those who falter tend to fall in the very same places, in the very same way.",
+            "I have lived through those mistakes myself, here on the ground. That is why I can show you where the pitfalls truly are — not as textbook theory, but as lived experience.",
+            "Beyond that, I have built businesses in Thailand and sold them, run multiple restaurants, and operated several hair and beauty salons. Personally, I am also active in Thai real estate, asset management, and related services. Having actually run, sold, and recovered value from ventures on the ground — not merely advised on paper — I am confident I can offer a compass a cut above the rest.",
+            "I want to be the advisor for the companies and owners who take on this challenge next. I believe my experience can become the strength that supports someone's first step."
+          ]
+        }
       }
     ],
     "cta": {

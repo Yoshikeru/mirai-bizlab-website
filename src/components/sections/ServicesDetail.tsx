@@ -15,6 +15,10 @@ type ServiceItem = {
   deliverables: string[];
   pricing: string;
   ctaLabel?: string;
+  rationale?: {
+    title: string;
+    body: string[];
+  };
 };
 
 /**
@@ -116,6 +120,30 @@ function ServiceBlock({
   const ctaHref = PAYMENT_URL ?? `/${locale}/contact`;
   const ctaExternal = Boolean(PAYMENT_URL);
 
+  const renderPricing = () => (
+    <div className="flex flex-col gap-4 rounded-2xl border-l-4 border-[color:var(--color-accent)] bg-[color:var(--color-accent-soft)]/40 p-6 md:flex-row md:items-center md:justify-between md:gap-6 md:p-7">
+      <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:gap-6">
+        <span className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
+          Pricing
+        </span>
+        <span className="text-base font-semibold tracking-tight text-foreground md:text-lg">
+          {item.pricing}
+        </span>
+      </div>
+      {item.ctaLabel && (
+        <a
+          href={ctaHref}
+          target={ctaExternal ? "_blank" : undefined}
+          rel={ctaExternal ? "noopener noreferrer" : undefined}
+          className="inline-flex flex-none items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_-12px_rgba(215,0,15,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
+        >
+          {item.ctaLabel}
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
+      )}
+    </div>
+  );
+
   return (
     <motion.article
       ref={ref}
@@ -182,27 +210,30 @@ function ServiceBlock({
         </ul>
       </div>
 
-      <div className="mt-6 flex flex-col gap-4 rounded-2xl border-l-4 border-[color:var(--color-accent)] bg-[color:var(--color-accent-soft)]/40 p-6 md:flex-row md:items-center md:justify-between md:gap-6 md:p-7">
-        <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:gap-6">
-          <span className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
-            Pricing
-          </span>
-          <span className="text-base font-semibold tracking-tight text-foreground md:text-lg">
-            {item.pricing}
-          </span>
+      <div className="mt-6">{renderPricing()}</div>
+
+      {item.rationale && (
+        <div className="mt-16 border-t border-[color:var(--color-border)] pt-12 md:mt-20 md:pt-16">
+          <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-accent)] uppercase">
+            Why this service
+          </p>
+          <h3 className="mt-5 max-w-3xl text-2xl leading-snug font-bold tracking-tight md:text-3xl">
+            {item.rationale.title}
+          </h3>
+          <div className="mt-7 max-w-2xl space-y-5">
+            {item.rationale.body.map((para, index) => (
+              <p
+                key={index}
+                className="text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg"
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-12">{renderPricing()}</div>
         </div>
-        {item.ctaLabel && (
-          <a
-            href={ctaHref}
-            target={ctaExternal ? "_blank" : undefined}
-            rel={ctaExternal ? "noopener noreferrer" : undefined}
-            className="inline-flex flex-none items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_-12px_rgba(215,0,15,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
-          >
-            {item.ctaLabel}
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        )}
-      </div>
+      )}
     </motion.article>
   );
 }
