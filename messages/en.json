@@ -643,6 +643,7 @@
         ],
         "pricing": "THB 30,000 per session (online, paid in advance)",
         "ctaLabel": "Book online",
+        "ctaNote": "After you book, we will contact you to arrange the session schedule.",
         "rationale": {
           "title": "Success takes many forms. Failure follows a pattern.",
           "body": [

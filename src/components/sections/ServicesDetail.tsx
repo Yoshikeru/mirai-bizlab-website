@@ -15,6 +15,7 @@ type ServiceItem = {
   deliverables: string[];
   pricing: string;
   ctaLabel?: string;
+  ctaNote?: string;
   rationale?: {
     title: string;
     body: string[];
@@ -131,15 +132,22 @@ function ServiceBlock({
         </span>
       </div>
       {item.ctaLabel && (
-        <a
-          href={ctaHref}
-          target={ctaExternal ? "_blank" : undefined}
-          rel={ctaExternal ? "noopener noreferrer" : undefined}
-          className="inline-flex flex-none items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_-12px_rgba(215,0,15,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
-        >
-          {item.ctaLabel}
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
+        <div className="flex flex-none flex-col gap-2 md:items-end">
+          <a
+            href={ctaHref}
+            target={ctaExternal ? "_blank" : undefined}
+            rel={ctaExternal ? "noopener noreferrer" : undefined}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_-12px_rgba(215,0,15,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            {item.ctaLabel}
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          {item.ctaNote && (
+            <p className="max-w-xs text-xs leading-relaxed text-[color:var(--color-muted)] md:text-right">
+              {item.ctaNote}
+            </p>
+          )}
+        </div>
       )}
     </div>
   );
