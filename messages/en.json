@@ -374,7 +374,9 @@
     "sections": [
       {
         "heading": "Personal data we collect",
-        "paragraphs": ["We may collect the following personal data:"],
+        "paragraphs": [
+          "We may collect the following personal data:"
+        ],
         "bullets": [
           "Information you provide through our contact form (name, company name, email address, phone number, and the content of your enquiry)",
           "The content of conversations you enter into our AI chat support",
@@ -383,7 +385,9 @@
       },
       {
         "heading": "Purposes of use",
-        "paragraphs": ["We use the personal data we collect for the following purposes:"],
+        "paragraphs": [
+          "We use the personal data we collect for the following purposes:"
+        ],
         "bullets": [
           "Responding to enquiries and consultations, preparing quotations, and providing our services",
           "Maintaining and improving service quality, and improving and analysing the website",
@@ -435,7 +439,9 @@
       },
       {
         "heading": "Your rights as a data subject",
-        "paragraphs": ["Under the PDPA, you have the following rights in relation to your personal data held by us:"],
+        "paragraphs": [
+          "Under the PDPA, you have the following rights in relation to your personal data held by us:"
+        ],
         "bullets": [
           "The right to access and obtain a copy of your personal data",
           "The right to request correction or updating of your personal data",
@@ -826,7 +832,7 @@
     },
     "map": {
       "title": "Office",
-      "placeholder": "Map (Google Maps embed placeholder)"
+      "openInMaps": "Open in Google Maps"
     }
   },
   "chat": {
