@@ -17,7 +17,7 @@ export function LegalContent() {
 
   return (
     <section className="bg-background py-14 md:py-28">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
+      <div className="mb-wrap">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

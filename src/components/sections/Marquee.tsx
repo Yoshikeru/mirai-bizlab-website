@@ -24,8 +24,8 @@ export function Marquee() {
                 className="flex shrink-0 items-center gap-8 pr-8 md:gap-14 md:pr-14"
               >
                 <span
-                  className="text-sm font-semibold tracking-[0.22em] whitespace-nowrap text-foreground/60 uppercase md:text-base"
-                  style={{ fontFamily: "var(--font-sans-display), var(--font-sans-jp), sans-serif" }}
+                  className="text-xs font-bold tracking-[0.22em] whitespace-nowrap text-foreground/55 uppercase md:text-sm"
+                  style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {word}
                 </span>

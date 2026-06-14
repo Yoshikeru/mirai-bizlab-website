@@ -37,6 +37,47 @@
 
   --content-max: 1280px;
   --content-readable: 1140px;
+
+  /* ---------------------------------------------------------------- */
+  /* Müller-Brockmann modular grid — ONE source of truth              */
+  /*   Content (.mb-wrap/.mb-grid) and the dev overlay (.guides) read  */
+  /*   these SAME variables, so the overlay columns ARE the content    */
+  /*   columns at every width.                                         */
+  /* ---------------------------------------------------------------- */
+  --cols: 12;
+  --bl: 8px; /* baseline unit */
+  --lh: 24px; /* leading = 3 × baseline */
+  --gutter: 24px;
+  --margin: 24px; /* outer margin (responsive below) */
+  --maxw: 1296px;
+
+  --font-mono: var(--font-space-mono), "Space Mono", ui-monospace,
+    "SFMono-Regular", monospace;
+
+  /* Grid-overlay ink (dev-only) — accent red + teal baseline, theme-agnostic */
+  --g-col: rgba(215, 0, 15, 0.06);
+  --g-edge: rgba(215, 0, 15, 0.42);
+  --g-base: rgba(0, 150, 140, 0.34);
+  --g-base-min: rgba(0, 150, 140, 0.12);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --margin: 48px;
+    --gutter: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --margin: 72px;
+  }
+}
+
+.dark {
+  --g-col: rgba(255, 90, 100, 0.07);
+  --g-edge: rgba(255, 90, 100, 0.5);
+  --g-base: rgba(60, 200, 185, 0.3);
+  --g-base-min: rgba(60, 200, 185, 0.12);
 }
 
 .dark {
@@ -80,6 +121,7 @@
   --font-sans: var(--font-sans-jp);
   --font-display: var(--font-sans-display);
   --font-thai: var(--font-sans-thai);
+  --font-mono: var(--font-mono);
 
   --container-content: 1140px;
   --container-wide: 1280px;
@@ -288,4 +330,144 @@ html[lang="en"] h4 {
   letter-spacing: 0;
   font-weight: 500;
   color: var(--color-muted);
+}
+
+/* ================================================================== */
+/* MÜLLER-BROCKMANN GRID — load-bearing scaffold                      */
+/*   .mb-wrap  : the shared content box (max-width + margin)          */
+/*   .mb-grid  : 12-column field reading the :root tokens             */
+/*   .mb-band  : spans all columns and re-exposes them as subgrid     */
+/*   .guides   : the dev-only overlay, same box → columns match       */
+/* ================================================================== */
+.mb-wrap {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+.mb-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: var(--lh);
+}
+.mb-band {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  column-gap: var(--gutter);
+  row-gap: var(--lh);
+  align-items: start;
+}
+@supports not (grid-template-columns: subgrid) {
+  .mb-band {
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  }
+}
+
+/* mono kicker / folio / grid-annotation register */
+.mb-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem; /* 11 */
+  line-height: var(--bl);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.mb-folio {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+}
+/* large data numeral — a signature Swiss move */
+.mb-numeral {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-feature-settings: "ss01", "palt";
+}
+/* hairline rule that sits inside a baseline-height band */
+.mb-rule {
+  height: 1px;
+  background: var(--color-border);
+  border: 0;
+}
+
+/* ---- the dev-only OVERLAY (reads the same tokens) ---- */
+.guides {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.26s ease;
+}
+body.grid-on .guides {
+  opacity: 1;
+}
+.guides .guides-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+.guides .cols {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: var(--gutter);
+}
+.guides .col {
+  background: var(--g-col);
+  box-shadow: inset 1px 0 0 var(--g-edge), inset -1px 0 0 var(--g-edge);
+  position: relative;
+}
+.guides .col span {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+  color: var(--color-accent);
+}
+.guides .rows {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      to bottom,
+      var(--g-base) 0 1px,
+      transparent 1px var(--lh)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--g-base-min) 0 1px,
+      transparent 1px var(--bl)
+    );
+}
+.guides .mline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--g-edge);
+}
+.guides .mline.l {
+  left: var(--margin);
+}
+.guides .mline.r {
+  right: var(--margin);
+}
+@media (prefers-reduced-motion: reduce) {
+  .guides {
+    transition: none;
+  }
 }

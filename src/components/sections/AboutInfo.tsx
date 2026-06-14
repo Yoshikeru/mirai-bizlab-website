@@ -11,15 +11,15 @@ export function AboutInfo() {
 
   return (
     <section className="bg-surface-alt py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
-          <header className="md:col-span-4">
+      <div className="mb-wrap">
+        <div className="mb-grid">
+          <header className="col-span-12 md:col-span-4">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="typo-eyebrow"
+              className="mb-kicker"
             >
               {t("eyebrow")}
             </motion.p>
@@ -32,13 +32,13 @@ export function AboutInfo() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.08,
               }}
-              className="typo-h2 mt-6"
+              className="mb-optical typo-h2 mt-6"
             >
               {t("title")}
             </motion.h2>
           </header>
 
-          <dl className="md:col-span-8">
+          <dl className="col-span-12 md:col-span-8">
             {rows.map((row, index) => (
               <motion.div
                 key={row.label}

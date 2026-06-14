@@ -46,21 +46,21 @@ export function PageHero({
         className="pointer-events-none absolute -top-32 -left-32 -z-10 h-[400px] w-[400px] rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="relative mb-wrap">
         <Breadcrumb items={breadcrumb} />
         <div
           className={
             hasRight
-              ? "mt-2 grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12"
+              ? "mt-2 mb-grid items-center"
               : ""
           }
         >
-          <div className={hasRight ? "md:col-span-7" : ""}>
+          <div className={hasRight ? "col-span-12 md:col-span-7" : ""}>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="typo-eyebrow mt-6 md:mt-10"
+              className="mb-kicker mt-6 md:mt-10"
             >
               {eyebrow}
             </motion.p>
@@ -68,7 +68,7 @@ export function PageHero({
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, ease: EASE, delay: 0.1 }}
-              className="typo-h1 mt-7 whitespace-pre-line"
+              className="mb-optical typo-h1 mt-7 whitespace-pre-line"
             >
               {title}
             </motion.h1>
@@ -89,7 +89,7 @@ export function PageHero({
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.1, ease: EASE, delay: 0.25 }}
-              className="hidden items-center justify-center md:col-span-5 md:flex"
+              className="col-span-12 hidden items-center justify-center md:col-span-5 md:flex"
             >
               {rightSlot}
             </motion.div>

@@ -30,7 +30,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[color:var(--color-border)]/80 bg-background/80 backdrop-blur-md">
       {/* Row 1 — utility bar: logo + language / theme / menu */}
-      <div className="mx-auto flex h-16 w-full max-w-(--container-wide) items-center justify-between gap-6 px-6 md:h-[4.75rem]">
+      <div className="mb-wrap flex h-16 items-center justify-between gap-6 md:h-[4.75rem]">
         <Link
           href="/"
           aria-label={site("name")}
@@ -58,7 +58,7 @@ export function Header() {
         aria-label="Primary"
         className="hidden border-t border-[color:var(--color-border)]/80 lg:block"
       >
-        <ul className="mx-auto grid max-w-(--container-wide) grid-cols-6 divide-x divide-[color:var(--color-border)]/80">
+        <ul className="mb-wrap grid grid-cols-6 divide-x divide-[color:var(--color-border)]/80">
           {NAV_ITEMS.map((item) => {
             const active = isActive(item.href);
             return (

@@ -21,7 +21,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
             {t("filter.label")}
@@ -50,7 +50,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
             {t("empty")}
           </p>
         ) : (
-          <ul className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14 mb-grid">
             {filtered.map((post, index) => (
               <motion.li
                 key={post.slug}
@@ -62,6 +62,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
                   ease: [0.22, 1, 0.36, 1],
                   delay: (index % 3) * 0.08,
                 }}
+                className="col-span-12 md:col-span-6 lg:col-span-4"
               >
                 <Link
                   href={`/blog/${post.slug}`}

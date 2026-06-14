@@ -14,15 +14,16 @@ export function WhyMirai() {
 
   return (
     <section className="relative bg-background py-14 md:py-32">
-      <div className="mx-auto grid w-full max-w-(--container-wide) grid-cols-1 gap-12 px-6 md:grid-cols-12 md:gap-16">
-        <aside className="md:col-span-5">
+      <div className="mb-wrap">
+        <div className="mb-grid gap-y-12">
+        <aside className="col-span-12 md:col-span-5">
           <div className="md:sticky md:top-28">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="typo-eyebrow"
+              className="mb-kicker"
             >
               {t("eyebrow")}
             </motion.p>
@@ -35,7 +36,7 @@ export function WhyMirai() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.08,
               }}
-              className="typo-h2 mt-6 whitespace-pre-line"
+              className="mb-optical typo-h2 mt-6 whitespace-pre-line"
             >
               {t("title")}
             </motion.h2>
@@ -104,7 +105,7 @@ export function WhyMirai() {
           </div>
         </aside>
 
-        <div className="md:col-span-7">
+        <div className="col-span-12 md:col-span-7">
           <ol className="flex flex-col gap-16 md:gap-24">
             {reasons.map((reason, index) => (
               <ReasonItem
@@ -115,6 +116,7 @@ export function WhyMirai() {
               />
             ))}
           </ol>
+        </div>
         </div>
       </div>
     </section>

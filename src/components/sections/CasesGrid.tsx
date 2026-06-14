@@ -61,7 +61,7 @@ export function CasesGrid() {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
             {t("filter.label")}
@@ -94,7 +94,7 @@ export function CasesGrid() {
             {t("empty")}
           </p>
         ) : (
-          <ul className="mt-10 grid grid-cols-1 gap-5 md:mt-14 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 mb-grid md:mt-14">
             {filtered.map(({ item, index }, gridIndex) => (
               <motion.li
                 key={item.title}
@@ -106,6 +106,7 @@ export function CasesGrid() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: (gridIndex % 3) * 0.08,
                 }}
+                className="col-span-12 md:col-span-6 lg:col-span-4"
               >
                 <button
                   type="button"

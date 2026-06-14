@@ -39,9 +39,9 @@ export function ServicesDetail() {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-          <aside className="md:col-span-3">
+      <div className="mb-wrap">
+        <div className="mb-grid">
+          <aside className="col-span-12 md:col-span-3">
             <div className="md:sticky md:top-28">
               <p className="text-xs font-semibold tracking-[0.32em] text-[color:var(--color-muted)] uppercase">
                 {t("nav")}
@@ -89,7 +89,7 @@ export function ServicesDetail() {
             </div>
           </aside>
 
-          <div className="flex flex-col gap-28 md:col-span-9 md:gap-36">
+          <div className="col-span-12 flex flex-col gap-28 md:col-span-9 md:gap-36">
             {items.map((item) => (
               <ServiceBlock
                 key={item.id}

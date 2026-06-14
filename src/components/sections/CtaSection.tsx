@@ -65,13 +65,13 @@ export function CtaSection() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:60px_60px]"
       />
 
-      <div className="relative mx-auto w-full max-w-(--container-content) px-6 text-center">
+      <div className="relative mb-wrap text-center">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="typo-eyebrow"
+          className="mb-kicker inline-block"
         >
           {t("eyebrow")}
         </motion.p>
