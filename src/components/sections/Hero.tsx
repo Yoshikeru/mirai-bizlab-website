@@ -48,70 +48,70 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-background/95 via-background/70 to-background/0 md:from-background/92 md:via-background/55 md:to-transparent"
       />
 
-      <div className="relative z-10 mx-auto grid min-h-svh w-full max-w-(--container-wide) grid-cols-1 items-start px-6 pt-6 pb-20 md:grid-cols-12 md:gap-10 md:pt-16 md:pb-24">
-        <motion.div
-          className="md:col-span-7"
-          style={reduce ? undefined : { opacity: textOpacity, y: textY }}
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="typo-eyebrow"
-          >
-            {t("eyebrow")}
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.9,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.1,
-            }}
-            className="mt-7 whitespace-pre-line font-extrabold tracking-[-0.025em]"
-            style={{
-              fontFamily:
-                "var(--font-sans-display), var(--font-sans-jp), sans-serif",
-              fontSize: "clamp(1.75rem, 4.4vw, 4rem)",
-              lineHeight: 1.1,
-            }}
-          >
-            {t("title")}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.25,
-            }}
-            className="typo-body-lg mt-8 max-w-xl text-[color:var(--color-muted)]"
-          >
-            {t("subtitle")}
-          </motion.p>
+      <div className="mb-wrap relative z-10 flex min-h-svh w-full flex-col justify-center py-24">
+        <div className="mb-grid w-full">
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.4,
-            }}
-            className="mt-10 flex flex-wrap gap-3"
+            className="col-span-12 md:col-span-8 lg:col-span-7"
+            style={reduce ? undefined : { opacity: textOpacity, y: textY }}
           >
-            <Button href="/contact" variant="primary">
-              {t("primaryCta")}
-            </Button>
-            <Button href="/services" variant="secondary">
-              {t("secondaryCta")}
-            </Button>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-kicker"
+            >
+              {t("eyebrow")}
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.9,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.1,
+              }}
+              className="mb-optical mt-6 whitespace-pre-line font-extrabold"
+              style={{
+                fontFamily:
+                  "var(--font-sans-display), var(--font-sans-jp), sans-serif",
+                fontSize: "clamp(2rem, 5.2vw, 4.5rem)",
+                lineHeight: 1.04,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              {t("title")}
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.25,
+              }}
+              className="typo-body-lg mt-8 max-w-xl text-[color:var(--color-muted)]"
+            >
+              {t("subtitle")}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.4,
+              }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              <Button href="/contact" variant="primary">
+                {t("primaryCta")}
+              </Button>
+              <Button href="/services" variant="secondary">
+                {t("secondaryCta")}
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
-
-        {/* right column intentionally empty on desktop — visual carries the right side */}
-        <div className="hidden md:col-span-5 md:block" aria-hidden />
+        </div>
       </div>
 
       {/* scroll indicator */}

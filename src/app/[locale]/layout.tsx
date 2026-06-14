@@ -4,6 +4,7 @@ import {
   Inter_Tight,
   Noto_Sans_JP,
   Noto_Sans_Thai,
+  Space_Mono,
 } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -13,6 +14,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ChatWidget } from "@/components/chat/ChatWidget";
+import { GridOverlay } from "@/components/grid/GridOverlay";
+import { OpticalAlign } from "@/components/grid/OpticalAlign";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { LenisProvider } from "@/components/motion/LenisProvider";
@@ -58,6 +61,13 @@ const notoSansThai = Noto_Sans_Thai({
   weight: ["400", "500", "700"],
   display: "swap",
   variable: "--font-noto-sans-thai",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-space-mono",
 });
 
 export function generateStaticParams() {
@@ -115,7 +125,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${notoSansJp.variable} ${inter.variable} ${interTight.variable} ${notoSansThai.variable}`}
+      className={`${notoSansJp.variable} ${inter.variable} ${interTight.variable} ${notoSansThai.variable} ${spaceMono.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
         <a
@@ -137,6 +147,8 @@ export default async function LocaleLayout({
               </div>
             </LenisProvider>
             <ChatWidget />
+            <OpticalAlign />
+            <GridOverlay />
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />
