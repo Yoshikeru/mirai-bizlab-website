@@ -22,7 +22,7 @@ export function Process() {
 
   return (
     <section className="relative bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
+      <div className="mb-wrap">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
 
         <div ref={containerRef} className="relative mt-10 pl-10 md:mt-20 md:pl-16">

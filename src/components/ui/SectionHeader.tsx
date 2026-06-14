@@ -26,10 +26,12 @@ export function SectionHeader({
       className={`flex flex-col gap-6 ${align === "center" ? "items-center text-center" : ""}`}
     >
       <Reveal y={16} duration={0.6}>
-        <p className="typo-eyebrow">{eyebrow}</p>
+        <p className="mb-kicker">{eyebrow}</p>
       </Reveal>
       <Reveal y={24} duration={0.7} delay={0.05}>
-        <h2 className={`typo-h2 whitespace-pre-line ${titleColor}`}>
+        <h2
+          className={`typo-h2 whitespace-pre-line ${align === "left" ? "mb-optical" : ""} ${titleColor}`}
+        >
           {title}
         </h2>
       </Reveal>

@@ -17,10 +17,10 @@ export function Services() {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-        <div className="mt-10 grid grid-cols-1 gap-5 md:mt-20 md:grid-cols-2 md:gap-7 lg:grid-cols-4 lg:gap-6">
+        <div className="mb-grid mt-10 md:mt-20">
           {items.map((item, index) => {
             const Icon = ICONS[index] ?? Calculator;
             return (
@@ -34,7 +34,7 @@ export function Services() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: index * 0.15,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-[color:var(--color-accent-soft)]/55 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.32)] md:p-10 md:py-12"
+                className="group relative col-span-12 overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-[color:var(--color-accent-soft)]/55 hover:shadow-[0_36px_70px_-36px_rgba(215,0,15,0.32)] md:col-span-6 md:p-10 md:py-12 lg:col-span-3"
               >
                 <span
                   aria-hidden

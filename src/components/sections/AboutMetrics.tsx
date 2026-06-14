@@ -34,21 +34,21 @@ export function AboutMetrics() {
       <div className="absolute inset-x-0 bottom-0 h-px bg-[color:var(--color-accent)]/80" />
 
       <div className="md:sticky md:top-0 md:flex md:h-screen md:flex-col md:justify-center md:overflow-hidden">
-        <div className="mx-auto w-full max-w-(--container-wide) px-6 pt-14 md:pt-0">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-            <div className="md:col-span-5">
+        <div className="mb-wrap pt-14 md:pt-0">
+          <div className="mb-grid">
+            <div className="col-span-12 md:col-span-5">
               <Reveal y={16} duration={0.6}>
-                <p id="about-heading" className="typo-eyebrow">
+                <p id="about-heading" className="mb-kicker">
                   {t("eyebrow")}
                 </p>
               </Reveal>
               <Reveal y={24} duration={0.7} delay={0.05}>
-                <h2 className="typo-h2 mt-6 whitespace-pre-line">
+                <h2 className="mb-optical typo-h2 mt-6 whitespace-pre-line">
                   {t("title")}
                 </h2>
               </Reveal>
             </div>
-            <div className="md:col-span-6 md:col-start-7">
+            <div className="col-span-12 md:col-span-6 md:col-start-7">
               <Reveal y={20} duration={0.7} delay={0.1}>
                 <p className="typo-body-lg text-[color:var(--color-muted)]">
                   {t("description")}
@@ -76,7 +76,7 @@ export function AboutMetrics() {
         </div>
 
         {/* mobile: stacked grid */}
-        <ul className="mx-auto mt-10 grid w-full max-w-(--container-content) grid-cols-2 gap-3 px-6 pb-14 md:hidden">
+        <ul className="mb-wrap mt-10 grid grid-cols-2 gap-3 pb-14 md:hidden">
           {metrics.map((metric, index) => (
             <MetricCard
               key={metric.label}

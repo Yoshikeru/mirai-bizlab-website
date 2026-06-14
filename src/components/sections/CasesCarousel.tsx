@@ -53,8 +53,8 @@ export function CasesCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-[#F5F5F5] py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+    <section className="bg-surface-alt py-14 md:py-32">
+      <div className="mb-wrap">
         <SectionHeader
           eyebrow={t("eyebrow")}
           title={t("title")}
