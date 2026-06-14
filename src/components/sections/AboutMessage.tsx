@@ -10,15 +10,15 @@ export function AboutMessage() {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-          <aside className="md:col-span-4">
+      <div className="mb-wrap">
+        <div className="mb-grid">
+          <aside className="col-span-12 md:col-span-4">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="text-xs font-semibold tracking-[0.32em] text-[color:var(--color-accent)] uppercase"
+              className="mb-kicker"
             >
               {t("eyebrow")}
             </motion.p>
@@ -62,7 +62,7 @@ export function AboutMessage() {
             </motion.div>
           </aside>
 
-          <div className="md:col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}

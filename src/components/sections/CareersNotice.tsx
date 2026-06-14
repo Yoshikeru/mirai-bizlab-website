@@ -11,7 +11,7 @@ export function CareersNotice() {
 
   return (
     <section className="bg-background pt-4 pb-12 md:pt-8 md:pb-24">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
+      <div className="mb-wrap">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

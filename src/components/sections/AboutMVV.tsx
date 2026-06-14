@@ -21,14 +21,14 @@ export function AboutMVV() {
         className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="relative mb-wrap">
         <div className="text-center">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="typo-eyebrow"
+            className="mb-kicker inline-block"
           >
             {t("eyebrow")}
           </motion.p>
@@ -47,7 +47,7 @@ export function AboutMVV() {
           </motion.h2>
         </div>
 
-        <ul className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-3 md:gap-8">
+        <ul className="mt-16 mb-grid md:mt-20">
           {items.map((item, index) => (
             <motion.li
               key={item.key}
@@ -59,9 +59,9 @@ export function AboutMVV() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.12,
               }}
-              className="group relative rounded-3xl border border-[color:var(--color-border)] bg-surface/80 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-surface md:p-10"
+              className="col-span-12 md:col-span-4 group relative rounded-3xl border border-[color:var(--color-border)] bg-surface/80 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/20 hover:bg-surface md:p-10"
             >
-              <p className="typo-eyebrow font-mono">{item.label}</p>
+              <p className="mb-kicker">{item.label}</p>
               <h3 className="typo-h3 mt-6">{item.title}</h3>
               <p className="typo-body mt-5 text-[color:var(--color-muted)]">
                 {item.description}

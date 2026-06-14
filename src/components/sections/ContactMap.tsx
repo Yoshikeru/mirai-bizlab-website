@@ -20,7 +20,7 @@ export function ContactMap() {
 
   return (
     <section className="bg-surface-alt py-12 md:py-24">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

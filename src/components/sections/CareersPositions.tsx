@@ -20,7 +20,7 @@ export function CareersPositions() {
 
   return (
     <section className="bg-surface-alt py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <div className="flex flex-col gap-5">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}

@@ -61,7 +61,7 @@ function BlogArticle({ post }: { post: BlogPost }) {
 
   return (
     <article className="relative isolate bg-background pt-16 pb-24 md:pt-24 md:pb-32">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
+      <div className="mb-wrap">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.24em] text-[color:var(--color-muted)] uppercase transition-colors duration-300 hover:text-[color:var(--color-accent)]"
@@ -82,7 +82,7 @@ function BlogArticle({ post }: { post: BlogPost }) {
           </span>
         </div>
 
-        <h1 className="typo-h1 mt-7 whitespace-pre-line">{post.title}</h1>
+        <h1 className="mb-optical typo-h1 mt-7 whitespace-pre-line">{post.title}</h1>
         <p className="typo-body-lg mt-7 max-w-2xl text-[color:var(--color-muted)]">
           {post.excerpt}
         </p>

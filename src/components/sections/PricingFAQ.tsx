@@ -14,7 +14,7 @@ export function PricingFAQ() {
 
   return (
     <section className="bg-surface-alt py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-content) px-6">
+      <div className="mb-wrap">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

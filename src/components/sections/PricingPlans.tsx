@@ -21,7 +21,7 @@ export function PricingPlans() {
 
   return (
     <section className="bg-background py-14 md:py-32">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6">
+      <div className="mb-wrap">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export function PricingPlans() {
           {t("note")}
         </motion.p>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-3 md:items-end md:gap-7">
+        <div className="mt-14 mb-grid md:mt-16 md:items-end">
           {plans.map((plan, index) => {
             const recommended = index === 1;
             return (
@@ -46,7 +46,7 @@ export function PricingPlans() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: index * 0.12,
                 }}
-                className={`relative flex flex-col rounded-3xl p-8 md:p-10 ${
+                className={`col-span-12 md:col-span-4 relative flex flex-col rounded-3xl p-8 md:p-10 ${
                   recommended
                     ? "border border-[color:var(--color-accent)] bg-contrast text-white shadow-[0_40px_80px_-40px_rgba(215,0,15,0.45)] md:py-12 lg:py-14"
                     : "border border-[color:var(--color-border)] bg-surface text-foreground"

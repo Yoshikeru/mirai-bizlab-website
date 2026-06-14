@@ -37,9 +37,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[color:var(--color-border)] bg-background">
-      <div className="mx-auto w-full max-w-(--container-wide) px-6 py-12 md:py-20">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 md:gap-10">
-          <div className="col-span-2 md:col-span-1">
+      <div className="mb-wrap py-12 md:py-20">
+        <div className="mb-grid gap-y-12">
+          <div className="col-span-12 md:col-span-4">
             <p className="text-base font-bold tracking-tight">{site("name")}</p>
             <p className="mt-4 text-sm leading-relaxed text-[color:var(--color-muted)]">
               {t("tagline")}
@@ -82,7 +82,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-6 md:col-span-3">
             <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
               {t("services")}
             </p>
@@ -100,7 +100,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-6 md:col-span-3">
             <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
               {t("company")}
             </p>
@@ -118,7 +118,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-12 md:col-span-2">
             <p className="text-xs font-semibold tracking-[0.28em] text-[color:var(--color-muted)] uppercase">
               {t("language")}
             </p>
