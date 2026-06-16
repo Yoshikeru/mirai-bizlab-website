@@ -48,7 +48,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-background/95 via-background/70 to-background/0 md:from-background/92 md:via-background/55 md:to-transparent"
       />
 
-      <div className="mb-wrap relative z-10 flex min-h-svh w-full flex-col justify-center py-24">
+      <div className="mb-wrap relative z-10 flex min-h-svh w-full flex-col justify-start pt-20 pb-24 md:justify-center md:py-24">
         <div className="mb-grid w-full">
           <motion.div
             className="col-span-12 md:col-span-8 lg:col-span-7"
