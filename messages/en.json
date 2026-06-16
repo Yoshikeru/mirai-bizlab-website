@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "MIRAI BizLab",
-    "tagline": "Accounting & Consulting Partner for Japanese SMEs in Bangkok"
+    "tagline": "Accounting & Consulting Partner for SMEs in Bangkok"
   },
   "nav": {
     "home": "Home",
@@ -35,7 +35,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "For Japanese SMEs in Thailand",
+      "eyebrow": "For SMEs in Thailand",
       "title": "A partner by the side\nof every SME\nventuring into Thailand.",
       "subtitle": "Thailand market entry, accounting and BizDev for SMEs — all in one place.",
       "primaryCta": "Book a free consultation",
@@ -44,7 +44,7 @@
     "about": {
       "eyebrow": "About",
       "title": "Your partner &\ncompanion\nfor SMEs in Thailand.",
-      "description": "Nineteen years on the ground in Bangkok. We support Japanese businesses across languages, industries, and growth stages.",
+      "description": "Nineteen years on the ground in Bangkok. We support businesses across languages, industries, and growth stages.",
       "metrics": [
         {
           "value": 30,
@@ -80,12 +80,12 @@
         {
           "index": "02",
           "title": "Accounting & Tax",
-          "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your Japan HQ."
+          "description": "From monthly bookkeeping to tax filings and audits, aligned with both Thai standards and your head office."
         },
         {
           "index": "03",
           "title": "Accounting System Implementation",
-          "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ."
+          "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and your head office."
         },
         {
           "index": "04",
@@ -103,8 +103,8 @@
           "description": "Japanese, English, and Thai delivered by one team — HQ, local staff, and authorities stay in sync."
         },
         {
-          "title": "Focused on Japanese SMEs",
-          "description": "We design operations specifically for Japan-affiliated SMEs in Thailand, sharing pitfalls and shortcuts from day one."
+          "title": "Focused on SMEs in Thailand",
+          "description": "We design operations specifically for SMEs in Thailand, sharing pitfalls and shortcuts from day one."
         },
         {
           "title": "One-stop",
@@ -349,7 +349,7 @@
     ]
   },
   "footer": {
-    "tagline": "Accelerating Japanese SMEs' ambitions, from Bangkok.",
+    "tagline": "Accelerating your ambitions in Thailand, from Bangkok.",
     "company": "Company",
     "services": "Services",
     "language": "Language",
@@ -504,7 +504,7 @@
     "hero": {
       "eyebrow": "About",
       "title": "In Bangkok,\nright by your side.",
-      "description": "We are the on-the-ground partner for Japanese SMEs taking on Thailand."
+      "description": "We are the on-the-ground partner for businesses taking on Thailand."
     },
     "message": {
       "eyebrow": "Message",
@@ -512,7 +512,7 @@
       "name": "Takuro Yoshida",
       "role": "Managing Director",
       "body": [
-        "MIRAI BizLab exists to be the operational footing that helps Japanese companies launch and grow in Thailand.",
+        "MIRAI BizLab exists to be the operational footing that helps companies launch and grow in Thailand.",
         "Crossing borders means crossing language, regulation, and culture. We unwind those gaps with a fully trilingual team and nineteen years of local experience, so your decisions can move a step faster.",
         "Tidy numbers are not the goal — they are the starting line for smart decisions. We take on accounting, tax, company setup, and consulting as one package so you can keep your focus on the core business.",
         "Share with us what you want to achieve in Thailand. We will walk with you well past the entry point."
@@ -564,13 +564,13 @@
           "key": "mission",
           "label": "Mission",
           "title": "Build the footing for ambition.",
-          "description": "Make it possible for Japanese SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management."
+          "description": "Make it possible for SMEs to operate in Thailand with both feet firmly on the ground — across accounting, tax, and management."
         },
         {
           "key": "vision",
           "label": "Vision",
           "title": "The right adviser for Bangkok, Thailand.",
-          "description": "When a Japanese company is about to make a move in Bangkok, MIRAI BizLab is the first name they reach out to."
+          "description": "When a company is about to make a move in Bangkok, MIRAI BizLab is the first name they reach out to."
         },
         {
           "key": "values",
@@ -608,14 +608,14 @@
         "id": "accounting",
         "index": "02",
         "title": "Accounting & Tax",
-        "summary": "Monthly close, tax filings, audits — with Japanese-language support and reporting available. Operations designed to serve both your Japan HQ and local branch.",
-        "problem": "Accounting handled solely by local staff drifts away from HQ-ready reporting, and tax risk becomes hard to see.",
-        "solution": "We design operations that satisfy both TFRS and your HQ's management accounting needs, accelerating monthly close and visibility through cloud accounting.",
+        "summary": "Monthly close, tax filings, audits — with multilingual support and reporting available. Operations designed to serve both your head office and local branch.",
+        "problem": "Accounting handled solely by local staff drifts away from head-office reporting, and tax risk becomes hard to see.",
+        "solution": "We design operations that satisfy both TFRS and your head office's management accounting needs, accelerating monthly close and visibility through cloud accounting.",
         "deliverables": [
           "Monthly bookkeeping and trial balance",
           "VAT / withholding / corporate tax filings",
           "Audit firm coordination",
-          "HQ-ready reports (Japanese / English)"
+          "Management reports (multilingual available)"
         ],
         "pricing": "From THB 18,000 / month (depending on scope)"
       },
@@ -623,14 +623,14 @@
         "id": "accounting-system",
         "index": "03",
         "title": "Accounting System Implementation",
-        "summary": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and Japan HQ.",
-        "problem": "You want to roll out a cloud or ERP, but no one can design a setup that satisfies local operations and HQ-grade management accounting at once. Manual work and Excel survive after go-live.",
+        "summary": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and your head office.",
+        "problem": "You want to roll out a cloud or ERP, but no one can design a setup that satisfies local operations and head-office management accounting at once. Manual work and Excel survive after go-live.",
         "solution": "We evaluate Thai accounting software such as PEAK / FlowAccount / Express against your operating needs and budget, redesign chart-of-accounts and department codes, and build a flow that automates up to 80% of monthly close.",
         "deliverables": [
           "System selection (cloud / ERP)",
           "Chart-of-accounts and department code redesign",
           "Monthly close automation flow",
-          "Training for local staff and HQ accounting"
+          "Training for local staff and head-office accounting"
         ],
         "pricing": "From THB 150,000 per project (varies by scope and target system)"
       },
@@ -650,7 +650,7 @@
         "pricing": "THB 30,000 per session (online, paid in advance)",
         "ctaLabel": "Book online",
         "ctaNote": "After you book, we will contact you to arrange the session schedule.",
-        "audienceNote": "Please note: this session is designed for Japanese business owners and is conducted in Japanese. If you know an owner who would benefit, we would be grateful for your introduction.",
+        "audienceNote": "Please note: this session is conducted in Japanese.",
         "rationale": {
           "title": "Success takes many forms. Failure follows a pattern.",
           "body": [
@@ -673,7 +673,7 @@
     "hero": {
       "eyebrow": "Cases",
       "title": "Stories of ambition,\nbehind the numbers.",
-      "description": "We specialize in supporting Japanese SMEs in Thailand, particularly multi-outlet, operations-heavy businesses. From building accounting frameworks to day-to-day bookkeeping and payroll, market entry and exit, here are cases where we worked alongside our clients in line with Thai practice."
+      "description": "We specialize in supporting SMEs in Thailand, particularly multi-outlet, operations-heavy businesses. From building accounting frameworks to day-to-day bookkeeping and payroll, market entry and exit, here are cases where we worked alongside our clients in line with Thai practice."
     },
     "filter": {
       "label": "Filter by industry",

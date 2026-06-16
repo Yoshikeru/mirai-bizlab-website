@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "MIRAI BizLab",
-    "tagline": "Socio de contabilidad y consultoría para PYMES japonesas en Bangkok"
+    "tagline": "Socio de contabilidad y consultoría para PYMES en Bangkok"
   },
   "nav": {
     "home": "Inicio",
@@ -35,7 +35,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Para PYMES japonesas en Tailandia",
+      "eyebrow": "Para PYMES en Tailandia",
       "title": "Un socio al lado\nde cada PYME\nque entra en Tailandia.",
       "subtitle": "Entrada al mercado tailandés, contabilidad y desarrollo empresarial para PYMES — todo en un solo lugar.",
       "primaryCta": "Reservar consulta gratuita",
@@ -44,7 +44,7 @@
     "about": {
       "eyebrow": "Nosotros",
       "title": "Su socio y\nacompañante\npara PYMES en Tailandia.",
-      "description": "Diecinueve años sobre el terreno en Bangkok. Apoyamos a empresas japonesas en varios idiomas, sectores y etapas de crecimiento.",
+      "description": "Diecinueve años sobre el terreno en Bangkok. Apoyamos a empresas en varios idiomas, sectores y etapas de crecimiento.",
       "metrics": [
         {
           "value": 30,
@@ -80,12 +80,12 @@
         {
           "index": "02",
           "title": "Contabilidad e impuestos",
-          "description": "Desde la contabilidad mensual hasta las declaraciones fiscales y auditorías, alineadas con las normas tailandesas y con su casa matriz en Japón."
+          "description": "Desde la contabilidad mensual hasta las declaraciones fiscales y auditorías, alineadas con las normas tailandesas y con su casa matriz."
         },
         {
           "index": "03",
           "title": "Implementación de sistema contable",
-          "description": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para la casa matriz en Japón."
+          "description": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para su casa matriz."
         },
         {
           "index": "04",
@@ -103,8 +103,8 @@
           "description": "Japonés, inglés y tailandés, entregados por un solo equipo — la casa matriz, el personal local y las autoridades siempre sincronizados."
         },
         {
-          "title": "Enfocados en PYMES japonesas",
-          "description": "Diseñamos operaciones específicamente para PYMES afiliadas a Japón en Tailandia, compartiendo errores comunes y atajos desde el primer día."
+          "title": "Enfocados en PYMES en Tailandia",
+          "description": "Diseñamos operaciones específicamente para PYMES en Tailandia, compartiendo errores comunes y atajos desde el primer día."
         },
         {
           "title": "Servicio integral",
@@ -349,7 +349,7 @@
     ]
   },
   "footer": {
-    "tagline": "Impulsando las ambiciones de las PYMES japonesas, desde Bangkok.",
+    "tagline": "Impulsando sus ambiciones en Tailandia, desde Bangkok.",
     "company": "Empresa",
     "services": "Servicios",
     "language": "Idioma",
@@ -504,7 +504,7 @@
     "hero": {
       "eyebrow": "Nosotros",
       "title": "En Bangkok,\nright by your side.",
-      "description": "Somos el socio sobre el terreno para las PYMES japonesas que se aventuran en Tailandia."
+      "description": "Somos el socio sobre el terreno para las empresas que se aventuran en Tailandia."
     },
     "message": {
       "eyebrow": "Mensaje",
@@ -512,7 +512,7 @@
       "name": "Takuro Yoshida",
       "role": "Director General",
       "body": [
-        "MIRAI BizLab existe para ser la base operativa que ayuda a las empresas japonesas a lanzarse y crecer en Tailandia.",
+        "MIRAI BizLab existe para ser la base operativa que ayuda a las empresas a lanzarse y crecer en Tailandia.",
         "Cruzar fronteras implica cruzar idiomas, regulaciones y culturas. Resolvemos esas brechas con un equipo completamente trilingüe y diecinueve años de experiencia local, para que sus decisiones puedan avanzar un paso más rápido.",
         "Las cifras ordenadas no son el objetivo — son el punto de partida para las decisiones inteligentes. Asumimos la contabilidad, los impuestos, la constitución de empresas y la consultoría como un paquete integral para que usted pueda mantener el foco en su negocio principal.",
         "Comparta con nosotros lo que desea lograr en Tailandia. Caminaremos junto a usted mucho más allá del punto de entrada."
@@ -564,13 +564,13 @@
           "key": "mission",
           "label": "Misión",
           "title": "Construir la base para la ambición.",
-          "description": "Hacer posible que las PYMES japonesas operen en Tailandia con los pies firmemente en el suelo — en contabilidad, impuestos y gestión."
+          "description": "Hacer posible que las PYMES operen en Tailandia con los pies firmemente en el suelo — en contabilidad, impuestos y gestión."
         },
         {
           "key": "vision",
           "label": "Visión",
           "title": "El asesor de referencia en Bangkok, Tailandia.",
-          "description": "Cuando una empresa japonesa está a punto de dar un paso en Bangkok, MIRAI BizLab es el primer nombre al que recurren."
+          "description": "Cuando una empresa está a punto de dar un paso en Bangkok, MIRAI BizLab es el primer nombre al que recurren."
         },
         {
           "key": "values",
@@ -608,14 +608,14 @@
         "id": "accounting",
         "index": "02",
         "title": "Contabilidad e impuestos",
-        "summary": "Cierre mensual, declaraciones fiscales, auditorías — con soporte en japonés e informes disponibles. Operaciones diseñadas para servir tanto a su casa matriz en Japón como a la sucursal local.",
+        "summary": "Cierre mensual, declaraciones fiscales, auditorías — con soporte multilingüe e informes disponibles. Operaciones diseñadas para servir tanto a su casa matriz como a la sucursal local.",
         "problem": "La contabilidad gestionada únicamente por el personal local se aleja de los informes aptos para la casa matriz, y el riesgo fiscal se vuelve difícil de detectar.",
-        "solution": "Diseñamos operaciones que satisfacen tanto las TFRS como las necesidades de contabilidad de gestión de su casa matriz, acelerando el cierre mensual y la visibilidad a través de la contabilidad en la nube.",
+        "solution": "Diseñamos operaciones que satisfacen tanto las TFRS como las necesidades de la contabilidad gerencial de su casa matriz, acelerando el cierre mensual y la visibilidad a través de la contabilidad en la nube.",
         "deliverables": [
           "Contabilidad mensual y balance de comprobación",
           "Declaraciones de IVA / retención / impuesto de sociedades",
           "Coordinación con la firma auditora",
-          "Informes para la casa matriz (japonés / inglés)"
+          "Informes de gestión (multilingüe disponible)"
         ],
         "pricing": "Desde THB 18,000 / mes (según el alcance)"
       },
@@ -623,14 +623,14 @@
         "id": "accounting-system",
         "index": "03",
         "title": "Implementación de sistema contable",
-        "summary": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para la casa matriz en Japón.",
-        "problem": "Desea implantar una solución en la nube o un ERP, pero nadie puede diseñar una configuración que satisfaga simultáneamente las operaciones locales y la contabilidad de gestión de nivel sede. El trabajo manual y Excel sobreviven tras la puesta en marcha.",
+        "summary": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para su casa matriz.",
+        "problem": "Desea implantar una solución en la nube o un ERP, pero nadie puede diseñar una configuración que satisfaga simultáneamente las operaciones locales y la contabilidad gerencial para la casa matriz. El trabajo manual y Excel sobreviven tras la puesta en marcha.",
         "solution": "Evaluamos el software contable tailandés como PEAK / FlowAccount / Express según sus necesidades operativas y presupuesto, rediseñamos el catálogo de cuentas y los códigos de departamento, y construimos un flujo que automatiza hasta el 80% del cierre mensual.",
         "deliverables": [
           "Selección del sistema (nube / ERP)",
           "Rediseño del catálogo de cuentas y códigos de departamento",
           "Flujo de automatización del cierre mensual",
-          "Formación para el personal local y la contabilidad de la casa matriz"
+          "Formación para el personal local y la contabilidad de su casa matriz"
         ],
         "pricing": "Desde THB 150,000 por proyecto (varía según el alcance y el sistema objetivo)"
       },
@@ -650,7 +650,7 @@
         "pricing": "THB 30,000 por sesión (en línea, pago anticipado)",
         "ctaLabel": "Reservar en línea",
         "ctaNote": "Tras su reserva, nos pondremos en contacto para acordar el horario de la sesión.",
-        "audienceNote": "Nota: esta sesión está diseñada para empresarios japoneses y se imparte en japonés. Si conoce a un empresario que se beneficiaría, le agradecemos su presentación.",
+        "audienceNote": "Nota: esta sesión se realiza en japonés. Si conoce a un empresario que se beneficiaría, le agradecemos su presentación.",
         "rationale": {
           "title": "El éxito adopta muchas formas. El fracaso sigue un patrón.",
           "body": [
@@ -673,7 +673,7 @@
     "hero": {
       "eyebrow": "Casos",
       "title": "Historias de ambición,\ndetrás de los números.",
-      "description": "Nos especializamos en apoyar a PYMES japonesas en Tailandia, en particular a negocios con múltiples sucursales y operaciones intensivas. Desde la construcción de marcos contables hasta la contabilidad diaria, la nómina, la entrada y la salida del mercado, aquí presentamos casos en los que trabajamos codo a codo con nuestros clientes, conforme a la práctica tailandesa."
+      "description": "Nos especializamos en apoyar a PYMES en Tailandia, en particular a negocios con múltiples sucursales y operaciones intensivas. Desde la construcción de marcos contables hasta la contabilidad diaria, la nómina, la entrada y la salida del mercado, aquí presentamos casos en los que trabajamos codo a codo con nuestros clientes, conforme a la práctica tailandesa."
     },
     "filter": {
       "label": "Filtrar por sector",
