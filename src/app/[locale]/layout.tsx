@@ -33,6 +33,9 @@ const OG_LOCALES: Record<Locale, string> = {
   ja: "ja_JP",
   en: "en_US",
   th: "th_TH",
+  zh: "zh_CN",
+  "zh-TW": "zh_TW",
+  es: "es_ES",
 };
 
 const notoSansJp = Noto_Sans_JP({

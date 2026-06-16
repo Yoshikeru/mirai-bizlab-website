@@ -84,6 +84,9 @@ const LANG_INSTRUCTION: Record<Locale, string> = {
   ja: "必ず日本語で回答してください。ただし利用者が英語またはタイ語で質問した場合は、その言語で回答してください。",
   en: "Respond in English by default. If the user writes in Japanese or Thai, reply in that language instead. Keep all facts identical to the information above; convert THB figures and addresses as written.",
   th: "ตอบเป็นภาษาไทยโดยค่าเริ่มต้น หากผู้ใช้พิมพ์เป็นภาษาญี่ปุ่นหรืออังกฤษ ให้ตอบเป็นภาษานั้น โดยคงข้อเท็จจริงทั้งหมดให้ตรงกับข้อมูลด้านบน",
+  zh: "请默认用简体中文回答。如果用户用日语、英语或泰语提问，请用对应语言回答。所有事实信息请与上述内容保持一致。",
+  "zh-TW": "請預設以繁體中文回答。如果使用者以日語、英語或泰語提問，請以對應語言回答。所有事實資訊請與上述內容保持一致。",
+  es: "Responde en español por defecto. Si el usuario escribe en japonés, inglés o tailandés, responde en ese idioma en su lugar. Mantén todos los datos idénticos a la información indicada arriba.",
 };
 
 /**

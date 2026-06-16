@@ -1,0 +1,893 @@
+{
+  "site": {
+    "name": "MIRAI BizLab",
+    "tagline": "Socio de contabilidad y consultoría para PYMES japonesas en Bangkok"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "cases": "Casos",
+    "blog": "Blog",
+    "careers": "Empleos",
+    "contact": "Contacto"
+  },
+  "locale": {
+    "label": "Idioma",
+    "ja": "JP",
+    "en": "EN",
+    "th": "TH",
+    "jaFull": "Japonés",
+    "enFull": "English",
+    "thFull": "Tailandés",
+    "zh": "简中",
+    "zh-TW": "繁中",
+    "es": "ES",
+    "zhFull": "简体中文",
+    "zh-TWFull": "繁體中文",
+    "esFull": "Español"
+  },
+  "common": {
+    "scroll": "Desplazar",
+    "home": "Inicio",
+    "viewMore": "Ver detalles",
+    "back": "Volver"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Para PYMES japonesas en Tailandia",
+      "title": "Un socio al lado\nde cada PYME\nque entra en Tailandia.",
+      "subtitle": "Entrada al mercado tailandés, contabilidad y desarrollo empresarial para PYMES — todo en un solo lugar.",
+      "primaryCta": "Reservar consulta gratuita",
+      "secondaryCta": "Explorar servicios"
+    },
+    "about": {
+      "eyebrow": "Nosotros",
+      "title": "Su socio y\nacompañante\npara PYMES en Tailandia.",
+      "description": "Diecinueve años sobre el terreno en Bangkok. Apoyamos a empresas japonesas en varios idiomas, sectores y etapas de crecimiento.",
+      "metrics": [
+        {
+          "value": 30,
+          "suffix": "",
+          "label": "Clientes en Tailandia"
+        },
+        {
+          "value": 3,
+          "suffix": "",
+          "label": "Idiomas atendidos"
+        },
+        {
+          "value": 15,
+          "suffix": "+",
+          "label": "Sectores servidos"
+        },
+        {
+          "value": 51,
+          "suffix": "+",
+          "label": "Empresas constituidas"
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Servicios",
+      "title": "Cuatro pilares\npara cada etapa en Tailandia.",
+      "items": [
+        {
+          "index": "01",
+          "title": "Constitución de empresa",
+          "description": "BOI, entidades locales y oficinas de representación — diseñamos el esquema de entrada que se adapta a su modelo de negocio."
+        },
+        {
+          "index": "02",
+          "title": "Contabilidad e impuestos",
+          "description": "Desde la contabilidad mensual hasta las declaraciones fiscales y auditorías, alineadas con las normas tailandesas y con su casa matriz en Japón."
+        },
+        {
+          "index": "03",
+          "title": "Implementación de sistema contable",
+          "description": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para la casa matriz en Japón."
+        },
+        {
+          "index": "04",
+          "title": "Sesión de estrategia de entrada a Tailandia",
+          "description": "Reduzca el riesgo en sus decisiones previas a la entrada más importantes con 19 años sobre el terreno. En una sesión en línea individual, señalamos los escollos que hacen tropezar a las empresas — selección de socios, gestión del talento tailandés y más — antes de que ocurran."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Por qué MIRAI",
+      "title": "Cuatro razones\npor las que nos eligen.",
+      "reasons": [
+        {
+          "title": "Completamente trilingüe",
+          "description": "Japonés, inglés y tailandés, entregados por un solo equipo — la casa matriz, el personal local y las autoridades siempre sincronizados."
+        },
+        {
+          "title": "Enfocados en PYMES japonesas",
+          "description": "Diseñamos operaciones específicamente para PYMES afiliadas a Japón en Tailandia, compartiendo errores comunes y atajos desde el primer día."
+        },
+        {
+          "title": "Servicio integral",
+          "description": "Contabilidad, constitución y consultoría bajo un mismo techo — un solo interlocutor, cero pérdidas en los traspasos."
+        },
+        {
+          "title": "Diecinueve años sobre el terreno",
+          "description": "Nuestra red local con autoridades, bancos y especialistas abre el camino más rápido y viable."
+        }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Casos",
+      "title": "Trabajo seleccionado.",
+      "description": "Nuestra fortaleza está en apoyar a negocios con múltiples sucursales y operaciones presenciales — restaurantes, salones, clínicas, agencias — donde las operaciones diarias y los números están estrechamente vinculados, con soporte práctico de contabilidad, fiscalidad y RR. HH. sobre el terreno en Tailandia.",
+      "items": [
+        {
+          "industry": "Restaurante",
+          "scale": "3 sucursales / 32 empleados",
+          "title": "Conciliación de ventas en efectivo y por delivery en 3 sucursales para P/L por local",
+          "summary": "Las ventas en efectivo y los depósitos de plataformas de delivery ya no podían conciliarse, dejando la rentabilidad por local invisible. La integración del POS y un cierre mensual más ágil le dieron a la dirección los números para gestionar.",
+          "challenge": "Al crecer el grupo a tres restaurantes japoneses, las ventas en efectivo, los depósitos de plataformas de delivery como Grab y LINE MAN, y los pagos con tarjeta en el local se registraban por separado, y la conciliación de fin de mes había colapsado. Con los depósitos netos de comisiones imposibles de cotejar contra las ventas, ni los márgenes por local ni siquiera los ingresos totales podían afirmarse con certeza.",
+          "approach": [
+            "Establecimiento de reglas de conciliación entre POS, ventas diarias y depósitos",
+            "Asignación de comisiones de delivery y costos promocionales por sucursal",
+            "Contabilidad en la nube para acelerar el cierre y generar P/L por local"
+          ],
+          "results": [
+            {
+              "value": "8 días hábiles",
+              "label": "Tiempo de cierre mensual (aproximadamente 15 días más rápido)"
+            },
+            {
+              "value": "3 sucursales",
+              "label": "Cobertura de P/L por local"
+            },
+            {
+              "value": "100%",
+              "label": "Tasa de conciliación de depósitos de delivery"
+            }
+          ]
+        },
+        {
+          "industry": "Salón de peluquería",
+          "scale": "2 sucursales / 14 estilistas",
+          "title": "Unificación del pago por comisiones con seguridad social e impuesto de retención",
+          "summary": "Los cálculos de comisiones de estilistas dependían de una sola persona, y las retenciones de seguridad social e impuesto sobre la renta personal contenían errores. La externalización de la nómina y el saneamiento de RR. HH. hicieron el ciclo mensual preciso y puntual.",
+          "challenge": "En dos salones que atienden a expatriados japoneses, el gerente de tienda calculaba manualmente el pago por comisiones vinculado a la nominación y los ingresos por servicio, por lo que cada mes traía variaciones y retrasos. Las deducciones de la Oficina del Seguro Social (SSO) y la retención del impuesto sobre la renta personal (PND1) también contenían errores que requerían corrección constante.",
+          "approach": [
+            "Definición de la lógica de comisiones y estandarización de la plantilla de cálculo",
+            "Externalización de las retenciones y declaraciones mensuales de SSO y PND1",
+            "Recibos de nómina multilingües y un flujo de desembolso claro"
+          ],
+          "results": [
+            {
+              "value": "Día 5 de cada mes",
+              "label": "Nómina finalizada en plazo (sin retrasos)"
+            },
+            {
+              "value": "Cero",
+              "label": "Errores en retenciones y seguridad social (tras la corrección)"
+            },
+            {
+              "value": "Aprox. 8 hrs",
+              "label": "Carga de trabajo mensual de nómina eliminada de los locales"
+            }
+          ]
+        },
+        {
+          "industry": "Clínica médica",
+          "scale": "21 empleados / 2 departamentos",
+          "title": "Desenredando el reconocimiento de ingresos y el inventario de medicamentos en una clínica",
+          "summary": "El tratamiento con seguro y el de pago directo tenían ciclos de efectivo distintos, lo que desdibujaba el reconocimiento de ingresos, y el inventario de medicamentos no se registraba. Un nuevo marco contable hizo visible el P/L por departamento y el inventario.",
+          "challenge": "En esta clínica afiliada a Japón, la facturación sin efectivo a aseguradoras se mezclaba con pagos en efectivo y tarjeta de pacientes de pago directo, y los ingresos se reconocían en momentos inconsistentes. Los productos farmacéuticos y los suministros médicos tampoco se registraban en los libros, dejando el costo de ventas y las mermas desconocidos.",
+          "approach": [
+            "Separación del reconocimiento de ingresos para seguro y pago directo",
+            "Introducción de gestión de P/L por departamento y segmento",
+            "Construcción del flujo de recuento de existencias y reconocimiento de costos para medicamentos"
+          ],
+          "results": [
+            {
+              "value": "2 departamentos",
+              "label": "Unidades de visibilidad de P/L por segmento"
+            },
+            {
+              "value": "Aprox. 30 días",
+              "label": "Ciclo de liquidación de cuentas por cobrar de seguros, ahora monitoreado"
+            },
+            {
+              "value": "Mensual",
+              "label": "Frecuencia de recuento de existencias y costeo de medicamentos"
+            }
+          ]
+        },
+        {
+          "industry": "Agencia de publicidad",
+          "scale": "18 empleados",
+          "title": "Control de costos por proyecto para identificar trabajos no rentables",
+          "summary": "Los costos no se rastreaban por proyecto, por lo que los trabajos no rentables solo se detectaban al final del año. El P/L por proyecto, la gestión de WHT y un mejor seguimiento de cobros permitieron al equipo evaluar la rentabilidad antes de aceptar un trabajo.",
+          "challenge": "En esta agencia afiliada a Japón, los costos de producción, medios y subcontratación se registraban entre proyectos, por lo que el margen bruto por trabajo era invisible. El impuesto de retención (WHT 3%) sobre los subcontratistas se omitía con frecuencia, y combinado con cobros lentos, el flujo de caja era crónicamente ajustado.",
+          "approach": [
+            "Etiquetado y agregación de costos por código de proyecto",
+            "Configuración de retención WHT del 3% a subcontratistas y remisión de PND3/53",
+            "Gestión del ciclo de facturación a cobro para mejorar el flujo de caja"
+          ],
+          "results": [
+            {
+              "value": "Por proyecto",
+              "label": "Unidad de visibilidad del margen bruto"
+            },
+            {
+              "value": "Antes de firmar",
+              "label": "Cuándo puede evaluarse ahora la rentabilidad"
+            },
+            {
+              "value": "Aprox. 20 días",
+              "label": "Reducción en el ciclo promedio de cobro"
+            }
+          ]
+        },
+        {
+          "industry": "Implantación de PEAK",
+          "scale": "12 empleados",
+          "title": "Migración de Excel y facturas en papel a la contabilidad en la nube PEAK",
+          "summary": "La facturación y la contabilidad funcionaban con Excel y papel, por lo que los números llegaban con retraso hasta fin de mes. La implantación de la contabilidad en la nube PEAK de Tailandia brindó visibilidad en tiempo real y mucho menos trabajo contable.",
+          "challenge": "Las facturas de ventas y compras se creaban en Excel y se archivaban en papel, y la contabilidad dependía de la entrada manual, por lo que las cifras mensuales no eran definitivas hasta bien entrado el mes siguiente. El IVA y la retención se calculaban manualmente cada vez, con riesgo de errores de entrada y doble contabilización.",
+          "approach": [
+            "Implantación de PEAK para digitalizar la facturación y la contabilidad",
+            "Configuración del cálculo y reporte automático de IVA/WHT",
+            "Adaptación del catálogo de cuentas y el flujo de trabajo a la empresa"
+          ],
+          "results": [
+            {
+              "value": "Aprox. -60%",
+              "label": "Reducción en la carga de trabajo contable mensual"
+            },
+            {
+              "value": "En tiempo real",
+              "label": "Visibilidad de ventas y saldos"
+            },
+            {
+              "value": "3er día hábil",
+              "label": "Días para finalizar el balance de comprobación mensual"
+            }
+          ]
+        },
+        {
+          "industry": "Constitución de empresa",
+          "scale": "Capital THB 3M / A&B",
+          "title": "Acompañamiento en la entrada al mercado A&B hasta la aprobación de licencias",
+          "summary": "Apoyamos todo, desde el registro en el DBD y el registro de IVA hasta la licencia de negocio de alimentos y el visado y permiso de trabajo del expatriado. La gestión paralela de los trámites administrativos permitió un lanzamiento ágil.",
+          "challenge": "Al entrar por primera vez en el sector A&B de Tailandia, la empresa matriz japonesa no tenía un panorama claro de la estructura societaria, las normas de participación extranjera o las licencias requeridas, y no podía determinar qué pasos seguir en qué orden. El avance debía gestionarse hacia atrás desde la fecha de apertura planificada.",
+          "approach": [
+            "Gestión del registro de la empresa en el DBD y del registro fiscal/IVA",
+            "Apoyo en la solicitud de licencia de alimentos e impuesto de letreros",
+            "Obtención del visado y permiso de trabajo del expatriado"
+          ],
+          "results": [
+            {
+              "value": "Aprox. 8 semanas",
+              "label": "Desde el registro hasta la apertura"
+            },
+            {
+              "value": "1 permiso",
+              "label": "Permiso de trabajo del expatriado obtenido"
+            },
+            {
+              "value": "Integral",
+              "label": "Punto único para constitución, impuestos, licencia y visado"
+            }
+          ]
+        },
+        {
+          "industry": "Liquidación",
+          "scale": "9 empleados / salida del mercado",
+          "title": "Cierre ordenado de la empresa mediante liquidación al salir del mercado",
+          "summary": "Llevamos a cabo las terminaciones de los empleados, la liquidación fiscal y el registro de liquidación paso a paso conforme a la ley. La empresa se disolvió sin controversia, completando la salida de la empresa matriz según lo planificado.",
+          "challenge": "Una reestructuración de la empresa matriz implicó la retirada de Tailandia, pero los pasos requeridos y el calendario no estaban claros — indemnizaciones estatutarias según la legislación laboral, liquidación de impuestos y IVA pendientes, nombramiento de un liquidador y avisos a acreedores, entre otros.",
+          "approach": [
+            "Ejecución de procedimientos legales de desvinculación y separación",
+            "Cancelación del registro de IVA y obtención de la liquidación fiscal",
+            "Completación del nombramiento del liquidador, aviso a acreedores y registro"
+          ],
+          "results": [
+            {
+              "value": "9 empleados",
+              "label": "Desvinculaciones completadas conforme a la ley"
+            },
+            {
+              "value": "Cero",
+              "label": "Conflictos laborales o fiscales"
+            },
+            {
+              "value": "Aprox. 12 meses",
+              "label": "Tiempo hasta la finalización de la liquidación"
+            }
+          ]
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Proceso",
+      "title": "De la primera llamada\nal soporte continuo.",
+      "steps": [
+        {
+          "title": "Consulta gratuita",
+          "description": "Una llamada en línea de 30–45 min. Comparta su situación actual y sus objetivos."
+        },
+        {
+          "title": "Entrevista en profundidad",
+          "description": "Analizamos sus cifras, organización y flujos de trabajo en detalle."
+        },
+        {
+          "title": "Propuesta y presupuesto",
+          "description": "Hipótesis, alcance y precio — claramente sobre la mesa."
+        },
+        {
+          "title": "Contrato e inicio",
+          "description": "La incorporación se completa y las operaciones comienzan en ~2 semanas."
+        },
+        {
+          "title": "Soporte continuo",
+          "description": "Revisiones mensuales, con actualizaciones estratégicas trimestrales superpuestas."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Póngase en contacto",
+      "title": "Comience con una\nconsulta gratuita.",
+      "description": "Desde definir el problema hasta elegir el esquema de entrada adecuado — 30 minutos son suficientes para avanzar.",
+      "button": "Reservar consulta gratuita"
+    },
+    "marquee": [
+      "Constitución de empresa",
+      "Contabilidad e impuestos",
+      "Cierre mensual",
+      "Nómina",
+      "Visado y permiso de trabajo",
+      "Contabilidad en la nube PEAK",
+      "Asesoría empresarial",
+      "Liquidación"
+    ]
+  },
+  "footer": {
+    "tagline": "Impulsando las ambiciones de las PYMES japonesas, desde Bangkok.",
+    "company": "Empresa",
+    "services": "Servicios",
+    "language": "Idioma",
+    "address": "Samutprakarn, Thailand",
+    "privacy": "Política de privacidad",
+    "copyright": "© {year} MIRAI BizLab Co., Ltd. Todos los derechos reservados."
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Política de privacidad",
+      "title": "Política de\nprivacidad",
+      "description": "MIRAI BizLab Co., Ltd. está comprometida con el manejo y la protección responsable de sus datos personales."
+    },
+    "updated": "Última actualización: 13 de junio de 2026",
+    "intro": [
+      "MIRAI BizLab Co., Ltd. (\"nosotros\", \"nos\", \"nuestro\") maneja los datos personales que recopilamos a través de este sitio web (www.miraibizlab.co.th) y en el curso de la prestación de nuestros servicios, de conformidad con la Ley de Protección de Datos Personales de Tailandia B.E. 2562 (\"PDPA\") y otras leyes aplicables.",
+      "Esta política explica qué datos personales recopilamos, cómo los utilizamos, cuándo los compartimos y los derechos de que dispone usted."
+    ],
+    "controller": {
+      "heading": "Responsable del tratamiento",
+      "lines": [
+        "MIRAI BizLab Co., Ltd.",
+        "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270, Thailand",
+        "Email: contact@miraibizlab.co.th",
+        "Tel: +66-2-088-8539"
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Datos personales que recopilamos",
+        "paragraphs": [
+          "Podemos recopilar los siguientes datos personales:"
+        ],
+        "bullets": [
+          "Información que usted proporciona a través de nuestro formulario de contacto (nombre, nombre de la empresa, dirección de correo electrónico, número de teléfono y el contenido de su consulta)",
+          "El contenido de las conversaciones que usted introduce en nuestro servicio de chat con inteligencia artificial",
+          "Información recopilada automáticamente cuando utiliza el sitio web (dirección IP, tipo de navegador y dispositivo, páginas visitadas, hora de acceso e identificadores como las cookies)"
+        ]
+      },
+      {
+        "heading": "Finalidades del uso",
+        "paragraphs": [
+          "Utilizamos los datos personales que recopilamos para las siguientes finalidades:"
+        ],
+        "bullets": [
+          "Responder a consultas y asesorías, preparar presupuestos y prestar nuestros servicios",
+          "Mantener y mejorar la calidad del servicio, y mejorar y analizar el sitio web",
+          "Enviarle avisos e información relevante cuando haya prestado su consentimiento",
+          "Cumplir con la ley, prevenir el uso indebido y proteger nuestros derechos e intereses legítimos"
+        ]
+      },
+      {
+        "heading": "Base jurídica del tratamiento",
+        "paragraphs": [
+          "En virtud de la PDPA, tratamos los datos personales sobre una de las siguientes bases jurídicas: ejecución de un contrato, los intereses legítimos nuestros o de un tercero, el cumplimiento de una obligación legal, o su consentimiento. Cuando nos basamos en el consentimiento, usted puede retirarlo en cualquier momento."
+        ]
+      },
+      {
+        "heading": "Divulgación y encargados del tratamiento",
+        "paragraphs": [
+          "No vendemos ni alquilamos sus datos personales a terceros sin su consentimiento. Sin embargo, podemos encomendar el tratamiento de datos personales a los siguientes proveedores de servicios de confianza (encargados del tratamiento) en la medida necesaria para prestar nuestros servicios:"
+        ],
+        "bullets": [
+          "Alojamiento web y análisis (Vercel Inc.)",
+          "Envío de correos electrónicos de contacto (Resend)",
+          "Generación de respuestas del chat de inteligencia artificial (Anthropic)",
+          "Cuando la divulgación sea requerida por ley, o necesaria para proteger derechos y la seguridad"
+        ]
+      },
+      {
+        "heading": "Transferencias internacionales de datos",
+        "paragraphs": [
+          "Algunos de los encargados del tratamiento mencionados anteriormente están ubicados fuera de Tailandia (por ejemplo, en los Estados Unidos). Cuando los datos personales se transfieren internacionalmente, los gestionamos con las salvaguardas adecuadas exigidas por la PDPA."
+        ]
+      },
+      {
+        "heading": "Cookies y análisis",
+        "paragraphs": [
+          "Nuestro sitio web puede utilizar cookies y tecnologías similares (incluido el análisis) para comprender el uso y mejorar nuestros servicios. Puede rechazar las cookies a través de la configuración de su navegador, aunque algunas funciones pueden no funcionar correctamente como resultado."
+        ]
+      },
+      {
+        "heading": "Conservación de datos",
+        "paragraphs": [
+          "Conservamos los datos personales solo durante el tiempo necesario para alcanzar las finalidades de uso o según lo exija la ley, y los eliminamos de forma segura o los anonimizamos cuando la conservación ya no es necesaria."
+        ]
+      },
+      {
+        "heading": "Medidas de seguridad",
+        "paragraphs": [
+          "Aplicamos medidas de seguridad técnicas y organizativas razonables y apropiadas para prevenir el acceso no autorizado, la pérdida, destrucción, alteración y filtración de datos personales."
+        ]
+      },
+      {
+        "heading": "Sus derechos como interesado",
+        "paragraphs": [
+          "En virtud de la PDPA, usted tiene los siguientes derechos en relación con sus datos personales en nuestro poder:"
+        ],
+        "bullets": [
+          "El derecho a acceder y obtener una copia de sus datos personales",
+          "El derecho a solicitar la corrección o actualización de sus datos personales",
+          "El derecho a solicitar la supresión o suspensión del uso de sus datos personales",
+          "El derecho a oponerse al tratamiento y a retirar su consentimiento",
+          "El derecho a presentar una reclamación ante la autoridad de control"
+        ]
+      },
+      {
+        "heading": "Cambios en esta política",
+        "paragraphs": [
+          "Podemos revisar esta política en respuesta a cambios en la legislación o en nuestros servicios. Anunciaremos cualquier cambio sustancial en este sitio web."
+        ]
+      },
+      {
+        "heading": "Contacto",
+        "paragraphs": [
+          "Si tiene alguna pregunta sobre esta política o desea ejercer los derechos anteriores, contáctenos en contact@miraibizlab.co.th."
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "about": {
+      "title": "Nosotros",
+      "description": "Nuestra historia y liderazgo"
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "Oferta detallada de servicios"
+    },
+    "cases": {
+      "title": "Casos",
+      "description": "Trabajo seleccionado"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Perspectivas y conocimiento práctico"
+    },
+    "careers": {
+      "title": "Empleos",
+      "description": "Trabajar en MIRAI BizLab"
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Póngase en contacto"
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Cómo gestionamos sus datos personales"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Nosotros",
+      "title": "En Bangkok,\nright by your side.",
+      "description": "Somos el socio sobre el terreno para las PYMES japonesas que se aventuran en Tailandia."
+    },
+    "message": {
+      "eyebrow": "Mensaje",
+      "title": "Mensaje de la dirección",
+      "name": "Takuro Yoshida",
+      "role": "Director General",
+      "body": [
+        "MIRAI BizLab existe para ser la base operativa que ayuda a las empresas japonesas a lanzarse y crecer en Tailandia.",
+        "Cruzar fronteras implica cruzar idiomas, regulaciones y culturas. Resolvemos esas brechas con un equipo completamente trilingüe y diecinueve años de experiencia local, para que sus decisiones puedan avanzar un paso más rápido.",
+        "Las cifras ordenadas no son el objetivo — son el punto de partida para las decisiones inteligentes. Asumimos la contabilidad, los impuestos, la constitución de empresas y la consultoría como un paquete integral para que usted pueda mantener el foco en su negocio principal.",
+        "Comparta con nosotros lo que desea lograr en Tailandia. Caminaremos junto a usted mucho más allá del punto de entrada."
+      ]
+    },
+    "info": {
+      "eyebrow": "Empresa",
+      "title": "Información de la empresa",
+      "rows": [
+        {
+          "label": "Nombre",
+          "value": "MIRAI BizLab Co., Ltd."
+        },
+        {
+          "label": "Fundación",
+          "value": "Abril 2010 (Bangkok)"
+        },
+        {
+          "label": "Director General",
+          "value": "Takuro Yoshida"
+        },
+        {
+          "label": "Sede principal",
+          "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270"
+        },
+        {
+          "label": "Oficina en Bangkok",
+          "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110"
+        },
+        {
+          "label": "Actividad",
+          "value": "Contabilidad e impuestos, constitución de empresas, consultoría de gestión"
+        },
+        {
+          "label": "Idiomas",
+          "value": "Japonés / English / ภาษาไทย"
+        },
+        {
+          "label": "Tamaño del equipo",
+          "value": "7 miembros (a mayo de 2026)"
+        }
+      ]
+    },
+    "mvv": {
+      "eyebrow": "MVV",
+      "title": "Misión · Visión · Valores",
+      "items": [
+        {
+          "key": "mission",
+          "label": "Misión",
+          "title": "Construir la base para la ambición.",
+          "description": "Hacer posible que las PYMES japonesas operen en Tailandia con los pies firmemente en el suelo — en contabilidad, impuestos y gestión."
+        },
+        {
+          "key": "vision",
+          "label": "Visión",
+          "title": "El asesor de referencia en Bangkok, Tailandia.",
+          "description": "Cuando una empresa japonesa está a punto de dar un paso en Bangkok, MIRAI BizLab es el primer nombre al que recurren."
+        },
+        {
+          "key": "values",
+          "label": "Valores",
+          "title": "Ágil · Accesible · Honesto.",
+          "description": "Ágiles en la respuesta, fáciles de contactar, honestos con las personas — lo evidente, entregado a un ritmo refrescante."
+        }
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Servicios",
+      "title": "Nos hacemos cargo\ndel negocio detrás de su negocio.",
+      "description": "Contabilidad e impuestos, constitución de empresas y consultoría de gestión — la realidad operativa de funcionar en Tailandia, gestionada de forma integral."
+    },
+    "nav": "Lista de servicios",
+    "items": [
+      {
+        "id": "incorporation",
+        "index": "01",
+        "title": "Constitución de empresa",
+        "summary": "BOI, entidades locales, oficinas de representación — desde el diseño del esquema de entrada hasta la apertura de cuentas bancarias.",
+        "problem": "Demasiadas opciones de entrada, con supuestos complejos en torno a impuestos, trabajo y participación accionaria, paralizan la decisión.",
+        "solution": "Diseñamos el esquema de entrada adecuado partiendo de su resultado empresarial hacia atrás — y gestionamos el BOI, el registro, las cuentas bancarias y los visados de principio a fin.",
+        "deliverables": [
+          "Comparación y selección del esquema de entrada",
+          "Registro en BOI / Ministerio de Comercio",
+          "Apertura de cuenta bancaria",
+          "Solicitud de permiso de trabajo y visado"
+        ],
+        "pricing": "Desde THB 75,000 por proyecto (según el esquema)"
+      },
+      {
+        "id": "accounting",
+        "index": "02",
+        "title": "Contabilidad e impuestos",
+        "summary": "Cierre mensual, declaraciones fiscales, auditorías — con soporte en japonés e informes disponibles. Operaciones diseñadas para servir tanto a su casa matriz en Japón como a la sucursal local.",
+        "problem": "La contabilidad gestionada únicamente por el personal local se aleja de los informes aptos para la casa matriz, y el riesgo fiscal se vuelve difícil de detectar.",
+        "solution": "Diseñamos operaciones que satisfacen tanto las TFRS como las necesidades de contabilidad de gestión de su casa matriz, acelerando el cierre mensual y la visibilidad a través de la contabilidad en la nube.",
+        "deliverables": [
+          "Contabilidad mensual y balance de comprobación",
+          "Declaraciones de IVA / retención / impuesto de sociedades",
+          "Coordinación con la firma auditora",
+          "Informes para la casa matriz (japonés / inglés)"
+        ],
+        "pricing": "Desde THB 18,000 / mes (según el alcance)"
+      },
+      {
+        "id": "accounting-system",
+        "index": "03",
+        "title": "Implementación de sistema contable",
+        "summary": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para la casa matriz en Japón.",
+        "problem": "Desea implantar una solución en la nube o un ERP, pero nadie puede diseñar una configuración que satisfaga simultáneamente las operaciones locales y la contabilidad de gestión de nivel sede. El trabajo manual y Excel sobreviven tras la puesta en marcha.",
+        "solution": "Evaluamos el software contable tailandés como PEAK / FlowAccount / Express según sus necesidades operativas y presupuesto, rediseñamos el catálogo de cuentas y los códigos de departamento, y construimos un flujo que automatiza hasta el 80% del cierre mensual.",
+        "deliverables": [
+          "Selección del sistema (nube / ERP)",
+          "Rediseño del catálogo de cuentas y códigos de departamento",
+          "Flujo de automatización del cierre mensual",
+          "Formación para el personal local y la contabilidad de la casa matriz"
+        ],
+        "pricing": "Desde THB 150,000 por proyecto (varía según el alcance y el sistema objetivo)"
+      },
+      {
+        "id": "consulting",
+        "index": "04",
+        "title": "Sesión de estrategia de entrada a Tailandia",
+        "summary": "Una sesión en línea puntual para eliminar el \"ojalá lo hubiera sabido antes\". Diecinueve años sobre el terreno, aplicados 1 a 1 a sus decisiones de entrada y a los errores que vale la pena evitar.",
+        "problem": "Muchas empresas que entran en Tailandia se topan con costos y problemas inesperados — el socio local equivocado, o una lectura errónea del carácter y la gestión del personal tailandés. Y no hay nadie sobre el terreno con quien hablarlo.",
+        "solution": "Analizamos a fondo sus decisiones previas a la entrada y en etapas tempranas en una sesión individual, apoyándonos en 19 años de experiencia real aquí: cómo evaluar a un socio de confianza, cómo trabajar con el talento tailandés y los escollos comunes y cómo evitarlos — todo adaptado a su situación.",
+        "deliverables": [
+          "Sesión en línea individual (aprox. 120–240 min)",
+          "Qué buscar al elegir socios y proveedores",
+          "Gestión del talento tailandés y cómo salvar la brecha cultural",
+          "Asesoramiento para evitar escollos adaptado a su caso"
+        ],
+        "pricing": "THB 30,000 por sesión (en línea, pago anticipado)",
+        "ctaLabel": "Reservar en línea",
+        "ctaNote": "Tras su reserva, nos pondremos en contacto para acordar el horario de la sesión.",
+        "audienceNote": "Nota: esta sesión está diseñada para empresarios japoneses y se imparte en japonés. Si conoce a un empresario que se beneficiaría, le agradecemos su presentación.",
+        "rationale": {
+          "title": "El éxito adopta muchas formas. El fracaso sigue un patrón.",
+          "body": [
+            "El nivel de comprensión de Tailandia entre los empresarios que entran al mercado varía notablemente. Algunos ya han profundizado su conocimiento de diversas maneras — un conocido tailandés, un amigo que conoce bien el país. Otros se lanzan con escasa preparación: decidieron a toda prisa, se movieron porque tenían un contacto, o llegaron a través de una fusión o adquisición — entrando en Tailandia por todo tipo de razones y, con frecuencia, comprometiéndose antes de tener suficiente conocimiento de base.",
+            "Sin embargo, aunque el éxito adopta infinitas formas, el fracaso casi siempre luce igual. El socio equivocado, un dominio precario de la contabilidad y los impuestos locales, tropiezos en la contratación y gestión del personal tailandés, dejar negociaciones y contratos a medias — quienes flaquean tienden a caer en los mismos lugares, de la misma manera.",
+            "He vivido esos errores en carne propia, aquí sobre el terreno. Por eso puedo mostrarle dónde están realmente los escollos — no como teoría de manual, sino como experiencia vivida.",
+            "Más allá de eso, he construido negocios en Tailandia y los he vendido, he operado múltiples restaurantes y varios salones de peluquería y belleza. Personalmente, también estoy activo en el sector inmobiliario tailandés, la gestión de activos y servicios relacionados. Habiendo gestionado, vendido y recuperado valor de emprendimientos sobre el terreno — no meramente asesorado sobre el papel — confío en poder ofrecer una brújula por encima de la media.",
+            "Quiero ser el asesor de las empresas y los empresarios que acepten este desafío a continuación. Creo que mi experiencia puede convertirse en la fortaleza que apoye el primer paso de alguien."
+          ]
+        }
+      }
+    ],
+    "cta": {
+      "title": "¿No sabe qué servicio le conviene? Háblelo primero.",
+      "description": "Analizaremos juntos las combinaciones y prioridades en una primera llamada.",
+      "button": "Reservar consulta gratuita"
+    }
+  },
+  "cases": {
+    "hero": {
+      "eyebrow": "Casos",
+      "title": "Historias de ambición,\ndetrás de los números.",
+      "description": "Nos especializamos en apoyar a PYMES japonesas en Tailandia, en particular a negocios con múltiples sucursales y operaciones intensivas. Desde la construcción de marcos contables hasta la contabilidad diaria, la nómina, la entrada y la salida del mercado, aquí presentamos casos en los que trabajamos codo a codo con nuestros clientes, conforme a la práctica tailandesa."
+    },
+    "filter": {
+      "label": "Filtrar por sector",
+      "all": "Todos"
+    },
+    "empty": "No hay casos que coincidan con este filtro.",
+    "detail": {
+      "challenge": "El desafío",
+      "approach": "Lo que hicimos",
+      "results": "Resultados"
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Conocimiento operativo\nprobado en campo.",
+      "description": "Contabilidad, legislación, conocimiento práctico sobre la entrada en Tailandia y tendencias — entregados con la profundidad con la que realmente trabajamos."
+    },
+    "filter": {
+      "label": "Categoría",
+      "all": "Todos"
+    },
+    "categories": {
+      "accounting": "Contabilidad",
+      "legal": "Legal",
+      "expansion": "Entrada en Tailandia",
+      "trends": "Tendencias"
+    },
+    "readMore": "Leer más",
+    "minRead": "min de lectura",
+    "publishedOn": "Publicado",
+    "empty": "Aún no hay artículos."
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "Empleos",
+      "title": "En este momento\nno estamos contratando.",
+      "description": "Seguimos dando la bienvenida a consultas sobre oportunidades futuras a través de nuestro formulario de contacto."
+    },
+    "notice": {
+      "badge": "Contratación en pausa",
+      "title": "Las posiciones abiertas están temporalmente suspendidas.",
+      "description": "En este momento no aceptamos solicitudes. Si desea que le avisemos cuando se reanude la contratación, comuníquese a través del formulario de contacto.",
+      "cta": "Ir al formulario de contacto"
+    },
+    "office": {
+      "title": "Nuestra oficina en Bangkok",
+      "description": "A cinco minutos de la estación de Sukhumvit, nuestra oficina luminosa es donde colegas japoneses, tailandeses e internacionales comparten ideas cada día.",
+      "imagePlaceholder": "Foto de la oficina (próximamente)"
+    },
+    "positions": {
+      "title": "Para referencia: puestos en los que solemos contratar",
+      "subtitle": "Cuando se reanude la contratación, planeamos enfocarnos en los siguientes puestos.",
+      "items": [
+        {
+          "id": "accounting-staff",
+          "title": "Personal de contabilidad",
+          "type": "Tiempo completo",
+          "location": "Bangkok",
+          "summary": "Gestión de la contabilidad mensual, apoyo en declaraciones fiscales y comunicación con clientes japoneses. Se requiere japonés; inglés funcional o tailandés es un plus. 1–3 años de experiencia en contabilidad."
+        },
+        {
+          "id": "consultant-jp",
+          "title": "Consultor contable (nacional japonés)",
+          "type": "Tiempo completo",
+          "location": "Bangkok",
+          "summary": "Responsable del diseño de contabilidad de gestión, revisiones empresariales mensuales, construcción de KPI y proyectos de mejora del rendimiento para PYMES japonesas. 3+ años de experiencia contable en Japón; inglés de nivel profesional."
+        },
+        {
+          "id": "consultant-th",
+          "title": "Consultor contable (nacional tailandés)",
+          "type": "Tiempo completo",
+          "location": "Bangkok",
+          "summary": "Liderazgo en el diseño de operaciones contables para entidades locales, cierre mensual basado en TFRS y cumplimiento fiscal tailandés (IVA / retención / sociedades). Tailandés nativo, inglés profesional; el japonés es un fuerte plus."
+        }
+      ]
+    },
+    "apply": {
+      "title": "Manténgase en contacto",
+      "description": "Si desea recibir información sobre futuras vacantes o desea hablar sobre su carrera, contáctenos a través del formulario de contacto.",
+      "button": "Ir al formulario de contacto"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Comience con una\nbreve conversación.",
+      "description": "Una llamada en línea de 30 minutos es suficiente para organizar juntos el panorama actual."
+    },
+    "form": {
+      "title": "Formulario de contacto",
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Taro Yamada",
+        "required": "Por favor, ingrese su nombre"
+      },
+      "company": {
+        "label": "Empresa",
+        "placeholder": "Sample Inc.",
+        "required": "Por favor, ingrese el nombre de su empresa"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "you@example.com",
+        "required": "Por favor, ingrese su correo electrónico",
+        "invalid": "Por favor, ingrese un correo electrónico válido"
+      },
+      "phone": {
+        "label": "Teléfono (opcional)",
+        "placeholder": "+66 X XXXX XXXX"
+      },
+      "categories": {
+        "label": "¿Sobre qué es su consulta? (seleccione todo lo que aplique)",
+        "required": "Por favor, seleccione al menos una opción",
+        "options": [
+          {
+            "value": "accounting",
+            "label": "Contabilidad e impuestos"
+          },
+          {
+            "value": "incorporation",
+            "label": "Constitución de empresa"
+          },
+          {
+            "value": "consulting",
+            "label": "Sesión de estrategia de entrada a Tailandia"
+          },
+          {
+            "value": "careers",
+            "label": "Empleos"
+          },
+          {
+            "value": "other",
+            "label": "Otro"
+          }
+        ]
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntenos dónde se encuentra y qué le está dificultando avanzar.",
+        "required": "Por favor, ingrese su mensaje"
+      },
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "success": "Gracias. Le responderemos en un día hábil.",
+      "error": "El envío falló. Por favor, inténtelo de nuevo más tarde."
+    },
+    "info": {
+      "title": "O contáctenos directamente",
+      "phone": {
+        "label": "Teléfono",
+        "value": "02-088-8539"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "value": "contact@miraibizlab.co.th"
+      },
+      "line": {
+        "label": "LINE Oficial",
+        "value": "@miraibizlab",
+        "url": "https://lin.ee/yPi5Yoq"
+      },
+      "address": {
+        "label": "Sede principal",
+        "value": "954/1724 The Metropolis Building, 3rd Floor, Room No. M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270"
+      },
+      "bangkokOffice": {
+        "label": "Oficina en Bangkok",
+        "value": "No. 6/5, H Building, 5th Floor, Soi Promsri, Khlong Tan Nuea, Vadhana, Bangkok 10110"
+      },
+      "hours": {
+        "label": "Horario",
+        "value": "Días hábiles 9:00 – 18:00 (Bangkok)"
+      }
+    },
+    "map": {
+      "title": "Oficina",
+      "openInMaps": "Abrir en Google Maps"
+    }
+  },
+  "chat": {
+    "launcher": "Consulte a nuestro asistente de IA",
+    "title": "Asistente de IA MIRAI",
+    "subtitle": "Pregunte sobre expansión a Tailandia y contabilidad",
+    "online": "En línea",
+    "placeholder": "Escriba su pregunta…",
+    "send": "Enviar",
+    "close": "Cerrar",
+    "reset": "Reiniciar conversación",
+    "typing": "Escribiendo…",
+    "welcome": "¡Hola! Soy el asistente de IA de MIRAI BizLab. Pregúnteme lo que quiera sobre la constitución de empresas en Tailandia, contabilidad e impuestos, precios o cómo trabajamos.",
+    "suggestionsLabel": "Preguntas frecuentes",
+    "suggestions": [
+      "¿Cuánto tarda la constitución de una empresa?",
+      "¿Cuáles son sus honorarios contables?",
+      "Cuénteme sobre el BOI",
+      "Me gustaría reservar una consulta gratuita"
+    ],
+    "disclaimer": "Orientación general de IA. Consulte a un profesional para decisiones definitivas.",
+    "error": "Lo sentimos, algo salió mal. Espere un momento e inténtelo de nuevo.",
+    "ctaLabel": "Hable con nosotros ahora",
+    "ctaConsult": "Reservar consulta gratuita",
+    "ctaLine": "Chatear por LINE"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "toDark": "Cambiar a modo oscuro",
+    "toLight": "Cambiar a modo claro",
+    "label": "Tema"
+  },
+  "notFound": {
+    "title": "Esta página ha desaparecido",
+    "fun": "Se subió a un tuk-tuk y se perdió\nen algún lugar de Bangkok 🛺",
+    "description": "Es posible que la página que busca se haya movido o eliminado.",
+    "button": "Volver al inicio"
+  }
+}

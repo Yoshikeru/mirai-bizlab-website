@@ -19,7 +19,13 @@
     "th": "TH",
     "jaFull": "日本語",
     "enFull": "English",
-    "thFull": "ไทย"
+    "thFull": "ไทย",
+    "zh": "简中",
+    "zh-TW": "繁中",
+    "es": "ES",
+    "zhFull": "简体中文",
+    "zh-TWFull": "繁體中文",
+    "esFull": "Español"
   },
   "common": {
     "scroll": "Scroll",

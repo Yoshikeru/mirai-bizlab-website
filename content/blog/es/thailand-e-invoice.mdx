@@ -1,0 +1,104 @@
+---
+title: "El régimen de factura electrónica en Tailandia — e-Tax Invoice & e-Receipt explicados"
+category: "accounting"
+publishedAt: "2026-03-15"
+excerpt: "El programa de facturación electrónica del Departamento de Ingresos — por qué las empresas registradas ante el VAT deberían adoptarlo, cómo son los requisitos reales, las trampas operativas y cómo apoyamos la implementación."
+readTime: 9
+coverImage: "/assets/photos/blog-boi.jpg"
+---
+
+## El panorama general
+
+El **Departamento de Ingresos** de Tailandia ha estado implementando activamente **e-Tax Invoice & e-Receipt** para reemplazar la facturación en papel. A medida que las casas matrices japonesas impulsan el mantenimiento de registros electrónicos (como la "ley de preservación de documentos electrónicos" japonesa), las PYME japonesas en Tailandia desean cada vez más que su entidad local también sea electrónica.
+
+A continuación compartimos lo que hemos aprendido al operarlo para clientes — la **lógica de decisión y las trampas operativas**.
+
+## Primero, distinga los dos regímenes
+
+Tailandia tiene en realidad **dos programas diferentes** bajo el paraguas de factura electrónica, con costos y complejidades muy distintos.
+
+### 1. e-Tax Invoice & e-Receipt (versión completa)
+
+- Emisión de facturas / recibos como **XML con certificado digital**
+- Formato: **XML aprobado por ETDA** (basado en UBL 2.1)
+- Archivo **enviado al Departamento de Ingresos antes del día 15 de cada mes**
+- Conservación: **5 años**, legalmente equivalente al papel
+
+**A quién va dirigido**: Cualquier entidad registrada ante el VAT en principio. En la práctica resulta rentable cuando los ingresos son ≥ 30M THB o el volumen de transacciones supera varios cientos al mes.
+
+### 2. e-Tax Invoice por correo electrónico (versión simplificada)
+
+- PDF + correo electrónico con sello de tiempo ETDA, con `etax@etda.or.th` en copia
+- Diseñada para **PYME con ingresos ≤ 30M THB**
+
+**A quién va dirigido**: Menor volumen de transacciones, poca disposición a cambios de TI. El costo de adopción es reducido.
+
+## Por qué vale la pena — cuatro beneficios
+
+1. **Ahorro de horas**: Sin impresión, envío postal, escaneo ni archivado. Hemos visto más de 200 horas/año recuperadas en clientes de tamaño medio.
+2. **Listo para auditorías**: Recupere cualquier factura de los últimos 5 años en segundos durante una auditoría fiscal.
+3. **Integración con la casa matriz**: Los datos de ventas se alimentan directamente al ERP / contabilidad en la nube → la contabilidad de gestión al nivel de la casa matriz se vuelve mucho más sencilla.
+4. **Confianza de contrapartes**: Las grandes contrapartes tailandesas (PTT, Central, SCG, etc.) están convirtiendo el soporte de factura electrónica en una **condición de compra**.
+
+## Las trampas que vemos en el campo
+
+### Trampa 1: saltar directamente a la "versión completa"
+
+Los proveedores promueven la costosa configuración de XML + certificado. Si emite 30 facturas al mes, **la versión por correo electrónico es suficiente**.
+
+### Trampa 2: olvidar renovar el certificado digital
+
+Los certificados vencen en 1 a 3 años. Olvidar la renovación significa que el sistema deja de emitir — y se ve obligado a volver a facturas en papel durante un mes.
+
+### Trampa 3: la contraparte no está lista
+
+Usted envía un PDF; ellos piden una **factura en papel sellada**. Acuerde esto con anticipación.
+
+### Trampa 4: problemas de fuente / codificación
+
+Las facturas en idioma tailandés en XML se corrompen habitualmente en el lado del destinatario debido a la incrustación de fuentes. Siempre validamos primero el manejo de Sarabun / TH SarabunNew.
+
+### Trampa 5: calendario del cierre mensual
+
+El envío del día 15 de cada mes interfiere con el cierre contable de fin de mes. El cronograma de envío de la factura electrónica debe diseñarse **a partir de su calendario de cierre**.
+
+## Cómo comenzar — cuatro pasos
+
+### Paso 1: Decisión de elegibilidad
+
+Elija entre completa / por correo electrónico / aún no, según su tamaño, volumen, sistemas internos y presión de las contrapartes.
+
+### Paso 2: Certificado digital
+
+- **Completa**: obtenga el certificado de un proveedor aprobado por ETDA (TICA, TDID, etc.)
+- **Por correo electrónico**: regístrese en el servicio de correo electrónico de ETDA
+
+### Paso 3: Integración del sistema
+
+- **Contabilidad en la nube** (PEAK, FlowAccount): existen complementos nativos de factura electrónica
+- **ERP** (SAP B1, Oracle NetSuite): conectores intermediarios (Symphony, e-Tax Invoice Connector)
+- **Sistemas heredados**: conversores de CSV/Excel a XML como puente
+
+### Paso 4: Aviso a contrapartes + piloto
+
+Comunique el cambio a sus principales ~5 contrapartes, realice un piloto de 3 meses y luego salga a producción.
+
+## Lo que entrega MIRAI BizLab
+
+Proveemos todo esto de principio a fin:
+
+- **Evaluación de elegibilidad** basada en tamaño, volumen, contrapartes y hoja de ruta
+- **Obtención del certificado** incluyendo selección del proveedor y trámite
+- **Integración del sistema contable** — véase también [Implementación de sistemas contables](/es/services)
+- **Diseño de operaciones**: calendario de cierre mensual, flujo de contingencia, comunicaciones con contrapartes
+- **Soporte continuo**: renovaciones de certificados, incidencias con contrapartes, consultas al Departamento de Ingresos
+
+## Empiece con la evaluación
+
+Incluso "¿deberíamos adoptarlo?" puede responderse en una consulta gratuita de 30 minutos. Cuéntenos su escala, volumen mensual de facturas y perfil de contrapartes — y le daremos **completa / por correo electrónico / aún no** el mismo día.
+
+[Reserve una consulta gratuita](/es/contact)
+
+---
+
+*Relacionado*: [Solicitudes BOI: desde el campo](/es/blog/boi-key-points) / [Su primer paso en Tailandia — la cuestión del accionista tailandés](/es/blog/incorporation-thai-shareholder)
