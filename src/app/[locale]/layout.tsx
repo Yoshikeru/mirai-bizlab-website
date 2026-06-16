@@ -12,6 +12,7 @@ import { notFound } from "next/navigation";
 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { GridOverlay } from "@/components/grid/GridOverlay";
@@ -156,6 +157,7 @@ export default async function LocaleLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-ZBJ74ZV19X" />
       </body>
     </html>
   );

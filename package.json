@@ -12,6 +12,7 @@
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.81",
     "@hookform/resolvers": "^5.2.2",
+    "@next/third-parties": "^15.5.19",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "ai": "^6.0.193",
