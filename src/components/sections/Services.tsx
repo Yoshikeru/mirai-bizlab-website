@@ -67,15 +67,19 @@ export function Services() {
                   }}
                   className="mb-grid items-start py-8 transition-colors duration-500 group-hover:bg-[color:var(--color-accent-soft)]/40 md:py-11"
                 >
-                  {/* index numeral */}
-                  <div className="col-span-12 md:col-span-2">
+                  {/* index numeral (+ emblem inline on mobile) */}
+                  <div className="col-span-12 flex items-center justify-between md:col-span-2 md:block">
                     <span className="mb-numeral block text-5xl text-[color:var(--color-border)] transition-colors duration-500 group-hover:text-[color:var(--color-accent)] md:text-6xl lg:text-7xl">
                       {item.index}
                     </span>
+                    <ServiceIcon
+                      index={index}
+                      className="h-16 w-16 flex-none transition-transform duration-500 group-hover:scale-110 md:hidden"
+                    />
                   </div>
 
                   {/* title + description */}
-                  <div className="col-span-12 mt-4 md:col-span-6 md:col-start-4 md:mt-0">
+                  <div className="col-span-12 mt-5 md:col-span-6 md:col-start-4 md:mt-0">
                     <h3 className="typo-h3 transition-transform duration-500 group-hover:translate-x-1">
                       {item.title}
                     </h3>
@@ -91,11 +95,11 @@ export function Services() {
                     </div>
                   </div>
 
-                  {/* animated emblem */}
-                  <div className="col-span-12 mt-8 md:col-span-3 md:col-start-10 md:mt-0 md:flex md:justify-end">
+                  {/* animated emblem (desktop column) */}
+                  <div className="hidden md:col-span-3 md:col-start-10 md:flex md:justify-end">
                     <ServiceIcon
                       index={index}
-                      className="h-20 w-20 transition-transform duration-500 group-hover:scale-110 md:h-24 md:w-24"
+                      className="h-24 w-24 transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 </motion.div>
