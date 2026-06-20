@@ -18,7 +18,7 @@ const schema = {
   logo: `${SITE_URL}/assets/logo/Logo_MIRAI_BizLab1.png`,
   image: `${SITE_URL}/opengraph-image`,
   description:
-    "Accounting, tax, company setup, and management consulting partner for Japanese SMEs in Thailand. Trilingual (JP / EN / TH) team based in Samutprakarn, Bangkok area.",
+    "Accounting, tax, company setup, and management support partner for Japanese SMEs in Thailand. Trilingual (JP / EN / TH) team based in Samutprakarn, Bangkok area.",
   founder: {
     "@type": "Person",
     name: "Takuro Yoshida",
@@ -53,7 +53,7 @@ const schema = {
     "Tax compliance",
     "Company incorporation",
     "Accounting system implementation",
-    "Management consulting",
+    "Management support",
   ],
   sameAs: [SITE_URL],
 };

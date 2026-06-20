@@ -1,6 +1,6 @@
 # MIRAI BizLab — Corporate Website
 
-バンコクを拠点とする会計・コンサルティング会社 **MIRAI BizLab Co., Ltd.** のコーポレートサイト。日系SMEのタイ進出と運用を支援する3言語(日本語 / English / ไทย)対応のNext.jsプロジェクトです。
+バンコクを拠点とする会計・経営サポート会社 **MIRAI BizLab Co., Ltd.** のコーポレートサイト。日系SMEのタイ進出と運用を支援する3言語(日本語 / English / ไทย)対応のNext.jsプロジェクトです。
 
 ---
 

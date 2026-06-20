@@ -10,7 +10,7 @@ type ServiceItem = { index: string; title: string; description: string };
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-// 01 会社設立 / 02 会計・税務 / 03 会計システム / 04 経営コンサル
+// 01 会社設立 / 02 会計・税務 / 03 会計システム / 04 戦略セッション
 const ICONS = [Building2, Calculator, Database, LineChart];
 
 export function Services() {

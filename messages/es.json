@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "MIRAI BizLab",
-    "tagline": "Socio de contabilidad y consultoría para PYMES en Bangkok"
+    "tagline": "Socio de contabilidad y apoyo a la gestión para PYMES en Bangkok"
   },
   "nav": {
     "home": "Inicio",
@@ -108,7 +108,7 @@
         },
         {
           "title": "Servicio integral",
-          "description": "Contabilidad, constitución y consultoría bajo un mismo techo — un solo interlocutor, cero pérdidas en los traspasos."
+          "description": "Contabilidad, constitución y apoyo a la gestión bajo un mismo techo — un solo interlocutor, cero pérdidas en los traspasos."
         },
         {
           "title": "Diecinueve años sobre el terreno",
@@ -344,7 +344,7 @@
       "Nómina",
       "Visado y permiso de trabajo",
       "Contabilidad en la nube PEAK",
-      "Asesoría empresarial",
+      "Apoyo a la gestión",
       "Liquidación"
     ]
   },
@@ -514,7 +514,7 @@
       "body": [
         "MIRAI BizLab existe para ser la base operativa que ayuda a las empresas a lanzarse y crecer en Tailandia.",
         "Cruzar fronteras implica cruzar idiomas, regulaciones y culturas. Resolvemos esas brechas con un equipo completamente trilingüe y diecinueve años de experiencia local, para que sus decisiones puedan avanzar un paso más rápido.",
-        "Las cifras ordenadas no son el objetivo — son el punto de partida para las decisiones inteligentes. Asumimos la contabilidad, los impuestos, la constitución de empresas y la consultoría como un paquete integral para que usted pueda mantener el foco en su negocio principal.",
+        "Las cifras ordenadas no son el objetivo — son el punto de partida para las decisiones inteligentes. Asumimos la contabilidad, los impuestos, la constitución de empresas y el apoyo a la gestión como un paquete integral para que usted pueda mantener el foco en su negocio principal.",
         "Comparta con nosotros lo que desea lograr en Tailandia. Caminaremos junto a usted mucho más allá del punto de entrada."
       ]
     },
@@ -544,7 +544,7 @@
         },
         {
           "label": "Actividad",
-          "value": "Contabilidad e impuestos, constitución de empresas, consultoría de gestión"
+          "value": "Contabilidad e impuestos, constitución de empresas, apoyo a la gestión"
         },
         {
           "label": "Idiomas",
@@ -585,7 +585,7 @@
     "hero": {
       "eyebrow": "Servicios",
       "title": "Nos hacemos cargo\ndel negocio detrás de su negocio.",
-      "description": "Contabilidad e impuestos, constitución de empresas y consultoría de gestión — la realidad operativa de funcionar en Tailandia, gestionada de forma integral."
+      "description": "Contabilidad e impuestos, constitución de empresas y apoyo a la gestión — la realidad operativa de funcionar en Tailandia, gestionada de forma integral."
     },
     "nav": "Lista de servicios",
     "items": [

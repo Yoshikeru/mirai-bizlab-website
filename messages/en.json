@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "MIRAI BizLab",
-    "tagline": "Accounting & Consulting Partner for SMEs in Bangkok"
+    "tagline": "Accounting & Management Support Partner for SMEs in Bangkok"
   },
   "nav": {
     "home": "Home",
@@ -108,7 +108,7 @@
         },
         {
           "title": "One-stop",
-          "description": "Accounting, setup, and consulting under one roof — one contact, zero handover loss."
+          "description": "Accounting, setup, and management support under one roof — one contact, zero handover loss."
         },
         {
           "title": "Nineteen years on the ground",
@@ -344,7 +344,7 @@
       "Payroll",
       "Visa & Work Permit",
       "PEAK Cloud Accounting",
-      "Business Advisory",
+      "Management Support",
       "Liquidation"
     ]
   },
@@ -514,7 +514,7 @@
       "body": [
         "MIRAI BizLab exists to be the operational footing that helps companies launch and grow in Thailand.",
         "Crossing borders means crossing language, regulation, and culture. We unwind those gaps with a fully trilingual team and nineteen years of local experience, so your decisions can move a step faster.",
-        "Tidy numbers are not the goal — they are the starting line for smart decisions. We take on accounting, tax, company setup, and consulting as one package so you can keep your focus on the core business.",
+        "Tidy numbers are not the goal — they are the starting line for smart decisions. We take on accounting, tax, company setup, and management support as one package so you can keep your focus on the core business.",
         "Share with us what you want to achieve in Thailand. We will walk with you well past the entry point."
       ]
     },
@@ -544,7 +544,7 @@
         },
         {
           "label": "Business",
-          "value": "Accounting & tax, company setup, management consulting"
+          "value": "Accounting & tax, company setup, management support"
         },
         {
           "label": "Languages",
@@ -585,7 +585,7 @@
     "hero": {
       "eyebrow": "Services",
       "title": "We take on\nthe business behind your business.",
-      "description": "Accounting & tax, company setup, and management consulting — the operational reality of running in Thailand, handled as one."
+      "description": "Accounting & tax, company setup, and management support — the operational reality of running in Thailand, handled as one."
     },
     "nav": "Service list",
     "items": [
