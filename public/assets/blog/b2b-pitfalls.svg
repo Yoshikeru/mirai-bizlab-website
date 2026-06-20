@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Two company nodes with a mismatched process connector">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#f6f3ee"/>
+      <stop offset="1" stop-color="#e8e2d8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="34%" r="60%">
+      <stop offset="0" stop-color="#d7000f" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#d7000f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#paper)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+
+  <!-- faint Swiss baseline grid -->
+  <g stroke="#1f1d1b" stroke-opacity="0.045" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+  <g stroke="#1f1d1b" stroke-opacity="0.03" stroke-width="1">
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+  </g>
+
+  <!-- oversized faint signature ring, partly off-canvas -->
+  <circle cx="1130" cy="120" r="240" fill="none" stroke="#1f1d1b" stroke-opacity="0.05" stroke-width="2"/>
+
+  <!-- LEFT node (company A) -->
+  <g transform="translate(400 338)">
+    <circle r="128" fill="#ffffff" fill-opacity="0.5" stroke="#1f1d1b" stroke-width="2"/>
+    <circle r="98" fill="none" stroke="#1f1d1b" stroke-opacity="0.25" stroke-width="1.5"/>
+    <!-- document glyph -->
+    <g transform="translate(-34 -44)" stroke="#1f1d1b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0 0 H50 L68 18 V88 H0 Z"/>
+      <path d="M50 0 V18 H68"/>
+      <line x1="14" y1="40" x2="54" y2="40" stroke-opacity="0.55"/>
+      <line x1="14" y1="58" x2="54" y2="58" stroke-opacity="0.55"/>
+      <line x1="14" y1="76" x2="40" y2="76" stroke-opacity="0.55"/>
+    </g>
+  </g>
+
+  <!-- RIGHT node (company B) — accent -->
+  <g transform="translate(800 338)">
+    <circle r="128" fill="#ffffff" fill-opacity="0.5" stroke="#d7000f" stroke-width="2"/>
+    <circle r="98" fill="none" stroke="#d7000f" stroke-opacity="0.3" stroke-width="1.5"/>
+    <g transform="translate(-34 -44)" stroke="#d7000f" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0 0 H50 L68 18 V88 H0 Z"/>
+      <path d="M50 0 V18 H68"/>
+      <line x1="14" y1="40" x2="54" y2="40" stroke-opacity="0.6"/>
+      <line x1="14" y1="58" x2="54" y2="58" stroke-opacity="0.6"/>
+      <line x1="14" y1="76" x2="40" y2="76" stroke-opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- connectors between the two nodes -->
+  <g stroke-linecap="round">
+    <!-- top: aligned -->
+    <line x1="528" y1="300" x2="672" y2="300" stroke="#1f1d1b" stroke-opacity="0.4" stroke-width="2"/>
+    <!-- bottom: aligned -->
+    <line x1="528" y1="376" x2="672" y2="376" stroke="#1f1d1b" stroke-opacity="0.4" stroke-width="2"/>
+    <!-- middle: the MISMATCH — red, broken, offset -->
+    <line x1="528" y1="334" x2="588" y2="334" stroke="#d7000f" stroke-width="3"/>
+    <line x1="612" y1="344" x2="672" y2="344" stroke="#d7000f" stroke-width="3"/>
+    <circle cx="588" cy="334" r="4.5" fill="#d7000f"/>
+    <circle cx="612" cy="344" r="4.5" fill="#d7000f"/>
+  </g>
+
+  <!-- mono register -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="20" letter-spacing="3">
+    <text x="64" y="78">MIRAI BIZLAB — JOURNAL</text>
+  </g>
+  <line x1="64" y1="600" x2="112" y2="600" stroke="#d7000f" stroke-width="3"/>
+  <text x="124" y="606" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="19" letter-spacing="3">B2B · PROCESS</text>
+</svg>

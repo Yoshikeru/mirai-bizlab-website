@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Ascending data line rising to a summit beside a cloud">
+  <defs>
+    <linearGradient id="paper2" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#f6f3ee"/>
+      <stop offset="1" stop-color="#e8e2d8"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="70%" cy="32%" r="62%">
+      <stop offset="0" stop-color="#d7000f" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#d7000f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#paper2)"/>
+  <rect width="1200" height="675" fill="url(#glow2)"/>
+
+  <!-- faint Swiss baseline grid -->
+  <g stroke="#1f1d1b" stroke-opacity="0.045" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+  <g stroke="#1f1d1b" stroke-opacity="0.03" stroke-width="1">
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+  </g>
+
+  <!-- oversized faint signature ring, partly off-canvas (left) -->
+  <circle cx="70" cy="120" r="220" fill="none" stroke="#1f1d1b" stroke-opacity="0.05" stroke-width="2"/>
+
+  <!-- cloud (geometric arc) top-right -->
+  <g transform="translate(950 150)" fill="none" stroke="#1f1d1b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5">
+    <path d="M-104 38 a38 38 0 0 1 15 -74 a55 55 0 0 1 106 -9 a42 42 0 0 1 27 83 Z"/>
+  </g>
+  <!-- data raining from cloud toward summit -->
+  <g fill="#1f1d1b" fill-opacity="0.26">
+    <circle cx="905" cy="220" r="4"/>
+    <circle cx="950" cy="238" r="4"/>
+    <circle cx="995" cy="220" r="4"/>
+  </g>
+
+  <!-- mountain: two triangles, centered -->
+  <path d="M250 520 L580 200 L660 520 Z" fill="#ffffff" fill-opacity="0.45" stroke="#1f1d1b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M580 200 L660 520 L940 520 L740 300 Z" fill="#d7000f" fill-opacity="0.12" stroke="#d7000f" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- ascending data line + nodes, spanning the width -->
+  <polyline points="150,486 320,452 470,372 620,398 770,300 920,238" fill="none" stroke="#d7000f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f6f3ee" stroke="#d7000f" stroke-width="3">
+    <circle cx="320" cy="452" r="7"/>
+    <circle cx="470" cy="372" r="7"/>
+    <circle cx="620" cy="398" r="7"/>
+    <circle cx="770" cy="300" r="7"/>
+  </g>
+  <!-- summit node, solid -->
+  <circle cx="920" cy="238" r="11" fill="#d7000f"/>
+  <circle cx="920" cy="238" r="23" fill="none" stroke="#d7000f" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- baseline -->
+  <line x1="120" y1="520" x2="1080" y2="520" stroke="#1f1d1b" stroke-opacity="0.32" stroke-width="2"/>
+
+  <!-- mono register -->
+  <text x="64" y="78" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="20" letter-spacing="3">MIRAI BIZLAB — JOURNAL</text>
+  <line x1="64" y1="600" x2="112" y2="600" stroke="#d7000f" stroke-width="3"/>
+  <text x="124" y="606" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="19" letter-spacing="3">CLOUD ACCOUNTING</text>
+</svg>
