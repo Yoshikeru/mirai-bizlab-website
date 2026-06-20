@@ -20,11 +20,11 @@ export const CASE_SLUGS = [
 export type CaseSlug = (typeof CASE_SLUGS)[number];
 
 export const CASE_IMAGES: Record<CaseSlug, string> = {
-  "restaurant-multi-outlet": "/assets/photos/case-hospitality.jpg",
-  "beauty-salon-payroll": "/assets/photos/case-salon.jpg",
-  "medical-clinic-accounting": "/assets/photos/case-healthcare.jpg",
-  "ad-agency-project-pl": "/assets/photos/office-collab.jpg",
-  "peak-cloud-accounting": "/assets/photos/case-it.jpg",
-  "company-incorporation-fnb": "/assets/photos/office-bangkok.jpg",
-  "company-liquidation": "/assets/photos/office-hero.jpg",
+  "restaurant-multi-outlet": "/assets/cases/restaurant-multi-outlet.svg",
+  "beauty-salon-payroll": "/assets/cases/beauty-salon-payroll.svg",
+  "medical-clinic-accounting": "/assets/cases/medical-clinic-accounting.svg",
+  "ad-agency-project-pl": "/assets/cases/ad-agency-project-pl.svg",
+  "peak-cloud-accounting": "/assets/cases/peak-cloud-accounting.svg",
+  "company-incorporation-fnb": "/assets/cases/company-incorporation-fnb.svg",
+  "company-liquidation": "/assets/cases/company-liquidation.svg",
 };

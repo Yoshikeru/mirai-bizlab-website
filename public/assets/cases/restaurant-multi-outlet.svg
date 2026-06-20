@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="A dining plate with three outlet location pins">
+  <defs>
+    <linearGradient id="rmoP" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#f6f3ee"/><stop offset="1" stop-color="#e8e2d8"/></linearGradient>
+    <radialGradient id="rmoG" cx="60%" cy="32%" r="62%"><stop offset="0" stop-color="#d7000f" stop-opacity="0.12"/><stop offset="1" stop-color="#d7000f" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#rmoP)"/><rect width="1200" height="675" fill="url(#rmoG)"/>
+  <g stroke="#1f1d1b" stroke-opacity="0.045" stroke-width="1"><line x1="0" y1="135" x2="1200" y2="135"/><line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="405" x2="1200" y2="405"/><line x1="0" y1="540" x2="1200" y2="540"/></g>
+  <g stroke="#1f1d1b" stroke-opacity="0.03" stroke-width="1"><line x1="300" y1="0" x2="300" y2="675"/><line x1="600" y1="0" x2="600" y2="675"/><line x1="900" y1="0" x2="900" y2="675"/></g>
+  <circle cx="1120" cy="560" r="220" fill="none" stroke="#1f1d1b" stroke-opacity="0.05" stroke-width="2"/>
+
+  <!-- three outlets (storefronts) -->
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-width="3">
+    <g stroke="#1f1d1b"><path d="M450 206 L480 168 L510 206 Z"/><rect x="458" y="206" width="44" height="40" rx="2"/></g>
+    <g stroke="#d7000f"><path d="M570 190 L600 152 L630 190 Z"/><rect x="578" y="190" width="44" height="40" rx="2"/></g>
+    <g stroke="#1f1d1b"><path d="M690 206 L720 168 L750 206 Z"/><rect x="698" y="206" width="44" height="40" rx="2"/></g>
+  </g>
+
+  <!-- plate + cutlery -->
+  <circle cx="600" cy="430" r="130" fill="#ffffff" fill-opacity="0.5" stroke="#1f1d1b" stroke-width="3"/>
+  <circle cx="600" cy="430" r="96" fill="none" stroke="#1f1d1b" stroke-opacity="0.25" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-width="4" fill="none">
+    <!-- fork -->
+    <g stroke="#1f1d1b"><line x1="690" y1="356" x2="690" y2="504"/><line x1="676" y1="356" x2="676" y2="392"/><line x1="704" y1="356" x2="704" y2="392"/><path d="M676 392 q14 16 28 0"/></g>
+    <!-- knife (accent) -->
+    <g stroke="#d7000f"><line x1="512" y1="356" x2="512" y2="504"/><path d="M512 356 q-22 26 0 70"/></g>
+  </g>
+
+  <text x="64" y="78" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="20" letter-spacing="3">MIRAI BIZLAB — CASE</text>
+  <line x1="64" y1="600" x2="112" y2="600" stroke="#d7000f" stroke-width="3"/>
+  <text x="124" y="606" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="19" letter-spacing="3">F&amp;B · MULTI-OUTLET</text>
+</svg>

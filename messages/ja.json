@@ -96,7 +96,7 @@
     },
     "why": {
       "eyebrow": "Why MIRAI",
-      "title": "選ばれる、\n4つの理由。",
+      "title": "選ばれる、\n4つの理由",
       "reasons": [
         {
           "title": "3言語フル対応",
@@ -118,7 +118,7 @@
     },
     "cases": {
       "eyebrow": "Cases",
-      "title": "支援事例。",
+      "title": "支援事例",
       "description": "飲食・美容・クリニック・広告代理店など、現場と数字が直結する店舗系ビジネスの会計・税務・労務を、現地で伴走しながら整えるのが私たちの強みです。",
       "items": [
         {
@@ -307,7 +307,7 @@
     },
     "process": {
       "eyebrow": "Process",
-      "title": "ご相談から、導入まで。",
+      "title": "ご相談から、導入まで",
       "steps": [
         {
           "title": "無料相談",
