@@ -8,7 +8,7 @@ export const DURATION = {
   slow: 0.8,
 } as const;
 
-export const VIEWPORT_ONCE = { once: true, margin: "-100px" } as const;
+export const VIEWPORT_ONCE = { once: true, margin: "-100px 0px" } as const;
 
 export const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 24 },

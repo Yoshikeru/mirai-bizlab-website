@@ -25,7 +25,7 @@ export function PricingPlans() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-80px 0px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-2xl text-center text-sm text-[color:var(--color-muted)]"
         >
@@ -40,7 +40,7 @@ export function PricingPlans() {
                 key={plan.id}
                 initial={{ opacity: 0, y: 36 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, margin: "-80px 0px" }}
                 transition={{
                   duration: 0.85,
                   ease: [0.22, 1, 0.36, 1],

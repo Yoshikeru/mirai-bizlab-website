@@ -144,7 +144,7 @@ function ReasonItem({
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-120px" }}
+      viewport={{ once: true, margin: "-120px 0px" }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="relative pl-8 md:pl-12"
     >

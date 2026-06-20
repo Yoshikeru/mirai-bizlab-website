@@ -69,7 +69,7 @@ export function CtaSection() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px 0px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mb-kicker inline-block"
         >
@@ -79,7 +79,7 @@ export function CtaSection() {
           id="cta-heading"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px 0px" }}
           transition={{
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
@@ -92,7 +92,7 @@ export function CtaSection() {
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px 0px" }}
           transition={{
             duration: 0.85,
             ease: [0.22, 1, 0.36, 1],
@@ -105,7 +105,7 @@ export function CtaSection() {
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px 0px" }}
           transition={{
             duration: 0.85,
             ease: [0.22, 1, 0.36, 1],

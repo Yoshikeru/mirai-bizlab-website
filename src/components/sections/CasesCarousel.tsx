@@ -59,6 +59,7 @@ export function CasesCarousel() {
           eyebrow={t("eyebrow")}
           title={t("title")}
           description={t("description")}
+          folio={`(01 — ${String(items.length).padStart(2, "0")})`}
         />
 
         <div className="mt-10 md:mt-20">

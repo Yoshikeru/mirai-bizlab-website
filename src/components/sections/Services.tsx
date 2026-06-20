@@ -22,7 +22,7 @@ export function Services() {
       : "";
 
   return (
-    <section className="bg-background py-14 md:py-32">
+    <section className="bg-surface-alt py-14 md:py-32">
       <div className="mb-wrap">
         {/* asymmetric header register */}
         <div className="mb-grid items-end">

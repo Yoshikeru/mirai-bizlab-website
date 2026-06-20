@@ -25,7 +25,7 @@ export function CareersPositions() {
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px 0px" }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
             className="typo-h2"
           >
@@ -34,7 +34,7 @@ export function CareersPositions() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px 0px" }}
             transition={{
               duration: 0.85,
               ease: [0.22, 1, 0.36, 1],
@@ -52,7 +52,7 @@ export function CareersPositions() {
               key={item.id}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, margin: "-60px 0px" }}
               transition={{
                 duration: 0.6,
                 ease: [0.22, 1, 0.36, 1],
@@ -85,7 +85,7 @@ export function CareersPositions() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-80px 0px" }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="mt-16 rounded-3xl border border-[color:var(--color-accent)]/15 bg-[color:var(--color-accent-soft)]/35 p-8 text-center md:p-12"
         >

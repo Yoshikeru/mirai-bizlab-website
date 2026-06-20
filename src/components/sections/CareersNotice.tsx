@@ -15,7 +15,7 @@ export function CareersNotice() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-80px 0px" }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="relative overflow-hidden rounded-3xl border border-[color:var(--color-accent)]/25 bg-[color:var(--color-accent-soft)]/55 p-8 md:p-12"
         >

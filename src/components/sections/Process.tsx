@@ -11,6 +11,10 @@ type Step = { title: string; description: string };
 export function Process() {
   const t = useTranslations("home.process");
   const steps = t.raw("steps") as Step[];
+  const folio =
+    steps.length > 0
+      ? `(01 — ${String(steps.length).padStart(2, "0")})`
+      : undefined;
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
@@ -23,7 +27,7 @@ export function Process() {
   return (
     <section className="relative bg-background py-14 md:py-32">
       <div className="mb-wrap">
-        <SectionHeader eyebrow={t("eyebrow")} title={t("title")} />
+        <SectionHeader eyebrow={t("eyebrow")} title={t("title")} folio={folio} />
 
         <div ref={containerRef} className="relative mt-10 pl-10 md:mt-20 md:pl-16">
           <div
@@ -78,7 +82,7 @@ function StepItem({ step, index }: { step: Step; index: number }) {
       <motion.div
         initial={{ opacity: 0, x: 24 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, margin: "-80px 0px" }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <span className="font-mono text-xs tracking-[0.3em] text-[color:var(--color-accent)] uppercase">
