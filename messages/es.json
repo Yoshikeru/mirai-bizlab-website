@@ -85,7 +85,7 @@
         {
           "index": "03",
           "title": "Implementación de sistema contable",
-          "description": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para su casa matriz."
+          "description": "Desde la selección de la herramienta de contabilidad en la nube adecuada hasta su implementación y adopción — apoyo integral adaptado a su contabilidad local."
         },
         {
           "index": "04",
@@ -623,11 +623,11 @@
         "id": "accounting-system",
         "index": "03",
         "title": "Implementación de sistema contable",
-        "summary": "Selección de contabilidad en la nube o ERP, diseño del catálogo de cuentas y automatización del cierre mensual que funciona tanto para las operaciones locales como para su casa matriz.",
-        "problem": "Desea implantar una solución en la nube o un ERP, pero nadie puede diseñar una configuración que satisfaga simultáneamente las operaciones locales y la contabilidad gerencial para la casa matriz. El trabajo manual y Excel sobreviven tras la puesta en marcha.",
+        "summary": "Desde la selección de la herramienta de contabilidad en la nube adecuada hasta su implementación y adopción — apoyo integral adaptado a su contabilidad local.",
+        "problem": "Desea implantar una solución de contabilidad en la nube, pero nadie puede diseñar una configuración que satisfaga simultáneamente las operaciones locales y la contabilidad gerencial para la casa matriz. El trabajo manual y Excel sobreviven tras la puesta en marcha.",
         "solution": "Evaluamos el software contable tailandés como PEAK / FlowAccount / Express según sus necesidades operativas y presupuesto, rediseñamos el catálogo de cuentas y los códigos de departamento, y construimos un flujo que automatiza hasta el 80% del cierre mensual.",
         "deliverables": [
-          "Selección del sistema (nube / ERP)",
+          "Selección del sistema (contabilidad en la nube)",
           "Rediseño del catálogo de cuentas y códigos de departamento",
           "Flujo de automatización del cierre mensual",
           "Formación para el personal local y la contabilidad de su casa matriz"

@@ -85,7 +85,7 @@
         {
           "index": "03",
           "title": "Accounting System Implementation",
-          "description": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and your head office."
+          "description": "From selecting the right cloud accounting tool to rollout and adoption — one-stop support shaped around your local accounting."
         },
         {
           "index": "04",
@@ -623,11 +623,11 @@
         "id": "accounting-system",
         "index": "03",
         "title": "Accounting System Implementation",
-        "summary": "Cloud accounting / ERP selection, chart-of-accounts design, and month-end automation that works for both local ops and your head office.",
-        "problem": "You want to roll out a cloud or ERP, but no one can design a setup that satisfies local operations and head-office management accounting at once. Manual work and Excel survive after go-live.",
+        "summary": "From selecting the right cloud accounting tool to rollout and adoption — one-stop support shaped around your local accounting.",
+        "problem": "You want to roll out cloud accounting, but no one can design a setup that satisfies local operations and head-office management accounting at once. Manual work and Excel survive after go-live.",
         "solution": "We evaluate Thai accounting software such as PEAK / FlowAccount / Express against your operating needs and budget, redesign chart-of-accounts and department codes, and build a flow that automates up to 80% of monthly close.",
         "deliverables": [
-          "System selection (cloud / ERP)",
+          "System selection (cloud accounting)",
           "Chart-of-accounts and department code redesign",
           "Monthly close automation flow",
           "Training for local staff and head-office accounting"
