@@ -1,17 +1,14 @@
 "use client";
 
-import { Building2, Calculator, Database, LineChart } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 import { Reveal } from "@/components/motion/Reveal";
+import { ServiceIcon } from "@/components/sections/ServiceIcon";
 
 type ServiceItem = { index: string; title: string; description: string };
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-// 01 会社設立 / 02 会計・税務 / 03 会計システム / 04 戦略セッション
-const ICONS = [Building2, Calculator, Database, LineChart];
 
 export function Services() {
   const t = useTranslations("home.services");
@@ -54,7 +51,6 @@ export function Services() {
         {/* editorial index list */}
         <ul className="mt-12 md:mt-20">
           {items.map((item, index) => {
-            const Icon = ICONS[index] ?? Calculator;
             return (
               <li
                 key={item.index}
@@ -95,14 +91,12 @@ export function Services() {
                     </div>
                   </div>
 
-                  {/* icon */}
-                  <div className="col-span-12 mt-6 md:col-span-2 md:col-start-11 md:mt-0 md:flex md:justify-end">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--color-accent)]/10 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-105">
-                      <Icon
-                        className="h-7 w-7 text-[color:var(--color-accent)]"
-                        aria-hidden
-                      />
-                    </div>
+                  {/* animated emblem */}
+                  <div className="col-span-12 mt-8 md:col-span-3 md:col-start-10 md:mt-0 md:flex md:justify-end">
+                    <ServiceIcon
+                      index={index}
+                      className="h-20 w-20 transition-transform duration-500 group-hover:scale-110 md:h-24 md:w-24"
+                    />
                   </div>
                 </motion.div>
               </li>
