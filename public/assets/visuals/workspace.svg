@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750" role="img" aria-label="An editorial line drawing of a calm, empty modern office">
+  <defs>
+    <linearGradient id="wsPaper" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#f6f3ee"/><stop offset="1" stop-color="#e7e1d8"/></linearGradient>
+    <radialGradient id="wsGlow" cx="80%" cy="26%" r="62%"><stop offset="0" stop-color="#d7000f" stop-opacity="0.12"/><stop offset="1" stop-color="#d7000f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="wsSun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#d7000f" stop-opacity="0.22"/><stop offset="1" stop-color="#d7000f" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  <rect width="1000" height="750" fill="url(#wsPaper)"/>
+  <rect width="1000" height="750" fill="url(#wsGlow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#1f1d1b" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="188" x2="1000" y2="188"/><line x1="0" y1="375" x2="1000" y2="375"/><line x1="0" y1="562" x2="1000" y2="562"/>
+    <line x1="250" y1="0" x2="250" y2="750"/><line x1="500" y1="0" x2="500" y2="750"/><line x1="750" y1="0" x2="750" y2="750"/>
+  </g>
+
+  <g stroke="#1f1d1b" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor + ceiling register -->
+    <line x1="60" y1="628" x2="940" y2="628" stroke-opacity="0.32" stroke-width="2.5"/>
+    <line x1="80" y1="96" x2="520" y2="96" stroke-opacity="0.28" stroke-width="2.5"/>
+
+    <!-- window wall (right) -->
+    <circle cx="812" cy="206" r="60" fill="url(#wsSun)" stroke="none"/>
+    <rect x="556" y="120" width="392" height="448" stroke-width="3" stroke-opacity="0.85"/>
+    <line x1="556" y1="344" x2="948" y2="344" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="687" y1="120" x2="687" y2="568" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="818" y1="120" x2="818" y2="568" stroke-width="2" stroke-opacity="0.6"/>
+    <!-- faint skyline + foliage behind glass -->
+    <g stroke="none" fill="#1f1d1b" fill-opacity="0.06">
+      <rect x="600" y="430" width="40" height="138"/><rect x="660" y="470" width="34" height="98"/><rect x="740" y="412" width="44" height="156"/><rect x="864" y="452" width="38" height="116"/>
+    </g>
+    <circle cx="712" cy="470" r="34" fill="#1f1d1b" fill-opacity="0.05" stroke="none"/>
+
+    <!-- pendant lights over the desk -->
+    <g stroke-width="2.5" stroke-opacity="0.7">
+      <line x1="300" y1="96" x2="300" y2="176"/><path d="M280 176 h40 l-8 26 h-24 Z"/>
+      <line x1="404" y1="96" x2="404" y2="156"/><path d="M386 156 h36 l-7 24 h-22 Z"/>
+    </g>
+
+    <!-- desk -->
+    <rect x="150" y="430" width="372" height="12" rx="3" stroke-width="3"/>
+    <line x1="176" y1="442" x2="176" y2="600" stroke-width="3"/>
+    <line x1="496" y1="442" x2="496" y2="600" stroke-width="3"/>
+    <!-- monitor -->
+    <rect x="214" y="344" width="138" height="86" rx="7" stroke-width="3"/>
+    <line x1="283" y1="430" x2="283" y2="430" stroke-width="3"/>
+    <!-- plant on the left -->
+    <path d="M96 560 h74 l-10 68 h-54 Z" stroke-width="2.5"/>
+    <g stroke-width="2.5" stroke-opacity="0.8">
+      <path d="M133 560 C120 510 108 486 96 470"/><path d="M133 560 C146 506 160 484 178 468"/><path d="M133 560 C133 506 133 482 133 452"/>
+    </g>
+    <!-- wall shelf + objects (left) -->
+    <line x1="84" y1="300" x2="236" y2="300" stroke-width="2.5" stroke-opacity="0.7"/>
+    <g stroke-width="2.5" stroke-opacity="0.7"><rect x="96" y="266" width="16" height="34"/><rect x="120" y="276" width="16" height="24"/><rect x="150" y="270" width="40" height="30"/></g>
+  </g>
+
+  <!-- red accent: desk lamp -->
+  <g stroke="#d7000f" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="452" y1="430" x2="452" y2="386"/>
+    <line x1="452" y1="386" x2="486" y2="356"/>
+    <path d="M486 356 l22 14 l-16 18 l-22 -14 Z" fill="#d7000f" fill-opacity="0.12"/>
+    <line x1="436" y1="430" x2="468" y2="430"/>
+  </g>
+  <circle cx="490" cy="382" r="3.5" fill="#d7000f"/>
+
+  <text x="60" y="700" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="17" letter-spacing="3">MIRAI BIZLAB — BANGKOK WORKSPACE</text>
+</svg>

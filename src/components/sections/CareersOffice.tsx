@@ -48,7 +48,7 @@ export function CareersOffice() {
               className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[color:var(--color-border)]"
             >
               <Image
-                src="/assets/photos/office-hero.jpg"
+                src="/assets/visuals/workspace.svg"
                 alt={t("title")}
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"

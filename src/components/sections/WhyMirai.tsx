@@ -90,7 +90,7 @@ export function WhyMirai() {
                 className="absolute inset-0"
               >
                 <Image
-                  src="/assets/photos/office-hero.jpg"
+                  src="/assets/visuals/workspace.svg"
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
