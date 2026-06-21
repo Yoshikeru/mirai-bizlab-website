@@ -11,11 +11,11 @@ import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Link } from "@/lib/i18n/navigation";
 
 const NAV_ITEMS = [
-  { key: "about", href: "/about" },
   { key: "services", href: "/services" },
   { key: "cases", href: "/cases" },
   { key: "blog", href: "/blog" },
   { key: "careers", href: "/careers" },
+  { key: "about", href: "/about" },
   { key: "contact", href: "/contact" },
 ] as const;
 

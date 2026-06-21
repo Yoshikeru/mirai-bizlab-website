@@ -11,11 +11,11 @@ import { MobileMenu } from "./MobileMenu";
 
 // Main navigation shown in the full-width second row (home lives on the logo).
 const NAV_ITEMS = [
-  { key: "about", href: "/about" },
   { key: "services", href: "/services" },
   { key: "cases", href: "/cases" },
   { key: "blog", href: "/blog" },
   { key: "careers", href: "/careers" },
+  { key: "about", href: "/about" },
   { key: "contact", href: "/contact" },
 ] as const;
 

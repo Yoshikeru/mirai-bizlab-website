@@ -4,12 +4,14 @@ import { motion, useReducedMotion } from "motion/react";
 
 /**
  * Animated, brand-aligned service emblems for the home Services list.
- * Line-art + accent red, colors via CSS vars so they adapt to dark mode.
- * Subtle continuous motion; falls back to static when reduced-motion is set.
+ * Refined motion-graphics: each emblem has one choreographed looping idea.
+ * Colors via CSS vars so they adapt to dark mode; static fallback when
+ * reduced-motion is set. Motifs are centered in a 96×96 box for balance.
  */
 
 const INK = "var(--color-foreground)";
 const ACCENT = "var(--color-accent)";
+const SOFT = [0.4, 0, 0.2, 1] as const;
 
 type Props = { index: number; className?: string };
 
@@ -22,107 +24,118 @@ export function ServiceIcon({ index, className }: Props) {
     role: "img" as const,
     "aria-hidden": true,
   };
-  const float = (delay: number, amp: number) =>
-    reduce
-      ? {}
-      : {
-          animate: { y: [0, -amp, 0] },
-          transition: {
-            duration: 3.2,
-            repeat: Infinity,
-            ease: "easeInOut" as const,
-            delay,
-          },
-        };
 
-  // 01 — 会社設立支援: stacking blocks rising, with a pulsing summit node
+  // 01 — 会社設立支援: a stable structure with a red "build beam" sweeping up
   if (index === 0) {
+    const settle = (delay: number, amp: number) =>
+      reduce
+        ? {}
+        : {
+            animate: { y: [0, -amp, 0] },
+            transition: { duration: 4, repeat: Infinity, ease: "easeInOut" as const, delay },
+          };
     return (
       <svg {...svg}>
-        <line x1="18" y1="84" x2="78" y2="84" stroke={INK} strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
-        <motion.rect x="26" y="60" width="44" height="20" rx="4" stroke={INK} strokeWidth="3" {...float(0, 1.5)} />
-        <motion.rect x="32" y="40" width="32" height="18" rx="4" stroke={INK} strokeWidth="3" {...float(0.25, 2.5)} />
-        <motion.g {...float(0.5, 3.5)}>
-          <rect x="40" y="22" width="16" height="16" rx="4" stroke={ACCENT} strokeWidth="3" />
+        <line x1="20" y1="80" x2="76" y2="80" stroke={INK} strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
+        <motion.rect x="26" y="58" width="44" height="20" rx="4" stroke={INK} strokeWidth="3" {...settle(0, 1)} />
+        <motion.rect x="32" y="38" width="32" height="18" rx="4" stroke={INK} strokeWidth="3" {...settle(0.2, 1.6)} />
+        <motion.g {...settle(0.4, 2.2)}>
+          <rect x="40" y="20" width="16" height="16" rx="4" stroke={ACCENT} strokeWidth="3" />
           <motion.circle
-            cx="48" cy="13" r="3.2" fill={ACCENT}
-            animate={reduce ? undefined : { scale: [1, 1.5, 1], opacity: [1, 0.55, 1] }}
-            transition={reduce ? undefined : { duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            cx="48" cy="11" r="3.2" fill={ACCENT}
             style={{ transformBox: "fill-box", transformOrigin: "center" }}
+            animate={reduce ? undefined : { scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
+            transition={reduce ? undefined : { duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.g>
+        {/* build beam sweeping up the structure */}
+        {!reduce && (
+          <motion.line
+            x1="24" y1="0" x2="72" y2="0" stroke={ACCENT} strokeWidth="3" strokeLinecap="round"
+            animate={{ y: [80, 14], opacity: [0, 0.9, 0.9, 0] }}
+            transition={{ duration: 2.6, repeat: Infinity, ease: SOFT, times: [0, 0.2, 0.8, 1], repeatDelay: 0.6 }}
+          />
+        )}
       </svg>
     );
   }
 
-  // 02 — 会計・税務: breathing bar chart (one bar accent)
+  // 02 — 会計・税務: equalizer with a traveling wave (one accent bar)
   if (index === 1) {
     const bars = [
-      { x: 22, h: 30, c: INK, o: 0.85, d: 0 },
-      { x: 38, h: 46, c: INK, o: 0.85, d: 0.3 },
-      { x: 54, h: 22, c: ACCENT, o: 1, d: 0.6 },
-      { x: 70, h: 38, c: INK, o: 0.85, d: 0.15 },
+      { x: 20, h: 28, accent: false },
+      { x: 32, h: 42, accent: false },
+      { x: 44, h: 30, accent: true },
+      { x: 56, h: 48, accent: false },
+      { x: 68, h: 36, accent: false },
     ];
     return (
       <svg {...svg}>
-        <line x1="16" y1="80" x2="82" y2="80" stroke={INK} strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
-        {bars.map((b) => (
+        <line x1="16" y1="78" x2="80" y2="78" stroke={INK} strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
+        {bars.map((b, i) => (
           <motion.rect
             key={b.x}
-            x={b.x} y={80 - b.h} width="9" height={b.h} rx="2.5"
-            fill={b.c} fillOpacity={b.o}
+            x={b.x} y={78 - b.h} width="8" height={b.h} rx="2.5"
+            fill={b.accent ? ACCENT : INK} fillOpacity={b.accent ? 1 : 0.85}
             style={{ transformBox: "fill-box", transformOrigin: "bottom" }}
-            animate={reduce ? undefined : { scaleY: [1, 0.55, 1] }}
-            transition={reduce ? undefined : { duration: 2.6, repeat: Infinity, ease: "easeInOut", delay: b.d }}
+            animate={reduce ? undefined : { scaleY: [1, 0.38, 1] }}
+            transition={reduce ? undefined : { duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: i * 0.18 }}
           />
         ))}
       </svg>
     );
   }
 
-  // 03 — 会計システム導入支援: cloud with data dots streaming down to a tray
+  // 03 — 会計システム導入支援: data streams from a cloud into a receiving tray
   if (index === 2) {
     const dots = [
-      { x: 34, c: INK, o: 0.4, d: 0 },
-      { x: 48, c: ACCENT, o: 1, d: 0.5 },
-      { x: 62, c: INK, o: 0.4, d: 1 },
+      { x: 36, accent: false, d: 0 },
+      { x: 48, accent: true, d: 0.7 },
+      { x: 60, accent: false, d: 1.4 },
     ];
     return (
       <svg {...svg}>
-        <path
+        <motion.path
           d="M30 40 a13 13 0 0 1 5 -25 a19 19 0 0 1 36 -3 a15 15 0 0 1 9 28 Z"
           stroke={INK} strokeWidth="3" strokeLinejoin="round" transform="translate(2 0)"
+          style={{ transformBox: "fill-box", transformOrigin: "center" }}
+          animate={reduce ? undefined : { scale: [1, 1.04, 1] }}
+          transition={reduce ? undefined : { duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
         />
         {dots.map((dt) => (
           <motion.circle
-            key={dt.x} cx={dt.x} cy="50" r="3.4" fill={dt.c} fillOpacity={dt.o}
-            animate={reduce ? undefined : { cy: [48, 74], opacity: [0, dt.o, dt.o, 0] }}
-            transition={reduce ? undefined : { duration: 2.4, repeat: Infinity, ease: "easeIn", delay: dt.d, times: [0, 0.2, 0.8, 1] }}
+            key={dt.x} cx={dt.x} cy="32" r="3.4"
+            fill={dt.accent ? ACCENT : INK} fillOpacity={dt.accent ? 1 : 0.4}
+            animate={reduce ? undefined : { cy: [32, 72], opacity: [0, 1, 1, 0] }}
+            transition={reduce ? undefined : { duration: 2.1, repeat: Infinity, ease: "easeIn", delay: dt.d, times: [0, 0.2, 0.85, 1] }}
           />
         ))}
-        {/* tray / database */}
-        <rect x="28" y="76" width="40" height="8" rx="4" stroke={ACCENT} strokeWidth="3" />
+        <motion.rect
+          x="28" y="76" width="40" height="8" rx="4" stroke={ACCENT} strokeWidth="3"
+          style={{ transformBox: "fill-box", transformOrigin: "center" }}
+          animate={reduce ? undefined : { scaleX: [1, 1.08, 1] }}
+          transition={reduce ? undefined : { duration: 2.1, repeat: Infinity, ease: "easeOut" }}
+        />
       </svg>
     );
   }
 
-  // 04 — タイ進出 戦略セッション: a node radiating consultation pulses + ascending spark
+  // 04 — タイ進出 戦略セッション: a node emitting steady consultation ripples
   return (
     <svg {...svg}>
-      {[0, 1].map((i) => (
+      {[0, 1, 2].map((i) => (
         <motion.circle
-          key={i} cx="44" cy="54" r="14" stroke={ACCENT} strokeWidth="2.5"
+          key={i} cx="48" cy="50" r="13" stroke={ACCENT} strokeWidth="2.5"
           style={{ transformBox: "fill-box", transformOrigin: "center" }}
-          animate={reduce ? undefined : { scale: [1, 2.3], opacity: [0.5, 0] }}
-          transition={reduce ? undefined : { duration: 2.6, repeat: Infinity, ease: "easeOut", delay: i * 1.3 }}
+          animate={reduce ? undefined : { scale: [1, 2.6], opacity: [0.5, 0] }}
+          transition={reduce ? undefined : { duration: 3, repeat: Infinity, ease: "easeOut", delay: i }}
         />
       ))}
-      <circle cx="44" cy="54" r="9" fill={ACCENT} />
-      {/* ascending insight spark */}
-      <motion.path
-        d="M64 40 L70 24 L78 34" stroke={INK} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
-        animate={reduce ? undefined : { y: [0, -3, 0], opacity: [0.55, 1, 0.55] }}
-        transition={reduce ? undefined : { duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+      <motion.circle
+        cx="48" cy="50" r="9" fill={ACCENT}
+        style={{ transformBox: "fill-box", transformOrigin: "center" }}
+        animate={reduce ? undefined : { scale: [1, 1.12, 1] }}
+        transition={reduce ? undefined : { duration: 2, repeat: Infinity, ease: "easeInOut" }}
       />
     </svg>
   );
