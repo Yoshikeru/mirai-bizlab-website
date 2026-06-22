@@ -346,7 +346,12 @@
       "Contabilidad en la nube PEAK",
       "Apoyo a la gestión",
       "Liquidación"
-    ]
+    ],
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Artículos recientes",
+      "viewAll": "Ver todos los artículos"
+    }
   },
   "footer": {
     "tagline": "Impulsando sus ambiciones en Tailandia, desde Bangkok.",

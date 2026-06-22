@@ -346,7 +346,12 @@
       "PEAK 雲端會計",
       "經營支援",
       "公司清算"
-    ]
+    ],
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "最新文章",
+      "viewAll": "查看全部文章"
+    }
   },
   "footer": {
     "tagline": "從 Bangkok 出發，加速您在泰國的雄心壯志。",

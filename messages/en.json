@@ -346,7 +346,12 @@
       "PEAK Cloud Accounting",
       "Management Support",
       "Liquidation"
-    ]
+    ],
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Latest insights",
+      "viewAll": "View all articles"
+    }
   },
   "footer": {
     "tagline": "Accelerating your ambitions in Thailand, from Bangkok.",
