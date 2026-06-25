@@ -1,0 +1,39 @@
+# MIRAI BizLab Co., Ltd.
+
+> Bangkok-based accounting, tax, company-incorporation, and management-support
+> partner for SMEs operating in (or expanding into) Thailand. Trilingual team
+> (Japanese / English / Thai), founded 2010, based in the Samutprakarn / Bangkok area.
+
+Primary site: https://www.miraibizlab.co.th (default locale: Japanese `/ja`; also `/en`, `/th`, `/zh`, `/zh-TW`, `/es`)
+
+## Services
+- Company incorporation support — BOI / local company / representative office scheme design, DBD & ministry registration, bank account setup, work permit & visa. Guide price: from THB 75,000 per project.
+- Accounting & tax — monthly bookkeeping, trial balance, VAT / withholding tax (WHT) / corporate tax filing, audit liaison, head-office management reporting. Guide price: from THB 18,000 / month.
+- Accounting-system implementation — selection and onboarding of Thai cloud accounting (e.g. PEAK, FlowAccount), chart-of-accounts design, month-end close automation, staff training. Guide price: from THB 150,000 per project.
+- Thailand market-entry strategy session — a one-off online 1-on-1 consultation drawing on 19 years on the ground (partner selection, managing Thai staff, common pitfalls). THB 30,000 per session.
+
+All prices are guides and vary by scope; details are confirmed in a written quote.
+
+## Key pages
+- Home: https://www.miraibizlab.co.th/ja
+- Services: https://www.miraibizlab.co.th/ja/services
+- Case studies: https://www.miraibizlab.co.th/ja/cases
+- Blog / insights: https://www.miraibizlab.co.th/ja/blog
+- About: https://www.miraibizlab.co.th/ja/about
+- Careers: https://www.miraibizlab.co.th/ja/careers
+- Contact: https://www.miraibizlab.co.th/ja/contact
+
+## Strengths
+- Full trilingual support (JP / EN / TH) connecting head office, local staff, and authorities.
+- Focus on SMEs, especially store/site-based businesses (restaurants, salons, clinics, agencies).
+- One-stop: accounting, incorporation, and management support handled by one in-house team.
+- 19 years of on-the-ground experience and an authority / bank / professional network in Thailand.
+
+## Contact
+- Phone: +66 2 088 8539
+- Email: contact@miraibizlab.co.th
+- LINE: @miraibizlab (https://lin.ee/yPi5Yoq)
+- Hours: weekdays 9:00–18:00 (Bangkok time)
+- Address: 954/1724 The Metropolis Building, 3rd Floor, Room M3, Moo. 9, Thepharak, Muang Samutprakarn, Samutprakarn 10270, Thailand
+
+How to engage: start with a free online consultation (30–45 min) via the contact page.

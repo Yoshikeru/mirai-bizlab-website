@@ -351,6 +351,32 @@
       "eyebrow": "Blog",
       "title": "Latest insights",
       "viewAll": "View all articles"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What languages do you work in?",
+          "a": "We work fully in Japanese, English, and Thai."
+        },
+        {
+          "q": "What services do you offer?",
+          "a": "Company incorporation, accounting & tax, accounting-system implementation, and a Thailand market-entry strategy session (a one-off online consultation)."
+        },
+        {
+          "q": "What areas do you cover?",
+          "a": "Based in Bangkok, we support SMEs across Thailand."
+        },
+        {
+          "q": "How much does it cost?",
+          "a": "It depends on scope and size. As a guide, accounting & tax retainers start at THB 18,000/month and company setup from THB 75,000 per project; details are confirmed in a quote."
+        },
+        {
+          "q": "How do we get started?",
+          "a": "Start with a free online consultation (30–45 min). Reach us via the contact form, LINE, phone, or email."
+        }
+      ]
     }
   },
   "footer": {

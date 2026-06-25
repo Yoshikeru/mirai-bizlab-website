@@ -1,28 +1,36 @@
 /**
- * JSON-LD Organization schema for SEO / Knowledge Graph.
- * Rendered once per page via layout.tsx.
+ * Site-wide JSON-LD (@graph): Organization + WebSite.
+ * Rendered once per page via layout.tsx. Gives search engines and AI answer
+ * engines a stable entity (@id) to reference from page-level Article schema.
  *
- * Reference: https://developers.google.com/search/docs/appearance/structured-data/organization
+ * Ref: https://developers.google.com/search/docs/appearance/structured-data/organization
  */
+
+import { routing } from "@/lib/i18n/routing";
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.miraibizlab.co.th"
 ).replace(/\/$/, "");
 
-const schema = {
-  "@context": "https://schema.org",
+export const ORG_ID = `${SITE_URL}/#organization`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+
+const organization = {
   "@type": "ProfessionalService",
+  "@id": ORG_ID,
   name: "MIRAI BizLab Co., Ltd.",
   alternateName: ["MIRAI BizLab", "ミライ ビズラボ", "มิราอิ บิซแล็บ"],
   url: SITE_URL,
-  logo: `${SITE_URL}/assets/logo/Logo_MIRAI_BizLab1.png`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/assets/logo/Logo_MIRAI_BizLab1.png`,
+  },
   image: `${SITE_URL}/opengraph-image`,
   description:
-    "Accounting, tax, company setup, and management support partner for Japanese SMEs in Thailand. Trilingual (JP / EN / TH) team based in Samutprakarn, Bangkok area.",
-  founder: {
-    "@type": "Person",
-    name: "Takuro Yoshida",
-  },
+    "Accounting, tax, company setup, and management support partner for SMEs in Thailand. Trilingual (JP / EN / TH) team based in Samutprakarn, Bangkok area.",
+  email: "contact@miraibizlab.co.th",
+  telephone: "+66-2-088-8539",
+  founder: { "@type": "Person", name: "Takuro Yoshida" },
   foundingDate: "2010-04",
   address: {
     "@type": "PostalAddress",
@@ -44,10 +52,7 @@ const schema = {
     },
   ],
   knowsLanguage: ["ja", "en", "th"],
-  areaServed: {
-    "@type": "Country",
-    name: "Thailand",
-  },
+  areaServed: { "@type": "Country", name: "Thailand" },
   serviceType: [
     "Accounting",
     "Tax compliance",
@@ -55,7 +60,21 @@ const schema = {
     "Accounting system implementation",
     "Management support",
   ],
-  sameAs: [SITE_URL],
+  sameAs: [SITE_URL, "https://lin.ee/yPi5Yoq"],
+};
+
+const website = {
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  url: SITE_URL,
+  name: "MIRAI BizLab",
+  inLanguage: [...routing.locales],
+  publisher: { "@id": ORG_ID },
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [organization, website],
 };
 
 export function OrganizationSchema() {

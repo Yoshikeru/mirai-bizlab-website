@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { ArrowLeft } from "lucide-react";
 
+import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Link } from "@/lib/i18n/navigation";
 import {
@@ -15,6 +16,10 @@ import {
 } from "@/lib/blog";
 import { type Locale } from "@/lib/i18n/routing";
 import { buildAlternates } from "@/lib/seo/alternates";
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.miraibizlab.co.th"
+).replace(/\/$/, "");
 
 type Params = { locale: string; slug: string };
 
@@ -30,10 +35,28 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getBlogPost(locale as Locale, slug);
   if (!post) return {};
+  const url = `${SITE_URL}/${locale}/blog/${slug}`;
   return {
     title: post.title,
     description: post.excerpt,
     alternates: buildAlternates(locale as Locale, `/blog/${slug}`),
+    openGraph: {
+      type: "article",
+      siteName: "MIRAI BizLab",
+      title: post.title,
+      description: post.excerpt,
+      url,
+      publishedTime: post.publishedAt,
+      modifiedTime: post.publishedAt,
+      authors: ["MIRAI BizLab"],
+      section: post.category,
+      images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -47,8 +70,16 @@ export default async function BlogPostPage({
   const post = getBlogPost(locale as Locale, slug);
   if (!post) notFound();
 
+  const nav = await getTranslations({ locale, namespace: "nav" });
+
   return (
     <>
+      <ArticleSchema
+        post={post}
+        locale={locale as Locale}
+        homeLabel={nav("home")}
+        blogLabel={nav("blog")}
+      />
       <BlogArticle post={post} />
       <CtaSection />
     </>

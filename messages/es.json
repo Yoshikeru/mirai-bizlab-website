@@ -351,6 +351,32 @@
       "eyebrow": "Blog",
       "title": "Artículos recientes",
       "viewAll": "Ver todos los artículos"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿En qué idiomas trabajan?",
+          "a": "Trabajamos plenamente en japonés, inglés y tailandés."
+        },
+        {
+          "q": "¿Qué servicios ofrecen?",
+          "a": "Constitución de empresas, contabilidad e impuestos, implementación de sistemas contables y una sesión de estrategia de entrada a Tailandia (consulta puntual en línea)."
+        },
+        {
+          "q": "¿Qué zonas cubren?",
+          "a": "Con base en Bangkok, damos servicio a PYMES en toda Tailandia."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "Depende del alcance y el tamaño. Como referencia, los honorarios de contabilidad e impuestos parten de 18.000 THB/mes y la constitución de empresas desde 75.000 THB por proyecto; los detalles se confirman en un presupuesto."
+        },
+        {
+          "q": "¿Cómo empezamos?",
+          "a": "Comience con una consulta en línea gratuita (30–45 min). Contáctenos por el formulario, LINE, teléfono o correo electrónico."
+        }
+      ]
     }
   },
   "footer": {
