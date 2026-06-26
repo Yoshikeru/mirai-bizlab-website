@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="A Thai monthly report mapped and adjusted into a Japanese head-office report">
+  <defs>
+    <linearGradient id="mrPaper" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#f6f3ee"/><stop offset="1" stop-color="#e8e2d8"/></linearGradient>
+    <radialGradient id="mrGlow" cx="62%" cy="34%" r="60%"><stop offset="0" stop-color="#d7000f" stop-opacity="0.13"/><stop offset="1" stop-color="#d7000f" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#mrPaper)"/><rect width="1200" height="675" fill="url(#mrGlow)"/>
+  <g stroke="#1f1d1b" stroke-opacity="0.045" stroke-width="1"><line x1="0" y1="135" x2="1200" y2="135"/><line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="405" x2="1200" y2="405"/><line x1="0" y1="540" x2="1200" y2="540"/></g>
+  <g stroke="#1f1d1b" stroke-opacity="0.03" stroke-width="1"><line x1="300" y1="0" x2="300" y2="675"/><line x1="600" y1="0" x2="600" y2="675"/><line x1="900" y1="0" x2="900" y2="675"/></g>
+  <circle cx="1120" cy="120" r="240" fill="none" stroke="#1f1d1b" stroke-opacity="0.05" stroke-width="2"/>
+
+  <!-- TH report (left, charcoal) -->
+  <text x="322" y="206" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="20" letter-spacing="3">TH</text>
+  <g transform="translate(318 222)" stroke="#1f1d1b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 0 H150 L186 36 V250 H0 Z" fill="#ffffff" fill-opacity="0.5"/>
+    <path d="M150 0 V36 H186"/>
+    <g stroke-opacity="0.5"><line x1="28" y1="78" x2="150" y2="78"/><line x1="28" y1="116" x2="158" y2="116"/><line x1="28" y1="154" x2="158" y2="154"/><line x1="28" y1="192" x2="110" y2="192"/></g>
+  </g>
+
+  <!-- JP report (right, accent) -->
+  <text x="700" y="206" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#d7000f" font-size="20" letter-spacing="3">JP</text>
+  <g transform="translate(696 222)" stroke="#d7000f" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 0 H150 L186 36 V250 H0 Z" fill="#ffffff" fill-opacity="0.5"/>
+    <path d="M150 0 V36 H186"/>
+    <g stroke-opacity="0.55"><line x1="28" y1="78" x2="150" y2="78"/><line x1="28" y1="116" x2="158" y2="116"/><line x1="28" y1="154" x2="158" y2="154"/><line x1="28" y1="192" x2="110" y2="192"/></g>
+  </g>
+
+  <!-- mapping / adjustment arrows TH -> JP -->
+  <g stroke-linecap="round">
+    <line x1="516" y1="300" x2="676" y2="300" stroke="#1f1d1b" stroke-opacity="0.4" stroke-width="2.5"/>
+    <polygon points="676,300 658,292 658,308" fill="#1f1d1b" fill-opacity="0.4"/>
+    <line x1="516" y1="360" x2="676" y2="360" stroke="#d7000f" stroke-width="3"/>
+    <polygon points="676,360 656,351 656,369" fill="#d7000f"/>
+    <line x1="516" y1="420" x2="676" y2="420" stroke="#1f1d1b" stroke-opacity="0.4" stroke-width="2.5"/>
+    <polygon points="676,420 658,412 658,428" fill="#1f1d1b" fill-opacity="0.4"/>
+  </g>
+
+  <text x="64" y="78" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="20" letter-spacing="3">MIRAI BIZLAB — JOURNAL</text>
+  <line x1="64" y1="600" x2="112" y2="600" stroke="#d7000f" stroke-width="3"/>
+  <text x="124" y="606" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8a8178" font-size="19" letter-spacing="3">MONTHLY REPORTS · TH -&gt; JP</text>
+</svg>
