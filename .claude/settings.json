@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.miraibizlab.co.th)",
+      "WebFetch(domain:miraibizlab.co.th)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

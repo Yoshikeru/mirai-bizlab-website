@@ -29,8 +29,10 @@ yarn-error.log*
 # vercel
 .vercel
 
-# claude code (local config, worktrees)
-.claude/
+# claude code（個人ローカル設定・worktree のみ除外。settings.json / skills / agents は git 管理）
+.claude/settings.local.json
+.claude/worktrees/
+.claude/launch.json
 
 # typescript
 *.tsbuildinfo
