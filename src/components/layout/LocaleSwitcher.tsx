@@ -36,10 +36,11 @@ export function LocaleSwitcher({
     };
   }, []);
 
-  const mutedColor =
+  // "muted" = the always-dark footer panel; needs fixed light-on-dark colors.
+  const toneClasses =
     tone === "muted"
-      ? "text-[color:var(--color-muted)]"
-      : "text-[color:var(--color-muted)]";
+      ? "text-white/60 hover:text-white"
+      : "text-[color:var(--color-muted)] hover:text-foreground";
 
   return (
     <div ref={ref} className="relative">
@@ -49,7 +50,7 @@ export function LocaleSwitcher({
         aria-label={t("label")}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase transition-colors duration-300 hover:text-foreground ${mutedColor}`}
+        className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase transition-colors duration-300 ${toneClasses}`}
       >
         <Globe className="h-3.5 w-3.5 flex-none" />
         <span>{t(current)}</span>
