@@ -107,6 +107,10 @@ export async function generateMetadata({
       description: site("tagline"),
     },
     alternates: buildAlternates(locale as Locale, "/"),
+    // Google Search Console のサイト所有権確認（削除すると確認が外れる）
+    verification: {
+      google: "pp2qqAuV1eeutDLlTAbEjn94CJ8AZGJppEYWujmMp6E",
+    },
   };
 }
 
