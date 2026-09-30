@@ -616,17 +616,17 @@ body.grid-on .guides {
   line-height: 0.9;
   font-size: min(11.4vw, 10.4rem);
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.07);
-  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
-  mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
-  margin-bottom: -0.12em;
+  color: rgba(255, 255, 255, 0.15);
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  padding-bottom: 0.1em;
   transition: color 0.6s var(--ease-out);
 }
 .mb-footer-mark span:last-child {
-  color: rgba(215, 0, 15, 0.22);
+  color: rgba(215, 0, 15, 0.42);
 }
 .mb-footer-mark:hover {
-  color: rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.24);
 }
 
 /* pointer ring (desktop, fine pointer only — see CursorFx) */
@@ -727,4 +727,10 @@ body.grid-on .guides {
 
 .mb-outline-numeral[data-on="1"] {
   -webkit-text-stroke-color: var(--color-accent);
+}
+
+/* Japanese phrase-aware line breaking + balanced headings (falls back silently) */
+.mb-phrase {
+  word-break: auto-phrase;
+  text-wrap: balance;
 }

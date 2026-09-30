@@ -6,7 +6,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const W = 1200, H = 675;
+const W = 1200, H = 750; // 16:10 = the aspect the cards use, so nothing is cropped sideways
 const RED = "#D7000F", INK = "#141414", PAPER = "#F3F1EC", DARK = "#0F0D10";
 const SANS = "Helvetica Neue, Helvetica, Arial, sans-serif";
 const MONO = "SFMono-Regular, Menlo, Consolas, monospace";
@@ -38,8 +38,7 @@ function poster({ label, theme, no, cat, word, size, width, y, extra, tag }) {
     `<rect width="${W}" height="${H}" fill="${c.bg}"/>${grid(c.line, c.lineA)}` +
       mono(60, 70, "MIRAI BIZLAB — JOURNAL", c.fg) +
       mono(W - 60, 70, `No.${no}`, c.fg, { anchor: "end" }) +
-      (extra ? extra(c) : "") +
-      giant(word, 52, y, size, width, c.fg) +
+      `<g transform="translate(0,37)">` + (extra ? extra(c) : "") + giant(word, 52, y, size, width, c.fg) + `</g>` +
       mono(60, H - 50, cat, c.fg, { op: 0.7 }) +
       (tag ? mono(W - 60, H - 50, tag, c.fg, { anchor: "end", op: 0.7 }) : "") +
       `<rect x="60" y="${H - 34}" width="56" height="4" fill="${theme === "red" ? "#fff" : RED}"/>`,
@@ -114,9 +113,9 @@ function dark({ label, no, industry, word, size, width, viz }) {
       `<rect width="${W}" height="${H}" fill="url(#g)"/>${grid("#fff", 0.05)}` +
       mono(60, 70, `CASE ${no}`, "#fff", { op: 0.75 }) +
       mono(W - 60, 70, industry, "#fff", { anchor: "end", op: 0.75 }) +
-      `<g>${viz}</g>` +
-      giant(word, 52, 600, size, width, "#fff", { op: 0.95 }) +
-      `<rect x="60" y="626" width="56" height="4" fill="${RED}"/>`,
+      `<g transform="translate(0,30)">${viz}</g>` +
+      `<g transform="translate(0,60)">` + giant(word, 52, 600, size, width, "#fff", { op: 0.95 }) + `</g>` +
+      `<rect x="60" y="${H - 49}" width="56" height="4" fill="${RED}"/>`,
   );
 }
 const bars = (xs, base, w, hs, gap) => hs.map((h, i) => `<rect x="${xs + i * (w + gap)}" y="${base - h}" width="${w}" height="${h}" fill="${i === hs.length - 1 ? RED : "#fff"}" fill-opacity="${i === hs.length - 1 ? 1 : 0.35}"/>`).join("");

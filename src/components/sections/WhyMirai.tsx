@@ -37,7 +37,7 @@ export function WhyMirai() {
                   <span className="mb-folio col-span-12 pt-2 text-[color:var(--color-accent)] md:col-span-1 md:text-[0.8125rem]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="col-span-12 text-[clamp(1.6rem,3.4vw,3.1rem)] leading-[1.2] font-extrabold tracking-tight transition-transform duration-500 group-hover:translate-x-2 md:col-span-6 md:col-start-2">
+                  <h3 className="mb-phrase col-span-12 text-[clamp(1.6rem,3.4vw,3.1rem)] leading-[1.2] font-extrabold tracking-tight transition-transform duration-500 group-hover:translate-x-2 md:col-span-6 md:col-start-2">
                     {reason.title}
                   </h3>
                   <p className="typo-body-lg col-span-12 max-w-xl text-[color:var(--color-muted)] md:col-span-4 md:col-start-9 md:pt-2">
