@@ -438,7 +438,6 @@ export function LedgerField() {
     const init = async () => {
       readTheme();
       try {
-        await document.fonts.ready;
         const jpText = WORD_PAIRS.map((p) => p.jp).join("") + "¥";
         const thText = WORD_PAIRS.map((p) => p.th).join("") + "฿";
         await Promise.race([
@@ -447,7 +446,7 @@ export function LedgerField() {
             document.fonts.load(`400 12px ${fonts.th}`, thText),
             document.fonts.load(`400 12px ${fonts.mono}`, "0123456789"),
           ]),
-          new Promise((res) => setTimeout(res, 2500)),
+          new Promise((res) => setTimeout(res, 1400)),
         ]);
       } catch {
         /* fall through with fallback fonts */
