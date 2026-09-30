@@ -87,13 +87,24 @@ function StepItem({ step, index }: { step: Step; index: number }) {
         }`}
       />
 
+      {/* giant outlined step numeral fills the opposite half (desktop) */}
+      <span
+        aria-hidden
+        data-on={inView ? "1" : undefined}
+        className={`mb-numeral mb-outline-numeral hidden select-none text-[clamp(7rem,13vw,12rem)] transition-[-webkit-text-stroke-color] duration-700 md:block md:row-start-1 ${
+          left ? "md:col-start-2 md:pl-20" : "md:col-start-1 md:pr-20 md:text-right"
+        }`}
+      >
+        {num}
+      </span>
+
       {/* content card */}
       <motion.div
         initial={reduce ? false : { opacity: 0, x: left ? -44 : 44, y: 12 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true, margin: "-80px 0px" }}
         transition={{ duration: 0.75, ease: EASE }}
-        className={`group pl-12 md:pl-0 ${
+        className={`group pl-12 md:row-start-1 md:pl-0 ${
           left
             ? "md:col-start-1 md:flex md:justify-end md:pr-20"
             : "md:col-start-2 md:flex md:justify-start md:pl-20"

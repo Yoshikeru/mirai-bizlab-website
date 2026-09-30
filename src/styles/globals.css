@@ -724,3 +724,7 @@ body.grid-on .guides {
   mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
   height: 0.62em;
 }
+
+.mb-outline-numeral[data-on="1"] {
+  -webkit-text-stroke-color: var(--color-accent);
+}
