@@ -1,12 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { useRef } from "react";
 
 import { Button } from "@/components/ui/Button";
