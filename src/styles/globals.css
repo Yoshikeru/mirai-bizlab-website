@@ -709,3 +709,20 @@ body.grid-on .guides {
   -webkit-text-stroke-color: var(--color-accent);
   color: var(--color-accent);
 }
+
+/* inner-page hero ghost type */
+.mb-hero-ghost {
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: right;
+  font-size: clamp(4rem, 15vw, 14rem);
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--color-foreground) 20%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+  height: 0.62em;
+}

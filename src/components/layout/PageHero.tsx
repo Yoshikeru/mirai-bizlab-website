@@ -26,7 +26,7 @@ export function PageHero({
   const hasRight = Boolean(rightSlot);
 
   return (
-    <section className="relative isolate overflow-hidden bg-background pt-4 pb-12 md:pt-16 md:pb-24">
+    <section className="relative isolate overflow-hidden bg-background pt-4 pb-16 md:pt-14 md:pb-32">
       {watermark && !hasRight ? (
         <div
           aria-hidden
@@ -45,6 +45,14 @@ export function PageHero({
         aria-hidden
         className="pointer-events-none absolute -top-32 -left-32 -z-10 h-[400px] w-[400px] rounded-full bg-[color:var(--color-accent)]/8 blur-[120px]"
       />
+
+      {/* oversized outlined eyebrow — typographic anchor for every inner page */}
+      <div
+        aria-hidden
+        className="mb-hero-ghost pointer-events-none absolute inset-x-0 bottom-0 -z-10 select-none overflow-hidden"
+      >
+        <span className="mb-wrap block">{eyebrow}</span>
+      </div>
 
       <div className="relative mb-wrap">
         <Breadcrumb items={breadcrumb} />
