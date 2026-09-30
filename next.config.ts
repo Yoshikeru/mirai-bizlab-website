@@ -32,6 +32,11 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    // Inline the (small, per-route) CSS into <head> — removes the render-blocking
+    // stylesheet request that dominated FCP on slow mobile networks.
+    inlineCss: true,
+  },
   outputFileTracingRoot: __dirname,
   images: {
     // Self-authored static SVG cover art is served through next/image. Sandboxed

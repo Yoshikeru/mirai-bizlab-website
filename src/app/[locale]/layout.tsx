@@ -41,28 +41,24 @@ const OG_LOCALES: Record<Locale, string> = {
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
   display: "swap",
   variable: "--font-noto-sans-jp",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
   display: "swap",
   variable: "--font-inter",
 });
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
   display: "swap",
   variable: "--font-inter-tight",
 });
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ["thai", "latin"],
-  weight: ["400", "500", "700"],
   display: "swap",
   variable: "--font-noto-sans-thai",
 });
