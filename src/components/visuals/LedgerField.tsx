@@ -10,7 +10,7 @@ import { useReducedMotion } from "@/components/motion/useReducedMotion";
  * A field of ledger entries. Left of the red gate they are raw Thai books
  * (฿ amounts, WHT/VAT, file names, Thai account names) drifting out of order.
  * Right of the gate they have been re-cast into a Japanese head-office report
- * (¥ amounts, 月次試算表, 源泉所得税 …) and locked to a strict grid.
+ * (฿ amounts, 月次試算表, 源泉所得税 …) and locked to a strict grid.
  * The pointer drags the gate; every entry it crosses is translated.
  *
  * Performance: text is pre-rendered to sprites once (per theme), the loop only
@@ -242,8 +242,7 @@ export function LedgerField() {
           } else {
             isAmount = true;
             const n = Math.round((R() * R() * 1450 + 6) * 100) * 10 + (R() < 0.5 ? 0 : 50);
-            const yen = Math.round((n * 4.2) / 10) * 10;
-            it = { th: `฿ ${fmt(n)}`, jp: `¥ ${fmt(yen)}`, hot: R() < 0.04 };
+            it = { th: `฿ ${fmt(n)}`, jp: `฿ ${fmt(n)}`, hot: R() < 0.04 };
           }
           const hot = !!it.hot;
           const thFam = /[\u0E00-\u0E7F]/.test(it.th) ? `${fonts.th}, ${fonts.mono}` : fonts.mono;
@@ -443,13 +442,13 @@ export function LedgerField() {
     const init = async () => {
       readTheme();
       try {
-        const jpText = WORD_PAIRS.map((p) => p.jp).join("") + "¥";
+        const jpText = WORD_PAIRS.map((p) => p.jp).join("") + "฿";
         const thText = WORD_PAIRS.map((p) => p.th).join("") + "฿";
         await Promise.race([
           Promise.all([
             document.fonts.load(`500 12px ${fonts.jp}`, jpText),
             document.fonts.load(`400 12px ${fonts.th}`, thText),
-            document.fonts.load(`400 12px ${fonts.mono}`, "0123456789"),
+            document.fonts.load(`400 12px ${fonts.mono}`, "฿0123456789"),
           ]),
           new Promise((res) => setTimeout(res, 1400)),
         ]);
