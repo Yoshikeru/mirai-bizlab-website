@@ -107,7 +107,7 @@ export function ServiceIcon({ index, className }: Props) {
           <motion.circle
             key={dt.x} cx={dt.x} cy="32" r="3.4"
             fill={dt.accent ? ACCENT : INK} fillOpacity={dt.accent ? 1 : 0.4}
-            animate={reduce ? undefined : { cy: [32, 72], opacity: [0, 1, 1, 0] }}
+            animate={reduce ? undefined : { y: [0, 40], opacity: [0, 1, 1, 0] }}
             transition={reduce ? undefined : { duration: 2.1, repeat: Infinity, ease: "easeIn", delay: dt.d, times: [0, 0.2, 0.85, 1] }}
           />
         ))}

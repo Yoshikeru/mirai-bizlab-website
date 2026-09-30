@@ -35,6 +35,8 @@
   --font-sans-display: var(--font-inter-tight), var(--font-inter), "Inter Tight",
     "Inter", system-ui, sans-serif;
 
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
   --content-max: 1280px;
   --content-readable: 1140px;
 
@@ -363,6 +365,93 @@ html[lang="en"] h4 {
 @supports not (grid-template-columns: subgrid) {
   .mb-band {
     grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  }
+}
+
+/* ---- hero: CSS-driven entrance + scroll fx ------------------------- */
+/* Pure CSS so the headline is painted with the first frame — the LCP no longer
+   waits for JS hydration (it did when this was a motion/react initial:{opacity:0}). */
+.hero-h1 {
+  font-family: var(--font-sans-display), var(--font-sans-jp), sans-serif;
+  font-size: clamp(2.3rem, 5.6vw + 0.3rem, 5.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+html[lang="en"] .hero-h1,
+html[lang="es"] .hero-h1 {
+  font-size: clamp(2.1rem, 4.5vw, 4.1rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+html[lang="th"] .hero-h1 {
+  font-size: clamp(2rem, 4.4vw, 3.9rem);
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+}
+.hero-mask {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.12em 0.2em;
+  margin-block: -0.12em -0.2em;
+}
+.hero-mask > span {
+  display: block;
+  animation: hero-rise 1.05s var(--ease-out) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes hero-rise {
+  from {
+    transform: translate3d(0, 112%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.hero-fade {
+  animation: hero-fade 0.85s var(--ease-out) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* scroll-linked fade of the hero copy; --hero-p is written by LedgerField */
+[data-hero] [data-fx] {
+  opacity: calc(1 - var(--hero-p, 0) * 1.15);
+  transform: translate3d(0, calc(var(--hero-p, 0) * -44px), 0);
+  will-change: transform, opacity;
+}
+/* keep the copy readable over the ledger field: dim the left, fade top/bottom */
+.ledger-field {
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62) 26%, #000 58%),
+    linear-gradient(180deg, transparent, #000 12%, #000 86%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62) 26%, #000 58%),
+    linear-gradient(180deg, transparent, #000 12%, #000 86%, transparent);
+  mask-composite: intersect;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out);
+}
+.ledger-field[data-ready="true"] {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-mask > span,
+  .hero-fade {
+    animation: none;
+  }
+  [data-hero] [data-fx] {
+    transform: none;
+    opacity: 1;
+  }
+  .ledger-field {
+    transition: none;
   }
 }
 
