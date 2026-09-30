@@ -118,6 +118,7 @@ export function LedgerField() {
     let safe: { l: number; t: number; r: number; b: number }[] = [];
     let gate = 0;
     let gateTarget = 0;
+    let gateMin = 0;
     let pointerActive = false;
     let last = performance.now();
     let clock = 0;
@@ -185,6 +186,10 @@ export function LedgerField() {
         const r = el.hasAttribute("data-safe-box") ? el.getBoundingClientRect() : range.getBoundingClientRect();
         return { l: r.left - wr.left - 18, t: r.top - wr.top - 10, r: r.right - wr.left + 18, b: r.bottom - wr.top + 10 };
       });
+      // The gate never crosses the headline, so the ordered ledger stays clear of it.
+      const h1 = section.querySelector("h1");
+      const h1Right = h1 ? (() => { const rg = document.createRange(); rg.selectNodeContents(h1); return rg.getBoundingClientRect().right - wr.left; })() : 0;
+      gateMin = W >= 1024 ? clamp(h1Right + 28, W * 0.34, W * 0.72) : W * 0.34;
     };
     const safeFactor = (x: number, y: number) => {
       let dMin = 999;
@@ -270,7 +275,7 @@ export function LedgerField() {
       labelSprites.jp = sprite("JP REPORT", fonts.mono, 10.5, 700, colors.accent, 2.2);
     };
 
-    const restGate = () => W * (W < 720 ? 0.5 : 0.56);
+    const restGate = () => Math.max(gateMin, W * (W < 720 ? 0.5 : 0.56));
 
     const frame = (now: number) => {
       if (disposed) return;
@@ -279,7 +284,7 @@ export function LedgerField() {
       clock += dt;
 
       // gate: pointer while active, otherwise a slow breathing drift
-      const idle = restGate() + Math.sin(clock * 0.32) * W * 0.05;
+      const idle = Math.max(gateMin, restGate() + Math.sin(clock * 0.32) * W * 0.05);
       const target = pointerActive ? gateTarget : idle;
       gate += (target - gate) * (1 - Math.exp(-dt * (pointerActive ? 6 : 2.2)));
 
@@ -429,7 +434,7 @@ export function LedgerField() {
       if (e.pointerType === "touch") return;
       const r = wrap.getBoundingClientRect();
       pointerActive = true;
-      gateTarget = clamp(e.clientX - r.left, W * 0.34, W * 0.9);
+      gateTarget = clamp(e.clientX - r.left, gateMin, W * 0.9);
     };
     const onLeave = () => {
       pointerActive = false;
