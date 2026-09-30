@@ -41,7 +41,7 @@ export function Footer() {
   })();
 
   return (
-    <footer className="mb-dark-panel border-t border-white/10">
+    <footer className="mb-dark-panel overflow-hidden border-t border-white/10">
       <div className="mb-wrap py-12 md:py-20">
         <div className="mb-grid gap-y-12">
           <div className="col-span-12 md:col-span-4">
@@ -139,6 +139,12 @@ export function Footer() {
             className="h-9 w-auto brightness-0 invert opacity-85 md:h-10"
           />
         </div>
+      </div>
+
+      {/* oversized wordmark — bleeds off the bottom edge */}
+      <div aria-hidden className="mb-footer-mark mb-wrap select-none">
+        <span>MIRAI</span>
+        <span>BizLab</span>
       </div>
     </footer>
   );

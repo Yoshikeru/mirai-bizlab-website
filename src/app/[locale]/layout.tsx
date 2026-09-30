@@ -19,7 +19,9 @@ import { GridOverlay } from "@/components/grid/GridOverlay";
 import { OpticalAlign } from "@/components/grid/OpticalAlign";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CursorFx } from "@/components/motion/CursorFx";
 import { LenisProvider } from "@/components/motion/LenisProvider";
+import { PageTransition } from "@/components/motion/PageTransition";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { routing, type Locale } from "@/lib/i18n/routing";
@@ -151,6 +153,8 @@ export default async function LocaleLayout({
               </div>
             </LenisProvider>
             <ChatWidget />
+            <CursorFx />
+            <PageTransition />
             <OpticalAlign />
             <GridOverlay />
           </NextIntlClientProvider>

@@ -51,6 +51,7 @@ export function BlogTeaser({ posts }: { posts: BlogPost[] }) {
             >
               <Link
                 href={`/blog/${post.slug}`}
+                data-cursor="Read"
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-surface transition-all duration-500 hover:-translate-y-1.5 hover:border-[color:var(--color-accent)]/25 hover:shadow-card-hover"
               >
                 {post.coverImage ? (

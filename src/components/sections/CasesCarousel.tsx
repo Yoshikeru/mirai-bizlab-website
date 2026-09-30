@@ -63,7 +63,7 @@ export function CasesCarousel() {
         />
 
         <div className="mt-10 md:mt-20">
-          <div ref={emblaRef} className="overflow-hidden">
+          <div ref={emblaRef} data-cursor="Drag" className="overflow-hidden">
             <ul className="flex gap-6 md:gap-8">
               {items.map((item, index) => (
                 <li

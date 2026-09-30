@@ -69,7 +69,7 @@ export function Services() {
                 >
                   {/* index numeral (+ emblem inline on mobile) */}
                   <div className="col-span-12 flex items-center justify-between md:col-span-2 md:block">
-                    <span className="mb-numeral block text-5xl text-[color:var(--color-border)] transition-colors duration-500 group-hover:text-[color:var(--color-accent)] md:text-6xl lg:text-7xl">
+                    <span className="mb-numeral mb-outline-numeral block text-5xl transition-colors duration-500 group-hover:text-[color:var(--color-accent)] md:text-7xl lg:text-8xl">
                       {item.index}
                     </span>
                     <ServiceIcon

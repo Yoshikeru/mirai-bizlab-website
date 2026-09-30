@@ -589,3 +589,123 @@ body.grid-on .guides {
     transition: none;
   }
 }
+
+/* hero scroll cue: a short accent line that slides down and resets */
+.hero-scroll-cue {
+  transform-origin: top;
+  animation: hero-cue 2.4s var(--ease-out) infinite;
+}
+@keyframes hero-cue {
+  0% { transform: scaleY(0); opacity: 1; }
+  55% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue { animation: none; }
+}
+
+/* footer giant wordmark */
+.mb-footer-mark {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.18em;
+  margin-top: -0.5rem;
+  font-family: var(--font-sans-display), var(--font-sans-jp);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  font-size: clamp(3.5rem, 16.4vw, 19rem);
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.16);
+  /* fade the lower half into the panel */
+  -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 96%);
+  mask-image: linear-gradient(to bottom, #000 35%, transparent 96%);
+  padding-bottom: 0.06em;
+  transition: -webkit-text-stroke-color 0.6s var(--ease-out);
+}
+.mb-footer-mark span:last-child {
+  -webkit-text-stroke-color: rgba(215, 0, 15, 0.55);
+}
+.mb-footer-mark:hover {
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+}
+
+/* pointer ring (desktop, fine pointer only — see CursorFx) */
+.mb-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  pointer-events: none;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition:
+    opacity 0.3s,
+    width 0.4s var(--ease-out),
+    height 0.4s var(--ease-out),
+    background-color 0.3s,
+    border-color 0.3s;
+}
+.mb-cursor[data-on="1"] { opacity: 0.85; }
+.mb-cursor[data-mode="link"] {
+  width: 56px;
+  height: 56px;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+.mb-cursor[data-mode="label"] {
+  width: 84px;
+  height: 84px;
+  background: var(--color-accent);
+  opacity: 1;
+}
+.mb-cursor-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+@media (hover: none), (pointer: coarse) {
+  .mb-cursor { display: none; }
+}
+
+/* route arrival curtain (see PageTransition) */
+.mb-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  pointer-events: none;
+  background: var(--color-contrast);
+  transform-origin: top;
+  animation: mb-curtain 0.75s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+.mb-curtain::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--color-accent);
+}
+@keyframes mb-curtain {
+  0% { transform: scaleY(1); }
+  100% { transform: scaleY(0); }
+}
+
+/* outlined display numeral: readable in both themes, fills on hover */
+.mb-outline-numeral {
+  color: transparent;
+  -webkit-text-stroke: 1.25px color-mix(in srgb, var(--color-foreground, currentColor) 38%, transparent);
+}
+.group:hover .mb-outline-numeral {
+  -webkit-text-stroke-color: var(--color-accent);
+  color: var(--color-accent);
+}

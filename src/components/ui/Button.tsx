@@ -33,6 +33,7 @@ export function Button({
   return (
     <Link
       href={href}
+      data-magnetic
       className={`${BASE} ${VARIANT_CLASSES[variant]} ${className}`}
     >
       <span>{children}</span>

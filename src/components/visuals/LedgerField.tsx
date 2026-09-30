@@ -429,7 +429,7 @@ export function LedgerField() {
       if (e.pointerType === "touch") return;
       const r = wrap.getBoundingClientRect();
       pointerActive = true;
-      gateTarget = clamp(e.clientX - r.left, W * 0.16, W * 0.9);
+      gateTarget = clamp(e.clientX - r.left, W * 0.34, W * 0.9);
     };
     const onLeave = () => {
       pointerActive = false;
@@ -469,7 +469,7 @@ export function LedgerField() {
       stop();
       build();
       measureSafe();
-      gate = clamp(gate, W * 0.16, W * 0.9);
+      gate = clamp(gate, W * 0.34, W * 0.9);
       frame(performance.now());
       if (wasRunning && !reduce) start();
     });

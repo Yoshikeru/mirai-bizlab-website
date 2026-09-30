@@ -4,8 +4,6 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { LedgerField } from "@/components/visuals/LedgerField";
 
-type Metric = { value: number; suffix: string; label: string };
-
 const d = (s: number): CSSProperties => ({ ["--d" as string]: `${s}s` });
 
 /**
@@ -15,9 +13,7 @@ const d = (s: number): CSSProperties => ({ ["--d" as string]: `${s}s` });
  */
 export function Hero() {
   const t = useTranslations("home.hero");
-  const about = useTranslations("home.about");
   const lines = t("title").split("\n");
-  const metrics = about.raw("metrics") as Metric[];
 
   return (
     <section
@@ -83,26 +79,19 @@ export function Hero() {
           </div>
         </div>
 
-        {/* proof strip — real figures only (same source as the metrics section) */}
-        <dl
+        {/* folio strip — location / languages / scroll cue (figures live in the metrics band) */}
+        <div
           data-fx
-          className="hero-fade grid grid-cols-2 gap-x-6 gap-y-6 border-t border-[color:var(--color-border)] pt-6 md:grid-cols-4"
+          className="hero-fade mb-folio flex items-center justify-between gap-6 border-t border-[color:var(--color-border)] pt-5 text-[color:var(--color-muted)]"
           style={d(0.34)}
         >
-          {metrics.map((m) => (
-            <div key={m.label} className="flex flex-col-reverse gap-1.5">
-              <dt className="mb-folio text-[color:var(--color-muted)]">
-                {m.label}
-              </dt>
-              <dd className="mb-numeral text-3xl text-foreground tabular-nums md:text-5xl">
-                {m.value}
-                <span className="text-[color:var(--color-accent)]">
-                  {m.suffix}
-                </span>
-              </dd>
-            </div>
-          ))}
-        </dl>
+          <span className="flex items-center gap-3">
+            <span aria-hidden className="hero-scroll-cue block h-8 w-px bg-[color:var(--color-accent)]" />
+            SCROLL
+          </span>
+          <span className="hidden sm:block">13.7563°N&nbsp;&nbsp;100.5018°E&nbsp;&nbsp;—&nbsp;&nbsp;BANGKOK</span>
+          <span aria-hidden>JA · EN · TH · ZH · 繁 · ES</span>
+        </div>
       </div>
     </section>
   );
